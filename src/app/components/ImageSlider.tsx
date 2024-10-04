@@ -29,10 +29,10 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ slides }) => {
   };
 
   return (
-    <div className="relative h-[600px] pr-20 pl-20">
+    <div className="relative h-[600px] pr-40 pl-40">
       {/* Left Arrow */}
       <div
-        className="absolute top-1/2 left-8 transform -translate-y-1/2 text-4xl text-white z-10 cursor-pointer"
+        className="absolute top-1/2 left-8 transform -translate-y-1/2 text-4xl text-white z-10 cursor-pointer pl-20"
         onClick={goToPrevious}
       >
         ❰
@@ -40,7 +40,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ slides }) => {
 
       {/* Right Arrow */}
       <div
-        className="absolute top-1/2 right-8 transform -translate-y-1/2 text-4xl text-white z-10 cursor-pointer"
+        className="absolute top-1/2 right-8 transform -translate-y-1/2 text-4xl text-white z-10 cursor-pointer pr-20"
         onClick={goToNext}
       >
         ❱

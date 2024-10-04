@@ -5,6 +5,8 @@ import Events from "./components/Events";
 import Divider from "./components/Divider";
 import HeadOfTheDepartment from "./components/HeadOfTheDepartment";
 import FacultyAdvisors from "./components/FacultyAdvisors";
+import AccordianSection from "./components/AccordianSection";
+import AboutSection from "./components/About";
 
 const Apps = () => {
   const slides = [
@@ -23,10 +25,8 @@ const Apps = () => {
   ];
   return (
     <main className="pt-24">
-      <div>
-        <ImageSlider slides={slides} />
-      </div>
-      <div className="w-full flex justify-between items-center">
+      <ImageSlider slides={slides} />
+      <div className="w-full flex justify-between items-center pt-10">
         <div className="p-20 w-[1200px]">
           <h1 className="text-4xl font-bold text-yellow-400">
             Home to the COOLEST Students&#x2019; Chapter of all Time
@@ -43,12 +43,15 @@ const Apps = () => {
           <Button variant="outline">Connect</Button>
         </div>
       </div>
+      <AboutSection />
       <Divider />
       <Events />
       <Divider />
       <HeadOfTheDepartment />
       <Divider />
       <FacultyAdvisors />
+      <Divider />
+      <AccordianSection />
       <Divider />
     </main>
   );

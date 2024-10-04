@@ -16,9 +16,6 @@ const Navebar = () => {
           <Link href="/">
             <Button variant="scee">Home</Button>
           </Link>
-          <Link href="/about">
-            <Button variant="scee">About</Button>
-          </Link>
           <Link href="/team">
             <Button variant="scee">Team</Button>
           </Link>
