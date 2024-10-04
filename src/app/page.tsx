@@ -1,6 +1,8 @@
 import React from "react";
 import ImageSlider from "@/app/components/ImageSlider";
 import { Button } from "@/components/ui/button";
+import Events from "./components/Events";
+import Divider from "./components/Divider";
 
 const Apps = () => {
   const slides = [
@@ -36,12 +38,14 @@ const Apps = () => {
         </div>
         <div className="mr-20 flex">
           <Button className="mr-5">Join Us</Button>
-          <Button variant="outline">Explore Events</Button>
+          <Button variant="outline">Connect</Button>
         </div>
       </div>
+      <Divider />
       <div>
-        <div className="ml-20 mr-20 border border-gray-300 border-dashed"></div>
+        <Events />
       </div>
+      <Divider />
     </main>
   );
 };
