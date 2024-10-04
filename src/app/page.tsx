@@ -3,6 +3,8 @@ import ImageSlider from "@/app/components/ImageSlider";
 import { Button } from "@/components/ui/button";
 import Events from "./components/Events";
 import Divider from "./components/Divider";
+import HeadOfTheDepartment from "./components/HeadOfTheDepartment";
+import FacultyAdvisors from "./components/FacultyAdvisors";
 
 const Apps = () => {
   const slides = [
@@ -42,9 +44,11 @@ const Apps = () => {
         </div>
       </div>
       <Divider />
-      <div>
-        <Events />
-      </div>
+      <Events />
+      <Divider />
+      <HeadOfTheDepartment />
+      <Divider />
+      <FacultyAdvisors />
       <Divider />
     </main>
   );
