@@ -8,6 +8,7 @@ import Events from "./components/Events";
 import HeadOfTheDepartment from "./components/HeadOfTheDepartment";
 import FacultyAdvisors from "./components/FacultyAdvisors";
 import AccordianSection from "./components/AccordianSection";
+import Reveal from "@/components/layout/Reveal";
 
 const Apps = () => {
   const slides = [
@@ -29,15 +30,20 @@ const Apps = () => {
       <ImageSlider slides={slides} />
       <div className="w-full flex justify-between items-center pt-10">
         <div className="p-20 w-[1200px]">
-          <h1 className="text-4xl font-bold text-yellow-400">
-            Home to the COOLEST Students&#x2019; Chapter of all Time
-          </h1>
-          <p className="text-sm">
-            Welcome to the IEI Students&#x2019; Chapter of EE AOT! We&#x2019;re
-            all about innovation, tech vibes, and leveling up the skills. Join
-            us for cool workshops, epic events, and a community that&#x2019;s as
-            electric as you are! Let&#x2019;s make waves together! ⚡
-          </p>
+          <Reveal>
+            <h1 className="text-4xl font-bold text-yellow-400">
+              Home to the COOLEST Students&#x2019; Chapter of all Time
+            </h1>
+          </Reveal>
+          <Reveal>
+            <p className="text-sm">
+              Welcome to the IEI Students&#x2019; Chapter of EE AOT!
+              We&#x2019;re all about innovation, tech vibes, and leveling up the
+              skills. Join us for cool workshops, epic events, and a community
+              that&#x2019;s as electric as you are! Let&#x2019;s make waves
+              together! ⚡
+            </p>
+          </Reveal>
         </div>
         <div className="mr-20 flex">
           <Button className="mr-5">Join Us</Button>
