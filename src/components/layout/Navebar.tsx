@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Navebar = () => {
   return (
-    <div className="h-20 w-full pl-10 z-50 bg-black fixed flex justify-between text-center items-center border border-r-0 border-l-0 border-t-0 border-b-2">
+    <div className="h-20 w-full pl-10 z-50 bg-black fixed flex justify-between text-center items-center border border-r-0 border-l-0 border-t-0 border-b-2 border-gray-300 border-dashed">
       <div>
         <Image src={sceelogo} alt="logo" width={100} height={100} />
       </div>
