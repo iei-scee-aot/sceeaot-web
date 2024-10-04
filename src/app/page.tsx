@@ -1,12 +1,13 @@
 import React from "react";
-import ImageSlider from "@/app/components/ImageSlider";
 import { Button } from "@/components/ui/button";
-import Events from "./components/Events";
+
+import ImageSlider from "@/app/components/ImageSlider";
 import Divider from "./components/Divider";
+import AboutSection from "./components/About";
+import Events from "./components/Events";
 import HeadOfTheDepartment from "./components/HeadOfTheDepartment";
 import FacultyAdvisors from "./components/FacultyAdvisors";
 import AccordianSection from "./components/AccordianSection";
-import AboutSection from "./components/About";
 
 const Apps = () => {
   const slides = [
@@ -48,7 +49,6 @@ const Apps = () => {
       <Events />
       <Divider />
       <HeadOfTheDepartment />
-      <Divider />
       <FacultyAdvisors />
       <Divider />
       <AccordianSection />

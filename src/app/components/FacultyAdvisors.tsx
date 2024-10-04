@@ -1,6 +1,4 @@
 import Image from "next/image";
-import React from "react";
-
 import star from "@/assets/icons/star-icon.png";
 
 const FacultyAdvisors = () => {
