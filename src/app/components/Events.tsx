@@ -3,7 +3,6 @@ import Image from "next/image";
 import React from "react";
 
 import ticket from "@/assets/icons/ticket-icon.png";
-import noodles from "@/assets/icons/noodles-icon.png";
 
 const Events = () => {
   return (
