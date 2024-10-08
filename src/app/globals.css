@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubble+One&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,6 +11,23 @@ body::-webkit-scrollbar {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Define bg-background utility class */
+  .bg-background {
+    background-color: hsl(var(--background)); /* Use the HSL color defined in :root */
+  }
+
+  /* Define text-foreground utility class */
+  .text-foreground {
+    color: hsl(var(--foreground)); /* Use the HSL color defined in :root */
+  }
+}
+
+@layer components {
+  /* Define the border-border class */
+  .border-border {
+    border: 1px solid var(--border); /* Use your CSS variable or a specific color */
   }
 }
 
@@ -72,9 +90,9 @@ body::-webkit-scrollbar {
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border; /* This applies the border-border class */
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground; /* This uses the bg-background and text-foreground utility classes */
   }
 }
