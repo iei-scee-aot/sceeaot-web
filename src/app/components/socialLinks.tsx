@@ -6,7 +6,7 @@ import React from "react";
 
 import logo1 from "@/assets/icons/fb logo illumination.png";
 import logo2 from "@/assets/icons/insta logo illumination.png";
-import logo3 from "@/assets/icons/threads logo illumination.png";
+import logo3 from "@/assets/icons/threads.png";
 import logo4 from "@/assets/icons/x logo illumination.png";
 import logo5 from "@/assets/icons/linkedin logo illumination.png";
 import logo6 from "@/assets/icons/wp logo illumination.png";
@@ -23,7 +23,7 @@ const GridButtons = () => {
 
   return (
     <div className="relative">
-      <h2 className="text-yellow-400 text-xl mb-4 text-center font-bold">Connect with us</h2>
+      <h2 className="text-yellow-400 text-2xl mb-4 tracking-wide text-center font-bold">Connect with us</h2>
       <div className="flex justify-center">
         <div className="bg-black rounded-lg shadow-lg p-4">
           <div className="grid grid-cols-3 gap-4">
@@ -35,7 +35,7 @@ const GridButtons = () => {
                 rel="noopener noreferrer"
               >
                 <div className="relative flex justify-center items-center bg-black-800 hover:scale-105 transition-transform duration-300 rounded-lg p-2">
-                  <Image src={button.logo} alt={button.alt} width={60} height={60} />
+                  <Image src={button.logo} alt={button.alt} width={80} height={80} />
                 </div>
               </Link>
             ))}
