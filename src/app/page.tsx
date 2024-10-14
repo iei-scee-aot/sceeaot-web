@@ -50,10 +50,9 @@ const Apps = () => {
                 <p
                   className="text-[4rem] transition-opacity duration-1000 ease-in-out"
                   style={{
-                    color: colors[wordIndex], 
-                    transform: "skewX(-15deg)", 
+                    color: colors[wordIndex],
                     display: "inline-block", 
-                    fontWeight: "bold", 
+                    fontWeight: "bolder", 
                   }}
                 >
                   {words[wordIndex]}
