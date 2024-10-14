@@ -48,7 +48,7 @@ const Apps = () => {
               <h1 className="text-[2.5rem] font-bold text-yellow-400 leading-tight">
                 <p>Home to the</p>
                 <p
-                  className="text-[4rem] transition-opacity duration-1000 ease-in-out"
+                  className="text-[4rem] tracking-wide transition-opacity duration-1000 ease-in-out"
                   style={{
                     color: colors[wordIndex],
                     display: "inline-block", 
