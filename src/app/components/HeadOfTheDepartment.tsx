@@ -3,35 +3,45 @@ import star from "@/assets/icons/star-icon.png";
 
 const HeadOfTheDepartment = () => {
   return (
-    <div className="m-10 mr-20 ml-20 h-[400px] border border-gray-300 border-dashed rounded-lg flex flex-col justify-between p-5">
-      <div className="flex items-center">
+    <div
+      className="mt-20 mx-auto rounded-3xl shadow-lg transform transition-transform duration-300 hover:scale-105"
+      style={{
+        backgroundColor: "rgba(59, 60, 60, 0.75)",
+        width: 'calc(80% - 40px)',
+        padding: '20px',
+      }}
+    >
+      <div className="flex items-center mb-4">
         <Image src={star} alt="star" width={24} />
-        <h2 className="ml-2 font-bold text-lg">Words from our HOD</h2>
+        <h2 className="ml-2 font-bold text-4xl">Words from our HOD</h2>
       </div>
-      <div className="flex p-5 pl-10 pr-10">
-        <Image
-          src="https://utfs.io/f/kQP3nlH8TqeSeKzgDDQBzFbSNRv1gTxy3f2HGeUVuAoXW0sl"
-          alt="ssc-hod"
-          width={300}
-          height={300}
-        />
-        <div className="p-10 pr-20 pl-20">
-          <p>
-            <span className="text-xl text-yellow-300">&#x275D;</span>
+      <div className="flex flex-grow">
+        <div className="flex-shrink-0">
+          <Image
+            src="https://utfs.io/f/kQP3nlH8TqeSeKzgDDQBzFbSNRv1gTxy3f2HGeUVuAoXW0sl"
+            alt="ssc-hod"
+            width={250}
+            height={250}
+            className="rounded-lg transition-transform duration-300 hover:scale-105"
+          />
+        </div>
+        <div className="flex-grow p-5 ml-5">
+          <p className="text-2xl font-bold italic transform transition-transform duration-200 hover:scale-105">
+            <span className="text-xl text-yellow-300 mr-2">&#x275D;</span>
             Our department has created a platform to deliver strong fundamentals
             based technical education. We strive to produce electrical engineers
             who are well suited for industry as well as society. As HOD of this
             department, I endeavor to transform them into creators of technology
             with good human values; commitment towards our nation. I on behalf
-            of Department of Electrical Engineering of Academy of Technology
-            encourage all my faculty members, technical staff and students to
+            of the Department of Electrical Engineering of Academy of Technology
+            encourage all my faculty members, technical staff, and students to
             work tirelessly towards developing solutions to challenging problems
             leading to the socio-economic growth of the Nation.
-            <span className="text-xl text-yellow-300">&#x275E;</span>
+            <span className="text-xl text-yellow-300 ml-2">&#x275E;</span>
           </p>
-          <p className="mt-5 text-yellow-300 text-sm">
-            - Sandip Saha Choudhury (Head of the Department of Electrical
-            Engineering at Academy of Technology)
+          <p className="mt-5 font-bold text-yellow-300 text-2xl transform transition-transform duration-200 hover:scale-105">
+            - Dr. Sandip Saha Chowdhury <br />
+            HOD, Department of Electrical Engineering.
           </p>
         </div>
       </div>

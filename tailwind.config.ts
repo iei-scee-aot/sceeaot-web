@@ -74,6 +74,11 @@ const config: Config = {
   				}
   			}
   		},
+		  fontFamily: {
+			sans: ['"Inter"', 'sans-serif'],
+			// Add Bubble One font here
+			bubble: ['"Bubble One"', 'cursive']
+		  },
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out'

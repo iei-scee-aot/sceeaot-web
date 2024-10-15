@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+
+import { useState, useEffect } from "react";
 
 interface Slide {
   url: string;
@@ -12,16 +13,17 @@ interface ImageSliderProps {
 const ImageSlider: React.FC<ImageSliderProps> = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(goToNext, 5000);
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
   const goToPrevious = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? slides.length - 1 : prevIndex - 1));
   };
 
   const goToNext = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
+    setCurrentIndex((prevIndex) => (prevIndex === slides.length - 1 ? 0 : prevIndex + 1));
   };
 
   const goToSlide = (slideIndex: number) => {
@@ -29,36 +31,46 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ slides }) => {
   };
 
   return (
-    <div className="relative h-[600px] pr-40 pl-40">
-      {/* Left Arrow */}
-      <div
-        className="absolute top-1/2 left-8 transform -translate-y-1/2 text-4xl text-white z-10 cursor-pointer pl-20"
-        onClick={goToPrevious}
-      >
-        ❰
-      </div>
+    <div className="mb-[200px] flex flex-col items-center justify-center h-[500px] relative">
+      <div className="flex items-center h-full">
+        {/* Left Arrow */}
+        <div
+          className="text-4xl text-white z-10 cursor-pointer pr-5"
+          onClick={goToPrevious}
+          aria-label="Previous Slide"
+        >
+          ❰
+        </div>
 
-      {/* Right Arrow */}
-      <div
-        className="absolute top-1/2 right-8 transform -translate-y-1/2 text-4xl text-white z-10 cursor-pointer pr-20"
-        onClick={goToNext}
-      >
-        ❱
-      </div>
+        {/* Slide with Transparent Effect */}
+        <div
+          className="w-[700px] h-[400px] rounded-lg bg-cover bg-center transition-transform duration-500 ease-in-out relative overflow-hidden transform hover:scale-105" 
+          style={{
+            backgroundImage: `url(${slides[currentIndex].url})`,
+            backgroundColor: "transparent",
+          }}
+        >
+          {/* Overlay for transparency effect */}
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+        </div>
 
-      {/* Slide */}
-      <div
-        className="w-full h-full rounded-lg bg-cover bg-center"
-        style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-      ></div>
+        {/* Right Arrow */}
+        <div
+          className="text-4xl text-white z-10 cursor-pointer pl-5"
+          onClick={goToNext}
+          aria-label="Next Slide"
+        >
+          ❱
+        </div>
+      </div>
 
       {/* Dots */}
       <div className="flex justify-center mt-4">
         {slides.map((_, slideIndex) => (
           <div
             key={slideIndex}
-            className={`mx-1 cursor-pointer text-2xl ${
-              slideIndex === currentIndex ? "text-yellow-400" : "text-gray-400"
+            className={`mx-1 cursor-pointer transition-transform duration-300 ease-in-out ${
+              slideIndex === currentIndex ? "text-yellow-400 transform scale-150" : "text-gray-400"
             }`}
             onClick={() => goToSlide(slideIndex)}
           >
