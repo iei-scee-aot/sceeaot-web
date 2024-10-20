@@ -57,7 +57,8 @@ const Apps = () => {
                 >
                   {words[wordIndex]}
                 </p>
-                <p>Students&#x2019; Chapter of All Time</p>
+                <p>Students&#x2019; Chapter of</p>
+                <p> All Time</p>
               </h1>
             </Reveal>
             <Reveal>
