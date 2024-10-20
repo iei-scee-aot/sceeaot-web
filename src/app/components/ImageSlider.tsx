@@ -31,11 +31,11 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ slides }) => {
   };
 
   return (
-    <div className="mb-[200px] flex flex-col items-center justify-center h-[500px] relative">
+    <div className="mr-10 mb-[200px] flex flex-col items-center justify-center h-[450px] relative">
       <div className="flex items-center h-full">
         {/* Left Arrow */}
         <div
-          className="text-4xl text-white z-10 cursor-pointer pr-5"
+          className="text-4xl text-white z-20 cursor-pointer pr-5"
           onClick={goToPrevious}
           aria-label="Previous Slide"
         >
@@ -44,7 +44,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ slides }) => {
 
         {/* Slide with Transparent Effect */}
         <div
-          className="w-[700px] h-[400px] rounded-lg bg-cover bg-center transition-transform duration-500 ease-in-out relative overflow-hidden transform hover:scale-105" 
+          className="w-[340px] h-[200px] md:w-[488px] md:h-[320px] rounded-lg bg-cover bg-center transition-transform duration-500 ease-in-out relative overflow-hidden transform hover:scale-105" 
           style={{
             backgroundImage: `url(${slides[currentIndex].url})`,
             backgroundColor: "transparent",
@@ -56,7 +56,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ slides }) => {
 
         {/* Right Arrow */}
         <div
-          className="text-4xl text-white z-10 cursor-pointer pl-5"
+          className="text-4xl text-white z-20 cursor-pointer pl-5"
           onClick={goToNext}
           aria-label="Next Slide"
         >
@@ -65,7 +65,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ slides }) => {
       </div>
 
       {/* Dots */}
-      <div className="flex justify-center mt-4">
+      <div className="flex justify-center">
         {slides.map((_, slideIndex) => (
           <div
             key={slideIndex}

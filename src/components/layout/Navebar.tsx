@@ -1,51 +1,96 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+
+import { FiMenu } from "react-icons/fi";
+import { IoMdClose } from "react-icons/io";
 
 import sceelogo from "@/assets/icons/sceelogo.png";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { div } from "framer-motion/client";
 
-const Navebar = () => {
+function Navbar() {
+  const [navbar, setNavbar] = useState(false);
   return (
-    <nav className="h-20 w-full px-10 z-50 bg-black fixed border-b-4 border-gray-300 flex items-center">
-      <div className="flex-shrink-0 mr-5">
-        <Image src={sceelogo} alt="SCEE Logo" width={80} height={80} className="object-contain" />
-      </div>
-      <div className="flex-grow flex justify-end items-center h-full"> 
-        <div className="flex items-center space-x-8">
-          <Link href="/">
-            <Button
-              variant="scee"
-              className="text-yellow-400 font-black hover:bg-white hover:text-black border border-black text-lg px-4 py-2"
-            >
-              Home
-            </Button>
-          </Link>
-          <Link href="/team">
-            <Button
-              variant="scee"
-              className="text-yellow-400 font-black hover:bg-white hover:text-black border border-black text-lg px-4 py-2"
-            >
-              Team
-            </Button>
-          </Link>
-          <Link href="/events">
-            <Button
-              variant="scee"
-              className="text-yellow-400 font-black hover:bg-white hover:text-black border border-black text-lg px-4 py-2"
-            >
-              Events
-            </Button>
-          </Link>
-        </div>
-        <div className="h-full w-auto flex items-center justify-center bg-yellow-400 ml-5">
-          <Button variant="ghost" className="text-black rounded-none w-full h-full text-lg px-4 py-2">
-            Coming Soon...
-          </Button>
-        </div>
-      </div>
-    </nav>
-  );
-};
+    <div>
+      <nav className="w-full bg-black fixed top-0 left-0 right-0 z-50">
+        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+          <div>
+            <div className="flex items-center justify-between py-3 md:py-5 md:block">
+              {/* LOGO */}
+              <Image src={sceelogo} alt="SCEE Logo" width={80} height={80} className="object-contain" />
+              {/* HAMBURGER BUTTON FOR MOBILE */}
+              <div className="md:hidden">
+                <button
+                  className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                  onClick={() => setNavbar(!navbar)}
+                >
+                  {navbar ? (
+                    <IoMdClose className="text-4xl text-gray-400" />
 
-export default Navebar;
+                  ) : (
+                    <FiMenu className="text-4xl text-gray-400" />
+
+                  )}
+                </button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+                navbar ? 'p-12 md:p-0 block' : 'hidden'
+              }`}
+            >
+              <ul className="h-screen space-y-5 md:space-y-0 md:h-auto items-center justify-center md:flex ">
+                <li className=" text-center border-b-2 md:border-b-0 ">
+                  <Link href="" onClick={() => setNavbar(!navbar)}>
+                  <Button
+                variant="scee"
+                className="md:px-6 text-yellow-400 font-black hover:bg-white hover:text-black border border-black text-lg pb-6 px-4 py-2"
+              >
+                Home
+              </Button>
+                  </Link>
+                </li>
+                <li className=" text-center border-b-2 md:border-b-0 ">
+                  <Link href="" onClick={() => setNavbar(!navbar)}>
+                  <Button
+                variant="scee"
+                className="md:px-6 text-yellow-400 font-black hover:bg-white hover:text-black border border-black text-lg pb-6 px-4 py-2"
+              >
+                Team
+              </Button>
+                  </Link>
+                </li>
+                <li className=" text-center border-b-2 md:border-b-0 ">
+                  <Link href="" onClick={() => setNavbar(!navbar)}>
+                  <Button
+                variant="scee"
+                className="md:px-6 text-yellow-400 font-black hover:bg-white hover:text-black border border-black text-lg pb-6 px-4 py-2"
+              >
+                Events
+              </Button>
+                  </Link>
+                </li>
+                <li className="mt-20 md:mt-0 md:ml-10 text-center rounded-lg bg-yellow-400 border-b-2 md:border-b-0 ">
+                  <Link href="" onClick={() => setNavbar(!navbar)}>
+                  <Button
+                variant="scee"
+                className="md:px-6 text-black hover:text-black font-bold border-black text-lg pb-6 px-4 py-2"
+              >
+                Coming soon...
+              </Button>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  );
+}
+
+export default Navbar;

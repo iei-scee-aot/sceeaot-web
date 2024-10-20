@@ -40,9 +40,9 @@ const Apps = () => {
   }, [words.length]);
 
   return (
-    <main className="pt-20 pl-0">
-      <div className="flex justify-center items-start"> 
-        <div className="flex flex-col pt-10 ml-10"> 
+    <main className="pt-20 flex flex-col">
+      <div className="max-w-full flex-col sm:flex-row flex  justify-center items-start"> 
+        <div className="max-w-full flex flex-col justify-center items-center md:items-start ml-10 mr-0"> 
           <div className="p-5">
             <Reveal>
               <h1 className="text-[2.5rem] font-bold text-yellow-400 leading-tight">
@@ -57,7 +57,7 @@ const Apps = () => {
                 >
                   {words[wordIndex]}
                 </p>
-                <p>Students&#x2019; Chapter of all Time</p>
+                <p>Students&#x2019; Chapter of All Time</p>
               </h1>
             </Reveal>
             <Reveal>
