@@ -10,7 +10,7 @@ interface EventsProps {
 const Events: React.FC<EventsProps> = ({ paddingHorizontal = '20px' }) => {
   return (
     <div
-      className="mx-20 mt-24 h-[400px] rounded-3xl flex flex-col justify-between shadow-lg overflow-hidden"
+      className="mx-5 md:mx-20 mt-24 h-[400px] rounded-3xl flex flex-col justify-between shadow-lg overflow-hidden"
       style={{ 
         backgroundColor: 'rgba(59, 60, 60, 0.75)', 
 
@@ -19,8 +19,8 @@ const Events: React.FC<EventsProps> = ({ paddingHorizontal = '20px' }) => {
       }} 
     >
       <div className="flex items-center mb-4">
-        <Image className="ml-5" src={ticket} alt="ticket" width={35} />
-        <h2 className="ml-2 font-bold text-3xl">Ongoing Events</h2>
+        <Image className="md:ml-5" src={ticket} alt="ticket" width={35} />
+        <h2 className="ml-2 font-bold text-xl md:text-3xl">Ongoing Events</h2>
       </div>
       <div className="flex flex-col font-bold justify-center items-center text-center font-['Bubbler_One'] mb-4">
         <Image src={noodles} alt="Noodles" width={120} />

@@ -7,7 +7,7 @@ import {
 
 const AccordianSection = () => {
   return (
-    <div className="m-10 w-[90%] mx-auto h-auto flex flex-col justify-between p-5 mb-32 bg-black-800 rounded-lg shadow-lg">
+    <div className="m-10 w-[90%] mx-auto h-auto flex flex-col justify-between p-5 bg-black-800 rounded-lg shadow-lg">
       <h1 className="font-bold text-yellow-300 text-3xl mb-5">
         Most Frequently Asked Questions
       </h1>

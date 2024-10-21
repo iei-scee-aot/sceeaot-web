@@ -7,20 +7,20 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="rounded-lg shadow m-4">
-      <div className="w-full max-w-screen mx-auto pl-16 pr-16 md:py-8">
-        <div className="sm:flex flex-col md:flex-row  sm:items-center sm:justify-between">
+      <div className="w-full max-w-screen mx-auto md:px-16 px-5 md:py-8">
+        <div className="sm:flex flex-wrap  sm:items-center sm:justify-between">
           <Link
             href="/"
             className="flex flex-wrap justify-center items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
           >
             <div><Image src={sceelogo} alt="SCEEAOT" width={100} className="h-8" /></div>
             <div className="text-center">
-              <span className="self-center md:text-2xl text-sm font-semibold mr-10 text-white">
+              <span className="text-center md:text-2xl text-sm font-semibold whitespace-nowrap md:mr-10 text-white">
                 Students Chapter of Electrical Engineering
               </span>
             </div>
           </Link>
-          <div>
+          <div className="flex justify-center">
             <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-white sm:mb-0">
               <li>
                 <a href="#" className="hover:underline me-4 md:me-6">
@@ -57,7 +57,10 @@ const Footer = () => {
         </span>
       </div>
     </footer>
+    
   );
 };
 
 export default Footer;
+
+

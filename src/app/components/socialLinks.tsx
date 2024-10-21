@@ -22,11 +22,11 @@ const GridButtons = () => {
   ];
 
   return (
-    <div className="relative">
-      <h2 className="text-yellow-400 text-2xl mb-4 tracking-wide text-center font-bold">Connect with us</h2>
+    <div className="relative md:scale-150">
+      <h2 className="text-yellow-400 md:text-2xl text-xl mb-4 tracking-wide text-center font-bold">Connect with us</h2>
       <div className="flex justify-center">
-        <div className="bg-black rounded-lg shadow-lg p-4">
-          <div className="grid grid-cols-3 gap-4">
+        <div className="bg-black  rounded-lg shadow-">
+          <div className="flex  md:grid md:grid-cols-3 gap-4">
             {buttons.map((button, index) => (
               <Link 
                 key={index} 
@@ -34,8 +34,8 @@ const GridButtons = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <div className="relative flex justify-center items-center bg-black-800 hover:scale-105 transition-transform duration-300 rounded-lg p-2">
-                  <Image src={button.logo} alt={button.alt} width={80} height={80} />
+                <div className=" relative flex justify-center items-center bg-black hover:scale-105 transition-transform duration-300 rounded-lg p-2">
+                  <Image className="scale-75  " src={button.logo} alt={button.alt} width={20} height={20} />
                 </div>
               </Link>
             ))}

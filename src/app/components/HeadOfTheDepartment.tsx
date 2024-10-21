@@ -4,7 +4,7 @@ import star from "@/assets/icons/star-icon.png";
 const HeadOfTheDepartment = () => {
   return (
     <div
-      className="mt-20 mb-0 pb-0 p-5 mx-20 flex flex-col rounded-3xl  "
+      className=" mt-20 mb-0 pb-0 p-5 mx-5 md:mx-20 flex flex-col rounded-3xl  "
       style={{
         backgroundColor: "rgba(59, 60, 60, 0.75)",
       }}
@@ -30,9 +30,9 @@ const HeadOfTheDepartment = () => {
             </span>
           </div>
         </div>
-        <div className="flex-grow p-5 ml-5 pb-5">
-          <p className="text-xl font-bold italic transform transition-transform duration-200 hover:scale-[1.02]">
-            <span className="text-xl text-yellow-300 mr-2">&#x275D;</span>
+        <div className="flex-grow md:p-5 p-0 pt-2 md:pt-0 ml-0 md:ml-5 pb-5">
+          <p className="text-xl text-center md:text-left font-bold italic transform transition-transform duration-200 hover:scale-[1.02]">
+            <span className="text-lg md:text-xl text-yellow-300">&#x275D;</span>
             Our department has created a platform to deliver strong fundamentals
             based technical education. We strive to produce electrical engineers
             who are well suited for industry as well as society. As HOD of this

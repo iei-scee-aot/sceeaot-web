@@ -4,7 +4,7 @@ import star from "@/assets/icons/star-icon.png";
 const FacultyAdvisors = () => {
   return (
     <div
-      className="mt-20 p-5 mx-20 rounded-3xl shadow-lg " 
+      className="mt-20 p-5 mx-5 md:mx-20 rounded-3xl shadow-lg " 
       style={{backgroundColor: 'rgba(59, 60, 60, 0.75)',}}>
       <div className="flex pl-3 items-center mb-4">
         <Image src={star} alt="star" width={24} />

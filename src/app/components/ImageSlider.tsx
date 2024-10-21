@@ -31,7 +31,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ slides }) => {
   };
 
   return (
-    <div className="mr-10 mb-[200px] flex flex-col items-center justify-center h-[450px] relative">
+    <div className=" flex mx-auto flex-col items-center justify-center w-full md:h-[450px] h-56 relative">
       <div className="flex items-center h-full">
         {/* Left Arrow */}
         <div
@@ -44,7 +44,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ slides }) => {
 
         {/* Slide with Transparent Effect */}
         <div
-          className="w-[340px] h-[200px] md:w-[488px] md:h-[320px] rounded-lg bg-cover bg-center transition-transform duration-500 ease-in-out relative overflow-hidden transform hover:scale-105" 
+          className="w-[315px] h-[200px] md:w-[490px] md:h-[320px] rounded-lg bg-cover bg-center transition-transform duration-500 ease-in-out relative overflow-hidden transform hover:scale-105" 
           style={{
             backgroundImage: `url(${slides[currentIndex].url})`,
             backgroundColor: "transparent",
