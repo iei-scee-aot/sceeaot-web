@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        // This maps the class "font-apparat" to "KMR Apparat"
+        apparat: ["KMR Apparat", "sans-serif"],
+      },
     },
   },
   plugins: [],
