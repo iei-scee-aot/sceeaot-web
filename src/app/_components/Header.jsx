@@ -3,22 +3,29 @@ import Image from "next/image";
 const Header = () => {
   return (
     <header className="w-screen flex justify-between items-center">
-          <div className="flex items-center gap-2">
+          <div className=" flex justify-end items-baseline">
+            <div className="flex items-center gap-2">
             <Image
               src="/scee_logo.jpg"
               alt="SCEE Logo"
-              width={80}
-              height={40}
-              className="object-contain"
+              width={100}
+              height={50}
+              className="object-contain pl-3"
             />
-            <span className="text-xs text-[#747474]">
+            <div className="flex mt-3 items-baseline"><span className="text-[8px] text-[#747474]">
               Student Chapter EE AOT
-            </span>
+            </span></div>
+            
           </div>
-          <div className="grid grid-cols-3 grid-rows-2 gap-1">
+          </div>
+          <div className=" flex items-center justify-center">
+          <table className="border border-gray-300 border-collapse">
+        <tbody>
+          <tr>
+            <td className="w-6 h-6 border flex items-center justify-center border-gray-400 text-xs font-semibold  text-center">
             <a
               href="#"
-              className="p-1 rounded-md border border-[#747474] text-[#747474]"
+              className=" text-[#747474]"
             >
               <img
                 src="/facebook.jpg"
@@ -26,15 +33,19 @@ const Header = () => {
                 className="w-4 h-4 object-contain"
               />
             </a>
+            </td>
+            <td className="w-6 h-6 border  border-gray-400 text-xs font-semibold  ">
             <a
               href="#"
-              className="p-1 rounded-md border border-[#747474] text-[#747474]"
+              className=" text-[#747474] flex items-center justify-center"
             >
-              <img src="/x.jpg" alt="X" className="w-4 h-4 object-contain" />
+              <img src="/x.jpg" alt="X" className="w-4 h-4 object-fill" />
             </a>
+            </td>
+            <td className="w-6 h-6 border border-gray-400 text-xs font-semibold  ">
             <a
               href="#"
-              className="p-1 rounded-md border border-[#747474] text-[#747474]"
+              className="flex items-center justify-center rounded-md  "
             >
               <img
                 src="/linkedin.jpg"
@@ -42,9 +53,13 @@ const Header = () => {
                 className="w-4 h-4 object-contain"
               />
             </a>
+            </td>
+          </tr>
+          <tr>
+            <td className="w-6 h-6 border border-gray-400 text-xs font-semibold  ">
             <a
               href="#"
-              className="p-1 rounded-md border border-[#747474] text-[#747474]"
+              className="flex justify-center items-center rounded-md  "
             >
               <img
                 src="/instagram.jpg"
@@ -52,9 +67,11 @@ const Header = () => {
                 className="w-4 h-4 object-contain"
               />
             </a>
+            </td>
+            <td className="w-6 h-6 border border-gray-400 text-xs font-semibold  ">
             <a
               href="#"
-              className="p-1 rounded-md border border-[#747474] text-[#747474]"
+              className="flex justify-center items-center rounded-md  "
             >
               <img
                 src="/threads.jpg"
@@ -62,9 +79,11 @@ const Header = () => {
                 className="w-4 h-4 object-contain"
               />
             </a>
+            </td>
+            <td className="w-6 h-6 border border-gray-400 text-xs font-semibold  ">
             <a
               href="#"
-              className="p-1 rounded-md border border-[#747474] text-[#747474]"
+              className="flex justify-center items-center rounded-md  "
             >
               <img
                 src="/whatsapp.jpg"
@@ -72,7 +91,24 @@ const Header = () => {
                 className="w-4 h-4 object-contain"
               />
             </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
           </div>
+
+
+
+
+
+          {/* <div className="grid grid-cols-3 grid-rows-2 ">
+            
+            
+            
+            
+            
+            
+          </div> */}
         </header>
   )
 }
