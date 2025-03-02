@@ -23,7 +23,7 @@ const EventCard: React.FC<EventCardProps> = ({
   description,
 }) => {
   return (
-    <div className="mb-6 border border-white border-[#747474]/30 rounded-sm overflow-hidden bg-[#000000]">
+    <div className="mt-0 pt=0 mb-6 border border-white border-[#747474]/30 rounded-sm overflow-hidden bg-[#000000]">
       <div className="relative">
         <Image
           src={imageSrc}

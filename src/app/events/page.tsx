@@ -32,7 +32,7 @@ export default function EventsPage() {
               className="object-contain"
             />
             <span className="text-xs text-[#747474]">
-              Student Chapter EE AOT
+              Students' Chapter EE AOT
             </span>
           </div>
 
@@ -122,11 +122,12 @@ export default function EventsPage() {
               isVisible ? "animate-marquee" : "opacity-0"
             }`}
             style={{
+              fontFamily: "KMR Apparat1",
               WebkitTextStroke: "1px #fec20c",
               lineHeight: "1",
             }}
           >
-            Ongoing Events !
+            Ongoing Events!
           </h2>
           <div className="h-[200px] flex items-center justify-center">
             {/* Empty state for ongoing events */}
@@ -134,18 +135,27 @@ export default function EventsPage() {
         </div>
 
         {/* Past Events Section */}
-        <div className="p-4">
+        <div className="border-t border-b border-white pl-4 pr-4 pt-0 pb-0 mb-0">
+          <div
+          className="p-4 relative overflow-hidden"
+          style={{
+            border: "1px solid white", // 1px white border
+            borderTop:"none",
+            boxShadow: "0.5px 0 0 0 white, -0.5px 0 0 0 white", // Offsets left & right borders
+          }}>
           <h2
             className={`text-[2.5rem] font-bold text-transparent bg-clip-text mb-4 whitespace-nowrap ${
               isVisible ? "animate-marquee" : "opacity-0"
             }`}
             style={{
+              fontFamily: "KMR Apparat1",
               WebkitTextStroke: "1px #fec20c",
               lineHeight: "1",
             }}
           >
             Past Events
           </h2>
+          </div>
 
           {/*HoverX Event Card*/}
           <PastEventCard
@@ -156,7 +166,9 @@ export default function EventsPage() {
           mode="Offline"
           fees="Free"
           teamSize="Solo"
-          description="A completely virtual photography event organized by IEI Students’ Chapter EE to celebrate Durga Puja. It was based on three themes all participate can take part in all or any one. Winner of each theme was awarded with a cash prize of ₹200."
+          description="From concept to flight !!
+          Our hands-on drone-making workshop, HOVERX was a soaring success. While all the participants explored the mechanics of drone making, they witnessed the live flight demos of two fully functional drones. 
+          The journey of learning & innovation continues."
           />
 
           {/* PUJO PIXEL Event Card */}
@@ -188,6 +200,7 @@ export default function EventsPage() {
           />
 
           {/* ELECTROFORGE Event Card */}
+
           <PastEventCard
           imageSrc="/utils/electroforge.png"
           title="ELECTROFORGE"

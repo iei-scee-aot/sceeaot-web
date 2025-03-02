@@ -21,49 +21,49 @@ body {
 }
 
 @font-face {
-  font-family: "KMR Apparat";
+  font-family: "KMR Apparat1";
   src: url("/fonts/KMR-Apparat-Light.ttf") format("truetype");
   font-weight: 300; /* Light */
   font-style: normal;
 }
 
 @font-face {
-  font-family: "KMR Apparat";
+  font-family: "KMR Apparat2";
   src: url("/fonts/KMR-Apparat-Book.ttf") format("truetype");
   font-weight: 350; /* or 400, if you prefer Book as normal weight */
   font-style: normal;
 }
 
 @font-face {
-  font-family: "KMR Apparat";
+  font-family: "KMR Apparat3";
   src: url("/fonts/KMR-Apparat-Regular.ttf") format("truetype");
   font-weight: 400; /* Regular */
   font-style: normal;
 }
 
 @font-face {
-  font-family: "KMR Apparat";
+  font-family: "KMR Apparat4";
   src: url("/fonts/KMR-Apparat-Medium.ttf") format("truetype");
   font-weight: 500; /* Medium */
   font-style: normal;
 }
 
 @font-face {
-  font-family: "KMR Apparat";
+  font-family: "KMR Apparat5";
   src: url("/fonts/KMR-Apparat-Bold.ttf") format("truetype");
   font-weight: 700; /* Bold */
   font-style: normal;
 }
 
 @font-face {
-  font-family: "KMR Apparat";
+  font-family: "KMR Apparat6";
   src: url("/fonts/KMR-Apparat-Heavy.ttf") format("truetype");
   font-weight: 800; /* Heavy */
   font-style: normal;
 }
 
 @font-face {
-  font-family: "KMR Apparat";
+  font-family: "KMR Apparat7";
   src: url("/fonts/KMR-Apparat-Black.ttf") format("truetype");
   font-weight: 900; /* Black */
   font-style: normal;
