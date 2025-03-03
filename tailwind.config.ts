@@ -15,6 +15,7 @@ export default {
       fontFamily: {
         // This maps the class "font-apparat" to "KMR Apparat"
         apparat: ["KMR Apparat", "sans-serif"],
+        pxg: ["'PXG'", "sans-serif"],
       },
     },
   },

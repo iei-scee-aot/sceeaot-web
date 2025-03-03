@@ -23,7 +23,7 @@ body {
 @font-face {
   font-family: "KMR Apparat1";
   src: url("/fonts/KMR-Apparat-Light.ttf") format("truetype");
-  font-weight: 300; /* Light */
+  font-weight: 900; /* Light */
   font-style: normal;
 }
 
@@ -37,7 +37,7 @@ body {
 @font-face {
   font-family: "KMR Apparat3";
   src: url("/fonts/KMR-Apparat-Regular.ttf") format("truetype");
-  font-weight: 400; /* Regular */
+  font-weight: 300; /* Regular */
   font-style: normal;
 }
 
@@ -65,6 +65,13 @@ body {
 @font-face {
   font-family: "KMR Apparat7";
   src: url("/fonts/KMR-Apparat-Black.ttf") format("truetype");
-  font-weight: 900; /* Black */
+  font-weight: 300; /* Black */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PXG';
+  src: url('/fonts/Px-Grotesk-Regular.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
 }

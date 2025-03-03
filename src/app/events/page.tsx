@@ -112,30 +112,38 @@ export default function EventsPage() {
         </header>
 
         {/* Ongoing Events Section */}
-        <div className="p-4 border-b border-[#747474]/30">
+        <div className="border-t border-b border-white pl-4 pr-4 pt-0 pb-0 mb-0">
           {/*
             2) Use .animate-marquee, starting at 100vw -> -100%.
             3) Add whitespace-nowrap so it doesn't wrap mid-animation.
           */}
+          <div className="p-4 relative overflow-hidden"
+          style={{
+            border: "1px solid white", // 1px white border
+            borderTop:"none",
+            boxShadow: "0.5px 0 0 0 white, -0.5px 0 0 0 white", // Offsets left & right borders
+          }}>
           <h2
-            className={`text-[2.5rem] font-bold text-transparent bg-clip-text whitespace-nowrap ${
+            className={`text-[3rem] font-bold text-transparent bg-clip-text mb-2.5 mt-2 whitespace-nowrap ${
               isVisible ? "animate-marquee" : "opacity-0"
             }`}
             style={{
               fontFamily: "KMR Apparat1",
               WebkitTextStroke: "1px #fec20c",
-              lineHeight: "1",
+              lineHeight: "0",
             }}
           >
             Ongoing Events!
           </h2>
-          <div className="h-[200px] flex items-center justify-center">
+          </div>
+          <div className="h-[200px] flex items-center justify-center border border-l-1 border-r-1 border-b-0 border-white">
             {/* Empty state for ongoing events */}
+            <p>No ongoing events</p>
           </div>
         </div>
 
         {/* Past Events Section */}
-        <div className="border-t border-b border-white pl-4 pr-4 pt-0 pb-0 mb-0">
+        <div className="border-t border-b border-white pl-4 pr-4 pt-0 pb-0 mb-0 mt-5">
           <div
           className="p-4 relative overflow-hidden"
           style={{
@@ -144,19 +152,20 @@ export default function EventsPage() {
             boxShadow: "0.5px 0 0 0 white, -0.5px 0 0 0 white", // Offsets left & right borders
           }}>
           <h2
-            className={`text-[2.5rem] font-bold text-transparent bg-clip-text mb-4 whitespace-nowrap ${
+            className={`text-[3rem] font-bold text-transparent bg-clip-text mb-1 mt-2 whitespace-nowrap ${
               isVisible ? "animate-marquee" : "opacity-0"
             }`}
             style={{
               fontFamily: "KMR Apparat1",
               WebkitTextStroke: "1px #fec20c",
-              lineHeight: "1",
+              lineHeight: "0",
             }}
           >
             Past Events
           </h2>
           </div>
 
+          <div className="grid place-items-center h-full w-full border border-white border-b-0 border-t-0 pt-5">
           {/*HoverX Event Card*/}
           <PastEventCard
           imageSrc="/utils/hoverx.png"
@@ -215,6 +224,7 @@ export default function EventsPage() {
                 design, fabrication and application of PCBs in modern
                 electronics."
           />
+          </div>
         </div>
 
         {/* Footer */}
