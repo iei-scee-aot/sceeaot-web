@@ -33,11 +33,10 @@ const EventCard: React.FC<EventCardProps> = ({
           className="w-full h-auto"
         />
         <div className="absolute bottom-0 right-0 bg-[#fec20c] text-black py-2 px-4 flex flex-col items-start gap-1 font-semibold hover:bg-[#fec20c]/90 transition-all duration-300">
-        <span>VIEW</span>
-        <span>GALLERY</span>
-        <ArrowRight size={16} className="animate-float" />
+          <span>VIEW</span>
+          <span>GALLERY</span>
+          <ArrowRight size={16} className="animate-float" />
         </div>
-
       </div>
 
       <div className="p-4">
@@ -48,25 +47,33 @@ const EventCard: React.FC<EventCardProps> = ({
           </span>
         </div>
 
-        <div className="grid grid-cols-2 gap-2 mb-4 text-sm">
-          <div className="flex justify-between border-b border-[#747474] py-1">
-            <span className="text-[#747474]">Date</span>
-            <span className="text-[#fec20c]">{date}</span>
-          </div>
-          <div className="flex justify-between border-b border-[#747474] py-1">
-            <span className="text-[#747474]">Mode</span>
-            <span className="text-[#fec20c]">{mode}</span>
-          </div>
-          <div className="flex justify-between border-b border-[#747474] py-1">
-            <span className="text-[#747474]">Registration Fees</span>
-            <span className="text-[#fec20c]">{fees}</span>
-          </div>
-          <div className="flex justify-between border-b border-[#747474] py-1">
-            <span className="text-[#747474]">Team Size</span>
-            <span className="text-[#fec20c]">{teamSize}</span>
-          </div>
+        <div className="grid grid-cols-[1fr_2fr] border-b border-gray-700">
+          {/* Date row */}
+          <div className="p-3 border-r border-gray-700 font-semibold">Date</div>
+          <div className="p-3 text-yellow-500">{date}</div>
         </div>
 
+        <div className="grid grid-cols-[1fr_1fr_1fr_1fr] border-b border-gray-700">
+          {/* Mode + Registration Fees row */}
+          <div className="p-3 border-r border-gray-700 font-semibold">Mode</div>
+          <div className="p-3 border-r border-gray-700 text-yellow-500">
+            {mode}
+          </div>
+          <div className="p-3 border-r border-gray-700 font-semibold">
+            Registration Fees
+          </div>
+          <div className="p-3 text-yellow-500">{fees}</div>
+        </div>
+
+        <div className="grid grid-cols-[1fr_2fr] border-b border-gray-700">
+          {/* Team Size row */}
+          <div className="p-3 border-r border-gray-700 font-semibold">
+            Team Size
+          </div>
+          <div className="p-3 text-yellow-500">{teamSize}</div>
+        </div>
+
+        {/* Description row */}
         <p className="text-sm text-[#f6f6f4]">{description}</p>
       </div>
     </div>
