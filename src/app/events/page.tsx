@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import PastEventCard from "./_components/PastEventCard";
+import Header from "../_components/Header";
+import Divider from "../_components/Divider";
 
 export default function EventsPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,97 +22,8 @@ export default function EventsPage() {
         2) Keep w-[25rem] if you like, or switch to max-w-sm for true responsiveness.
       */}
       <main className="relative flex flex-col w-[25rem] mx-auto min-h-screen bg-[#000000] text-white font-sans pb-32 overflow-x-hidden">
-        {/* Header */}
-        <header className="flex justify-between items-center p-4 border-b border-[#747474]/30">
-          {/* Left Section: Logo + Text */}
-          <div className="flex items-center gap-2">
-            <Image
-              src="/scee_logo.jpg"
-              alt="SCEE Logo"
-              width={80}
-              height={40}
-              className="object-contain"
-            />
-            <span className="text-xs text-[#747474]">
-              Students' Chapter EE AOT
-            </span>
-          </div>
-
-          {/* Right Section: Discord Icon + Other Social Icons */}
-          <div className="flex items-center gap-4">
-            {/* Discord Icon */}
-            <a href="#" className="relative">
-              <img
-                src="/discord.jpg"
-                alt="Discord"
-                className="w-8 h-8 object-contain"
-              />
-              {/* Red notification dot (optional). Adjust size/position as needed */}
-              {/* <span className="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full"></span> */}
-            </a>
-
-            {/* Other Social Icons */}
-            <div className="grid grid-cols-3 grid-rows-2 gap-1">
-              <a
-                href="#"
-                className="p-1 rounded-md border border-[#747474] text-[#747474]"
-              >
-                <img
-                  src="/facebook.jpg"
-                  alt="Facebook"
-                  className="w-4 h-4 object-contain"
-                />
-              </a>
-              <a
-                href="#"
-                className="p-1 rounded-md border border-[#747474] text-[#747474]"
-              >
-                <img src="/x.jpg" alt="X" className="w-4 h-4 object-contain" />
-              </a>
-              <a
-                href="#"
-                className="p-1 rounded-md border border-[#747474] text-[#747474]"
-              >
-                <img
-                  src="/linkedin.jpg"
-                  alt="Linkedin"
-                  className="w-4 h-4 object-contain"
-                />
-              </a>
-              <a
-                href="#"
-                className="p-1 rounded-md border border-[#747474] text-[#747474]"
-              >
-                <img
-                  src="/instagram.jpg"
-                  alt="Instagram"
-                  className="w-4 h-4 object-contain"
-                />
-              </a>
-              <a
-                href="#"
-                className="p-1 rounded-md border border-[#747474] text-[#747474]"
-              >
-                <img
-                  src="/threads.jpg"
-                  alt="Threads"
-                  className="w-4 h-4 object-contain"
-                />
-              </a>
-              <a
-                href="#"
-                className="p-1 rounded-md border border-[#747474] text-[#747474]"
-              >
-                <img
-                  src="/whatsapp.jpg"
-                  alt="WhatsApp"
-                  className="w-4 h-4 object-contain"
-                />
-              </a>
-            </div>
-          </div>
-        </header>
-
+        <Divider />
+        <Header />
         {/* Ongoing Events Section */}
         <div className="border-t border-b border-white pl-4 pr-4 pt-0 pb-0 mb-0">
           {/*

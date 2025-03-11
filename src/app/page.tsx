@@ -1,13 +1,32 @@
-import Link from 'next/link'
-import React from 'react'
+import React from "react";
+import Navbar from "./_components/Navbar";
+import Header from "./_components/Header";
+import Divider from "./_components/Divider";
+import Footer from "./_components/Footer";
 
 const HomePage = () => {
   return (
-    <main className="flex flex-col items-center justify-center h-screen">
-      <h1>Home Page</h1>
-      <Link href="events/">Go to events page</Link>
-    </main>
-  )
-}
+    <div className="relative min-h-screen bg-black flex flex-col">
+      {/* Fixed Divider and Header */}
+      <div className="fixed top-[0.9375rem] w-full z-50 bg-black">
+        <Divider />
+        <div className="w-full flex justify-between items-center border-b-2">
+          <div className="px-3 h-12"></div>
+          <Header />
+          <div className="px-3 h-12"></div>
+        </div>
+        <Divider />
+      </div>
 
-export default HomePage
+      {/* Navbar remains normal */}
+      <Navbar />
+
+      {/* Footer at exact 41.653125rem distance */}
+      <div className="mt-[41.653125rem]">
+        <Footer />
+      </div>
+    </div>
+  );
+};
+
+export default HomePage;
