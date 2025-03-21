@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 const Header = () => {
   return (
-    <header className="w-screen flex justify-between items-center">
+    <header className="w-[calc(100%-30px)] border-[0.5px] border-t-0 border-b-0 border-gray-400 flex justify-between items-center mx-auto">
           <div className=" flex justify-end items-baseline">
             <div className="flex items-center gap-2">
             <Image

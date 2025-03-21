@@ -6,9 +6,9 @@ import Divier from "../team/_components/Divider";
 const Navbar = () => {
   return (
     <>
-        <nav className="fixed w-screen bottom-0  bg-[#0e0c0c] border-t border-white z-50  flex justify-between items-start">
-        <div className="px-3 border-r-[0.5px] h-20"></div>
-        <div className="navigation h-16 w-screen border-b flex justify-between">
+        <nav className="fixed w-screen bottom-0  bg-[#0e0c0c] border-t border-white z-50  flex flex-col">
+        <div className="flex justify-between items-start" >
+        <div className="navigation h-16 w-[calc(100%-30px)] mx-auto border-l border-r  flex justify-between">
           <div className="w-1/4 flex border-r justify-between items-center">
             <Link href="/" className="flex flex-col w-full">
               <span className="text-white font-bold text-lg pb-2 pl-2">Home</span>
@@ -57,9 +57,12 @@ const Navbar = () => {
             </Link>
           </div>
         </div>
-        <div className="px-3 border-l-[0.5px] h-20"></div>
-        
+        </div>
+        <div className=" w-screen py-3 border-t">
+
+        </div>
       </nav>
+
     </>
   )
 }

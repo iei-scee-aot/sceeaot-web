@@ -4,159 +4,98 @@ import Card from "./_components/Card"
 import Footer from "../_components/Footer";
 import Header from "../_components/Header";
 import Divider from "./_components/Divider";
+import Divider2 from "./_components/Divider2";
 import Navbar from "../_components/Navbar";
 import Image from "next/image";
 const Page = () => {
   return (
     <>
-      <Divider />
-      {/* <Header /> */}
-      <div className="w-screen flex justify-between align-middle items-center border-b-2">
-        <div className="px-3 border-r-[0.5px] h-12"></div>
-        <Header/>
-        <div className="px-3 border-l-[0.5px] h-12"></div>
-      </div>
-      <Divider />
-      {/*prev team*/}
-      <div className="w-screen flex align-middle items-center border-b-2">
-        <div className="px-3 border-r-[0.5px] h-56"></div>
-        <div className="h-56 w-screen overflow-hidden text-center flex flex-col mx-auto ">
-          <div className="h-10 border-b-[0.5px] overflow-y-hidden">
-          <h1 className="text-2xl font-bold whitespace-nowrap text-ellipsis">THE PREVIOUS TEAM</h1>
+      <div className="h-full w-screen mb-[90px]"> {/* Added padding-bottom */}
+        <Divider />
+        <Header />
+        <Divider2 />
+        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-400 border-t-0 border-b-0 ">
+          <div className="flex items-center  text-5xl font-bold border-gray-400 border-b-[0.5px] text-white h-fit leading-none whitespace-nowrap overflow-hidden ">
+            <p>The previous team</p>
           </div>
-          <div className=" h-fit ">
-            <img src="/oldteam.jpg" alt="old team" />
+          <div className="relative w-full h-[200px] flex flex-wrap justify-center">
+            <Image alt="scee-old-team" src="/oldteam.jpg" layout="fill" objectFit="cover" />
           </div>
         </div>
-        <div className="px-3 border-l-[0.5px] h-56"></div>
-      </div>
-      <Divider />
-      {/*core team*/}
-      {/*prev team*/}
-      <div className="w-screen flex align-middle items-center border-b-2">
-        <div className="px-3 border-r-[0.5px] h-56"></div>
-        <div className="h-56 w-screen overflow-hidden text-center flex flex-col mx-auto ">
-          <div className="h-10 border-b-[0.5px] overflow-y-hidden">
-          <h1 className="text-2xl font-bold whitespace-nowrap text-ellipsis">CORE TEAM</h1>
+        <Divider2 />
+        {/*Core team*/}
+        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-400 border-t-0 border-b-0 ">
+          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-400 border-b-[0.5px]">
+            Core Team
           </div>
-          <div className=" flex flex-wrap justify-evenly h-fit ">
-            <Card />
-            <Card />
+          <div className="flex flex-wrap justify-center items-center py-12">
             <Card />
           </div>
         </div>
-        <div className="px-3 border-l-[0.5px] h-56"></div>
-      </div>
-      <Divider />
-      {/*tech team*/}
-      <div className="w-screen flex align-middle items-center border-b-2">
-        <div className="px-3 border-r-[0.5px] h-56"></div>
-        <div className="h-56 w-screen overflow-hidden text-center flex flex-col mx-auto ">
-          <div className="h-10 border-b-[0.5px] overflow-y-hidden">
-          <h1 className="text-2xl font-bold whitespace-nowrap text-ellipsis">TECH TEAM</h1>
+        <Divider2 />
+        {/*The Tech Team*/}
+        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-400 border-t-0 border-b-0 ">
+          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-400 border-b-[0.5px]">
+            Tech Team            
           </div>
-          <div className=" flex flex-wrap justify-evenly h-fit ">
-            <Card />
-            <Card />
+          <div className="flex flex-wrap justify-center items-center py-12">
             <Card />
           </div>
         </div>
-        <div className="px-3 border-l-[0.5px] h-56"></div>
-      </div>
-      <Divider />
-      {/*design team*/} 
-      <div className="w-screen flex align-middle items-center border-b-2">
-        <div className="px-3 border-r-[0.5px] h-56"></div>
-        <div className="h-56 w-screen overflow-hidden text-center flex flex-col mx-auto ">
-          <div className="h-10 border-b-[0.5px] overflow-y-hidden">
-          <h1 className="text-2xl font-bold whitespace-nowrap text-ellipsis">DESIGN TEAM</h1>
+        <Divider2 />
+        {/*The Design Team*/}
+        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-400 border-t-0 border-b-0 ">
+          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-400 border-b-[0.5px]">
+            Design Team
           </div>
-          <div className=" flex flex-wrap justify-evenly h-fit ">
-            <Card />
-            <Card />
+          <div className="flex flex-wrap justify-center items-center py-12">
             <Card />
           </div>
         </div>
-        <div className="px-3 border-l-[0.5px] h-56"></div>
-      </div>
-      <Divider />
-      {/*content team*/}
-      <div className="w-screen flex align-middle items-center border-b-2">
-        <div className="px-3 border-r-[0.5px] h-56"></div>
-        <div className="h-56 w-screen overflow-hidden text-center flex flex-col mx-auto ">
-          <div className="h-10 border-b-[0.5px] overflow-y-hidden">
-          <h1 className="text-2xl font-bold whitespace-nowrap text-ellipsis">CONTENT TEAM</h1>
+        <Divider2 />
+        {/*Content Team*/}
+        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-400 border-t-0 border-b-0 ">
+          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-400 border-b-[0.5px]">
+            Content Team
           </div>
-          <div className=" flex flex-wrap justify-evenly h-fit ">
-            <Card />
-            <Card />
+          <div className="flex flex-wrap justify-center items-center py-12">
             <Card />
           </div>
         </div>
-        <div className="px-3 border-l-[0.5px] h-56"></div>
-      </div>
-      <Divider/>
-      {/*pr and marketing team*/}
-      <div className="w-screen flex align-middle items-center border-b-2">
-        <div className="px-3 border-r-[0.5px] h-56"></div>
-        <div className="h-56 w-screen overflow-hidden text-center flex flex-col mx-auto ">
-          <div className="h-10 border-b-[0.5px] overflow-y-hidden">
-          <h1 className="text-2xl font-bold whitespace-nowrap text-ellipsis">PR AND MARKETING TEAM</h1>
+        <Divider2 />
+        {/*PR & Marketing Team*/}
+        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-400 border-t-0 border-b-0 ">
+          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-400 border-b-[0.5px]">
+            PR & Marketing Team
           </div>
-          <div className=" flex flex-wrap justify-evenly h-fit ">
-            <Card />
-            <Card />
+          <div className="flex flex-wrap justify-center items-center py-12">
             <Card />
           </div>
         </div>
-        <div className="px-3 border-l-[0.5px] h-56"></div>
-      </div>
-      <Divider />
-      {/*Photography team*/}
-      <div className="w-screen flex align-middle items-center border-b-2">
-        <div className="px-3 border-r-[0.5px] h-56"></div>
-        <div className="h-56 w-screen overflow-hidden text-center flex flex-col mx-auto ">
-          <div className="h-10 border-b-[0.5px] overflow-y-hidden">
-          <h1 className="text-2xl font-bold whitespace-nowrap text-ellipsis">PHOTOGRAPHY TEAM</h1>
+        <Divider2 />
+        {/*Photography Team*/}
+        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-400 border-t-0 border-b-0 ">
+          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-400 border-b-[0.5px]">
+            Photography Team
           </div>
-          <div className=" flex flex-wrap justify-evenly h-fit ">
-            <Card />
-            <Card />
+          <div className="flex flex-wrap justify-center items-center py-12">
             <Card />
           </div>
         </div>
-        <div className="px-3 border-l-[0.5px] h-56"></div>
-      </div>
-      <Divider />
-      {/*Videography team*/}
-      <div className="w-screen flex align-middle items-center border-b-2">
-        <div className="px-3 border-r-[0.5px] h-56"></div>
-        <div className="h-56 w-screen overflow-hidden text-center flex flex-col mx-auto ">
-          <div className="h-10 border-b-[0.5px] overflow-y-hidden">
-          <h1 className="text-2xl font-bold whitespace-nowrap text-ellipsis">VIDEOGRAPHY TEAM</h1>
+        <Divider2 />
+        {/*Videography Team*/}
+        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-400 border-t-0 border-b-0 ">
+          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-400 border-b-[0.5px]">
+            Videography Team
           </div>
-          <div className=" flex flex-wrap justify-evenly h-fit ">
-            <Card />
-            <Card />
+          <div className="flex flex-wrap justify-center items-center py-12">
             <Card />
           </div>
         </div>
-        <div className="px-3 border-l-[0.5px] h-56"></div>
+        <Divider2 />
+        {/*Footer*/}
+        
       </div>
-      <Divider />
-      {/*Footer*/}
-      <div className="w-screen flex align-middle items-center border-b-2">
-        <div className="px-3 border-r-[0.5px] h-56"></div>
-        <div className="h-56 w-screen overflow-hidden text-center flex flex-col mx-auto ">
-          <div className=" flex flex-wrap justify-evenly h-fit ">
-            Footer
-          </div>
-        </div>
-        <div className="px-3 border-l-[0.5px] h-56"></div>
-      </div>
-      <Divider />
-
-
 
       <Navbar />
     </>
