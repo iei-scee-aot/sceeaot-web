@@ -11,7 +11,7 @@ const Card = () => {
         >
           {/* <!-- Gray Border --> */}
           <polygon
-            points="0,0 100,0 100,90 0,100"
+            points="0,0 100,0 100,100 0,90"
             stroke="gray"
             strokeWidth="1"
             fill="none"

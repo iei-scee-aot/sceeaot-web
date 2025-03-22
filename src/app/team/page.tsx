@@ -14,8 +14,8 @@ const Page = () => {
         <Divider />
         <Header />
         <Divider2 />
-        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-400 border-t-0 border-b-0 ">
-          <div className="flex items-center  text-5xl font-bold border-gray-400 border-b-[0.5px] text-white h-fit leading-none whitespace-nowrap overflow-hidden ">
+        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
+          <div className="flex items-center  text-5xl font-bold border-gray-500 border-b-[0.5px] text-white h-fit leading-none whitespace-nowrap overflow-hidden ">
             <p>The previous team</p>
           </div>
           <div className="relative w-full h-[200px] flex flex-wrap justify-center">
@@ -24,8 +24,8 @@ const Page = () => {
         </div>
         <Divider2 />
         {/*Core team*/}
-        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-400 border-t-0 border-b-0 ">
-          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-400 border-b-[0.5px]">
+        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
+          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-500 border-b-[0.5px]">
             Core Team
           </div>
           <div className="flex flex-wrap justify-center items-center py-12">
@@ -34,8 +34,8 @@ const Page = () => {
         </div>
         <Divider2 />
         {/*The Tech Team*/}
-        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-400 border-t-0 border-b-0 ">
-          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-400 border-b-[0.5px]">
+        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
+          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-500 border-b-[0.5px]">
             Tech Team            
           </div>
           <div className="flex flex-wrap justify-center items-center py-12">
@@ -44,8 +44,8 @@ const Page = () => {
         </div>
         <Divider2 />
         {/*The Design Team*/}
-        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-400 border-t-0 border-b-0 ">
-          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-400 border-b-[0.5px]">
+        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
+          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-500 border-b-[0.5px]">
             Design Team
           </div>
           <div className="flex flex-wrap justify-center items-center py-12">
@@ -54,8 +54,8 @@ const Page = () => {
         </div>
         <Divider2 />
         {/*Content Team*/}
-        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-400 border-t-0 border-b-0 ">
-          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-400 border-b-[0.5px]">
+        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
+          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-500 border-b-[0.5px]">
             Content Team
           </div>
           <div className="flex flex-wrap justify-center items-center py-12">
@@ -64,8 +64,8 @@ const Page = () => {
         </div>
         <Divider2 />
         {/*PR & Marketing Team*/}
-        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-400 border-t-0 border-b-0 ">
-          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-400 border-b-[0.5px]">
+        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
+          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-500 border-b-[0.5px]">
             PR & Marketing Team
           </div>
           <div className="flex flex-wrap justify-center items-center py-12">
@@ -74,8 +74,8 @@ const Page = () => {
         </div>
         <Divider2 />
         {/*Photography Team*/}
-        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-400 border-t-0 border-b-0 ">
-          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-400 border-b-[0.5px]">
+        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
+          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-500 border-b-[0.5px]">
             Photography Team
           </div>
           <div className="flex flex-wrap justify-center items-center py-12">
@@ -84,8 +84,8 @@ const Page = () => {
         </div>
         <Divider2 />
         {/*Videography Team*/}
-        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-400 border-t-0 border-b-0 ">
-          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-400 border-b-[0.5px]">
+        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
+          <div className="flex items-center  text-white h-fit text-5xl font-bold leading-none whitespace-nowrap overflow-hidden border-gray-500 border-b-[0.5px]">
             Videography Team
           </div>
           <div className="flex flex-wrap justify-center items-center py-12">

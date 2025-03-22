@@ -19,10 +19,10 @@ const Header = () => {
           </div>
           </div>
           <div className=" flex items-center justify-center">
-          <table className="border border-gray-300 border-collapse">
+          <table className="border-gray-500 border-l-[0.5px] ">
         <tbody>
           <tr>
-            <td className="w-6 h-6 border flex items-center justify-center border-gray-400 text-xs font-semibold  text-center">
+            <td className="w-6 h-6  flex items-center justify-center text-xs font-semibold  text-center">
             <a
               href="#"
               className=" text-[#747474]"
@@ -34,7 +34,7 @@ const Header = () => {
               />
             </a>
             </td>
-            <td className="w-6 h-6 border  border-gray-400 text-xs font-semibold  ">
+            <td className="w-6 h-6 border-l-[0.5px] border-b-[0.5px]  border-gray-500 text-xs font-semibold  ">
             <a
               href="#"
               className=" text-[#747474] flex items-center justify-center"
@@ -42,7 +42,7 @@ const Header = () => {
               <img src="/x.jpg" alt="X" className="w-4 h-4 object-fill" />
             </a>
             </td>
-            <td className="w-6 h-6 border border-gray-400 text-xs font-semibold  ">
+            <td className="w-6 h-6 border-l-[0.5px] border-gray-500 text-xs font-semibold  ">
             <a
               href="#"
               className="flex items-center justify-center rounded-md  "
@@ -56,7 +56,7 @@ const Header = () => {
             </td>
           </tr>
           <tr>
-            <td className="w-6 h-6 border border-gray-400 text-xs font-semibold  ">
+            <td className="w-6 h-6  border-gray-500 border-t-[0.5px] text-xs font-semibold  ">
             <a
               href="#"
               className="flex justify-center items-center rounded-md  "
@@ -68,7 +68,7 @@ const Header = () => {
               />
             </a>
             </td>
-            <td className="w-6 h-6 border border-gray-400 text-xs font-semibold  ">
+            <td className="w-6 h-6 border-l-[0.5px] border-gray-500 text-xs font-semibold  ">
             <a
               href="#"
               className="flex justify-center items-center rounded-md  "
@@ -80,7 +80,7 @@ const Header = () => {
               />
             </a>
             </td>
-            <td className="w-6 h-6 border border-gray-400 text-xs font-semibold  ">
+            <td className="w-6 h-6 border-l-[0.5px] border-t-[0.5px] border-gray-500 text-xs font-semibold  ">
             <a
               href="#"
               className="flex justify-center items-center rounded-md  "

@@ -6,10 +6,10 @@ import Divier from "../team/_components/Divider";
 const Navbar = () => {
   return (
     <>
-        <nav className="fixed w-screen bottom-0  bg-[#0e0c0c] border-t border-white z-50  flex flex-col">
+        <nav className="fixed w-screen bottom-0  bg-[#0e0c0c] border-t-[0.5px] border-gray-500 z-50  flex flex-col">
         <div className="flex justify-between items-start" >
-        <div className="navigation h-16 w-[calc(100%-30px)] mx-auto border-l border-r  flex justify-between">
-          <div className="w-1/4 flex border-r justify-between items-center">
+        <div className="navigation h-16 w-[calc(100%-30px)] mx-auto border-l-[0.5px] border-r-[0.5px] border-gray-500  flex justify-between">
+          <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
             <Link href="/" className="flex flex-col w-full">
               <span className="text-white font-bold text-lg pb-2 pl-2">Home</span>
               <div className="div flex justify-end pb-2 pr-2">
@@ -19,7 +19,7 @@ const Navbar = () => {
               </div>
             </Link>
           </div>
-          <div className="w-1/4 flex border-r justify-between items-center">
+          <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
             <Link href="/team" className="flex flex-col w-full">
               <span className="text-white font-bold text-lg pb-2 pl-2">Teams</span>
               <div className="div flex justify-end pb-2 pr-2">
@@ -30,7 +30,7 @@ const Navbar = () => {
               
             </Link>
           </div>
-          <div className="w-1/4 flex border-r justify-between items-center">
+          <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
             <Link href="/" className="flex flex-col w-full">
               <span className="text-white font-bold text-lg pb-2 pl-2">Events</span>
               <div className="div flex justify-end pb-2 pr-2">
@@ -58,7 +58,7 @@ const Navbar = () => {
           </div>
         </div>
         </div>
-        <div className=" w-screen py-3 border-t">
+        <div className=" w-screen py-3 border-gray-500 border-t-[0.5px]">
 
         </div>
       </nav>
