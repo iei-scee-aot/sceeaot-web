@@ -144,21 +144,8 @@ const Page = () => {
         </div>
         <div className="px-3 border-l-[0.5px] h-56"></div>
       </div>
-      <Divider />
-      {/*Footer*/}
-      <div className="w-screen flex align-middle items-center border-b-2">
-        <div className="px-3 border-r-[0.5px] h-56"></div>
-        <div className="h-56 w-screen overflow-hidden text-center flex flex-col mx-auto ">
-          <div className=" flex flex-wrap justify-evenly ">
-          <Footer />
-          </div>
-        </div>
-        <div className="px-3 border-l-[0.5px] h-56"></div>
-      </div>
-      <Divider />
-
-
-        {/* Footer (No extra margins) */}
+      
+      <Footer></Footer>
       
       <Navbar />
     </>

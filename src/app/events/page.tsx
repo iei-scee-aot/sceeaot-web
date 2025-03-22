@@ -145,7 +145,7 @@ export default function EventsPage() {
       <Navbar />
 
       {/* Marquee Animations */}
-      <style jsx global="true">{`
+      <style jsx global={true}>{`
         .animate-marquee {
           animation: marquee 10s linear infinite;
         }
