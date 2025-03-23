@@ -10,8 +10,8 @@ export default {
     extend: {
       keyframes: {
         marquee: {
-          from: { transform: "translateX(0%)" },
-          to: { transform: "translateX(-100%)" },
+          '0%': { transform: "translateX(0)" },
+          '100%': { transform: "translateX(-50%)" },
         },
       },
       animation: {
@@ -20,6 +20,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      fontFamily: {
+        apparat: ["KMR Apparat", "sans-serif"],
+        pxg: ["'PXG'", "sans-serif"],
       },
     },
   },
