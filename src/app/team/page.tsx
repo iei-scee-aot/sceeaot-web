@@ -22,7 +22,7 @@ const Page = () => {
 
   return (
     <>
-      <div className="h-full w-screen mb-[29px] pb-[60px]"> {/* Added padding-bottom */}
+      <div className="h-full w-screen mb-[29px] pb-[60px] font-pxg"> {/* Added padding-bottom */}
         <Divider />
         <Header />
         <Divider2 />
