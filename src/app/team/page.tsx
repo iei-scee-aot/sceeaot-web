@@ -230,7 +230,7 @@ const Page = () => {
         <Divider2/>
       </div>
 
-      <Navbar />
+      <Navbar teamColor="#FEC20C" />
     </>
   );
 };
