@@ -39,7 +39,7 @@ const Footer = () => {
             </div>
             <Link
               href="/contact"
-              className="flex items-center justify-between text-center mx-auto -mt-[15px] text-[3.1rem] font-light font-apparat group"
+              className="flex items-center justify-between text-center mx-auto -mt-[15px] text-[3rem] font-light font-apparat group"
             >
               Contact us
               <ArrowUpRight
