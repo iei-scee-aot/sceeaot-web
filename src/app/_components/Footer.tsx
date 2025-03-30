@@ -23,7 +23,8 @@ const Footer = () => {
                 </span>
 
                 {/* Linktree icon + /sceeaot in a row */}
-                <Link href="#" className="flex justify-center text-center items-center gap-1">
+                <Link href="https://linktr.ee/sceeaot?fbclid=PAY2xjawJV8IdleHRuA2FlbQIxMQABpmwEJYsLFgEq1OaWdlXDp1uDruyZb1mJ8buyCqrcjtfVIrNUKddTQwfG_g_aem_-1VCGJMHI1fDe_dN92eGEw"
+                 className="flex justify-center text-center items-center gap-1">
                   <img
                     src="/linktree.jpg"
                     alt="Linktree"
