@@ -1,151 +1,120 @@
-import React from "react";
-import Navbar from "./_components/Navbar";
+"use client";
+import React from "react"
+import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import Divider from "./_components/Divider";
-import Footer from "./_components/Footer";
+import Divider2 from "./_components/Divider2";
+import Navbar from "./_components/Navbar";
+
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import Headlines from "./_components/Headlines";
 
 const HomePage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
-    <div className="relative min-h-screen bg-black flex flex-col font-sans">
-      {/* Fixed Divider and Header */}
-      <div className="top-[0.9375rem] w-full z-50 bg-black">
+    <>
+      <div className="h-full w-screen font-pxg"> {/* Added padding-bottom */}
         <Divider />
-        <div className="w-full flex justify-between items-center border-b-2 border-white">
-          <div className="px-3 h-12"></div>
-          <Header />
-          <div className="px-3 h-12"></div>
+        <Header />
+      </div>
+      <Divider2 />
+
+      {/*Hero Section*/}
+      <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
+        <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
+        </div>
+        <div className="flex flex-wrap gap-7 justify-center items-stretch py-12">
         </div>
       </div>
+      <Divider2 />
 
-      <Divider />
-<div className="w-full flex justify-center items-center border-b-2">
-  <div className="px-3 border-r-[0.5px] min-h-56"></div>
-  <div className=" flex-1 text-center">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit commodi saepe dolorem consequatur nobis hic culpa 
-    veritatis cumque ipsa doloribus cum obcaecati quae, architecto maxime aliquam, dolore eum? Ratione, in!
+      {/*About us*/}
+      <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
+        <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
+          <Headlines headLine="About Us" />
+        </div>
+        <div className="min-h-[3.75rem] flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
+        </div>
+        <div className="flex flex-wrap gap-7 pl-[1.40625rem] pr-[1.40625rem] text-[10.5px] text-left justify-center items-stretch pt-[1.40625rem] font-pxg">
+          Welcome to the IEI Students' Chapter of Electrical Engineering! We may be the newest community on the block, but we’re definitely the most energetic and driven one.<br/><br/>
+
+          Our mission is to create a space where students can dive into both core and non-core topics, learn new skills, and push the limits of what they can achieve. We organize everything from hands-on workshops and ideathons to competitions and brainstorming sessions, all designed to spark creativity and innovation.<br/><br/>
+
+          It’s not just about textbooks here - it’s about real-world experiences and connecting with others who share the same passion for engineering.<br/><br/>
+
+          So, if you’re looking to learn, grow, and have a ton of fun, join us on this exciting journey! We can’t wait to see what we can achieve together.
+        </div>
+        <div className="relative w-full mt-4">
+          <Image src="/oldteam.jpg" alt="About Us" width={500} height={248} className="w-full" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/85 to-transparent"></div>
+        </div>
+      </div>
+      <Divider2 />
+
+      {/*Live Events*/}
+      <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
+        <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
+          <Headlines headLine="Live Events"/>
+        </div>
+        <div className="min-h-[3.75rem] flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
+        </div>
+        <div className="flex flex-wrap gap-7 justify-center items-stretch py-12">
+        
+        </div>
+      </div>
+      <Divider2 />
+
+      <div className="w-[calc(100%-20px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+  <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
+    <Headlines headLine="From The HOD's Desk" />
   </div>
-
-  <div className="px-3 border-l-[0.5px] min-h-56"></div>
+  <div className="flex gap-3 items-center py-[1.5rem] pl-[0.9rem] pr-[0.6rem] text-[10.5px] font-pxg tracking-tight leading-snug">
+    <Image src="/HOD.jpeg" alt="HOD's PIC" width={133} height={133} className="rounded-sm" />
+    <p className="flex-1">
+      Our department has created a platform to deliver strong fundamentals-based technical education. 
+      We strive to produce electrical engineers who are well suited for both 
+      industry and society.<br/>
+      As HOD of this department, I endeavor to transform them into 
+      creators of technology with good human values and a 
+      commitment towards our nation.<br/>
+      <span className="font-bold text-yellow-500"> - Prof. Sandip Saha Chowdhury<br/>
+      HOD, Department of Electrical Engineering</span>
+    </p>
+  </div>
 </div>
-<Divider />
+
+<Divider2 />
 
 
-
-
-      <div className="w-screen flex align-middle items-center border-b-2 min-h-56">
-        <div className="px-3 border-r-[0.5px] min-h-56"></div>
-        <div className="min-h-56 w-screen overflow-hidden text-center flex flex-col mx-auto ">
-          <div className="h-11 border-b-[0.5px] overflow-y-hidden">
-            <h1
-              className="text-[49px] font-bold whitespace-nowrap text-ellipsis text-transparent bg-clip-text"
-              style={{
-                fontFamily: "KMR Apparat1",
-                WebkitTextStroke: "1px #fec20c",
-                lineHeight: "1.2",
-              }}
-            >
-              About us
-            </h1>
-          </div>
-          <div className=" flex flex-wrap justify-evenly h-fit text-[10px] ">
-          <div className="w-screen border-b border-gray-300 ">
-            <div className="bg-yellow-400 h-[3.125rem] w-[5.356875rem] text-center text-black py-2">
-              MEET THE<br/>TEAM
-            </div>
-          </div>
-          Welcome to the IEI Students' Chapter of Electrical Engineering! We may be the newest community on the block, but we’re definitely the most energetic and driven one. 
-
-Our mission is to create a space where students can dive into both core and non-core topics, learn new skills, and push the limits of what they can achieve. We organize everything from hands-on workshops and ideathons to competitions and brainstorming sessions, all designed to spark creativity and innovation. 
-
-It’s not just about textbooks here - it’s about real-world experiences and connecting with others who share the same passion for engineering. 
-
-So, if you’re looking to learn, grow, and have a ton of fun, join us on this exciting journey! We can’t wait to see what we can achieve together.
-          </div>
+      {/*FAQs*/}
+      <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
+        <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
+          <Headlines headLine="FAQs" />
         </div>
-        <div className="px-3 border-l-[0.5px] min-h-56"></div>
-        
-      </div>
-      <Divider />
-    
-      <div className="w-screen flex align-middle items-center border-b-2">
-        <div className="px-3 border-r-[0.5px] h-56"></div>
-        <div className="h-56 w-screen overflow-hidden text-center flex flex-col mx-auto ">
-          <div className="h-11 border-b-[0.5px] overflow-y-hidden">
-            <h1
-              className="text-[49px] font-bold whitespace-nowrap text-ellipsis text-transparent bg-clip-text"
-              style={{
-                fontFamily: "KMR Apparat1",
-                WebkitTextStroke: "1px #fec20c",
-                lineHeight: "1.2",
-              }}
-            >
-              Live Events
-            </h1>
-          </div>
-          <div className=" flex flex-wrap justify-evenly h-fit ">
-          <div className="w-screen border-b border-gray-300 ">
-            <div className="bg-yellow-400 h-[3.125rem] w-[5.356875rem] text-center text-black text-[10px] py-2">
-              VIEW ALL<br/>EVENTS
-            </div>
-          </div>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam soluta sequi ut exercitationem dicta
-             reprehenderit quisquam animi, debitis sapiente at nihil! Quas, soluta voluptate error dolorem ad ipsa vero odio?
-          </div>
+        <div className="flex flex-wrap gap-7 justify-center items-stretch py-2">
+          Q!<br/>
+          Q2<br/>
+          Q3<br/>
+          Q4<br/>
+          Q5<br/>
         </div>
-        <div className="px-3 border-l-[0.5px] min-h-56"></div>
-        
       </div>
-      <Divider />
-    
-      <div className="w-screen flex align-middle items-center border-b-2">
-        <div className="px-3 border-r-[0.5px] h-56"></div>
-        <div className="h-56 w-screen overflow-hidden text-center flex flex-col mx-auto ">
-          <div className="h-11 border-b-[0.5px] overflow-y-hidden">
-            <h1
-              className="text-[49px] font-bold whitespace-nowrap text-ellipsis text-transparent bg-clip-text"
-              style={{
-                fontFamily: "KMR Apparat1",
-                WebkitTextStroke: "1px #fec20c",
-                lineHeight: "1.2",
-              }}
-            >
-              From the HOD's Desk
-            </h1>
-          </div>
+      <Divider2 />
 
-        </div>
-        <div className="px-3 border-l-[0.5px] h-56"></div>
-      </div>
-      <Divider />
-    
-      <div className="w-screen flex align-middle items-center border-b-2">
-        <div className="px-3 border-r-[0.5px] h-56"></div>
-        <div className="h-56 w-screen overflow-hidden text-center flex flex-col mx-auto ">
-          <div className="h-11 border-b-[0.5px] overflow-y-hidden">
-            <h1
-              className="text-[49px] font-bold whitespace-nowrap text-ellipsis text-transparent bg-clip-text"
-              style={{
-                fontFamily: "KMR Apparat1",
-                WebkitTextStroke: "1px #fec20c",
-                lineHeight: "1.2",
-              }}
-            >
-              FAQs
-            </h1>
-          </div>
+      {/*Footer*/}
+      <Footer />
+      <Divider2/>
+      <div className="py-11"></div>
 
-        </div>
-        <div className="px-3 border-l-[0.5px] h-56"></div>
-      </div>
-
-      {/* Navbar */}
-      <Navbar />
-
-      {/* Footer */}
-      <footer className="mb-20 mt-5 w-full bg-[#0e0c0c] border-t border-gray-700">
-        <Footer />
-      </footer>
-    </div>
+      <Navbar homeColor="#FEC20C" />
+      
+    </>
   );
 };
 

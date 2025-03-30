@@ -1,48 +1,109 @@
 import React from "react";
 import Image from "next/image";
-
-const socialLinks = [
-  { id: 1, url: "https://discord.gg/mqNcynTs", imgSrc: "/discord.jpg", alt: "Discord", size: "w-8 h-8" },
-  { id: 2, url: "https://www.facebook.com/share/1RBFTrFVs3/", imgSrc: "/facebook.jpg", alt: "Facebook", size: "w-4 h-4" },
-  { id: 3, url: "https://x.com/sceeaot?t=AEcVdqvd0iNtwQyNv0xRYQ&s=09", imgSrc: "/x.jpg", alt: "X", size: "w-4 h-4" },
-  { id: 4, url: "https://www.linkedin.com/company/iei-students-chapter-of-ee-academy-of-technology/", imgSrc: "/linkedin.jpg", alt: "LinkedIn", size: "w-4 h-4" },
-  { id: 5, url: "https://www.instagram.com/sceeaot?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", imgSrc: "/instagram.jpg", alt: "Instagram", size: "w-4 h-4" },
-  { id: 6, url: "https://www.threads.net/@sceeaot", imgSrc: "/threads.jpg", alt: "Threads", size: "w-4 h-4" },
-  { id: 7, url: "https://whatsapp.com", imgSrc: "/whatsapp.jpg", alt: "WhatsApp", size: "w-4 h-4" },
-];
-
-const Header: React.FC = () => {
+const Header = () => {
   return (
-    <header className="flex justify-between items-center px-[0.5rem] border-l-[0.03125rem] border-r-[0.03125rem] border-white">
-      {/* Left Section: Logo + Text */}
-      <div className="flex items-center gap-2">
-        <Image src="/scee_logo.jpg" alt="SCEE Logo" width={80} height={40} className="object-contain" />
-        <span className="text-xs text-[#747474]">Students' Chapter EE AOT</span>
-      </div>
-
-      {/* Right Section: Social Icons */}
-      <div className="flex items-center gap-4">
-        {socialLinks.slice(0, 1).map((item) => (
-          <a key={item.id} href={item.url} target="_blank" rel="noopener noreferrer" className="relative">
-            <img src={item.imgSrc} alt={item.alt} className={`${item.size} object-contain`} />
-          </a>
-        ))}
-        <div className="grid grid-cols-3 grid-rows-2 gap-1">
-          {socialLinks.slice(1).map((item) => (
-            <a
-              key={item.id}
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-1 rounded-md border border-[#747474] text-[#747474]"
-            >
-              <img src={item.imgSrc} alt={item.alt} className={`${item.size} object-contain`} />
+    <header className="w-[calc(100%-30px)] border-[0.5px] border-t-0 border-b-0 border-gray-500 flex justify-between items-center mx-auto">
+          <div className=" flex justify-end items-baseline">
+            <div className="flex items-center gap-2">
+            <Image
+              src="/scee_logo.jpg"
+              alt="SCEE Logo"
+              width={100}
+              height={50} 
+              className="object-contain pl-3"
+            />
+            <div className="flex mt-3 items-baseline"><span className="text-[8px] text-[#747474]">
+              Student Chapter EE AOT
+            </span></div>
+          
+          </div>
+          </div>
+          <div className=" flex items-center justify-center">
+            <a href="https://discord.gg/mqNcynTs" target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/discord.jpg" width={23.5} height={23.5} alt="d"
+              className="mr-3"/>
             </a>
-          ))}
-        </div>
-      </div>
-    </header>
-  );
-};
+          
+          <table className="border-gray-500 border-l-[0.5px] ">
+        <tbody>
+          <tr>
+            <td className="w-6 h-6  flex items-center justify-center text-xs font-semibold  text-center">
+            <a
+              href="https://www.facebook.com/share/1RBFTrFVs3/"
+              className=" text-[#747474]" target="_blank" rel="noopener noreferrer"
+            >
+              <img
+                src="/facebook.jpg"
+                alt="Facebook"
+                className="w-4 h-4 object-contain"
+              />
+            </a>
+            </td>
+            <td className="w-6 h-6 border-l-[0.5px] border-b-[0.5px]  border-gray-500 text-xs font-semibold  ">
+            <a
+              href="https://x.com/sceeaot?t=AEcVdqvd0iNtwQyNv0xRYQ&s=09"
+              className=" text-[#747474] flex items-center justify-center" target="_blank" rel="noopener noreferrer"
+            >
+              <img src="/x.jpg" alt="X" className="w-4 h-4 object-fill" />
+            </a>
+            </td>
+            <td className="w-6 h-6 border-l-[0.5px] border-gray-500 text-xs font-semibold  ">
+            <a
+              href="https://www.linkedin.com/company/iei-students-chapter-of-ee-academy-of-technology/"
+              className="flex items-center justify-center rounded-md  " target="_blank" rel="noopener noreferrer"
+            >
+              <img
+                src="/linkedin.jpg"
+                alt="Linkedin"
+                className="w-4 h-4 object-contain"
+              />
+            </a>
+            </td>
+          </tr>
+          <tr>
+            <td className="w-6 h-6  border-gray-500 border-t-[0.5px] text-xs font-semibold  ">
+            <a
+              href="https://www.instagram.com/sceeaot?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              className="flex justify-center items-center rounded-md  " target="_blank" rel="noopener noreferrer"
+            >
+              <img
+                src="/instagram.jpg"
+                alt="Instagram"
+                className="w-4 h-4 object-contain"
+              />
+            </a>
+            </td>
+            <td className="w-6 h-6 border-l-[0.5px] border-gray-500 text-xs font-semibold  ">
+            <a
+              href="https://www.threads.net/@sceeaot"
+              className="flex justify-center items-center rounded-md  " target="_blank" rel="noopener noreferrer"
+            >
+              <img
+                src="/threads.jpg"
+                alt="Threads"
+                className="w-4 h-4 object-contain"
+              />
+            </a>
+            </td>
+            <td className="w-6 h-6 border-l-[0.5px] border-t-[0.5px] border-gray-500 text-xs font-semibold  ">
+            <a
+              href="https://whatsapp.com"
+              className="flex justify-center items-center rounded-md  " target="_blank" rel="noopener noreferrer"
+            >
+              <img
+                src="/whatsapp.jpg"
+                alt="WhatsApp"
+                className="w-4 h-4 object-contain"
+              />
+            </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+          </div>
+        </header>
+  )
+}
 
 export default Header;

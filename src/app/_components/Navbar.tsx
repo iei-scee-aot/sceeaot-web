@@ -1,111 +1,132 @@
-"use client";
-
+import React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-
-const Navbar = () => {
-  const pathname = usePathname();
-
+const Navbar = ({homeColor="#F6F6F4", teamColor="#F6F6F4", eventColor="#F6F6F4", aboutColor="#F6F6F4"}) => {
   return (
-    <nav className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-[25rem] bg-[#0e0c0c] border-t border-[#747474]/30 z-50 p-4 flex justify-between items-center">
-      {/* Home Link */}
-      <Link
-        href="/"
-        className={`flex flex-col items-center text-xs ${
-          pathname === "/" ? "text-[#fec20c]" : "text-[#747474]"
-        }`}
-      >
-        <div className={`p-1 rounded-md ${pathname === "/" ? "bg-[#fec20c]/10" : ""}`}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M9 22V12H15V22M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"
-              stroke={pathname === "/" ? "#fec20c" : "#747474"}
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+    <>
+      <nav className="fixed font-pxg w-screen bottom-0  bg-[#0e0c0c] border-t-[0.5px] border-gray-500 z-50  flex flex-col">
+        <div className="navigation h-16 w-[calc(100%-30px)] mx-auto border-l-[0.5px] border-r-[0.5px] border-gray-500  flex justify-between">
+          <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
+            <Link href="/" className="flex flex-col w-full">
+              <span className="pl-2 font-light text-lg " style={{color: homeColor}}>
+                HOME
+              </span>
+              <div className="home flex pr-2 justify-end ">
+                <svg
+                  width="25"
+                  height="28"
+                  viewBox="0 0 25 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M23.6429 11.8972C23.6446 11.6592 23.5966 11.4236 23.5021 11.2052C23.4077 10.9868 23.2688 10.7904 23.0943 10.6286L12.5001 0.857178L1.90579 10.6286C1.73132 10.7904 1.59244 10.9868 1.49799 11.2052C1.40355 11.4236 1.35561 11.6592 1.35722 11.8972V21.4286C1.35722 21.8832 1.53783 22.3193 1.85932 22.6408C2.18081 22.9622 2.61685 23.1429 3.0715 23.1429H21.9286C22.3832 23.1429 22.8193 22.9622 23.1408 22.6408C23.4624 22.3193 23.6429 21.8832 23.6429 21.4286V11.8972Z"
+                    stroke={homeColor}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+            </Link>
+          </div>
+          <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
+            <Link href="/team" className="flex flex-col w-full">
+              <span className="pl-2 font-light text-lg " style={{color: teamColor}}>
+                TEAMS
+              </span>
+              <div className="teams flex pr-2 justify-end ">
+                <svg
+                  width="26"
+                  height="28"
+                  viewBox="0 0 26 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.164636 16.3775L0.164636 16.3775C0.127641 16.323 0.101844 16.2617 0.0887424 16.1972C0.075641 16.1327 0.0754975 16.0662 0.08832 16.0016C0.1011 15.9372 0.126508 15.876 0.163072 15.8215C1.45483 13.8365 3.42288 12.3908 5.69815 11.7502C4.53895 11.1743 3.59599 10.2368 3.01372 9.07664C2.40086 7.8556 2.22449 6.46156 2.51394 5.12636C2.80339 3.79117 3.54121 2.5953 4.60469 1.73767C5.66817 0.880029 6.9932 0.412316 8.35941 0.412316C9.72562 0.412316 11.0507 0.880029 12.1141 1.73767C13.1776 2.5953 13.9154 3.79117 14.2049 5.12636C14.4943 6.46156 14.318 7.8556 13.7051 9.07664C13.1228 10.2368 12.1799 11.1743 11.0207 11.7502C13.2959 12.3908 15.264 13.8365 16.5557 15.8215M0.164636 16.3775L16.4932 15.8628M0.164636 16.3775C0.20163 16.432 0.249083 16.4785 0.304237 16.5145L0.345211 16.4517M0.164636 16.3775L0.345211 16.4517M16.5557 15.8215C16.5558 15.8216 16.5559 15.8218 16.556 15.8219L16.4932 15.8628M16.5557 15.8215C16.5556 15.8213 16.5555 15.8211 16.5554 15.821L16.4932 15.8628M16.5557 15.8215C16.5923 15.876 16.6177 15.9372 16.6305 16.0016C16.6433 16.0662 16.6432 16.1327 16.6301 16.1972C16.617 16.2617 16.5912 16.323 16.5542 16.3775C16.5172 16.432 16.4697 16.4785 16.4146 16.5145C16.3594 16.5505 16.2977 16.5751 16.2329 16.587C16.1681 16.5989 16.1017 16.5978 16.0373 16.5838L16.0533 16.5105C16.1079 16.5225 16.1644 16.5234 16.2194 16.5133C16.2743 16.5032 16.3268 16.4822 16.3736 16.4517C16.4204 16.4212 16.4607 16.3816 16.4921 16.3354C16.5236 16.2891 16.5455 16.2371 16.5566 16.1823C16.5677 16.1275 16.5678 16.071 16.5569 16.0162C16.5461 15.9614 16.5244 15.9092 16.4932 15.8628M0.345211 16.4517L0.304239 16.5145C0.359392 16.5505 0.421146 16.5751 0.485911 16.587C0.550677 16.5989 0.617161 16.5978 0.681498 16.5838L0.665527 16.5105M0.345211 16.4517L0.665527 16.5105M0.665527 16.5105L0.6815 16.5838C0.745837 16.5698 0.806746 16.5431 0.860685 16.5054M0.665527 16.5105L0.860685 16.5054M0.860685 16.5054C0.914484 16.4677 0.960278 16.4197 0.995422 16.3642L0.860685 16.5054ZM15.7234 16.3642C15.7235 16.3644 15.7236 16.3645 15.7236 16.3646L15.7865 16.3237L15.7231 16.3638C15.7232 16.364 15.7233 16.3641 15.7234 16.3642ZM10.9185 11.7997C10.8808 11.7894 10.8431 11.7794 10.8052 11.7696C10.8408 11.7534 10.8762 11.7369 10.9113 11.7201L10.9185 11.7997ZM25.6972 16.51L25.6983 16.5093C25.8063 16.4363 25.8813 16.3237 25.9071 16.1959L25.8336 16.1811L25.9071 16.1959C25.9329 16.0681 25.9074 15.9354 25.8363 15.8262C24.5467 13.8409 22.581 12.3941 20.3077 11.7511C21.675 11.109 22.7516 9.97165 23.3162 8.56488C23.9071 7.09265 23.8889 5.44598 23.2657 3.98713C22.6425 2.52828 21.4653 1.37674 19.9931 0.785844C18.5211 0.19504 16.8747 0.21309 15.416 0.836001C15.3557 0.86046 15.3008 0.896515 15.2543 0.942126C15.2077 0.987913 15.1706 1.04243 15.1451 1.10257C15.1195 1.16271 15.1061 1.22729 15.1055 1.29263C15.1049 1.35796 15.1172 1.42278 15.1416 1.48336C15.1661 1.54395 15.2023 1.59913 15.248 1.64574C15.2938 1.69235 15.3484 1.72949 15.4085 1.75504C15.4686 1.78058 15.5332 1.79403 15.5986 1.79461C15.6638 1.7952 15.7285 1.78294 15.789 1.75855C16.4713 1.48622 17.2053 1.36797 17.9386 1.41227C18.6719 1.45657 19.3864 1.66231 20.0309 2.01479C20.6755 2.36728 21.2342 2.8578 21.6672 3.45129C22.1001 4.04479 22.3967 4.7266 22.5355 5.44799C22.6744 6.16939 22.6521 6.91255 22.4704 7.62436C22.2887 8.33617 21.952 8.99905 21.4843 9.56561C21.0167 10.1322 20.4297 10.5884 19.7652 10.9018C19.1007 11.2151 18.3753 11.3778 17.6406 11.3782C17.5089 11.3782 17.3825 11.4306 17.2893 11.5237C17.1961 11.6169 17.1438 11.7433 17.1438 11.8751C17.1438 12.0068 17.1961 12.1332 17.2893 12.2264C17.3825 12.3196 17.5089 12.3719 17.6407 12.3719H17.6408C19.1049 12.369 20.5464 12.7328 21.8337 13.4303C23.121 14.1277 24.213 15.1365 25.0101 16.3646L25.0102 16.3647C25.0821 16.475 25.1948 16.5522 25.3236 16.5795C25.4524 16.6067 25.5867 16.5818 25.6972 16.51ZM3.37191 6.39062C3.37193 5.40421 3.66444 4.43996 4.21246 3.61979C4.76049 2.7996 5.53943 2.16034 6.45078 1.78285C7.36212 1.40535 8.36494 1.30658 9.33242 1.49903C10.2999 1.69147 11.1886 2.16649 11.8861 2.864C12.5836 3.56151 13.0586 4.4502 13.2511 5.41768C13.4435 6.38516 13.3448 7.38798 12.9673 8.29933C12.5898 9.21067 11.9505 9.98961 11.1303 10.5376C10.3101 11.0857 9.3459 11.3782 8.35949 11.3782C7.03712 11.3768 5.76931 10.8509 4.83426 9.91585C3.8992 8.98079 3.37329 7.71298 3.37191 6.39062Z"
+                    fill={teamColor}
+                    stroke={teamColor}
+                    strokeWidth="0.15"
+                  />
+                </svg>
+              </div>
+            </Link>
+          </div>
+          <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
+            <Link href="/events" className="flex flex-col w-full">
+              <span className="pl-2 font-light text-lg " style={{color: eventColor}}>
+                EVENTS
+              </span>
+              <div className="events flex pr-2 justify-end ">
+                <svg
+                  width="26"
+                  height="28"
+                  viewBox="0 0 26 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.24774 16.8937C1.24774 17.9588 2.1112 18.8222 3.17631 18.8222H22.8237C23.8887 18.8222 24.7523 17.9588 24.7523 16.8937V13.3457C23.1896 12.9221 22.0402 11.4938 22.0402 9.79709C22.0402 8.10039 23.1896 6.67213 24.7523 6.24852V2.70054C24.7523 1.63543 23.8887 0.771973 22.8237 0.771973H3.17631C2.1112 0.771973 1.24774 1.63543 1.24774 2.70054V6.24048C2.82572 6.65381 3.98992 8.08949 3.98992 9.79709C3.98992 11.5047 2.82572 12.9404 1.24774 13.3537V16.8937Z"
+                    stroke={eventColor}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M17.068 0.787109V3.95118"
+                    stroke={eventColor}
+                    strokeLinecap="square"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M17.068 8.21509V11.3791"
+                    stroke={eventColor}
+                    strokeLinecap="square"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M17.068 15.6582V18.8222"
+                    stroke={eventColor}
+                    strokeLinecap="square"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+            </Link>
+          </div>
+          <div className="w-1/4 flex justify-between items-center">
+            <Link href="#" className="flex flex-col w-full">
+              <span className="pl-2 font-light text-lg pt-[2.9px]" style={{color: aboutColor}}>
+                ABOUT
+              </span>
+              <div className="about flex pr-2 justify-end pb-[5px]">
+                <svg
+                  width="26"
+                  height="26"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.58777 14.4531V9.17969H9.06042M9.06042 14.4531H10.1151M9.58777 6.54297V6.01562"
+                    stroke={aboutColor}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <rect
+                    x="0.577778"
+                    y="1.22438"
+                    width="18.02"
+                    height="18.02"
+                    stroke={aboutColor}
+                    strokeWidth="0.96"
+                  />
+                </svg>
+              </div>
+            </Link>
+          </div>
         </div>
-        HOME
-      </Link>
-
-      {/* Teams Link */}
-      <Link
-        href="/team"
-        className={`flex flex-col items-center text-xs ${
-          pathname === "/team" ? "text-[#fec20c]" : "text-[#747474]"
-        }`}
-      >
-        <div className={`p-1 rounded-md ${pathname === "/team" ? "bg-[#fec20c]/10" : ""}`}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13M16 3.13C16.8604 3.3503 17.623 3.8507 18.1676 4.55231C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7Z"
-              stroke={pathname === "/team" ? "#fec20c" : "#747474"}
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
-        TEAMS
-      </Link>
-
-      {/* Events Link */}
-      <Link
-        href="/events"
-        className={`flex flex-col items-center text-xs ${
-          pathname === "/events" ? "text-[#fec20c]" : "text-[#747474]"
-        }`}
-      >
-        <div className={`p-1 rounded-md ${pathname === "/events" ? "bg-[#fec20c]/10" : ""}`}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z"
-              stroke={pathname === "/events" ? "#fec20c" : "#747474"}
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M16 2V6M8 2V6M3 10H21M8 14H8.01M12 14H12.01M16 14H16.01M8 18H8.01M12 18H12.01M16 18H16.01"
-              stroke={pathname === "/events" ? "#fec20c" : "#747474"}
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
-        EVENTS
-      </Link>
-
-      {/* About Link */}
-      <Link
-        href="/about"
-        className={`flex flex-col items-center text-xs ${
-          pathname === "/about" ? "text-[#fec20c]" : "text-[#747474]"
-        }`}
-      >
-        <div className={`p-1 rounded-md ${pathname === "/about" ? "bg-[#fec20c]/10" : ""}`}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-              stroke={pathname === "/about" ? "#fec20c" : "#747474"}
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M12 16V12M12 8H12.01"
-              stroke={pathname === "/about" ? "#fec20c" : "#747474"}
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
-        ABOUT
-      </Link>
-    </nav>
+        <div className=" w-screen py-3 border-gray-500 border-t-[0.5px]"></div>
+      </nav>
+    </>
   );
 };
 

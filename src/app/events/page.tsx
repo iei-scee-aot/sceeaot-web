@@ -9,6 +9,7 @@ import Header from "../_components/Header";
 import Divider from "..//_components/Divider";
 import Footer from "..//_components/Footer";
 import Navbar from "..//_components/Navbar";
+import Divider2 from "..//_components/Divider2";
 
 export default function EventsPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,9 +24,9 @@ export default function EventsPage() {
         <div className="top-[0.9375rem] w-full z-50 bg-black">
           <Divider />
           <div className="w-full flex justify-between items-center border-b-2">
-            <div className="px-3 h-12"></div>
+            <div className="px-[0.9375rem] h-12"></div>
             <Header />
-            <div className="px-3 h-12"></div>
+            <div className="px-[0.9375rem] h-12"></div>
           </div>
           <Divider />
         </div>
@@ -134,15 +135,14 @@ export default function EventsPage() {
         </div>
 
         {/* Footer */}
-        <div className="mt-10">
-          <footer className="w-full bg-[#0e0c0c] border-t border-[#747474]/30">
-            <Footer />
-          </footer>
-        </div>
+        <div className="w-screen py-3 border-gray-500 border-b-[0.5px] "></div>
+        <Footer />
+        <div className="w-screen border-gray-500 border-b-[0.5px] "></div>
+        
       </main>
 
       {/* Fixed Bottom Nav */}
-      <Navbar />
+      <Navbar eventColor="#FEC20C" />
 
       {/* Marquee Animations */}
       <style jsx global={true}>{`
