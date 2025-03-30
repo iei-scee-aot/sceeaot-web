@@ -38,7 +38,7 @@ const Page = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
             <Headlines headLine="Core Team" />
           </div>
-          <div className="flex flex-wrap gap-12 justify-center items-stretch py-12">
+          <div className="flex flex-wrap gap-7 justify-center items-stretch py-12">
             <Card />
             <Card />
             <Card />
@@ -50,7 +50,7 @@ const Page = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
             <Headlines headLine="Tech Team" />
           </div>
-          <div className="flex flex-wrap gap-12 justify-center items-stretch py-12">
+          <div className="flex flex-wrap gap-7 justify-center items-stretch py-12">
             <Card />
             <Card />
             <Card />
@@ -62,7 +62,7 @@ const Page = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
             <Headlines headLine="Design Team"/>
           </div>
-          <div className="flex flex-wrap gap-12 justify-center items-stretch py-12">
+          <div className="flex flex-wrap gap-7 justify-center items-stretch py-12">
             <Card />
             <Card />
             <Card />
@@ -74,7 +74,7 @@ const Page = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
             <Headlines headLine="Content Team" />
           </div>
-          <div className="flex flex-wrap gap-12 justify-center items-stretch py-12">
+          <div className="flex flex-wrap gap-7 justify-center items-stretch py-12">
             <Card />
             <Card />
             <Card />
@@ -86,7 +86,7 @@ const Page = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
             <Headlines headLine="PR & Marketing Team" />
           </div>
-          <div className="flex flex-wrap gap-12 justify-center items-stretch py-12">
+          <div className="flex flex-wrap gap-7 justify-center items-stretch py-12">
             <Card />
             <Card />
             <Card />
@@ -98,7 +98,7 @@ const Page = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
             <Headlines headLine="Photography Team" />
           </div>
-          <div className="flex flex-wrap gap-12 justify-center items-stretch py-12">
+          <div className="flex flex-wrap gap-7 justify-center items-stretch py-12">
             <Card />
             <Card />
             <Card />
@@ -110,7 +110,7 @@ const Page = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
             <Headlines headLine="Videography Team" />
           </div>
-          <div className="flex flex-wrap gap-12 justify-center items-stretch  py-12">
+          <div className="flex flex-wrap gap-7 justify-center items-stretch  py-12">
             <Card />
             <Card />
             <Card />
