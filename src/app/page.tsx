@@ -5,6 +5,9 @@ import Header from "./_components/Header";
 import Divider from "./_components/Divider";
 import Divider2 from "./_components/Divider2";
 import Navbar from "./_components/Navbar";
+import { ArrowRight } from "lucide-react";
+import Link from 'next/link';
+import { useRouter } from "next/navigation";
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -40,6 +43,13 @@ const HomePage = () => {
           <Headlines headLine="About Us" />
         </div>
         <div className="min-h-[3.75rem] flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
+          <Link href="/team">
+            <div className=" bg-[#fec20c] text-black py-1 px-3 flex flex-col items-start gap-0 text-sm  hover:bg-[#fec20c]/90 transition-all duration-300">
+              <span>MEET THE</span>
+              <span>TEAM</span>
+              <ArrowRight size={14} className="animate-float" />
+            </div>
+          </Link>
         </div>
         <div className="flex flex-wrap gap-7 pl-[1.40625rem] pr-[1.40625rem] text-[10.5px] text-left justify-center items-stretch pt-[1.40625rem] font-pxg">
           Welcome to the IEI Students' Chapter of Electrical Engineering! We may be the newest community on the block, but we’re definitely the most energetic and driven one.<br/><br/>
@@ -59,16 +69,23 @@ const HomePage = () => {
 
       {/*Live Events*/}
       <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
-        <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
-          <Headlines headLine="Live Events"/>
-        </div>
-        <div className="min-h-[3.75rem] flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
-        </div>
-        <div className="flex flex-wrap gap-7 justify-center items-stretch py-12">
-        
-        </div>
+  <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
+    <Headlines headLine="Live Events"/>
+  </div>
+  <div className="min-h-[3.75rem] flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
+    <Link href="/events">
+      <div className="bg-[#fec20c] text-black py-1 px-3 flex flex-col items-start gap-0 text-sm hover:bg-[#fec20c]/90 transition-all duration-300 cursor-pointer">
+        <span>VIEW ALL</span>
+        <span>EVENTS</span>
+        <ArrowRight size={14} className="animate-float" />
       </div>
-      <Divider2 />
+    </Link>
+  </div>
+
+  <div className="flex flex-wrap gap-7 justify-center items-stretch py-12">
+  </div>
+</div>
+<Divider2 />
 
       <div className="w-[calc(100%-20px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
   <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
