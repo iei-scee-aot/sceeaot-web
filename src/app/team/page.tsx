@@ -20,12 +20,12 @@ const Page = () => {
 
   return (
     <>
-      <div className="h-full border-gray-500 border-b-[0.5px] w-screen mb-[29px] pb-[60px] lg:pb-0 font-pxg"> {/* Added padding-bottom */}
+      <div className="h-full border-gray-500 border-b-[0.5px] w-full mb-[29px] pb-[60px] lg:pb-0 font-pxg"> {/* Added padding-bottom */}
         <Divider />
         <Header />
         <Divider2 />
         <Navbar teamColor="#FEC20C" />
-        <div className="w-screen hidden lg:flex py-3 border-gray-500 border-b-[0.5px] "></div>
+        <div className="w-full hidden lg:flex py-3 border-gray-500 border-b-[0.5px] "></div>
         <div className="w-[calc(100%-30px)] lg:w-[calc(100%-200px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
             <Headlines headLine="The Previous Team" />
