@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 const Header = () => {
   return (
-    <header className="w-[calc(100%-30px)] border-[0.5px] border-t-0 border-b-0 border-gray-500 flex justify-between items-center mx-auto">
+    <header className="w-[calc(100%-30px)] lg:w-[calc(100%-200px)]  border-[0.5px] border-t-0 border-b-0 border-gray-500 flex justify-between items-center mx-auto">
           <div className=" flex justify-end items-baseline">
             <div className="flex items-center gap-2">
             <Image
@@ -12,9 +12,11 @@ const Header = () => {
               height={50} 
               className="object-contain pl-3"
             />
-            <div className="flex mt-3 items-baseline"><span className="text-[8px] text-[#747474]">
+            <div className="flex mt-3 items-baseline">
+              <span className="text-[8px] text-[#747474] md:text-[10px] lg:text-[15px]">
               Student Chapter EE AOT
-            </span></div>
+              </span>
+            </div>
             
           </div>
           </div>
@@ -22,7 +24,7 @@ const Header = () => {
             <a href="#">
             <Image
               src="/discord.jpg" width={23.5} height={23.5} alt="d"
-              className="mr-3"/>
+              className="mr-3 "/>
             </a>
            
           <table className="border-gray-500 border-l-[0.5px] ">

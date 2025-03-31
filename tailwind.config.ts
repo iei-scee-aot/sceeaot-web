@@ -15,7 +15,7 @@ export default {
         },
       },
       animation: {
-        marquee: "marquee 10s linear infinite",
+        marquee: "marquee 20s linear infinite",
       },
       colors: {
         background: "var(--background)",
