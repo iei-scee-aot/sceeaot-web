@@ -28,11 +28,15 @@ const Page = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
             <Headlines headLine="The Previous Team" />
           </div>
-          <div className="relative w-full h-[210px] flex flex-wrap justify-center">
-            <Image alt="scee-old-team" src="/oldteam.jpg" layout="fill" objectFit="cover" />
+          <div className="relative flex flex-wrap justify-center mt-4">
+            
+                      <Image src="/oldteam.jpg" alt="OLD TEAM" width={500} height={210} className="w-full" />
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/85 to-transparent"></div>
+                    
           </div>
         </div>
         <Divider2 />
+
         {/*Core team*/}
         <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
@@ -40,10 +44,11 @@ const Page = () => {
           </div>
           <div className="flex flex-wrap gap-7 justify-center items-stretch py-12">
           <Card imagePath="/_pictures/Ritam_Dey.jpg" Name="Ritam Dey" Designation="Convenor"/>
-          <Card imagePath="/_pictures/.jpg" Name="Sovan Mondal" Designation="Treasurer"/>
+          <Card imagePath="/_pictures/Sovan_Mondal.jpg" Name="Sovan Mondal" Designation="Treasurer"/>
           </div>
         </div>
         <Divider2 />
+
         {/*The Tech Team*/}
         <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
@@ -61,6 +66,7 @@ const Page = () => {
           </div>
         </div>
         <Divider2 />
+        
         {/*The Design Team*/}
         <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
@@ -74,10 +80,12 @@ const Page = () => {
           <Card imagePath="/_pictures/Aditya_Kumar_Gupta.jpg" Name="Aditya Kumar Gupta" Designation="Member"/>
           <Card imagePath="/_pictures/Anindya_Sundar_Das.jpg" Name="Anindya Sundar Das" Designation="Member"/>
           <Card imagePath="/_pictures/Disha_Roy.jpg" Name="Disha Roy" Designation="Member"/>
+          <Card imagePath="/_pictures/Dipshikha_Pramanik.jpg" Name="Dipshikha Pramanik" Designation="Member"/>
           <Card imagePath="/_pictures/Mahasweta_Bhowmik.jpg" Name="Mahasweta Bhowmik" Designation="Member"/>
           </div>
         </div>
         <Divider2 />
+
         {/*Content Team*/}
         <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
@@ -89,9 +97,11 @@ const Page = () => {
           <Card imagePath="/_pictures/Niladri_Malakar.jpg" Name="Niladri Malakar" Designation="Member"/>
           <Card imagePath="/_pictures/Esha_Guha.jpg" Name="Esha Guha" Designation="Member"/>
           <Card imagePath="/_pictures/Surya_Sankar_Banerjee.jpg" Name="Surya Sankar Banerjee" Designation="Member"/>
+          <Card imagePath="/_pictures/Koushani_Kundu.jpg" Name="Koushani Kundu" Designation="Member"/>
           </div>
         </div>
         <Divider2 />
+
         {/*PR & Marketing Team*/}
         <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
@@ -107,6 +117,7 @@ const Page = () => {
           </div>
         </div>
         <Divider2 />
+
         {/*Photography Team*/}
         <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
@@ -114,7 +125,7 @@ const Page = () => {
           </div>
           <div className="flex flex-wrap gap-7 justify-center items-stretch py-12">
           <Card imagePath="/_pictures/Dhrubajit_Ghosh.jpg" Name="Dhrubajit Ghosh" Designation="Lead"/>
-          <Card imagePath="/_pictures/.jpg" Name="Asmit Putatunda" Designation="Co-Lead"/>
+          <Card imagePath="/_pictures/Asmit_Putatunda.jpg" Name="Asmit Putatunda" Designation="Co-Lead"/>
           <Card imagePath="/_pictures/Hrisikesh_Ghosh.jpg" Name="Hrisikesh Ghosh" Designation="Member"/>
           <Card imagePath="/_pictures/Ankan_Paul.jpg" Name="Ankan Paul" Designation="Member"/>
           <Card imagePath="/_pictures/Sayan_Debnath.jpg" Name="Sayan Debnath" Designation="Member"/>
@@ -122,6 +133,7 @@ const Page = () => {
           </div>
         </div>
         <Divider2 />
+        
         {/*Videography Team*/}
         <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
@@ -131,7 +143,7 @@ const Page = () => {
             <Card imagePath="/_pictures/Suvadeep_Roy.jpg" Name="Suvadeep Roy" Designation="Lead"/>
             <Card imagePath="/_pictures/Anish_Sasmal.jpg" Name="Anish Sasmal" Designation="Co-Lead"/>
             <Card imagePath="/_pictures/Souvik_Biswas.jpg" Name="Souvik Biswas" Designation="Member"/>
-            <Card imagePath="/_pictures/.jpg" Name="Bikram Bhowmik" Designation="Member" />
+            <Card imagePath="/_pictures/Bikram_Bhowmik.jpg" Name="Bikram Bhowmik" Designation="Member" />
           </div>
         </div>
         <Divider2 />

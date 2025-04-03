@@ -8,12 +8,20 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+        marquee: {
+          '0%': { transform: "translateX(0)" },
+          '100%': { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        marquee: "marquee 15s linear infinite",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        // This maps the class "font-apparat" to "KMR Apparat"
         apparat: ["KMR Apparat", "sans-serif"],
         pxg: ["'PXG'", "sans-serif"],
       },

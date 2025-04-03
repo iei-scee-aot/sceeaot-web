@@ -114,7 +114,7 @@ const HomePage = () => {
             src="/GIF.gif"
             className="w-full h-[3.75rem] object-cover"></img>
         </div>
-        <div className="flex flex-wrap gap-7 justify-center items-stretch py-12"></div>
+        <div className="flex flex-wrap gap-7 justify-center items-stretch py-12"> No ongoing events </div>
       </div>
       <Divider2 />
 
