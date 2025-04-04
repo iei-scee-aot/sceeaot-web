@@ -63,6 +63,8 @@ const Page = () => {
           <Card imagePath="/_pictures/Aveek_Dey.jpg" Name="Aveek Dey" Designation="Member"/>
           <Card imagePath="/_pictures/Soumya_Shubra_Ghosh.jpg" Name="Soumya Shubra Ghosh" Designation="Member"/>
           <Card imagePath="/_pictures/Snehel_Basu.jpg" Name="Snehel Basu" Designation="Member"/>
+          <Card imagePath="/_pictures/Soham_Banerjee.jpg" Name="Soham Banerjee" Designation="Member"/>
+          <Card imagePath="/_pictures/Sounak_Banerjee.jpg" Name="Sounak Banerjee" Designation="Member"/>
           </div>
         </div>
         <Divider2 />
@@ -144,6 +146,7 @@ const Page = () => {
             <Card imagePath="/_pictures/Anish_Sasmal.jpg" Name="Anish Sasmal" Designation="Co-Lead"/>
             <Card imagePath="/_pictures/Souvik_Biswas.jpg" Name="Souvik Biswas" Designation="Member"/>
             <Card imagePath="/_pictures/Bikram_Bhowmik.jpg" Name="Bikram Bhowmik" Designation="Member" />
+            <Card imagePath="/_pictures/Ronish_Chakraborty.jpg" Name="Ronish Chakraborty" Designation="Member"/>
           </div>
         </div>
         <Divider2 />
