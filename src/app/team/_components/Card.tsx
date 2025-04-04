@@ -43,7 +43,7 @@ const Card = ({
     <div className="h-[242px]">
       <div
         className={`relative cursor-pointer w-[140px] flex flex-col items-center justify-start transition-all duration-0 overflow-hidden ${
-          isExpanded ? "h-[242px]" : "h-[212px]"
+          isExpanded ? "h-[262px]" : "h-[230px]"
         }`}
         onClick={toggleCard}
       >
