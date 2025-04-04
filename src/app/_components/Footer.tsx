@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       <footer className="mx-auto w-[calc(100%-30px)] border-gray-500 border-l-[0.5px] border-r-[0.5px]">
-          <div className="py-6 mx-8 border-t border-[#747474]/30">
+          <div className="py-6 mx-8 border-[#747474]/30">
             <div className="flex justify-between items-center mb-4">
               <Image
                 src="/scee_logo.jpg"
