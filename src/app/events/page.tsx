@@ -40,11 +40,11 @@ export default function EventsPage() {
         <Divider2 />
 
         {/* Past Events Section */}
-        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 ">
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
             <Headlines headLine="Past Events" />
           </div>
-          <div className="flex gap-5 items-center py-[1rem] pl-[1rem] pr-[1rem] text-[9px] font-pxg tracking-tight leading-snug">
+          <div className="flex gap-5 items-center  text-[9px] font-pxg tracking-tight leading-snug">
             <div className="grid place-items-center h-full w-full pt-5">
               <PastEventCard
                 key="hoverx"
