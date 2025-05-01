@@ -118,12 +118,12 @@ const HomePage = () => {
       </div>
       <Divider2 />
 
-      <div className="w-[calc(100%-20px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+      <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
         <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
           <Headlines headLine="From The HOD's Desk" />
         </div>
         <div className="flex gap-5 items-center py-[1.9375rem] pl-[1rem] pr-[1rem] text-[9px] font-pxg tracking-tight leading-snug">
-          <Image src="/HOD.jpeg" alt="HOD's PIC" width={135} height={135} className="rounded-sm" />
+          <Image src="/HOD.jpeg" alt="HOD's PIC" width={150} height={150} className="rounded-sm" />
           <p className="flex-1 font-light">
             Our department has created a platform to deliver strong fundamentals-based technical education. 
             We strive to produce electrical engineers who are well suited for both 
