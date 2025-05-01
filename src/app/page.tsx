@@ -123,7 +123,7 @@ const HomePage = () => {
           <Headlines headLine="From The HOD's Desk" />
         </div>
         <div className="flex gap-5 items-center py-[1.9375rem] pl-[1rem] pr-[1rem] text-[9px] font-pxg tracking-tight leading-snug">
-          <Image src="/HOD.jpeg" alt="HOD's PIC" width={150} height={150} className="rounded-sm" />
+          <Image src="/HOD.jpeg" alt="HOD's PIC" width={135} height={135} className="rounded-sm" />
           <p className="flex-1 font-light">
             Our department has created a platform to deliver strong fundamentals-based technical education. 
             We strive to produce electrical engineers who are well suited for both 

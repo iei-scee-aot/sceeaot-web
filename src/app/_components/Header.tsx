@@ -21,7 +21,7 @@ const Header = () => {
           <div className=" flex items-center justify-center">
             <a href="https://discord.gg/mqNcynTs" target="_blank" rel="noopener noreferrer">
             <Image
-              src="/discord.jpg" width={23.5} height={23.5} alt="d"
+              src="/discord.jpg" width={32} height={32} alt="d"
               className="mr-3"/>
             </a>
           

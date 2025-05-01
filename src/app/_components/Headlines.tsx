@@ -12,14 +12,14 @@ const Headlines = ({headLine="Headline"}) => {
       }, []);
   return (
     <div><div className={`flex whitespace-nowrap ${isVisible ? "animate-marquee" : "opacity-0"}`}>
-    <p className="text-[2.5rem] font-bold text-transparent bg-clip-text mb-3 mt-[18px] mr-36"
+    <p className="text-[3rem] font-bold text-transparent bg-clip-text mb-3 mt-[18px] mr-36"
       style={{
         fontFamily: "KMR Apparat1",
         WebkitTextStroke: "1px #fec20c",
         lineHeight: "0",
       }}
     >{headLine}</p>
-    <p className="text-[2.5rem] font-bold text-transparent bg-clip-text mb-3 mt-[18px] mr-36"
+    <p className="text-[3rem] font-bold text-transparent bg-clip-text mb-3 mt-[18px] mr-36"
       style={{
         fontFamily: "KMR Apparat1",
         WebkitTextStroke: "1px #fec20c",

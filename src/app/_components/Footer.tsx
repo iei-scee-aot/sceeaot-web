@@ -39,7 +39,11 @@ const Footer = () => {
             </div>
             <Link
               href="/contact"
-              className="flex items-center justify-between text-center mx-auto -mt-[15px] text-[2.5rem] font-medium font-apparat group"
+              className="flex items-center justify-between text-center mx-auto -mt-[15px] text-[2.5rem] font-medium group"
+              style={{
+                fontFamily: "KMR Apparat1",
+                
+              }}
             >
               Contact us
               <ArrowUpRight
