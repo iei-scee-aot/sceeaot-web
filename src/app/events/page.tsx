@@ -44,7 +44,7 @@ export default function EventsPage() {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
             <Headlines headLine="Past Events" />
           </div>
-          <div className="flex gap-5 items-center  text-[9px] font-pxg tracking-tight leading-snug">
+          <div className="flex gap-5 items-center text-[9px] font-pxg tracking-tight leading-snug">
             <div className="grid place-items-center h-full w-full pt-5">
               <PastEventCard
                 key="hoverx"
