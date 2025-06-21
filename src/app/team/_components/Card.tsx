@@ -43,7 +43,7 @@ const Card = ({
     <div className="h-[242px]">
       <div
         className={`relative cursor-pointer w-[140px] flex flex-col items-center justify-start transition-all duration-0 overflow-hidden ${
-          isExpanded ? "h-[242px]" : "h-[212px]"
+          isExpanded ? "h-[16.4rem]" : "h-[13.9rem]"
         }`}
         onClick={toggleCard}
       >
@@ -90,7 +90,7 @@ const Card = ({
             }}
           ></div>
           <div className="border-t-[0.5px] border-gray-500 text-left pt-1 px-[0.6rem]">
-            <h2 className="font-pxg font-thin text-base">{Name}</h2>
+            <h2 className="font-pxg font-thin leading-[1.1rem] text-base">{Name}</h2>
             <p className="text-sm font-thin font-pxg text-[#FEC20C]">
               {Designation}
             </p>

@@ -1,6 +1,6 @@
 "use client";
-import React from "react"
-import Card from "./_components/Card"
+import React from "react";
+import Card from "./_components/Card";
 import Footer from "../_components/Footer";
 import Header from "../_components/Header";
 import Divider from "./_components/Divider";
@@ -9,7 +9,6 @@ import Navbar from "../_components/Navbar";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Headlines from "../_components/Headlines";
-
 
 const Page = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,7 +19,9 @@ const Page = () => {
 
   return (
     <>
-      <div className="h-full border-gray-500 border-b-[0.5px] w-full mb-[29px] pb-[60px] lg:pb-0 font-pxg"> {/* Added padding-bottom */}
+      <div className="h-full border-gray-500 border-b-[0.5px] w-full mb-[29px] pb-[60px] lg:pb-0 font-pxg">
+        {" "}
+        {/* Added padding-bottom */}
         <Divider />
         <Header />
         <Divider2 />
@@ -31,7 +32,13 @@ const Page = () => {
             <Headlines headLine="The Previous Team" />
           </div>
           <div className="relative w-full h-[200px] md:h-[420px] lg:h-[609px] flex flex-wrap justify-center">
-            <Image alt="scee-old-team" src="/oldteam.jpg" layout="fill" objectFit="cover" objectPosition="center" />
+            <Image
+              alt="scee-old-team"
+              src="/oldteam.jpg"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+            />
           </div>
         </div>
         <Divider2 />
@@ -52,8 +59,23 @@ const Page = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
             <Headlines headLine="Tech Team" />
           </div>
-          <div className="flex flex-wrap gap-y-4 justify-around gap-x-3 px-3 items-stretch py-12">
-            <Card />
+          <div className="flex flex-wrap gap-y-10 justify-around gap-x-3 px-3 items-stretch py-12">
+            <Card
+              Name="Debarshee Chakraborty"
+              Designation="Lead"
+             />
+            <Card
+              imagePath="https://drive.google.com/open?id=1acozPLaWenYI6o7pGPqdqXVhP6tKS3JJ"
+              Name="Arnab Biswas"
+              Designation="Co-Lead"
+              links={[
+                "https://www.facebook.com/share/1VQAZ6ggo8/",
+                "https://www.instagram.com/arnab.biswas.1512/",
+                "https://x.com/_Arnab_Biswas/",
+                "https://www.linkedin.com/in/arnab-biswas-rk108/"
+                
+              ]}
+            />
             <Card />
             <Card />
           </div>
@@ -62,7 +84,7 @@ const Page = () => {
         {/*The Design Team*/}
         <div className="w-[calc(100%-30px)] lg:w-[calc(100%-200px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
-            <Headlines headLine="Design Team"/>
+            <Headlines headLine="Design Team" />
           </div>
           <div className="flex flex-wrap gap-y-4 justify-around gap-x-3 px-3 items-stretch py-12">
             <Card />
@@ -121,10 +143,7 @@ const Page = () => {
         <Divider2 />
         {/*Footer*/}
         <Footer />
-        
       </div>
-
-      
     </>
   );
 };
