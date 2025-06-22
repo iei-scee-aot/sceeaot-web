@@ -80,7 +80,6 @@ const Page = () => {
           <Card imagePath="/_pictures/Jayeeta_Das.jpg" Name="Jayeeta Das" Designation="Member"/>
           <Card imagePath="/_pictures/Arindam_Das.jpg" Name="Arindam Das" Designation="Member"/>
           <Card imagePath="/_pictures/Aditya_Kumar_Gupta.jpg" Name="Aditya Kumar Gupta" Designation="Member"/>
-          <Card imagePath="/_pictures/Anindya_Sundar_Das.jpg" Name="Anindya Sundar Das" Designation="Member"/>
           <Card imagePath="/_pictures/Disha_Roy.jpg" Name="Disha Roy" Designation="Member"/>
           <Card imagePath="/_pictures/Dipshikha_Pramanik.jpg" Name="Dipshikha Pramanik" Designation="Member"/>
           <Card imagePath="/_pictures/Mahasweta_Bhowmik.jpg" Name="Mahasweta Bhowmik" Designation="Member"/>
@@ -113,6 +112,7 @@ const Page = () => {
           <Card imagePath="/_pictures/Swapnil_Dassharma.jpg" Name="Swapnil Dassharma" Designation="Lead"/>
           <Card imagePath="/_pictures/Aritrika_Chatterjee.jpg" Name="Aritrika Chatterjee" Designation="Co-Lead"/>
           <Card imagePath="/_pictures/Anurati_Bhaduri.jpg" Name="Anurati Bhaduri" Designation="Member"/>
+          <Card imagePath="/_pictures/Anindya_Sundar_Das.jpg" Name="Anindya Sundar Das" Designation="Member"/>
           <Card imagePath="/_pictures/Aniket_Kumar_Mondal.jpg" Name="Aniket Kumar Mondal" Designation="Member"/>
           <Card imagePath="/_pictures/Amritesh_Singh.jpg" Name="Amritesh Singh" Designation="Member"/>
           <Card imagePath="/_pictures/Sudipta_Dolay.jpg" Name="Sudipta Dolay" Designation="Member"/>
