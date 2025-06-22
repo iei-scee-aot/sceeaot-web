@@ -49,9 +49,21 @@ const Page = () => {
             <Headlines headLine="Core Team" />
           </div>
           <div className="flex flex-wrap gap-y-10 md:gap-y-16 justify-evenly md:gap-x-9 gap-x-3 md:px-9 px-3 items-stretch py-12">
-            <Card />
-            <Card />
-            <Card />
+            <Card
+              Name="Ritam Dey"
+              Designation="Convener"
+              imagePath="/_pictures/Ritam_Dey.jpg"
+              links={[
+                "https://www.facebook.com/share/1EpY3SMJVj/",
+                "https://www.instagram.com/ritamdey68/"
+              ]}
+            />
+            <Card
+              Name="Sovan Mondal"
+              Designation="Treasurer"
+              imagePath="/_pictures/Sovan_Mondal.jpg"
+              links={[]}
+            />
           </div>
         </div>
         <Divider2 />
@@ -249,9 +261,44 @@ const Page = () => {
             <Headlines headLine="Content Team" />
           </div>
           <div className="flex flex-wrap gap-y-10 md:gap-y-16 justify-evenly md:gap-x-9 gap-x-3 md:px-9 px-3 items-stretch py-12">
-            <Card />
-            <Card />
-            <Card />
+            <Card 
+              Name="Asmita Mukherjee"
+              Designation="Lead"
+              imagePath="/_pictures/Asmita_Mukherjee.jpg"
+              links={[
+                "https://www.linkedin.com/in/asmita-mukherjee-53b494242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              ]}
+            />
+            <Card 
+              Name="Anisha Singha"
+              Designation="Co-Lead"
+              imagePath="/_pictures/Anisha_Singha.jpg"
+              links={[
+                "https://www.linkedin.com/in/anisha-singha-b6381931b/edit/forms/intro/new/?profileFormEntryPoint=PROFILE_SECTION"
+              ]}
+      
+            />
+            <Card 
+              Name="Niladri Malakar"
+              Designation="Member"
+              imagePath="/_pictures/Niladri_Malakar.jpg"
+              links={[
+                "https://www.facebook.com/share/1TJ8aMfsuQ/",
+                "https://www.instagram.com/_comrade.malakar_2004?igsh=MWVranUybDhsbTU2aQ==",
+                "https://x.com/Niladri9082?t=NOJiQk0D_Q-LR4OeXlwj0w&s=09",
+                "https://www.linkedin.com/in/niladri-malakar-18078b321"
+              ]}
+            />
+            <Card 
+              Name="Surya Sankar Banerjee"
+              Designation="Member"
+              imagePath="/_pictures/Surya_Sankar_Banerjee.jpg"
+              links={[
+                "https://www.facebook.com/share/15prJibvqd/",
+                "https://www.instagram.com/shanky_.banerjee?igsh=bjF1a2MzbWhxemc0",
+                "https://www.linkedin.com/in/surya-sankar-banerjee-021753353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              ]}
+            />
           </div>
         </div>
         <Divider2 />
@@ -261,9 +308,71 @@ const Page = () => {
             <Headlines headLine="PR & Marketing Team" />
           </div>
           <div className="flex flex-wrap gap-y-10 md:gap-y-16 justify-evenly md:gap-x-9 gap-x-3 md:px-9 px-3 items-stretch py-12">
-            <Card />
-            <Card />
-            <Card />
+            <Card
+              Name="Swapnil Dassharma"
+              Designation="Lead"
+              imagePath="/_pictures/Swapnil_Dassharma.jpg"
+              links={[
+                "https://www.facebook.com/share/1E9EQicMRM/",
+                "https://www.instagram.com/swapnil_dassharma?igsh=MWxocG5wbG9vMWN1cw==",
+                "https://www.linkedin.com/in/swapnil-dassharma-1b664b213?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              ]}
+            />
+            <Card
+              Name="Aritrika chatterjee"
+              Designation="Co-Lead"
+              imagePath="/_pictures/Aritrika_Chatterjee.jpg"
+              links={[
+                "https://www.facebook.com/share/1B76dPjtYJ/",
+                "https://www.instagram.com/_a_riiy?igsh=MTcyOWU2eHloYzlkOA==",
+                "https://www.linkedin.com/in/aritrika-chatterjee-247104308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              ]}
+            />
+            <Card
+              Name="Sudipta Dolay"
+              Designation="Member"
+              imagePath="/_pictures/Sudipta_Dolay.jpg"
+              links={[
+                "https://www.facebook.com/share/1BA2KX2ttC/",
+                "https://www.instagram.com/comred_2004?igsh=eDhyeDBhMmdjdHVl",
+                "https://www.linkedin.com/in/sudipta-dolay-52b82a353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              ]}
+
+              
+            />
+            <Card 
+            Name="Aniket Kumar Mondal"
+            Designation="Member"
+            imagePath="/_pictures/Aniket_Kumar_Mondal.jpg"
+            links={[
+              "https://www.facebook.com/profile.php?id=100017587274137&mibextid=wwXIfr&mibextid=wwXIfr",
+              "https://www.instagram.com/viperrrrr___?igsh=NGRuZXVtNXdwZHE2&utm_source=qr",
+              "https://x.com/aniketviper7?s=21&t=8Swb4ZYlZ55VvwcIIOk2Qw",
+              "https://www.linkedin.com/in/aniket-kumar-mondal-212758353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+            ]}
+            
+            />
+
+            <Card
+              Name="Amritesh Singh"
+              Designation="Member"
+              imagePath="/_pictures/Amritesh_Singh.jpg"
+              links={[
+                "https://www.facebook.com/share/1D6e4YqY9J/",
+                "https://www.instagram.com/justamrit__?igsh=MWJ6OGoxYzJrNTF3aw==",
+                "https://www.linkedin.com/in/amritesh-singh-bb6b92346?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+
+              ]}
+            />
+            <Card 
+              Name="Anurati Bhaduri"
+              Designation="Member"
+              imagePath="/_pictures/Anurati_Bhaduri.jpg"
+              links={[
+                "https://www.instagram.com/anurati__?igsh=azRua2Q4NjdmN3F5",
+                "http://www.linkedin.com/in/anurati-bhaduri-807773353"
+              ]}
+            />
           </div>
         </div>
         <Divider2 />
@@ -273,9 +382,55 @@ const Page = () => {
             <Headlines headLine="Photography Team" />
           </div>
           <div className="flex flex-wrap gap-y-10 md:gap-y-16 justify-evenly md:gap-x-9 gap-x-3 md:px-9 px-3 items-stretch py-12">
-            <Card />
-            <Card />
-            <Card />
+            <Card
+              Name="Dhrubajit ghosh"
+              Designation="Lead"
+              imagePath="/_pictures/Dhrubajit_Ghosh.jpg"
+              links={[]}
+            />
+            <Card
+              Name="Asmit Putatunda"
+              Designation="Co-Lead"
+              imagePath="/_pictures/Asmit_Putatunda.jpg"
+              links={[]}
+            />
+            <Card
+              Name="Hrisikesh Ghosh"
+              Designation="Member"
+              imagePath="/_pictures/Hrisikesh_Ghosh.jpg"
+              links={[
+                "https://www.facebook.com/share/16HwyVvMdH/",
+                "https://www.instagram.com/hrisi_onroads?igsh=MXg0aDhiMTlwYmdsYw==",
+                "https://www.linkedin.com/in/hrisikesh-ghosh-771709353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              ]}
+            />
+            <Card
+              Name="Swarnil Biswas"
+              Designation="Member"
+              imagePath="/_pictures/Swarnil_Biswas.jpg"
+              links={[
+                "https://www.linkedin.com/in/swarnil-biswas-46420320a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              ]}
+            />
+            <Card 
+              Name="Sayan Debnath"
+              Designation="Member"
+              imagePath="/_pictures/Sayan_Debnath.jpg"
+              links={[
+                "https://www.instagram.com/sayan_exe?igsh=MTFvaWQyMGRlazg2Zw==",
+                "https://www.linkedin.com/in/sayan-debnath-6b7053296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              ]}
+            />
+
+            <Card
+              Name="Ankan Paul"
+              Designation="Member"
+              imagePath="/_pictures/Ankan_Paul.jpg"
+              links={[
+                "https://www.facebook.com/share/1KNcEGtQ5G/?mibextid=wwXIfr",
+                "https://www.instagram.com/trappped_in_mind?igsh=MXRybzM1NHNzd3d6Mg%3D%3D&utm_source=qr"
+              ]}
+            />
           </div>
         </div>
         <Divider2 />
@@ -285,9 +440,50 @@ const Page = () => {
             <Headlines headLine="Videography Team" />
           </div>
           <div className="flex flex-wrap gap-y-10 md:gap-y-16 justify-evenly md:gap-x-9 gap-x-3 md:px-9 px-3 items-stretch py-12">
-            <Card />
-            <Card />
-            <Card />
+            <Card 
+              Name="Pritam Basu"
+              Designation="Lead"
+              imagePath="/_pictures/Pritam_Basu.jpg"
+              links={[]}
+            />
+            <Card
+              Name="Anish Sasmal"
+              Designation="Co-Lead"
+              imagePath="/_pictures/Anish_Sasmal.jpg"
+              links={[]}
+            />
+            <Card 
+              Name="Suvadeep roy"
+              Designation="Member"
+              imagePath="/_pictures/Suvadeep_Roy.jpg"
+              links={[
+                "https://www.facebook.com/share/15NwjnunzS/",
+                "https://www.instagram.com/suvadeep_roy_777?igsh=b3h6djd5MDlqNTl1",
+                "https://x.com/RoySuvadeep7?t=H0w0MkyBjhNwTl0mLYTmOA&s=09",
+                "https://www.linkedin.com/in/suvadeep-roy-a6281b273?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              ]}
+            />
+            <Card 
+              Name="Ronish Chakraborty"
+              Designation="Member"
+              imagePath="/_pictures/Ronish_Chakraborty.jpg"
+              links={[
+                "https://www.facebook.com/share/1ECB2SRJxT/",
+                "https://www.instagram.com/ronish_2004/profilecard/?igsh=MXFxMzN1NDVnNGxwMQ==",
+                "https://x.com/Ronish_08?t=fWDXJeSiXRfflYY2abUYPg&s=09",
+                "https://www.linkedin.com/in/ronish-chakraborty-846732353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              ]}
+            />
+            <Card
+              Name="Souvik Biswas"
+              Designation="Member"
+              imagePath="/_pictures/Souvik_Biswas.jpg"
+              links={[
+                "https://www.facebook.com/share/12EF5vr7SKJ/",
+                "https://www.instagram.com/souvik_biswas13?igsh=N284N2xrYzJzYzc5",
+                "https://www.linkedin.com/in/souvik-biswas-125855353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              ]}
+            />
           </div>
         </div>
         <Divider2 />
