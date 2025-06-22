@@ -55,14 +55,18 @@ const Page = () => {
               imagePath="/_pictures/Ritam_Dey.jpg"
               links={[
                 "https://www.facebook.com/share/1EpY3SMJVj/",
-                "https://www.instagram.com/ritamdey68/"
+                "https://www.instagram.com/ritamdey68/",
               ]}
             />
             <Card
               Name="Sovan Mondal"
               Designation="Treasurer"
               imagePath="/_pictures/Sovan_Mondal.jpg"
-              links={[]}
+              links={[
+                "https://www.facebook.com/share/1McVJvidNu/",
+                "https://www.instagram.com/sovanm_07/",
+                "https://www.linkedin.com/in/sovan-mondal-99b440262/?originalSubdomain=in",
+              ]}
             />
           </div>
         </div>
@@ -81,9 +85,9 @@ const Page = () => {
                 "https://www.facebook.com/share/1FLHrYDQ18/",
                 "https://www.instagram.com/dino04.ai/",
                 "https://x.com/dinocodes69",
-                "https://www.linkedin.com/in/debarshee-chakraborty-dc2004/"
+                "https://www.linkedin.com/in/debarshee-chakraborty-dc2004/",
               ]}
-             />
+            />
             <Card
               imagePath="/_pictures/Arnab_Biswas.jpg"
               Name="Arnab Biswas"
@@ -92,8 +96,7 @@ const Page = () => {
                 "https://www.facebook.com/share/1VQAZ6ggo8/",
                 "https://www.instagram.com/arnab.biswas.1512/",
                 "https://x.com/_Arnab_Biswas/",
-                "https://www.linkedin.com/in/arnab-biswas-rk108/"
-                
+                "https://www.linkedin.com/in/arnab-biswas-rk108/",
               ]}
             />
             <Card
@@ -104,16 +107,16 @@ const Page = () => {
                 "https://www.facebook.com/share/18eYsdYadd/",
                 "https://www.instagram.com/me_ur_deb/",
                 "https://x.com/DebpratimSharm1/",
-                "https://www.linkedin.com/in/debpratim-sharma-916203267/"
+                "https://www.linkedin.com/in/debpratim-sharma-916203267/",
               ]}
-             />
+            />
             <Card
               Name="Indranil Das"
               Designation="Member"
               imagePath="/_pictures/Indranil_Das.jpg"
               links={[
                 "https://www.instagram.com/neel.sg_",
-                "https://www.linkedin.com/in/indranil-das-586837284/"
+                "https://www.linkedin.com/in/indranil-das-586837284/",
               ]}
             />
             <Card
@@ -123,20 +126,20 @@ const Page = () => {
               links={[
                 "https://www.facebook.com/sidd.a03",
                 "https://www.instagram.com/sidd.a03/",
-                "https://www.linkedin.com/in/achinta-siddhanta/"
+                "https://www.linkedin.com/in/achinta-siddhanta/",
               ]}
             />
-            <Card 
+            <Card
               Name="Aveek Dey"
               Designation="Member"
               imagePath="/_pictures/Aveek_Dey.jpg"
               links={[
                 "https://www.facebook.com/share/1BBs1gXPDh/",
                 "https://www.instagram.com/aveek_de_04/",
-                "https://www.linkedin.com/in/aveek-dey-89b476330/"
+                "https://www.linkedin.com/in/aveek-dey-89b476330/",
               ]}
             />
-            <Card 
+            <Card
               Name="Soumya Subhra Ghosh"
               Designation="Member"
               imagePath="/_pictures/Soumya.jpg"
@@ -144,19 +147,17 @@ const Page = () => {
                 "https://www.facebook.com/soumyashubra.ghosh/",
                 "https://www.instagram.com/soumya_subhra_05?igsh=Z2Zhem5vZHU5cWI2",
                 "https://x.com/SoumyaSubh13172?t=Nc9ZpDnnNSEhmsy5roVKlw&s=09",
-                "https://www.linkedin.com/in/soumya-subhra-ghosh-78b30729b/"
+                "https://www.linkedin.com/in/soumya-subhra-ghosh-78b30729b/",
               ]}
             />
-            <Card 
+            <Card
               Name="Snehel Basu"
               Designation="Member"
               imagePath="/_pictures/Snehel_Basu.jpg"
-              links={[
-                "https://www.linkedin.com/in/snehel-basu-26601329a/"
-              ]}
+              links={["https://www.linkedin.com/in/snehel-basu-26601329a/"]}
             />
-            <Card 
-             Name="Sounak Banerjee"
+            <Card
+              Name="Sounak Banerjee"
               Designation="Member"
               imagePath="/_pictures/Sounak_Banerjee.jpg"
               links={[
@@ -165,13 +166,13 @@ const Page = () => {
                 "https://www.linkedin.com/in/sounak-banerjee-innovation/",
               ]}
             />
-            <Card 
+            <Card
               Name="Soham Banerjee"
               Designation="Member"
               imagePath="/_pictures/Soham_Banerjee.jpg"
               links={[
                 "https://www.instagram.com/__sohambanerjee__?igsh=MXc4MXd3a2cwZjVqOA==",
-                "https://www.linkedin.com/in/soham-banerjee-65078229b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                "https://www.linkedin.com/in/soham-banerjee-65078229b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
               ]}
             />
           </div>
@@ -187,24 +188,33 @@ const Page = () => {
               Name="Rhritwika Das"
               Designation="Lead"
               imagePath="/_pictures/Rhritwika_Das.jpg"
+              links={["https://www.linkedin.com/in/rhritwika-das-b1b74b262/"]}
+            />
+            <Card
+              Name="Abhinandan Shadhukhan"
+              Designation="Co-Lead"
+              imagePath="/_pictures/Abhinandan_Shadhukhan.jpg"
+              links={[]}
+            />
+            <Card
+              Name="Jayeeta Das"
+              Designation="Member"
+              imagePath="/_pictures/Jayeeta_Das.jpg"
               links={[
-                "https://www.linkedin.com/in/rhritwika-das-b1b74b262/"
+                "https://www.facebook.com/share/1BBcYsWTeM/?mibextid=qi2Omg",
+                "https://www.instagram.com/jayeeta908?igsh=MTNuYzI1OWNtcWw0dA==",
+                "https://x.com/17Jayeeta?t=t5r_BBXj-0JYHxidTsrjVw&s=08",
+                "https://www.linkedin.com/in/jayeeta-das-8014ba2a4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
               ]}
             />
-            <Card 
-            Name="Abhinandan Shadhukhan"
-            Designation="Co-Lead"
-            imagePath="/_pictures/Abhinandan_Shadhukhan.jpg"
-            links={[]}
-            />
-            <Card 
+            <Card
               Name="Anindya Sundar Das"
               Designation="Member"
               imagePath="/_pictures/Anindya_Sundar_Das.jpg"
               links={[
                 "https://www.facebook.com/share/1Dasrb3pgu/",
                 "https://www.instagram.com/_aninz?igsh=MTgzbzYwdzQwNGlsag==",
-                "https://www.linkedin.com/in/anindya-sundar-das-798b942a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                "https://www.linkedin.com/in/anindya-sundar-das-798b942a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
               ]}
             />
             <Card
@@ -213,37 +223,38 @@ const Page = () => {
               imagePath="/_pictures/Disha_Roy.jpg"
               links={[
                 "https://www.instagram.com/disha_roy510?igsh=MXhpaWlnNXptcGtxNw==",
-                "http://www.linkedin.com/in/disha--roy"
+                "http://www.linkedin.com/in/disha--roy",
               ]}
             />
-            <Card 
+            <Card
               Name="Arindam Das"
               Designation="Member"
               imagePath="/_pictures/Arindam_Das.jpg"
               links={[
                 "https://www.facebook.com/share/15kSKay3MS/",
                 "https://www.instagram.com/i_am_devil_arii?igsh=d3h3aXF2MmxraHVm",
-                "https://www.linkedin.com/in/arindam-das-4a465528a"
+                "https://www.linkedin.com/in/arindam-das-4a465528a",
               ]}
             />
             <Card
-            Name="Aditya Kumar Gupta"
-            Designation="Member"
-            imagePath="/_pictures/Aditya_Kumar_Gupta.jpg"
-            links={[
-              "https://www.facebook.com/share/12GmE4ownR1/?mibextid=qi2Omg",
-              "https://www.instagram.com/_adiiiiiii._.04?igsh=NmxjdmNxNTIxMDB2",
-              "https://x.com/EddY___04?t=8Swb4ZYlZ55VvwcIIOk2Qw&s=09",
-              "https://www.linkedin.com/in/aditya-kumar-gupta-5616a129b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-
-            ]}
+              Name="Aditya Kumar Gupta"
+              Designation="Member"
+              imagePath="/_pictures/Aditya_Kumar_Gupta.jpg"
+              links={[
+                "https://www.facebook.com/share/12GmE4ownR1/?mibextid=qi2Omg",
+                "https://www.instagram.com/_adiiiiiii._.04?igsh=NmxjdmNxNTIxMDB2",
+                "https://x.com/EddY___04?t=8Swb4ZYlZ55VvwcIIOk2Qw&s=09",
+                "https://www.linkedin.com/in/aditya-kumar-gupta-5616a129b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+              ]}
             />
 
             <Card
               Name="Dipshikha Pramanik"
               Designation="Member"
               imagePath="/_pictures/Dipshikha_Pramanik.jpg"
-              links={["https://www.linkedin.com/in/dipshikha-pramanik-205a34328"]}
+              links={[
+                "https://www.linkedin.com/in/dipshikha-pramanik-205a34328",
+              ]}
             />
             <Card
               Name="Mahasweta Bhowmik"
@@ -251,7 +262,6 @@ const Page = () => {
               imagePath="/_pictures/Mahasweta_Bhowmik.jpg"
               links={["https://www.linkedin.com/in/mahasweta-bhowmik"]}
             />
-
           </div>
         </div>
         <Divider2 />
@@ -261,24 +271,23 @@ const Page = () => {
             <Headlines headLine="Content Team" />
           </div>
           <div className="flex flex-wrap gap-y-10 md:gap-y-16 justify-evenly md:gap-x-9 gap-x-3 md:px-9 px-3 items-stretch py-12">
-            <Card 
+            <Card
               Name="Asmita Mukherjee"
               Designation="Lead"
               imagePath="/_pictures/Asmita_Mukherjee.jpg"
               links={[
-                "https://www.linkedin.com/in/asmita-mukherjee-53b494242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                "https://www.linkedin.com/in/asmita-mukherjee-53b494242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
               ]}
             />
-            <Card 
+            <Card
               Name="Anisha Singha"
               Designation="Co-Lead"
               imagePath="/_pictures/Anisha_Singha.jpg"
               links={[
-                "https://www.linkedin.com/in/anisha-singha-b6381931b/edit/forms/intro/new/?profileFormEntryPoint=PROFILE_SECTION"
+                "https://www.linkedin.com/in/anisha-singha-b6381931b/edit/forms/intro/new/?profileFormEntryPoint=PROFILE_SECTION",
               ]}
-      
             />
-            <Card 
+            <Card
               Name="Niladri Malakar"
               Designation="Member"
               imagePath="/_pictures/Niladri_Malakar.jpg"
@@ -286,17 +295,17 @@ const Page = () => {
                 "https://www.facebook.com/share/1TJ8aMfsuQ/",
                 "https://www.instagram.com/_comrade.malakar_2004?igsh=MWVranUybDhsbTU2aQ==",
                 "https://x.com/Niladri9082?t=NOJiQk0D_Q-LR4OeXlwj0w&s=09",
-                "https://www.linkedin.com/in/niladri-malakar-18078b321"
+                "https://www.linkedin.com/in/niladri-malakar-18078b321",
               ]}
             />
-            <Card 
+            <Card
               Name="Surya Sankar Banerjee"
               Designation="Member"
               imagePath="/_pictures/Surya_Sankar_Banerjee.jpg"
               links={[
                 "https://www.facebook.com/share/15prJibvqd/",
                 "https://www.instagram.com/shanky_.banerjee?igsh=bjF1a2MzbWhxemc0",
-                "https://www.linkedin.com/in/surya-sankar-banerjee-021753353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                "https://www.linkedin.com/in/surya-sankar-banerjee-021753353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
               ]}
             />
           </div>
@@ -315,7 +324,7 @@ const Page = () => {
               links={[
                 "https://www.facebook.com/share/1E9EQicMRM/",
                 "https://www.instagram.com/swapnil_dassharma?igsh=MWxocG5wbG9vMWN1cw==",
-                "https://www.linkedin.com/in/swapnil-dassharma-1b664b213?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                "https://www.linkedin.com/in/swapnil-dassharma-1b664b213?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
               ]}
             />
             <Card
@@ -325,7 +334,7 @@ const Page = () => {
               links={[
                 "https://www.facebook.com/share/1B76dPjtYJ/",
                 "https://www.instagram.com/_a_riiy?igsh=MTcyOWU2eHloYzlkOA==",
-                "https://www.linkedin.com/in/aritrika-chatterjee-247104308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                "https://www.linkedin.com/in/aritrika-chatterjee-247104308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
               ]}
             />
             <Card
@@ -335,22 +344,19 @@ const Page = () => {
               links={[
                 "https://www.facebook.com/share/1BA2KX2ttC/",
                 "https://www.instagram.com/comred_2004?igsh=eDhyeDBhMmdjdHVl",
-                "https://www.linkedin.com/in/sudipta-dolay-52b82a353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                "https://www.linkedin.com/in/sudipta-dolay-52b82a353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
               ]}
-
-              
             />
-            <Card 
-            Name="Aniket Kumar Mondal"
-            Designation="Member"
-            imagePath="/_pictures/Aniket_Kumar_Mondal.jpg"
-            links={[
-              "https://www.facebook.com/profile.php?id=100017587274137&mibextid=wwXIfr&mibextid=wwXIfr",
-              "https://www.instagram.com/viperrrrr___?igsh=NGRuZXVtNXdwZHE2&utm_source=qr",
-              "https://x.com/aniketviper7?s=21&t=8Swb4ZYlZ55VvwcIIOk2Qw",
-              "https://www.linkedin.com/in/aniket-kumar-mondal-212758353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-            ]}
-            
+            <Card
+              Name="Aniket Kumar Mondal"
+              Designation="Member"
+              imagePath="/_pictures/Aniket_Kumar_Mondal.jpg"
+              links={[
+                "https://www.facebook.com/profile.php?id=100017587274137&mibextid=wwXIfr&mibextid=wwXIfr",
+                "https://www.instagram.com/viperrrrr___?igsh=NGRuZXVtNXdwZHE2&utm_source=qr",
+                "https://x.com/aniketviper7?s=21&t=8Swb4ZYlZ55VvwcIIOk2Qw",
+                "https://www.linkedin.com/in/aniket-kumar-mondal-212758353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+              ]}
             />
 
             <Card
@@ -360,17 +366,16 @@ const Page = () => {
               links={[
                 "https://www.facebook.com/share/1D6e4YqY9J/",
                 "https://www.instagram.com/justamrit__?igsh=MWJ6OGoxYzJrNTF3aw==",
-                "https://www.linkedin.com/in/amritesh-singh-bb6b92346?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-
+                "https://www.linkedin.com/in/amritesh-singh-bb6b92346?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
               ]}
             />
-            <Card 
+            <Card
               Name="Anurati Bhaduri"
               Designation="Member"
               imagePath="/_pictures/Anurati_Bhaduri.jpg"
               links={[
                 "https://www.instagram.com/anurati__?igsh=azRua2Q4NjdmN3F5",
-                "http://www.linkedin.com/in/anurati-bhaduri-807773353"
+                "http://www.linkedin.com/in/anurati-bhaduri-807773353",
               ]}
             />
           </div>
@@ -392,7 +397,12 @@ const Page = () => {
               Name="Asmit Putatunda"
               Designation="Co-Lead"
               imagePath="/_pictures/Asmit_Putatunda.jpg"
-              links={[]}
+              links={[
+                "https://www.facebook.com/profile.php?id=100094195157462",
+                "https://www.instagram.com/mostly_insane_0_0/?igsh=MTFvaWQyMGRlazg2Zw==",
+                "https://x.com/AsmitWick2005?t=H0w0MkyBjhNwTl0mLYTmOA&s=09"
+
+              ]}
             />
             <Card
               Name="Hrisikesh Ghosh"
@@ -401,7 +411,7 @@ const Page = () => {
               links={[
                 "https://www.facebook.com/share/16HwyVvMdH/",
                 "https://www.instagram.com/hrisi_onroads?igsh=MXg0aDhiMTlwYmdsYw==",
-                "https://www.linkedin.com/in/hrisikesh-ghosh-771709353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                "https://www.linkedin.com/in/hrisikesh-ghosh-771709353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
               ]}
             />
             <Card
@@ -409,16 +419,16 @@ const Page = () => {
               Designation="Member"
               imagePath="/_pictures/Swarnil_Biswas.jpg"
               links={[
-                "https://www.linkedin.com/in/swarnil-biswas-46420320a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                "https://www.linkedin.com/in/swarnil-biswas-46420320a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
               ]}
             />
-            <Card 
+            <Card
               Name="Sayan Debnath"
               Designation="Member"
               imagePath="/_pictures/Sayan_Debnath.jpg"
               links={[
                 "https://www.instagram.com/sayan_exe?igsh=MTFvaWQyMGRlazg2Zw==",
-                "https://www.linkedin.com/in/sayan-debnath-6b7053296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                "https://www.linkedin.com/in/sayan-debnath-6b7053296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
               ]}
             />
 
@@ -428,7 +438,7 @@ const Page = () => {
               imagePath="/_pictures/Ankan_Paul.jpg"
               links={[
                 "https://www.facebook.com/share/1KNcEGtQ5G/?mibextid=wwXIfr",
-                "https://www.instagram.com/trappped_in_mind?igsh=MXRybzM1NHNzd3d6Mg%3D%3D&utm_source=qr"
+                "https://www.instagram.com/trappped_in_mind?igsh=MXRybzM1NHNzd3d6Mg%3D%3D&utm_source=qr",
               ]}
             />
           </div>
@@ -440,30 +450,32 @@ const Page = () => {
             <Headlines headLine="Videography Team" />
           </div>
           <div className="flex flex-wrap gap-y-10 md:gap-y-16 justify-evenly md:gap-x-9 gap-x-3 md:px-9 px-3 items-stretch py-12">
-            <Card 
-              Name="Pritam Basu"
-              Designation="Lead"
-              imagePath="/_pictures/Pritam_Basu.jpg"
-              links={[]}
-            />
-            <Card
-              Name="Anish Sasmal"
-              Designation="Co-Lead"
-              imagePath="/_pictures/Anish_Sasmal.jpg"
-              links={[]}
-            />
-            <Card 
+            
+             <Card
               Name="Suvadeep roy"
-              Designation="Member"
+              Designation="Lead"
               imagePath="/_pictures/Suvadeep_Roy.jpg"
               links={[
                 "https://www.facebook.com/share/15NwjnunzS/",
                 "https://www.instagram.com/suvadeep_roy_777?igsh=b3h6djd5MDlqNTl1",
                 "https://x.com/RoySuvadeep7?t=H0w0MkyBjhNwTl0mLYTmOA&s=09",
-                "https://www.linkedin.com/in/suvadeep-roy-a6281b273?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                "https://www.linkedin.com/in/suvadeep-roy-a6281b273?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
               ]}
             />
-            <Card 
+
+            <Card
+              Name="Anish Sasmal"
+              Designation="Co-Lead"
+              imagePath="/_pictures/Anish_Sasmal.jpg"
+              links={[
+                "https://www.facebook.com/anish.sasmal.9",
+                "https://www.instagram.com/iam_anish___?utm_source=ig_web_button_share_sheet&igsh=MW5sb2QxM2M3czczZA==",
+                "https://x.com/AnishSasmal",
+                "https://www.linkedin.com/in/anish-sasmal-9a8111291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              ]}
+            />
+           
+            <Card
               Name="Ronish Chakraborty"
               Designation="Member"
               imagePath="/_pictures/Ronish_Chakraborty.jpg"
@@ -471,7 +483,7 @@ const Page = () => {
                 "https://www.facebook.com/share/1ECB2SRJxT/",
                 "https://www.instagram.com/ronish_2004/profilecard/?igsh=MXFxMzN1NDVnNGxwMQ==",
                 "https://x.com/Ronish_08?t=fWDXJeSiXRfflYY2abUYPg&s=09",
-                "https://www.linkedin.com/in/ronish-chakraborty-846732353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                "https://www.linkedin.com/in/ronish-chakraborty-846732353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
               ]}
             />
             <Card
@@ -481,7 +493,7 @@ const Page = () => {
               links={[
                 "https://www.facebook.com/share/12EF5vr7SKJ/",
                 "https://www.instagram.com/souvik_biswas13?igsh=N284N2xrYzJzYzc5",
-                "https://www.linkedin.com/in/souvik-biswas-125855353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                "https://www.linkedin.com/in/souvik-biswas-125855353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
               ]}
             />
           </div>
