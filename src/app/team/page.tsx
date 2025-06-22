@@ -207,16 +207,7 @@ const Page = () => {
                 "https://www.linkedin.com/in/jayeeta-das-8014ba2a4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
               ]}
             />
-            <Card
-              Name="Anindya Sundar Das"
-              Designation="Member"
-              imagePath="/_pictures/Anindya_Sundar_Das.jpg"
-              links={[
-                "https://www.facebook.com/share/1Dasrb3pgu/",
-                "https://www.instagram.com/_aninz?igsh=MTgzbzYwdzQwNGlsag==",
-                "https://www.linkedin.com/in/anindya-sundar-das-798b942a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-              ]}
-            />
+            
             <Card
               Name="Disha Roy"
               Designation="Member"
@@ -345,6 +336,16 @@ const Page = () => {
                 "https://www.facebook.com/share/1BA2KX2ttC/",
                 "https://www.instagram.com/comred_2004?igsh=eDhyeDBhMmdjdHVl",
                 "https://www.linkedin.com/in/sudipta-dolay-52b82a353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+              ]}
+            />
+            <Card
+              Name="Anindya Sundar Das"
+              Designation="Member"
+              imagePath="/_pictures/Anindya_Sundar_Das.jpg"
+              links={[
+                "https://www.facebook.com/share/1Dasrb3pgu/",
+                "https://www.instagram.com/_aninz?igsh=MTgzbzYwdzQwNGlsag==",
+                "https://www.linkedin.com/in/anindya-sundar-das-798b942a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
               ]}
             />
             <Card
@@ -494,6 +495,18 @@ const Page = () => {
                 "https://www.facebook.com/share/12EF5vr7SKJ/",
                 "https://www.instagram.com/souvik_biswas13?igsh=N284N2xrYzJzYzc5",
                 "https://www.linkedin.com/in/souvik-biswas-125855353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+              ]}
+            />
+
+            <Card
+              Name="Bikram Bhowmick"
+              Designation="Member"
+              imagePath="/_pictures/Bikram_Bhowmik.jpg"
+              links={[
+                "https://www.facebook.com/bikram.bhowmik.90475",
+                "https://www.instagram.com/bhowmick8462/",
+                "https://www.linkedin.com/in/bikram-bhowmick-59a379325/"
+
               ]}
             />
           </div>
