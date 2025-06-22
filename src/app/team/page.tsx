@@ -56,6 +56,8 @@ const Page = () => {
               links={[
                 "https://www.facebook.com/share/1EpY3SMJVj/",
                 "https://www.instagram.com/ritamdey68/",
+                "https://x.com/RitamDey315755?t=4SD9_iIsweoOuQspuSvVOA&s=09",
+                "https://www.linkedin.com/in/ritam-dey-9494a2326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               ]}
             />
             <Card
