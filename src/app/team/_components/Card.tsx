@@ -43,7 +43,7 @@ const Card = ({
     <div className="h-[242px]">
       <div
         className={`relative cursor-pointer w-[140px] flex flex-col items-center justify-start transition-all duration-0 overflow-hidden ${
-          isExpanded ? "h-[262px]" : "h-[230px]"
+          isExpanded ? "h-[16.4rem]" : "h-[13.9rem]"
         }`}
         onClick={toggleCard}
       >
@@ -89,16 +89,16 @@ const Card = ({
               backgroundPosition: "center",
             }}
           ></div>
-          <div className="border-t-[0.5px] border-gray-500 text-left pt-1 px-[0.6rem]">
-            <h2 className="font-pxg font-thin text-base">{Name}</h2>
-            <p className="text-sm font-thin font-pxg text-[#FEC20C]">
+          <div className="border-t-[0.5px] h-[3.5rem] border-gray-500 text-left pt-1 px-[0.6rem]">
+            <h2 className="font-pxg font-thin leading-[1.1rem] text-base">{Name}</h2>
+            <p className="text-sm  font-thin font-pxg text-[#FEC20C]">
               {Designation}
             </p>
           </div>
 
           {/* Links Section */}
           {isExpanded && (
-            <div className="flex items-center justify-between border-dashed border-gray-500 border-t-[0.5px] px-1 pt-2 mt-2 mx-[0.6rem]">
+            <div className="flex  items-center justify-around border-dashed border-gray-500 border-t-[0.5px] px-1 pt-2 mt-2 mx-[0.6rem]">
               {links.map((link, index) => {
                 const domain = getDomainFromUrl(link);
                 const icon = domain && domainToIconMap[domain] ? domainToIconMap[domain] : "default.jpg";
