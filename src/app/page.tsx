@@ -10,6 +10,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Headlines from "./_components/Headlines";
 
+
 // Define the type for FAQ items
 interface FAQ {
   question: string;

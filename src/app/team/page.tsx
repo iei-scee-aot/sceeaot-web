@@ -1,13 +1,12 @@
 "use client";
-import React from "react"
-import Card from "./_components/Card"
+import React, { useEffect, useState } from "react";
+import Card from "./_components/Card";
 import Footer from "../_components/Footer";
 import Header from "../_components/Header";
 import Divider from "../_components/Divider";
 import Divider2 from "../_components/Divider2";
 import Navbar from "../_components/Navbar";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import Headlines from "../_components/Headlines";
 
 
