@@ -95,7 +95,7 @@ const Navbar = ({homeColor="#F6F6F4", teamColor="#F6F6F4", eventColor="#F6F6F4",
             </Link>
           </div>
           <div className="w-1/4 flex justify-between items-center">
-            <Link href="#" className="flex flex-col w-full">
+            <Link href="/#About-Us" className="flex flex-col w-full">
               <span className="pl-2 font-light text-lg pt-[2.9px]" style={{color: aboutColor}}>
                 ABOUT
               </span>
@@ -223,7 +223,7 @@ const Navbar = ({homeColor="#F6F6F4", teamColor="#F6F6F4", eventColor="#F6F6F4",
             </Link>
           </div>
           <div className="w-1/4 flex justify-between items-center">
-            <Link href="#" className="flex justify-center items-baseline w-full">
+            <Link href="/#About-Us" className="flex justify-center items-baseline w-full">
               <span className=" font-light text-4xl " style={{color: aboutColor}}>
                 ABOUT
               </span>
