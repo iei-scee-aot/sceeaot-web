@@ -85,10 +85,24 @@ const PastEventCard: React.FC<PastEventCardProps> = ({
               className="max-w-none h-auto border-gray-500 border-[0.5px] object-cover rounded-lg"
               style={{ width: '500px', height: '400px' }}
             />
-            <div className="absolute bottom-0 right-0 w-[70px] h-[40px] 2xl:w-[120px] 2xl:h-[60px] bg-[#fec20c] text-black py-[0.4rem] px-[0.3rem] 2xl:py-[0.8rem] 2xl:px-[0.7rem] flex flex-col items-start text-[10px] 2xl:text-[14px] font-semibold hover:bg-[#fec20c]/90 transition-all duration-300 z-10 rounded-md">
-              <span className="leading-none">VIEW</span>
-              <span className="leading-none">GALLERY</span>
-              <ArrowRight size={14} className="animate-float" />
+            <div
+              className="
+                absolute bottom-0 right-0
+                w-[70px] h-[40px]
+                2xl:w-[500px] 2xl:h-[60px]
+                bg-[#fec20c] text-black
+                py-[0.4rem] px-[0.3rem]
+                2xl:py-[0.8rem] 2xl:px-[0.7rem]
+                flex flex-col items-start
+                2xl:flex-row 2xl:items-center 2xl:justify-center
+                text-[10px] 2xl:text-[1rem]
+                font-semibold hover:bg-[#fec20c]/90 transition-all duration-300 z-10 rounded-md
+                2xl:gap-2 2xl:text-center
+              "
+            >
+              <span className="leading-none 2xl:mr-2">VIEW</span>
+              <span className="leading-none 2xl:mr-2">GALLERY</span>
+              <ArrowRight size={30} className="animate-float" />
             </div>
           </div>
           {/* Content Section */}
