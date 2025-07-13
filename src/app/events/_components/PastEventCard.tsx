@@ -73,16 +73,17 @@ const PastEventCard: React.FC<PastEventCardProps> = ({
       </div>
 
       {/* -------- XL and 2XL Layout -------- */}
-      <div className="hidden xl:flex mb-4 w-full bg-[#181818] border border-gray-500 rounded-xl shadow-lg p-6 2xl:p-8 xl:min-h-[480px] flex-col">
+      <div className="hidden xl:flex mb-4 w-full bg-[#181818] border border-gray-500 rounded-xl shadow-lg p-2 2xl:p-4 xl:min-h-[480px] flex-col">
         <div className="flex w-full flex-row">
           {/* Image Section */}
-          <div className="relative xl:w-[220px] xl:h-[320px] 2xl:w-[500px] 2xl:h-[400px] flex-shrink-0">
+          <div className="relative xl:w-auto 2xl:w-auto flex-shrink-0">
             <Image
               src={imageSrc}
               alt={`${title} Event`}
               width={500}
               height={400}
-              className="w-full h-full border-gray-500 border-[0.5px] object-cover rounded-lg"
+              className="max-w-none h-auto border-gray-500 border-[0.5px] object-cover rounded-lg"
+              style={{ width: '500px', height: '400px' }}
             />
             <div className="absolute bottom-0 right-0 w-[70px] h-[40px] 2xl:w-[120px] 2xl:h-[60px] bg-[#fec20c] text-black py-[0.4rem] px-[0.3rem] 2xl:py-[0.8rem] 2xl:px-[0.7rem] flex flex-col items-start text-[10px] 2xl:text-[14px] font-semibold hover:bg-[#fec20c]/90 transition-all duration-300 z-10 rounded-md">
               <span className="leading-none">VIEW</span>
@@ -90,63 +91,65 @@ const PastEventCard: React.FC<PastEventCardProps> = ({
               <ArrowRight size={14} className="animate-float" />
             </div>
           </div>
-          
-          <div className="flex-1 flex flex-col p-4 2xl:p-6 border-l border-gray-500 border-[0.5px]">
-  <div className="flex justify-between items-center mb-2 border border-t-1 border-gray-500 mx-[-8px] px-3">
-    <h3 className="text-xl 2xl:text-3xl font-semibold pb-2" style={{ fontFamily: "'KMR Apparat1', sans-serif" }}>
-      {title}
-    </h3>
-    <Image
-      src="/closed.png"
-      alt="Status Icon"
-      width={100}
-      height={60}
-      className="w-[60px] h-[36px] 2xl:w-[100px] 2xl:h-[60px]"
-    />
-  </div>
-
-          {/* Date */}
-          <div className="grid grid-cols-[1fr_2fr] border-b border-gray-500 border-[0.5px] text-sm 2xl:text-base ml-[-8px] mr-[-8px]">
-            <div className="p-2 border-r border-gray-500 border-[0.5px] flex items-center justify-center font-pxg">
-              Date
+          {/* Content Section */}
+          <div className="flex-1 flex flex-col p-2 2xl:p-3 border-l border-gray-500 border-[0.5px]">
+            <div className="flex justify-between items-center mb-2 border border-t-1 border-gray-500 mx-[-4px] px-2">
+              <h3 className="text-xl 2xl:text-3xl font-semibold pt-1 pb-1 text-center w-full" style={{ fontFamily: "'KMR Apparat1', sans-serif" }}>
+                {title}
+              </h3>
             </div>
-            <div className=" text-yellow-500 flex items-center justify-center font-pxg">
-              {date}
+
+            {/* Date */}
+            <div className="grid grid-cols-[1fr_2fr] border-b border-gray-500 border-[0.5px] text-xs 2xl:text-base ml-[-4px] mr-[-4px]">
+              <div className="p-1 2xl:p-2 border-r border-gray-500 border-[0.5px] flex items-center justify-center font-pxg">
+                Date
+              </div>
+              <div className="p-1 2xl:p-2 text-yellow-500 flex items-center justify-center font-pxg">
+                {date}
+              </div>
+            </div>
+
+            {/* Mode + Fees */}
+            <div className="grid grid-cols-[1fr_1fr_2fr_1fr] border-b border-gray-500 border-[0.5px] text-xs 2xl:text-base ml-[-4px] mr-[-4px]">
+              <div className="p-1 2xl:p-2 border-r border-gray-500 border-[0.5px] flex items-center justify-center font-pxg">
+                Mode
+              </div>
+              <div className="p-1 2xl:p-2 border-r border-gray-500 border-[0.5px] text-yellow-500 flex items-center justify-center font-pxg">
+                {mode}
+              </div>
+              <div className="p-1 2xl:p-2 border-r border-gray-500 border-[0.5px] flex items-center justify-center font-pxg">
+                Registration Fees
+              </div>
+              <div className="p-1 2xl:p-2 text-yellow-500 flex items-center justify-center font-pxg">
+                {fees}
+              </div>
+            </div>
+
+            {/* Team Size */}
+            <div className="grid grid-cols-[1fr_2fr] border-b border-gray-500 border-[0.5px] text-xs 2xl:text-base ml-[-4px] mr-[-4px]">
+              <div className="p-1 2xl:p-2 border-r border-gray-500 border-[0.5px] flex items-center justify-center font-pxg">
+                Team Size
+              </div>
+              <div className="p-1 2xl:p-2 text-yellow-500 flex items-center justify-center font-pxg">
+                {teamSize}
+              </div>
+            </div>
+
+            {/* Close.png in the space below details */}
+            <div className="flex justify-center items-center mt-6 mb-2 h-[80px] 2xl:h-[120px]">
+              <Image
+                src="/closed.png"
+                alt="Status Icon"
+                width={180}
+                height={100}
+                className="w-[120px] h-[60px] 2xl:w-[180px] 2xl:h-[100px] object-contain"
+              />
             </div>
           </div>
-
-          {/* Mode + Fees */}
-          <div className="grid grid-cols-[1fr_1fr_2fr_1fr] border-b border-gray-500 border-[0.5px] text-sm 2xl:text-base ml-[-8px] mr-[-8px]">
-            <div className="p-3 border-r border-gray-500 border-[0.5px] flex items-center justify-center font-pxg">
-              Mode
-            </div>
-            <div className="p-3 border-r border-gray-500 border-[0.5px] text-yellow-500 flex items-center justify-center font-pxg">
-              {mode}
-            </div>
-            <div className="p-3 border-r border-gray-500 border-[0.5px] flex items-center justify-center font-pxg">
-              Registration Fees
-            </div>
-            <div className="p-3 text-yellow-500 flex items-center justify-center font-pxg">
-              {fees}
-            </div>
-          </div>
-
-          {/* Team Size */}
-          <div className="grid grid-cols-[1fr_2fr] border-b border-gray-500 border-[0.5px] text-sm 2xl:text-base ml-[-8px] mr-[-8px]">
-            <div className="p-3 border-r border-gray-500 border-[0.5px] flex items-center justify-center font-pxg">
-              Team Size
-            </div>
-            <div className="p-3 text-yellow-500 flex items-center justify-center font-pxg">
-              {teamSize}
-            </div>
-          </div>
-        </div>
-
-          
         </div>
         {/* Description box below */}
-        <div className="mt-4 2xl:mt-6 bg-[#232323] border border-gray-500 rounded-md p-4 2xl:p-6 w-full">
-          <p className="text-[12px] 2xl:text-base leading-normal 2xl:leading-relaxed text-[#f6f6f4] font-pxg break-words m-0">
+        <div className="mt-4 2xl:mt-6 bg-[#232323] border border-gray-500 rounded-md p-2 2xl:p-4 w-full">
+          <p className="text-base 2xl:text-xl leading-normal 2xl:leading-relaxed text-[#f6f6f4] font-pxg break-words m-0">
             {description}
           </p>
         </div>
