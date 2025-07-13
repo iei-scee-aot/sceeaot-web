@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Image from "next/image";
 
 interface CardProps {
   Name?: string;
@@ -40,7 +39,7 @@ const Card = ({
     try {
       const domain = new URL(url).hostname.replace("www.", "");
       return domain;
-    } catch (error) {
+    } catch {
       console.error("Invalid URL:", url);
       return null;
     }
@@ -119,7 +118,7 @@ const Card = ({
                     <img
                       src={`/${icon}`}
                       alt={domain || "link"}
-                      className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4 xl:w-4.5 xl:h-4.5 2xl:w-5 2xl:h-5 object-contain"
+                      className="w-3 h-3 md:w-4 md:h-4 lg:w-6 lg:h-6 xl:w-7 xl:h-7 2xl:w-8 2xl:h-8 object-contain"
                     />
                   </a>
                 );
