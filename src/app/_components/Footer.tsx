@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const Footer = () => {
   return (

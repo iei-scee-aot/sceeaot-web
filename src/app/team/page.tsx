@@ -7,16 +7,9 @@ import Divider from "../_components/Divider";
 import Divider2 from "../_components/Divider2";
 import Navbar from "../_components/Navbar";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import Headlines from "../_components/Headlines";
 
 const Page = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   return (
     <>
       <div className="h-full border-gray-500 border-b-[0.5px] w-full mb-[29px] pb-[60px] lg:pb-0 font-pxg">
