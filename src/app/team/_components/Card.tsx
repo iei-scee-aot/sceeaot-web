@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Image from "next/image";
 
 interface CardProps {
   Name?: string;
@@ -40,7 +39,7 @@ const Card = ({
     try {
       const domain = new URL(url).hostname.replace("www.", "");
       return domain;
-    } catch (error) {
+    } catch {
       console.error("Invalid URL:", url);
       return null;
     }

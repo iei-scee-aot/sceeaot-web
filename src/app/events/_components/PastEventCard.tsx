@@ -15,7 +15,7 @@ interface PastEventCardProps {
 const PastEventCard: React.FC<PastEventCardProps> = ({
   imageSrc,
   title,
-  status,
+  // status, // Currently unused but kept in props for future use
   date,
   mode,
   fees,

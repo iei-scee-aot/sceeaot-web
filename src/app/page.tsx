@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import Divider from "./_components/Divider";
@@ -18,12 +18,7 @@ interface FAQ {
 }
 
 const HomePage = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const [activeQuestion, setActiveQuestion] = useState<number | null>(null);  // Track which question is active
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   // FAQ data with questions and answers
   const faqData: FAQ[] = [
@@ -88,13 +83,13 @@ const HomePage = () => {
                 <ArrowRight size={14} className="animate-float" />
               </div>
             </Link>
-            <img src="/GIF.gif" className="w-full h-[3.75rem] object-cover" />
+            <img src="/GIF.gif" alt="Campus GIF" className="w-full h-[3.75rem] object-cover" />
           </div>
           <div className="flex font-light flex-wrap gap-7 pl-[1.40625rem] pr-[1.40625rem] text-[10.5px] text-left justify-center items-stretch pt-[1.40625rem] font-pxg">
-            Welcome to the IEI Students' Chapter of Electrical Engineering! We may be the newest community on the block, but we're definitely the most energetic and driven one.<br /><br />
+            Welcome to the IEI Students&apos; Chapter of Electrical Engineering! We may be the newest community on the block, but we&apos;re definitely the most energetic and driven one.<br /><br />
             Our mission is to create a space where students can dive into both core and non-core topics, learn new skills, and push the limits of what they can achieve. We organize everything from hands-on workshops and ideathons to competitions and brainstorming sessions, all designed to spark creativity and innovation.<br /><br />
-            It's not just about textbooks here - it's about real-world experiences and connecting with others who share the same passion for engineering.<br /><br />
-            So, if you're looking to learn, grow, and have a ton of fun, join us on this exciting journey! We can't wait to see what we can achieve together.
+            It&apos;s not just about textbooks here - it&apos;s about real-world experiences and connecting with others who share the same passion for engineering.<br /><br />
+            So, if you&apos;re looking to learn, grow, and have a ton of fun, join us on this exciting journey! We can&apos;t wait to see what we can achieve together.
           </div>
           <div className="relative w-full h-[200px] md:h-[420px] lg:h-[609px] mt-4">
             <Image 
@@ -150,10 +145,10 @@ const HomePage = () => {
 
           {/* Text Content Below - Desktop */}
           <div className="px-8 py-8 lg:text-[1.2rem] font-light leading-relaxed font-pxg text-center">
-            Welcome to the IEI Students' Chapter of Electrical Engineering! We may be the newest community on the block, but we're definitely the most energetic and driven one.<br /><br />
+            Welcome to the IEI Students&apos; Chapter of Electrical Engineering! We may be the newest community on the block, but we&apos;re definitely the most energetic and driven one.<br /><br />
             Our mission is to create a space where students can dive into both core and non-core topics, learn new skills, and push the limits of what they can achieve. We organize everything from hands-on workshops and ideathons to competitions and brainstorming sessions, all designed to spark creativity and innovation.<br /><br />
-            It's not just about textbooks here - it's about real-world experiences and connecting with others who share the same passion for engineering.<br /><br />
-            So, if you're looking to learn, grow, and have a ton of fun, join us on this exciting journey! We can't wait to see what we can achieve together.
+            It&apos;s not just about textbooks here - it&apos;s about real-world experiences and connecting with others who share the same passion for engineering.<br /><br />
+            So, if you&apos;re looking to learn, grow, and have a ton of fun, join us on this exciting journey! We can&apos;t wait to see what we can achieve together.
           </div>
 
           {/* Team Image - Desktop */}
@@ -186,7 +181,7 @@ const HomePage = () => {
                 <ArrowRight size={14} className="animate-float" />
               </div>
             </Link>
-            <img src="/GIF.gif" className="w-full h-[3.75rem] object-cover" />
+            <img src="/GIF.gif" alt="Campus GIF" className="w-full h-[3.75rem] object-cover" />
           </div>
           <div className="flex flex-wrap gap-7 justify-center items-stretch py-12 text-sm font-pxg">
             No ongoing events
@@ -246,14 +241,14 @@ const HomePage = () => {
         <div className="lg:hidden flex gap-2 items-center py-[1.9375rem] pl-[0.5rem] pr-[0.5rem] text-[9px] font-pxg tracking-tight leading-snug">
           <Image src="/HOD.jpeg" alt="HOD's PIC" width={135} height={135} className="border-2 rounded-md" />
           <p className="flex-1 font-light">
-         <span className="font-bolder text-left text-yellow">" </span>
+         <span className="font-bolder text-left text-yellow">&quot; </span>
             Our department has created a platform to deliver strong fundamentals-based technical education. 
             We strive to produce electrical engineers who are well suited for both 
             industry and society.<br />
             As HOD of this department, I endeavor to transform them into 
             creators of technology with good human values and a 
             commitment towards our nation.
-            <span className="font-bolder text-left text-yellow"> "</span>
+            <span className="font-bolder text-left text-yellow"> &quot;</span>
             <br />
             <span className="font-bolder text-left text-yellow"> - Prof. Sandip Saha Chowdhury</span><br />
             <span className="font-bolder text-left text-grey italic">   HOD, Department of Electrical Engineering</span>
@@ -263,14 +258,14 @@ const HomePage = () => {
         <div className="hidden lg:flex gap-10 items-center lg:py-[1.5rem] pl-[2rem] pr-[1rem] text-[9px] font-pxg tracking-tight  leading-snug">
           <Image src="/HOD.jpeg" alt="HOD's PIC" width={400} height={400} className="border-2 rounded-md" />
           <p className="flex-1 text-[1rem] font-light">
-           <span className="font-bolder text-left text-yellow">" </span>
+           <span className="font-bolder text-left text-yellow">&quot; </span>
             Our department has created a platform to deliver strong fundamentals-based technical education. 
             We strive to produce electrical engineers who are well suited for both 
             industry and society.<br /><br />
             As HOD of this department, I endeavor to transform them into 
             creators of technology with good human values and a 
             commitment towards our nation.
-            <span className="font-bolder text-left text-yellow"> "</span>
+            <span className="font-bolder text-left text-yellow"> &quot;</span>
             <br /><br />
             <span className="font-bolder text-left text-yellow"> - Prof. Sandip Saha Chowdhury</span><br />
             <span className="font-bolder text-left text-grey italic">   HOD, Department of Electrical Engineering</span>
@@ -292,7 +287,11 @@ const HomePage = () => {
             <div key={index} className="w-full border-b border-gray-700 last:border-b-0 py-4 lg:py-6">
               <button
                 onClick={() => toggleAnswer(index)}
-                className="w-full flex justify-between items-center text-left text-[13px] lg:text-[1.5rem] text-white focus:outline-none hover:text-[#fec20c] transition-colors duration-200 font-medium"
+                className={`w-full flex justify-between items-center text-left focus:outline-none transition-colors duration-200 font-medium text-[13px] lg:text-[1.5rem] ${
+                  activeQuestion === index 
+                    ? 'text-[#fec20c]' 
+                    : 'text-white '
+                }`}
               >
                 <span>{faq.question}</span>
                 <img 
