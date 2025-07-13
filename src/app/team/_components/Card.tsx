@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 
 interface CardProps {
   Name?: string;
@@ -39,26 +40,24 @@ const Card = ({
     try {
       const domain = new URL(url).hostname.replace("www.", "");
       return domain;
-    } catch {
+    } catch (error) {
       console.error("Invalid URL:", url);
       return null;
     }
   };
 
   return (
-    <div className="h-[180px] md:h-[280px] lg:h-[320px] xl:h-[380px] 2xl:h-[420px] m-1 md:m-2 lg:m-3 xl:m-4 2xl:m-5 mb-6 md:mb-8 lg:mb-9 xl:mb-10 2xl:mb-12">
+    <div className="h-[180px] md:h-[280px] lg:h-[300px] xl:h-[400px] 2xl:h-[500px] m-1 md:m-2 lg:m-3 xl:m-4 2xl:m-5 mb-6 md:mb-8 lg:mb-9 xl:mb-10 2xl:mb-12">
       <div
-        className={`relative cursor-pointer w-[6.5rem] md:w-[9rem] lg:w-[10.5rem] xl:w-[12.5rem] 2xl:w-[12rem] flex flex-col items-center justify-start transition-all duration-0 overflow-hidden ${
+        className={`relative cursor-pointer w-[6.5rem] md:w-[10rem] lg:w-[10rem] xl:w-[10rem] 2xl:w-[15rem] flex flex-col items-center justify-start transition-all duration-0 overflow-hidden ${
           isExpanded
-            ? "h-[12rem] md:h-[16.5rem] lg:h-[18.5rem] xl:h-[22rem] 2xl:h-[23rem]"
-            : "h-[10rem] md:h-[14.5rem] lg:h-[16rem] xl:h-[19rem] 2xl:h-[20rem]"
+            ? "h-[12rem] md:h-[17rem] lg:h-[18.5rem] xl:h-[20rem] 2xl:h-[26.2rem]"
+            : "h-[11rem] md:h-[15.5rem] lg:h-[16.2rem] xl:h-[18rem] 2xl:h-[23.2rem]"
         }`}
         onClick={toggleCard}
       >
         <svg
-          className="absolute top-0 right-[0.6rem] md:right-[0.9rem] lg:right-[1rem] xl:right-[1.2rem] 2xl:right-[1.5rem] z-10 scale-75 md:scale-100 lg:scale-110 xl:scale-125 2xl:scale-150 origin-top-right"
-          width="20"
-          height="26"
+          className="absolute top-0 right-[0.6rem] md:right-[0.9rem] lg:right-[1rem] xl:right-[1.2rem] 2xl:right-[1rem] z-10 w-5 h-7 md:w-5 md:h-7 lg:w-8 lg:h-10 xl:w-9 xl:h-12 2xl:w-10 2xl:h-13 origin-top-right"
           viewBox="0 0 28 37"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +88,7 @@ const Card = ({
         {/* Inner Content */}
         <div className="absolute inset-0 top-0 flex flex-col z-0 text-center">
           <div
-            className="imageSection w-[6.5rem] h-[6.5rem] md:w-[9rem] md:h-[9rem] lg:w-[10.5rem] lg:h-[10.5rem] xl:w-[12.5rem] xl:h-[12rem] 2xl:w-[12rem] 2xl:h-[12rem] overflow-hidden mx-auto"
+            className="imageSection w-[6.5rem] h-[6.5rem] md:w-[10rem] md:h-[10rem] lg:w-[10rem] lg:h-[10rem] xl:w-[10rem] xl:h-[10rem] 2xl:w-[15rem] 2xl:h-[15rem] overflow-hidden mx-auto"
             style={{
               backgroundImage: `url('${imagePath}')`,
               backgroundSize: "cover",
