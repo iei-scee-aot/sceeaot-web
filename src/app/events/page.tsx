@@ -37,7 +37,7 @@ export default function EventsPage() {
             </div>
 
             {/* Updated container with proper centering */}
-            <div className="flex flex-col items-center justify-center py-8 lg:py-12 space-y-8 lg:space-y-12 px-4 lg:px-8">
+            <div className="grid grid-cols-1 gap-8 px-4 lg:px-8 py-8 lg:py-12 place-items-center">
               <PastEventCard
                 key="hoverx"
                 imageSrc="/utils/hoverx.png"
@@ -88,7 +88,7 @@ export default function EventsPage() {
 
           {/* Footer */}
           <Footer />
-          
+
           {/* Consistent bottom spacing */}
           <div className="py-10"></div>
         </main>

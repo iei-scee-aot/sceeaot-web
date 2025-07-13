@@ -9,8 +9,8 @@ const Header = () => {
               src="/scee_logo.jpg"
               alt="SCEE Logo"
               width={100}
-              height={50} 
-              className="object-contain pl-3 w-[80px] h-[40px] md:w-[90px] md:h-[45px] lg:w-[100px] lg:h-[50px] xl:w-[110px] xl:h-[55px] 2xl:w-[120px] 2xl:h-[60px]"
+              height={50}
+              className="object-contain pl-3 w-[85px] h-[40px] md:w-[100px] md:h-[45px] lg:w-[120px] lg:h-[50px] xl:w-[110px] xl:h-[55px] 2xl:w-[120px] 2xl:h-[60px]"
             />
             <div className="flex mt-3 items-baseline">
               <span className="text-[7px] md:text-[8px] lg:text-[9px] xl:text-[10px] 2xl:text-[11px] text-[#747474]">
@@ -24,10 +24,10 @@ const Header = () => {
             <a href="https://discord.gg/mqNcynTs" target="_blank" rel="noopener noreferrer">
             <Image
               src="/discord.jpg" 
-              width={23.5} 
-              height={23.5} 
-              alt="d"
-              className="mr-3 w-[20px] h-[20px] md:w-[24px] md:h-[24px] lg:w-[28px] lg:h-[28px] xl:w-[32px] xl:h-[32px] 2xl:w-[36px] 2xl:h-[36px]"/>
+              width={25} 
+              height={25} 
+              alt="discord icon"
+              className="mr-3 w-[28px] h-[28px] md:w-[24px] md:h-[24px] lg:w-[28px] lg:h-[28px] xl:w-[32px] xl:h-[32px] 2xl:w-[36px] 2xl:h-[36px]"/>
             </a>
           
           <table className="border-gray-500 border-l-[0.5px]">

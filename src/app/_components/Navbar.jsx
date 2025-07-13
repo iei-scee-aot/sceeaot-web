@@ -137,7 +137,7 @@ const Navbar = ({homeColor="#F6F6F4", teamColor="#F6F6F4", eventColor="#F6F6F4",
         <div className="navigation w-[calc(100%-25rem)] mx-auto border-l-[0.5px] border-r-[0.5px] border-gray-500  flex justify-between">
           <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
             <Link href="/" className="flex justify-center items-baseline  w-full">
-              <span className=" font-light text-4xl " style={{color: homeColor}}>
+              <span className=" font-light lg:text-2xl xl:text-[1rem] 2xl:text-4xl " style={{color: homeColor}}>
                 HOME
               </span>
               <div className="home  pl-1">
@@ -160,7 +160,7 @@ const Navbar = ({homeColor="#F6F6F4", teamColor="#F6F6F4", eventColor="#F6F6F4",
           </div>
           <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
             <Link href="/team" className=" justify-center items-baseline flex  w-full">
-              <span className=" font-light text-4xl " style={{color: teamColor}}>
+              <span className=" font-light lg:text-2xl xl:text-[1rem] 2xl:text-4xl " style={{color: teamColor}}>
                 TEAMS
               </span>
               <div className="teams pl-1  ">
@@ -183,7 +183,7 @@ const Navbar = ({homeColor="#F6F6F4", teamColor="#F6F6F4", eventColor="#F6F6F4",
           </div>
           <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
             <Link href="/events" className="flex justify-center items-baseline   w-full">
-              <span className="font-light text-4xl " style={{color: eventColor}}>
+              <span className="font-light lg:text-2xl xl:text-[1rem] 2xl:text-4xl" style={{color: eventColor}}>
                 EVENTS
               </span>
               <div className="events  pl-1">
@@ -224,7 +224,7 @@ const Navbar = ({homeColor="#F6F6F4", teamColor="#F6F6F4", eventColor="#F6F6F4",
           </div>
           <div className="w-1/4 flex justify-between items-center">
             <Link href="/#About-Us" className="flex justify-center items-baseline w-full">
-              <span className=" font-light text-4xl " style={{color: aboutColor}}>
+              <span className=" font-light lg:text-2xl xl:text-[1rem] 2xl:text-4xl " style={{color: aboutColor}}>
                 ABOUT
               </span>
               <div className="about pl-1">
