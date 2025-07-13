@@ -43,11 +43,11 @@ const PastEventCard: React.FC<PastEventCardProps> = ({
 
       {/* Content Section */}
       <div className="p-3 lg:p-6 lg:flex-1 border-gray-500 border-[0.5px] border-t-0.5 lg:border-t-[0.5px] lg:border-l-0 lg:flex lg:flex-col lg:justify-between">
-        <div className="flex justify-between items-center mb-0 border border-t-0 border-gray-500 mx-[-16px] lg:mx-[-24px] px-4 lg:px-6">
+        <div className="flex justify-between items-center mb-0 border border-t-0 lg:border-t border-gray-500 mx-[-16px] lg:mx-[-24px] px-4 lg:px-6">
           <h3 className="text-lg lg:text-3xl pb-2 lg:pb-4" style={{ fontFamily: "'KMR Apparat1', sans-serif" }}>
             {title}
           </h3>
-          <div className="pb-3 lg:pb-6">
+          <div className="pb-3">
             <Image src="/closed.png" alt="Status Icon" width={70} height={40} className="lg:w-[100px] lg:h-[60px]" />
           </div>
         </div>

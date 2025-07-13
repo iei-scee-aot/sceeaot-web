@@ -47,17 +47,17 @@ const Card = ({
   };
 
   return (
-    <div className="h-[242px] md:h-[380px] lg:h-[480px] xl:h-[600px] 2xl:h-[650px] m-1 md:m-3 lg:m-4 xl:m-6 2xl:m-8 mb-8 md:mb-10 lg:mb-11 xl:mb-12 2xl:mb-14">
+    <div className="h-[180px] md:h-[280px] lg:h-[320px] xl:h-[380px] 2xl:h-[420px] m-1 md:m-2 lg:m-3 xl:m-4 2xl:m-5 mb-6 md:mb-8 lg:mb-9 xl:mb-10 2xl:mb-12">
       <div
-        className={`relative cursor-pointer w-[8.75rem] md:w-[13rem] lg:w-[15rem] xl:w-[20rem] 2xl:w-[26rem] flex flex-col items-center justify-start transition-all duration-0 overflow-hidden ${
+        className={`relative cursor-pointer w-[6.5rem] md:w-[9rem] lg:w-[10.5rem] xl:w-[12.5rem] 2xl:w-[12rem] flex flex-col items-center justify-start transition-all duration-0 overflow-hidden ${
           isExpanded
-            ? "h-[15.7rem] md:h-[22.8rem] lg:h-[26rem] xl:h-[33rem] 2xl:h-[42rem]"
-            : "h-[13.5rem] md:h-[20rem] lg:h-[23rem] xl:h-[29.5rem] 2xl:h-[40rem]"
+            ? "h-[12rem] md:h-[16.5rem] lg:h-[18.5rem] xl:h-[22rem] 2xl:h-[23rem]"
+            : "h-[10rem] md:h-[14.5rem] lg:h-[16rem] xl:h-[19rem] 2xl:h-[20rem]"
         }`}
         onClick={toggleCard}
       >
         <svg
-          className="absolute top-0 right-[0.8rem] md:right-[1.2rem] lg:right-[1.3rem] xl:right-[1.8rem] 2xl:right-[2rem] z-10 scale-100 md:scale-[150%] lg:scale-[175%] xl:scale-[225%] 2xl:scale-[250%] origin-top-right"
+          className="absolute top-0 right-[0.6rem] md:right-[0.9rem] lg:right-[1rem] xl:right-[1.2rem] 2xl:right-[1.5rem] z-10 scale-75 md:scale-100 lg:scale-110 xl:scale-125 2xl:scale-150 origin-top-right"
           width="20"
           height="26"
           viewBox="0 0 28 37"
@@ -90,23 +90,23 @@ const Card = ({
         {/* Inner Content */}
         <div className="absolute inset-0 top-0 flex flex-col z-0 text-center">
           <div
-            className="imageSection w-[8.75rem] h-[8.75rem] md:w-[13rem] md:h-[13rem] lg:w-[15rem] lg:h-[15rem] xl:w-[20rem] xl:h-[20rem] 2xl:w-[26rem] 2xl:h-[26rem] overflow-hidden mx-auto"
+            className="imageSection w-[6.5rem] h-[6.5rem] md:w-[9rem] md:h-[9rem] lg:w-[10.5rem] lg:h-[10.5rem] xl:w-[12.5rem] xl:h-[12rem] 2xl:w-[12rem] 2xl:h-[12rem] overflow-hidden mx-auto"
             style={{
               backgroundImage: `url('${imagePath}')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           ></div>
-          <div className="border-t-[0.5px] h-[3.5rem] md:h-[4.5rem] lg:h-[5rem] xl:h-[6.5rem] 2xl:h-[7rem] border-gray-500 text-left pt-1 md:pt-2 lg:pt-2.5 xl:pt-4 2xl:pt-5 px-[0.5rem] md:px-[1rem] lg:px-[1.2rem] xl:px-[1.8rem] 2xl:px-[2rem]">
-            <h2 className="font-pxg font-thin leading-[1.1rem] md:leading-[1.5rem] lg:leading-[1.7rem] xl:leading-[2.2rem] 2xl:leading-[2.5rem] text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">{Name}</h2>
-            <p className="text-xs md:text-base lg:text-lg xl:text-xl 2xl:text-xl font-thin font-pxg text-[#FEC20C]">
+          <div className="border-t-[0.5px] h-[2.5rem] md:h-[3.5rem] lg:h-[4rem] xl:h-[4.5rem] 2xl:h-[5.5rem] border-gray-500 text-left pt-1 md:pt-1.5 lg:pt-2 xl:pt-2.5 2xl:pt-3 px-[0.4rem] md:px-[0.7rem] lg:px-[0.8rem] xl:px-[1rem] 2xl:px-[1.2rem]">
+            <h2 className="font-pxg font-thin leading-[0.9rem] md:leading-[1.2rem] lg:leading-[1.4rem] xl:leading-[1.6rem] 2xl:leading-[1.8rem] text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl">{Name}</h2>
+            <p className="text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-base font-thin font-pxg text-[#FEC20C]">
               {Designation}
             </p>
           </div>
 
           {/* Links Section */}
           {isExpanded && (
-            <div className="flex items-center justify-around border-dashed border-gray-500 border-t-[0.5px] px-1 md:px-2 lg:px-2.5 xl:px-4 2xl:px-5 pt-2 md:pt-3 lg:pt-3.5 xl:pt-5 2xl:pt-6 mt-2 lg:mt-2.5 xl:mt-4 2xl:mt-5 mx-[0.5rem] md:mx-[1rem] lg:mx-[1.2rem] xl:mx-[1.8rem] 2xl:mx-[2rem]">
+            <div className="flex items-center justify-around border-dashed border-gray-500 border-t-[0.5px] px-1 md:px-1.5 lg:px-2 xl:px-2.5 2xl:px-3 pt-1.5 md:pt-2 lg:pt-2.5 xl:pt-3 2xl:pt-4 mt-1.5 lg:mt-2 xl:mt-2.5 2xl:mt-3 mx-[0.4rem] md:mx-[0.7rem] lg:mx-[0.8rem] xl:mx-[1rem] 2xl:mx-[1.2rem]">
               {links.map((link, index) => {
                 const domain = getDomainFromUrl(link);
                 const icon = domain && domainToIconMap[domain] ? domainToIconMap[domain] : "default.jpg";
@@ -121,7 +121,7 @@ const Card = ({
                     <img
                       src={`/${icon}`}
                       alt={domain || "link"}
-                      className="w-3 h-3 md:w-5 md:h-5 lg:w-5.5 lg:h-5.5 xl:w-7 xl:h-7 2xl:w-8 2xl:h-8 object-contain"
+                      className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4 xl:w-4.5 xl:h-4.5 2xl:w-5 2xl:h-5 object-contain"
                     />
                   </a>
                 );

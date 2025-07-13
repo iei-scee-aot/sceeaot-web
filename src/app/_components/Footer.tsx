@@ -43,7 +43,7 @@ const Footer = () => {
               <p className="text-[#747474] md:text-lg text-sm">Have something in mind?</p>
               <Link
               href="mailto:sceeaot@gmail.com"
-              className="flex md:mt-2 md:text-9xl lg:text-[9rem] items-center justify-center text-center mx-auto text-[2.9rem] font-semibold font-pxg group"
+              className="flex md:mt-2 md:text-9xl lg:text-[5rem] items-center justify-center text-center mx-auto text-[2.9rem] font-semibold font-pxg group"
             >
               Contact us
               <ArrowUpRight

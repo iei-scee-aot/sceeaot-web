@@ -34,7 +34,7 @@ export default function EventsPage() {
               <Headlines headLine="Ongoing Events" />
             </div>
             <div className="flex flex-wrap gap-[0.4375rem] justify-center items-stretch py-[14.0625rem] text-sm lg:text-2xl font-pxg min-h-[23.5rem]">
-              No ongoing events
+              No ongoing events...
             </div>
           </div>
           <Divider2 />

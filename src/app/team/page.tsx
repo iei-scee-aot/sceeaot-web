@@ -39,6 +39,7 @@ const Page = () => {
               objectFit="cover"
               objectPosition="center"
             />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/85 to-transparent"></div>
           </div>
         </div>
         <Divider2 />

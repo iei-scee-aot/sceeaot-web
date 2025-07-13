@@ -96,15 +96,21 @@ const HomePage = () => {
             It's not just about textbooks here - it's about real-world experiences and connecting with others who share the same passion for engineering.<br /><br />
             So, if you're looking to learn, grow, and have a ton of fun, join us on this exciting journey! We can't wait to see what we can achieve together.
           </div>
-          <div className="relative w-full mt-4">
-            <Image src="/oldteam.jpg" alt="About Us" width={500} height={248} className="w-full" />
+          <div className="relative w-full h-[200px] md:h-[420px] lg:h-[609px] mt-4">
+            <Image 
+              src="/oldteam.jpg" 
+              alt="About Us" 
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+            />
             <div className="absolute inset-0 bg-gradient-to-b from-black/85 to-transparent"></div>
           </div>
         </div>
 
         {/* Desktop Layout */}
         <div className="hidden lg:block">
-          <div className="flex h-[13.6875rem]">
+          <div className="flex h-[10rem]">
             {/* Left Section - About Us Heading */}
             <div className="w-1/2 border-r-[0.8px] border-gray-500 border-b-[0.8px] flex pl-[1.6rem] items-center relative">
               
@@ -143,7 +149,7 @@ const HomePage = () => {
           </div>
 
           {/* Text Content Below - Desktop */}
-          <div className="px-8 py-8 lg:text-[1.2rem] font-light leading-relaxed font-pxg">
+          <div className="px-8 py-8 lg:text-[1.2rem] font-light leading-relaxed font-pxg text-center">
             Welcome to the IEI Students' Chapter of Electrical Engineering! We may be the newest community on the block, but we're definitely the most energetic and driven one.<br /><br />
             Our mission is to create a space where students can dive into both core and non-core topics, learn new skills, and push the limits of what they can achieve. We organize everything from hands-on workshops and ideathons to competitions and brainstorming sessions, all designed to spark creativity and innovation.<br /><br />
             It's not just about textbooks here - it's about real-world experiences and connecting with others who share the same passion for engineering.<br /><br />
@@ -151,8 +157,14 @@ const HomePage = () => {
           </div>
 
           {/* Team Image - Desktop */}
-          <div className="relative w-full">
-            <Image src="/oldteam.jpg" alt="About Us" width={500} height={248} className="w-full h-full object-cover" />
+          <div className="relative w-full h-[200px] md:h-[420px] lg:h-[609px]">
+            <Image 
+              src="/oldteam.jpg" 
+              alt="About Us" 
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+            />
             <div className="absolute inset-0 bg-gradient-to-b from-black/85 to-transparent"></div>
           </div>
         </div>
@@ -183,7 +195,7 @@ const HomePage = () => {
 
         {/* Desktop Layout */}
         <div className="hidden lg:block lg:min-h-[23.5rem]">
-          <div className="flex h-[13.6875rem]">
+          <div className="flex h-[10rem]">
             {/* Left Section - Live Events Heading */}
             <div className="w-1/2 border-r-[0.8px] border-gray-500 border-b-[0.8px] flex pl-[1.6rem] items-center relative">
               <h1 className="text-[94px] font-bold leading-[72px] tracking-[-0.47px]" 
@@ -248,9 +260,9 @@ const HomePage = () => {
           </p>
         </div>
         {/* for desktop */}
-        <div className="hidden lg:flex gap-10 items-center py-[1.9375rem] pl-[4rem] pr-[1rem] text-[9px] font-pxg tracking-tight lg:min-h-[32.125rem] leading-snug">
-          <Image src="/HOD.jpeg" alt="HOD's PIC" width={300} height={300} className="border-2 rounded-md" />
-          <p className="flex-1 text-[1.5rem] font-light">
+        <div className="hidden lg:flex gap-10 items-center lg:py-[1.5rem] pl-[2rem] pr-[1rem] text-[9px] font-pxg tracking-tight  leading-snug">
+          <Image src="/HOD.jpeg" alt="HOD's PIC" width={400} height={400} className="border-2 rounded-md" />
+          <p className="flex-1 text-[1rem] font-light">
            <span className="font-bolder text-left text-yellow">" </span>
             Our department has created a platform to deliver strong fundamentals-based technical education. 
             We strive to produce electrical engineers who are well suited for both 
