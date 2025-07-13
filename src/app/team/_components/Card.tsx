@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
+interface CardProps {
+  Name?: string;
+  Designation?: string;
+  imagePath?: string;
+  links?: string[];
+}
+
 const Card = ({
   Name = "Member Name",
   Designation = "Designation",
@@ -12,7 +19,7 @@ const Card = ({
     "https://threads.net",
     "https://linkedin.com",
   ],
-}) => {
+}: CardProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleCard = () => {
@@ -40,17 +47,19 @@ const Card = ({
   };
 
   return (
-    <div className="h-[242px]">
+    <div className="h-[242px] md:h-[380px] lg:h-[480px] xl:h-[600px] 2xl:h-[650px] m-1 md:m-3 lg:m-4 xl:m-6 2xl:m-8 mb-8 md:mb-10 lg:mb-11 xl:mb-12 2xl:mb-14">
       <div
-        className={`relative cursor-pointer w-[140px] flex flex-col items-center justify-start transition-all duration-0 overflow-hidden ${
-          isExpanded ? "h-[262px]" : "h-[230px]"
+        className={`relative cursor-pointer w-[8.75rem] md:w-[13rem] lg:w-[15rem] xl:w-[20rem] 2xl:w-[26rem] flex flex-col items-center justify-start transition-all duration-0 overflow-hidden ${
+          isExpanded
+            ? "h-[15.7rem] md:h-[22.8rem] lg:h-[26rem] xl:h-[33rem] 2xl:h-[42rem]"
+            : "h-[13.5rem] md:h-[20rem] lg:h-[23rem] xl:h-[29.5rem] 2xl:h-[40rem]"
         }`}
         onClick={toggleCard}
       >
         <svg
-          className="absolute top-0 right-[0.8rem] z-10"
-          width="28"
-          height="37"
+          className="absolute top-0 right-[0.8rem] md:right-[1.2rem] lg:right-[1.3rem] xl:right-[1.8rem] 2xl:right-[2rem] z-10 scale-100 md:scale-[150%] lg:scale-[175%] xl:scale-[225%] 2xl:scale-[250%] origin-top-right"
+          width="20"
+          height="26"
           viewBox="0 0 28 37"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +79,6 @@ const Card = ({
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
         >
-          {/* <!-- Gray Border --> */}
           <polygon
             points="0,0 100,0 100,100 0,90"
             stroke="#6B7280"
@@ -79,26 +87,26 @@ const Card = ({
           />
         </svg>
 
-        {/* <!-- Inner Content --> */}
-        <div className=" absolute inset-0 top-0 flex flex-col z-0 text-center">
+        {/* Inner Content */}
+        <div className="absolute inset-0 top-0 flex flex-col z-0 text-center">
           <div
-            className="imageSection w-full h-[133.33px] overflow-hidden"
+            className="imageSection w-[8.75rem] h-[8.75rem] md:w-[13rem] md:h-[13rem] lg:w-[15rem] lg:h-[15rem] xl:w-[20rem] xl:h-[20rem] 2xl:w-[26rem] 2xl:h-[26rem] overflow-hidden mx-auto"
             style={{
               backgroundImage: `url('${imagePath}')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           ></div>
-          <div className="border-t-[0.5px] border-gray-500 text-left pt-1 px-[0.6rem]">
-            <h2 className="font-pxg font-thin text-base">{Name}</h2>
-            <p className="text-sm font-thin font-pxg text-[#FEC20C]">
+          <div className="border-t-[0.5px] h-[3.5rem] md:h-[4.5rem] lg:h-[5rem] xl:h-[6.5rem] 2xl:h-[7rem] border-gray-500 text-left pt-1 md:pt-2 lg:pt-2.5 xl:pt-4 2xl:pt-5 px-[0.5rem] md:px-[1rem] lg:px-[1.2rem] xl:px-[1.8rem] 2xl:px-[2rem]">
+            <h2 className="font-pxg font-thin leading-[1.1rem] md:leading-[1.5rem] lg:leading-[1.7rem] xl:leading-[2.2rem] 2xl:leading-[2.5rem] text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">{Name}</h2>
+            <p className="text-xs md:text-base lg:text-lg xl:text-xl 2xl:text-xl font-thin font-pxg text-[#FEC20C]">
               {Designation}
             </p>
           </div>
 
           {/* Links Section */}
           {isExpanded && (
-            <div className="flex items-center justify-between border-dashed border-gray-500 border-t-[0.5px] px-1 pt-2 mt-2 mx-[0.6rem]">
+            <div className="flex items-center justify-around border-dashed border-gray-500 border-t-[0.5px] px-1 md:px-2 lg:px-2.5 xl:px-4 2xl:px-5 pt-2 md:pt-3 lg:pt-3.5 xl:pt-5 2xl:pt-6 mt-2 lg:mt-2.5 xl:mt-4 2xl:mt-5 mx-[0.5rem] md:mx-[1rem] lg:mx-[1.2rem] xl:mx-[1.8rem] 2xl:mx-[2rem]">
               {links.map((link, index) => {
                 const domain = getDomainFromUrl(link);
                 const icon = domain && domainToIconMap[domain] ? domainToIconMap[domain] : "default.jpg";
@@ -111,9 +119,9 @@ const Card = ({
                     rel="noopener noreferrer"
                   >
                     <img
-                      src={`/${icon}`} // Use the mapped icon or fallback to "default.jpg"
+                      src={`/${icon}`}
                       alt={domain || "link"}
-                      className="w-3 h-3 object-contain"
+                      className="w-3 h-3 md:w-5 md:h-5 lg:w-5.5 lg:h-5.5 xl:w-7 xl:h-7 2xl:w-8 2xl:h-8 object-contain"
                     />
                   </a>
                 );
@@ -127,3 +135,20 @@ const Card = ({
 };
 
 export default Card;
+
+// In your parent component
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 place-items-center">
+  <Card
+    Name="John Doe"
+    Designation="Developer"
+    imagePath="/team/john.jpg"
+    links={["https://linkedin.com/in/john"]}
+  />
+  <Card
+    Name="Jane Smith"
+    Designation="Designer"
+    imagePath="/team/jane.jpg"
+    links={["https://instagram.com/jane"]}
+  />
+  {/* Add more cards */}
+</div>

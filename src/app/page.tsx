@@ -10,6 +10,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import Headlines from "./_components/Headlines";
 
+
 // Define the type for FAQ items
 interface FAQ {
   question: string;
@@ -54,108 +55,244 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="h-full w-screen font-pxg">
+
+
+      
+      <div className="h-full border-gray-500 border-b-[0.5px] w-full mb-[29px] pb-[60px] lg:pb-0 font-pxg">
         <Divider />
         <Header />
-      </div>
-      <Divider2 />
+        <Divider2 />
+        <Navbar homeColor="#FEC20C" />
+        <div className="w-full hidden lg:flex py-3 border-gray-500 border-b-[0.5px]"></div>
+
 
       {/*Hero Section*/}
-      <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
+      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 min-h-[46.9375rem] lg:min-h-[37.1875rem] ">
         <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden "></div>
         <div className="flex flex-wrap gap-7 justify-center items-stretch py-12"></div>
       </div>
       <Divider2 />
 
       {/*About us*/}
-      <div id="About-Us" className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
-        <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
-          <Headlines headLine="About Us" />
+      <div id="About-Us" className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+        {/* Mobile Layout */}
+        <div className="block lg:hidden">
+          <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
+            <Headlines headLine="About Us" />
+          </div>
+          <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
+            <Link href="/team">
+              <div className="h-[3.75rem] w-[6rem] bg-[#fec20c] text-black py-1 px-3 flex flex-col items-start gap-0 text-sm hover:bg-[#fec20c]/90 transition-all duration-300">
+                <span>MEET THE</span>
+                <span>TEAM</span>
+                <ArrowRight size={14} className="animate-float" />
+              </div>
+            </Link>
+            <img src="/GIF.gif" className="w-full h-[3.75rem] object-cover" />
+          </div>
+          <div className="flex font-light flex-wrap gap-7 pl-[1.40625rem] pr-[1.40625rem] text-[10.5px] text-left justify-center items-stretch pt-[1.40625rem] font-pxg">
+            Welcome to the IEI Students' Chapter of Electrical Engineering! We may be the newest community on the block, but we're definitely the most energetic and driven one.<br /><br />
+            Our mission is to create a space where students can dive into both core and non-core topics, learn new skills, and push the limits of what they can achieve. We organize everything from hands-on workshops and ideathons to competitions and brainstorming sessions, all designed to spark creativity and innovation.<br /><br />
+            It's not just about textbooks here - it's about real-world experiences and connecting with others who share the same passion for engineering.<br /><br />
+            So, if you're looking to learn, grow, and have a ton of fun, join us on this exciting journey! We can't wait to see what we can achieve together.
+          </div>
+          <div className="relative w-full mt-4">
+            <Image src="/oldteam.jpg" alt="About Us" width={500} height={248} className="w-full" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/85 to-transparent"></div>
+          </div>
         </div>
-        <div className=" flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
-          <Link href="/team">
-            <div className=" h-[3.75rem] w-[6rem] bg-[#fec20c] text-black py-1 px-3 flex flex-col items-start gap-0 text-sm hover:bg-[#fec20c]/90 transition-all duration-300">
-              <span>MEET THE</span>
-              <span>TEAM</span>
-              <ArrowRight size={14} className="animate-float" />
+
+        {/* Desktop Layout */}
+        <div className="hidden lg:block">
+          <div className="flex h-[13.6875rem]">
+            {/* Left Section - About Us Heading */}
+            <div className="w-1/2 border-r-[0.8px] border-gray-500 border-b-[0.8px] flex pl-[1.6rem] items-center relative">
+              
+                <h1 className="text-[94px] font-bold leading-[72px] tracking-[-0.47px]" 
+                    style={{
+                      fontFamily: "KMR Apparat1",
+                      WebkitTextStroke: "1px #fec20c",
+                      color: "transparent"
+                    }}>
+                  About<br />us
+                </h1>
+              
             </div>
-          </Link>
-          <img
-            src="/GIF.gif"
-            className="w-full h-[3.75rem] object-cover"></img>
-        </div>
-        <div className="flex font-light flex-wrap gap-7 pl-[1.40625rem] pr-[1.40625rem] text-[10.5px] text-left justify-center items-stretch pt-[1.40625rem] font-pxg">
-          Welcome to the IEI Students' Chapter of Electrical Engineering! We may be the newest community on the block, but we’re definitely the most energetic and driven one.<br /><br />
-          Our mission is to create a space where students can dive into both core and non-core topics, learn new skills, and push the limits of what they can achieve. We organize everything from hands-on workshops and ideathons to competitions and brainstorming sessions, all designed to spark creativity and innovation.<br /><br />
-          It’s not just about textbooks here - it’s about real-world experiences and connecting with others who share the same passion for engineering.<br /><br />
-          So, if you’re looking to learn, grow, and have a ton of fun, join us on this exciting journey! We can’t wait to see what we can achieve together.
-        </div>
-        <div className="relative w-full mt-4">
-          <Image src="/oldteam.jpg" alt="About Us" width={500} height={248} className="w-full" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/85 to-transparent"></div>
+
+            {/* Right Section - GIF Background with Button */}
+            <div className="w-1/2 border-b-[0.8px] border-gray-500 relative overflow-hidden"
+                 style={{
+                   backgroundImage: 'url(/GIF.gif)',
+                   backgroundSize: 'cover',
+                   backgroundPosition: '50% 50%'
+                 }}>
+              {/* Dark overlay */}
+              <div className="absolute inset-0 bg-black/20"></div>
+              
+              {/* Button positioned at bottom left */}
+              <div className="absolute bottom-0 left-0 w-[116px] h-[81px] bg-black/80">
+                <Link href="/team">
+                  <div className="w-full h-full bg-[#fec20c] text-black flex flex-col items-center justify-center text-sm font-medium hover:bg-[#fec20c]/90 transition-all duration-300 cursor-pointer">
+                    <span>MEET THE</span>
+                    <span>TEAM</span>
+                    <ArrowRight size={19} className="mt-1" />
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Text Content Below - Desktop */}
+          <div className="px-8 py-8 lg:text-[1.2rem] font-light leading-relaxed font-pxg">
+            Welcome to the IEI Students' Chapter of Electrical Engineering! We may be the newest community on the block, but we're definitely the most energetic and driven one.<br /><br />
+            Our mission is to create a space where students can dive into both core and non-core topics, learn new skills, and push the limits of what they can achieve. We organize everything from hands-on workshops and ideathons to competitions and brainstorming sessions, all designed to spark creativity and innovation.<br /><br />
+            It's not just about textbooks here - it's about real-world experiences and connecting with others who share the same passion for engineering.<br /><br />
+            So, if you're looking to learn, grow, and have a ton of fun, join us on this exciting journey! We can't wait to see what we can achieve together.
+          </div>
+
+          {/* Team Image - Desktop */}
+          <div className="relative w-full">
+            <Image src="/oldteam.jpg" alt="About Us" width={500} height={248} className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/85 to-transparent"></div>
+          </div>
         </div>
       </div>
       <Divider2 />
 
       {/*Live Events*/}
-      <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
-        <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
-          <Headlines headLine="Live Events" />
+      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+        {/* Mobile Layout */}
+        <div className="block lg:hidden">
+          <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
+            <Headlines headLine="Live Events" />
+          </div>
+          <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
+            <Link href="/events">
+              <div className="bg-[#fec20c] w-[6rem] h-[3.75rem] text-black py-1 px-3 flex flex-col items-start gap-0 text-sm hover:bg-[#fec20c]/90 transition-all duration-300 cursor-pointer">
+                <span>VIEW ALL</span>
+                <span>EVENTS</span>
+                <ArrowRight size={14} className="animate-float" />
+              </div>
+            </Link>
+            <img src="/GIF.gif" className="w-full h-[3.75rem] object-cover" />
+          </div>
+          <div className="flex flex-wrap gap-7 justify-center items-stretch py-12 text-sm font-pxg">
+            No ongoing events
+          </div>
         </div>
-        <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
-          <Link href="/events">
-            <div className="bg-[#fec20c] w-[6rem] h-[3.75rem] text-black py-1 px-3 flex flex-col items-start gap-0 text-sm hover:bg-[#fec20c]/90 transition-all duration-300 cursor-pointer">
-              <span>VIEW ALL</span>
-              <span>EVENTS</span>
-              <ArrowRight size={14} className="animate-float" />
+
+        {/* Desktop Layout */}
+        <div className="hidden lg:block lg:min-h-[23.5rem]">
+          <div className="flex h-[13.6875rem]">
+            {/* Left Section - Live Events Heading */}
+            <div className="w-1/2 border-r-[0.8px] border-gray-500 border-b-[0.8px] flex pl-[1.6rem] items-center relative">
+              <h1 className="text-[94px] font-bold leading-[72px] tracking-[-0.47px]" 
+                  style={{
+                      fontFamily: "KMR Apparat1",
+                      WebkitTextStroke: "1px #fec20c",
+                      color: "transparent"
+                  }}>
+                Live<br />Events
+              </h1>
             </div>
-          </Link>
-          <img
-            src="/GIF.gif"
-            className="w-full h-[3.75rem] object-cover"></img>
+
+            {/* Right Section - GIF Background with Button */}
+            <div className="w-1/2 border-b-[0.8px] border-gray-500 relative overflow-hidden"
+                 style={{
+                   backgroundImage: 'url(/GIF.gif)',
+                   backgroundSize: 'cover',
+                   backgroundPosition: '50% 50%'
+                 }}>
+              {/* Dark overlay */}
+              <div className="absolute inset-0 bg-black/20"></div>
+              
+              {/* Button positioned at bottom left */}
+              <div className="absolute bottom-0 left-0 w-[116px] h-[81px] bg-black/80">
+                <Link href="/events">
+                  <div className="w-full h-full bg-[#fec20c] text-black flex flex-col items-center justify-center text-sm font-medium hover:bg-[#fec20c]/90 transition-all duration-300 cursor-pointer">
+                    <span>VIEW ALL</span>
+                    <span>EVENTS</span>
+                    <ArrowRight size={19} className="mt-1" />
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Content Below - Desktop */}
+          <div className="px-8 py-8 font-light leading-relaxed font-pxg flex justify-center items-center min-h-[23.5rem]">
+            <p className="text-center text-[2rem]">No ongoing events...</p>
+          </div>
         </div>
-        <div className="flex flex-wrap gap-7 justify-center items-stretch py-12"> No ongoing events </div>
       </div>
       <Divider2 />
 
-      <div className="w-[calc(100%-20px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
         <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
           <Headlines headLine="From The HOD's Desk" />
         </div>
-        <div className="flex gap-5 items-center py-[1.9375rem] pl-[1rem] pr-[1rem] text-[9px] font-pxg tracking-tight leading-snug">
-          <Image src="/HOD.jpeg" alt="HOD's PIC" width={135} height={135} className="rounded-sm" />
+        <div className="lg:hidden flex gap-2 items-center py-[1.9375rem] pl-[0.5rem] pr-[0.5rem] text-[9px] font-pxg tracking-tight leading-snug">
+          <Image src="/HOD.jpeg" alt="HOD's PIC" width={135} height={135} className="border-2 rounded-md" />
           <p className="flex-1 font-light">
+         <span className="font-bolder text-left text-yellow">" </span>
+            Our department has created a platform to deliver strong fundamentals-based technical education. 
+            We strive to produce electrical engineers who are well suited for both 
+            industry and society.<br />
+            As HOD of this department, I endeavor to transform them into 
+            creators of technology with good human values and a 
+            commitment towards our nation.
+            <span className="font-bolder text-left text-yellow"> "</span>
+            <br />
+            <span className="font-bolder text-left text-yellow"> - Prof. Sandip Saha Chowdhury</span><br />
+            <span className="font-bolder text-left text-grey italic">   HOD, Department of Electrical Engineering</span>
+          </p>
+        </div>
+        {/* for desktop */}
+        <div className="hidden lg:flex gap-10 items-center py-[1.9375rem] pl-[4rem] pr-[1rem] text-[9px] font-pxg tracking-tight lg:min-h-[32.125rem] leading-snug">
+          <Image src="/HOD.jpeg" alt="HOD's PIC" width={300} height={300} className="border-2 rounded-md" />
+          <p className="flex-1 text-[1.5rem] font-light">
+           <span className="font-bolder text-left text-yellow">" </span>
             Our department has created a platform to deliver strong fundamentals-based technical education. 
             We strive to produce electrical engineers who are well suited for both 
             industry and society.<br /><br />
             As HOD of this department, I endeavor to transform them into 
             creators of technology with good human values and a 
             commitment towards our nation.
+            <span className="font-bolder text-left text-yellow"> "</span>
             <br /><br />
-            <span className="font-bolder text-left text-yellow-500"> - Prof. Sandip Saha Chowdhury</span><br />
-            <span className="font-bolder text-left text-yellow-500">   HOD, Department of Electrical Engineering</span>
+            <span className="font-bolder text-left text-yellow"> - Prof. Sandip Saha Chowdhury</span><br />
+            <span className="font-bolder text-left text-grey italic">   HOD, Department of Electrical Engineering</span>
           </p>
         </div>
+
       </div>
 
       <Divider2 />
 
-      {/*FAQs*/}
-      <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
+                 
+       {/*FAQs*/}
+      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
         <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
           <Headlines headLine="FAQs" />
         </div>
-        <div className="flex flex-wrap justify-center items-stretch py-2">
+        <div className="flex flex-col lg:flex-col justify-center items-stretch py-8 lg:py-12 px-4 lg:px-8">
           {faqData.map((faq, index: number) => (
-            <div key={index} className="w-full max-w-lg p-4">
+            <div key={index} className="w-full border-b border-gray-700 last:border-b-0 py-4 lg:py-6">
               <button
                 onClick={() => toggleAnswer(index)}
-                className="w-full text-left text-[13px] text-white focus:outline-none"
+                className="w-full flex justify-between items-center text-left text-[13px] lg:text-[1.5rem] text-white focus:outline-none hover:text-[#fec20c] transition-colors duration-200 font-medium"
               >
-                {faq.question}
+                <span>{faq.question}</span>
+                <img 
+                  src="/arrow-down.svg" 
+                  alt="Toggle"
+                  className={`w-4 h-4 lg:w-5 lg:h-5 transition-transform duration-300 ${
+                    activeQuestion === index ? 'rotate-180' : 'rotate-0'
+                  }`}
+                />
               </button>
               {activeQuestion === index && (
-                <p className="text-[13px] text-gray-700">{faq.answer}</p>
+                <p className="text-[13px] lg:text-[1.5rem] text-gray-500 mt-3 lg:mt-4 leading-relaxed">{faq.answer}</p>
               )}
             </div>
           ))}
@@ -165,10 +302,8 @@ const HomePage = () => {
 
       {/*Footer*/}
       <Footer />
-      <Divider2 />
-      <div className="py-11"></div>
-
-      <Navbar homeColor="#FEC20C" />
+      
+      </div>
     </>
   );
 };

@@ -134,7 +134,7 @@ const Navbar = ({homeColor="#F6F6F4", teamColor="#F6F6F4", eventColor="#F6F6F4",
 
 
       <nav className="hidden border-b-[0.5px] font-pxg w-full bg-[#0e0c0c] border-gray-500 z-50 lg:flex flex-col sticky top-0">
-        <div className="navigation w-[calc(100%-200px)] mx-auto border-l-[0.5px] border-r-[0.5px] border-gray-500  flex justify-between">
+        <div className="navigation w-[calc(100%-25rem)] mx-auto border-l-[0.5px] border-r-[0.5px] border-gray-500  flex justify-between">
           <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
             <Link href="/" className="flex justify-center items-baseline  w-full">
               <span className=" font-light text-4xl " style={{color: homeColor}}>
