@@ -73,8 +73,7 @@ const Page = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
             <Headlines headLine="Tech Team" />
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">
-            <Card
+<div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">            <Card
               Name="Debarshee Chakraborty"
               Designation="Lead"
               imagePath="/_pictures/Debarshee_Chatterjee.jpg"
@@ -181,8 +180,7 @@ const Page = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
             <Headlines headLine="Design Team" />
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">
-            <Card
+<div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">            <Card
               Name="Rhritwika Das"
               Designation="Lead"
               imagePath="/_pictures/Rhritwika_Das.jpg"
@@ -305,8 +303,7 @@ const Page = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
             <Headlines headLine="PR & Marketing Team" />
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">
-            <Card
+<div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">            <Card
               Name="Swapnil Dassharma"
               Designation="Lead"
               imagePath="/_pictures/Swapnil_Dassharma.jpg"
@@ -385,8 +382,7 @@ const Page = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
             <Headlines headLine="Photography Team" />
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">
-            <Card
+<div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">            <Card
               Name="Dhrubajit ghosh"
               Designation="Lead"
               imagePath="/_pictures/Dhrubajit_Ghosh.jpg"
@@ -447,8 +443,7 @@ const Page = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
             <Headlines headLine="Videography Team" />
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">
-            <Card
+<div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">            <Card
               Name="Suvadeep roy"
               Designation="Lead"
               imagePath="/_pictures/Suvadeep_Roy.jpg"
