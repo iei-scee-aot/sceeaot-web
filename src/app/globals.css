@@ -47,6 +47,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: PXG, sans-serif;
+  background-color: #181818; /* Suggested change */
 }
 
 /* Component-specific utilities */
@@ -200,22 +201,4 @@ body {
 
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-in-out forwards;
-}
-
-/* Add to your global CSS file (globals.css or equivalent) */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px) scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-/* Enhance the card hover effect */
-.card-hover:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
