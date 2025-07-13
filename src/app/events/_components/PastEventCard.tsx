@@ -15,7 +15,7 @@ interface PastEventCardProps {
 const PastEventCard: React.FC<PastEventCardProps> = ({
   imageSrc,
   title,
-  status,
+  // status,
   date,
   mode,
   fees,
