@@ -192,7 +192,10 @@ const Page = () => {
               Name="Abhinandan Shadhukhan"
               Designation="Co-Lead"
               imagePath="/_pictures/Abhinandan_Shadhukhan.jpg"
-              links={[]}
+              links={[
+
+              "https://www.linkedin.com/in/abhinandan-sadhukhan-5b011a269"
+              ]}
             />
             <Card
               Name="Jayeeta Das"
@@ -388,7 +391,10 @@ const Page = () => {
               Name="Dhrubajit ghosh"
               Designation="Lead"
               imagePath="/_pictures/Dhrubajit_Ghosh.jpg"
-              links={[]}
+              links={[
+                "https://www.facebook.com/share/16qFXU7iDX/",
+                "https://www.instagram.com/photography_with_abirla?igsh=MWpvdnI3aXlwYmtocw==https://www.instagram.com/photography_with_abirla?igsh=MWpvdnI3aXlwYmtocw=="
+              ]}
             />
             <Card
               Name="Asmit Putatunda"

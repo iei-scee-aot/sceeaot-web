@@ -44,10 +44,10 @@ html {
 }
 
 body {
-  color: #fff !important; /* Make all text white by default */
+  color: #fff; /* Make all text white by default */
   background: var(--background);
   font-family: PXG, sans-serif;
-  background-color: #000000;
+  background-color: #000000; /* Suggested change */
 }
 
 /* Component-specific utilities */
@@ -202,5 +202,3 @@ body {
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-in-out forwards;
 }
-
-*, *:before, *:after { color: inherit; }
