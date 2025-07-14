@@ -234,7 +234,9 @@ const HomePage = () => {
       </div>
       <Divider2 />
 
+
       <div className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+
         <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
           <Headlines headLine="From The HOD's Desk" />
         </div>

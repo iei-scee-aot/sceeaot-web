@@ -1,7 +1,9 @@
 import React from "react"
 import Link from "next/link"
 import Image from "next/image"
+
 import { ArrowUpRight } from "lucide-react";
+
 
 const Footer = () => {
   return (
@@ -53,6 +55,7 @@ const Footer = () => {
               </Link>
             </div>
             
+
           </div>
         </footer>
          <div className="w-screen border-gray-500 border-b-[0.5px]"></div>
