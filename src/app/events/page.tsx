@@ -1,5 +1,7 @@
 "use client";
-import React, { useEffect, useState } from "react";
+
+import React from "react";
+
 import PastEventCard from "./_components/PastEventCard";
 import Header from "../_components/Header";
 import Divider from "../_components/Divider";
@@ -9,40 +11,37 @@ import Divider2 from "../_components/Divider2";
 import Headlines from "../_components/Headlines";
 
 export default function EventsPage() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   return (
     <>
-      <main className="relative flex flex-col mx-auto min-h-screen bg-[#000000] text-white font-sans pb-32 overflow-x-hidden">
-        {/* Header Section */}
-        <div className="h-full w-screen font-pxg">
-          <Divider />
-          <Header />
-        </div>
+      <div className="h-full border-gray-500 border-b-[0.5px] w-full mb-[29px] pb-[60px] lg:pb-0 font-pxg">
+        <Divider />
+        <Header />
         <Divider2 />
+        <Navbar eventColor="#FEC20C" />
+        <div className="w-full hidden lg:flex py-3 border-gray-500 border-b-[0.5px]"></div>
 
-        {/* Ongoing Events Section */}
-        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
-          <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
-            <Headlines headLine="Ongoing Events" />
+        <main className="relative flex flex-col mx-auto min-h-screen bg-[#000000] text-white font-sans overflow-x-hidden">
+          {/* Ongoing Events Section */}
+          <div className="w-[calc(100%-1.875rem)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+            <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
+              <Headlines headLine="Ongoing Events" />
+            </div>
+            <div className="flex flex-wrap gap-[0.4375rem] justify-center items-stretch py-[14.0625rem] text-sm lg:text-2xl font-pxg min-h-[23.5rem]">
+              No ongoing events...
+            </div>
           </div>
-          <div className="flex flex-wrap gap-7 justify-center items-stretch py-12">
-            No ongoing events
-          </div>
-        </div>
-        <Divider2 />
+          <Divider2 />
 
-        {/* Past Events Section */}
-        <div className="w-[calc(100%-30px)] mx-auto border-[0.5px] border-gray-500 ">
-          <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
-            <Headlines headLine="Past Events" />
-          </div>
-          <div className="flex gap-5 items-center text-[9px] font-pxg tracking-tight leading-snug">
-            <div className="grid place-items-center h-full w-full pt-5">
+
+          {/* Past Events Section */}
+          <div className="w-[calc(100%-1.875rem)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+            <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
+              <Headlines headLine="Past Events" />
+            </div>
+
+            {/* Updated container with proper centering */}
+            <div className="grid grid-cols-1 gap-8 px-4 lg:px-8 py-8 lg:py-12 place-items-center">
+
               <PastEventCard
                 key="hoverx"
                 imageSrc="/utils/hoverx.png"
@@ -63,7 +62,7 @@ export default function EventsPage() {
                 mode="Online"
                 fees="Free"
                 teamSize="Solo"
-                description="A completely virtual photography event organized by IEI Students’ Chapter EE to celebrate Durga Puja. It was based on three themes, and participants could take part in all or any one. The winner of each theme was awarded a cash prize of ₹200."
+                description="A completely virtual photography event organized by IEI Students' Chapter EE to celebrate Durga Puja. It was based on three themes, and participants could take part in all or any one. The winner of each theme was awarded a cash prize of ₹200."
               />
               <PastEventCard
                 key="iotricity"
@@ -89,16 +88,15 @@ export default function EventsPage() {
               />
             </div>
           </div>
-        </div>
-        <Divider2 />
+          <Divider2 />
 
-        {/* Footer */}
-        <Footer />
-        <div className="w-screen border-gray-500 border-b-[0.5px]"></div>
-      </main>
+          {/* Footer */}
+          <Footer />
 
-      {/* Fixed Bottom Navbar */}
-      <Navbar eventColor="#FEC20C" />
+          {/* Consistent bottom spacing */}
+          <div className="py-10"></div>
+        </main>
+      </div>
     </>
   );
 }

@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
+interface CardProps {
+  Name?: string;
+  Designation?: string;
+  imagePath?: string;
+  links?: string[];
+}
+
 const Card = ({
   Name = "Member Name",
   Designation = "Designation",
@@ -12,7 +19,7 @@ const Card = ({
     "https://threads.net",
     "https://linkedin.com",
   ],
-}) => {
+}: CardProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleCard = () => {
@@ -33,24 +40,26 @@ const Card = ({
     try {
       const domain = new URL(url).hostname.replace("www.", "");
       return domain;
-    } catch (error) {
+    } catch {
       console.error("Invalid URL:", url);
       return null;
     }
   };
 
   return (
-    <div className="h-[242px]">
+    <div className="h-[180px] md:h-[280px] lg:h-[300px] xl:h-[400px] 2xl:h-[500px] m-1 md:m-2 lg:m-3 xl:m-4 2xl:m-5 mb-6 md:mb-8 lg:mb-9 xl:mb-10 2xl:mb-12">
       <div
-        className={`relative cursor-pointer w-[140px] flex flex-col items-center justify-start transition-all duration-0 overflow-hidden ${
-          isExpanded ? "h-[16.4rem]" : "h-[13.9rem]"
+
+        className={`relative cursor-pointer w-[6.5rem] md:w-[10rem] lg:w-[10rem] xl:w-[10rem] 2xl:w-[15rem] flex flex-col items-center justify-start transition-all duration-0 overflow-hidden ${
+          isExpanded
+            ? "h-[12rem] md:h-[17rem] lg:h-[18.5rem] xl:h-[20rem] 2xl:h-[26.2rem]"
+            : "h-[11rem] md:h-[15.5rem] lg:h-[16.2rem] xl:h-[18rem] 2xl:h-[23.2rem]"
+
         }`}
         onClick={toggleCard}
       >
         <svg
-          className="absolute top-0 right-[0.8rem] z-10"
-          width="28"
-          height="37"
+          className="absolute top-0 right-[0.6rem] md:right-[0.9rem] lg:right-[1rem] xl:right-[1.2rem] 2xl:right-[1rem] z-10 w-5 h-7 md:w-5 md:h-7 lg:w-8 lg:h-10 xl:w-9 xl:h-12 2xl:w-10 2xl:h-13 origin-top-right"
           viewBox="0 0 28 37"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +79,6 @@ const Card = ({
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
         >
-          {/* <!-- Gray Border --> */}
           <polygon
             points="0,0 100,0 100,100 0,90"
             stroke="#6B7280"
@@ -79,26 +87,31 @@ const Card = ({
           />
         </svg>
 
-        {/* <!-- Inner Content --> */}
-        <div className=" absolute inset-0 top-0 flex flex-col z-0 text-center">
-          <div
-            className="imageSection w-full h-[133.33px] overflow-hidden"
-            style={{
-              backgroundImage: `url('${imagePath}')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          ></div>
-          <div className="border-t-[0.5px] h-[3.5rem] border-gray-500 text-left pt-1 px-[0.6rem]">
-            <h2 className="font-pxg font-thin leading-[1.1rem] text-base">{Name}</h2>
-            <p className="text-sm  font-thin font-pxg text-[#FEC20C]">
+        {/* Inner Content */}
+        <div className="absolute inset-0 top-0 flex flex-col z-0 text-center">
+          <div className="flex justify-center items-center w-full">
+            <Image
+              src={imagePath}
+              alt={Name}
+              width={160}
+              height={160}
+              className="rounded-md object-cover w-[6.5rem] h-[6.5rem] md:w-[10rem] md:h-[10rem] lg:w-[10rem] lg:h-[10rem] xl:w-[10rem] xl:h-[10rem] 2xl:w-[15rem] 2xl:h-[15rem]"
+              priority={false}
+            />
+          </div>
+          <div className="border-t-[0.5px] h-[2.5rem] md:h-[3.5rem] lg:h-[4rem] xl:h-[4.5rem] 2xl:h-[5.5rem] border-gray-500 text-left pt-1 md:pt-1.5 lg:pt-2 xl:pt-2.5 2xl:pt-3 px-[0.4rem] md:px-[0.7rem] lg:px-[0.8rem] xl:px-[1rem] 2xl:px-[1.2rem]">
+            <h2 className="font-pxg font-thin leading-[0.9rem] md:leading-[1.2rem] lg:leading-[1.4rem] xl:leading-[1.6rem] 2xl:leading-[1.8rem] text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl">{Name}</h2>
+            <p className="text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-base font-thin font-pxg text-[#FEC20C]">
+
               {Designation}
             </p>
           </div>
 
           {/* Links Section */}
           {isExpanded && (
-            <div className="flex  items-center justify-around border-dashed border-gray-500 border-t-[0.5px] px-1 pt-2 mt-2 mx-[0.6rem]">
+
+            <div className="flex items-center justify-around border-dashed border-gray-500 border-t-[0.5px] px-1 md:px-1.5 lg:px-2 xl:px-2.5 2xl:px-3 pt-1.5 md:pt-2 lg:pt-2.5 xl:pt-3 2xl:pt-4 mt-1.5 lg:mt-2 xl:mt-2.5 2xl:mt-3 mx-[0.4rem] md:mx-[0.7rem] lg:mx-[0.8rem] xl:mx-[1rem] 2xl:mx-[1.2rem]">
+
               {links.map((link, index) => {
                 const domain = getDomainFromUrl(link);
                 const icon = domain && domainToIconMap[domain] ? domainToIconMap[domain] : "default.jpg";
@@ -110,10 +123,13 @@ const Card = ({
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src={`/${icon}`} // Use the mapped icon or fallback to "default.jpg"
+                    <Image
+                      src={`/${icon}`}
                       alt={domain || "link"}
-                      className="w-3 h-3 object-contain"
+                      width={24}
+                      height={24}
+                      className="w-3 h-3 md:w-4 md:h-4 lg:w-6 lg:h-6 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5 object-contain"
+                      loading="lazy"
                     />
                   </a>
                 );
@@ -127,3 +143,20 @@ const Card = ({
 };
 
 export default Card;
+
+// In your parent component
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 place-items-center">
+  <Card
+    Name="John Doe"
+    Designation="Developer"
+    imagePath="/team/john.jpg"
+    links={["https://linkedin.com/in/john"]}
+  />
+  <Card
+    Name="Jane Smith"
+    Designation="Designer"
+    imagePath="/team/jane.jpg"
+    links={["https://instagram.com/jane"]}
+  />
+  {/* Add more cards */}
+</div>
