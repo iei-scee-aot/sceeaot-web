@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 
 interface CardProps {
   Name?: string;
@@ -86,14 +87,16 @@ const Card = ({
 
         {/* Inner Content */}
         <div className="absolute inset-0 top-0 flex flex-col z-0 text-center">
-          <div
-            className="imageSection w-[6.5rem] h-[6.5rem] md:w-[10rem] md:h-[10rem] lg:w-[10rem] lg:h-[10rem] xl:w-[10rem] xl:h-[10rem] 2xl:w-[15rem] 2xl:h-[15rem] overflow-hidden mx-auto"
-            style={{
-              backgroundImage: `url('${imagePath}')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          ></div>
+          <div className="flex justify-center items-center w-full">
+            <Image
+              src={imagePath}
+              alt={Name}
+              width={160}
+              height={160}
+              className="rounded-md object-cover w-[6.5rem] h-[6.5rem] md:w-[10rem] md:h-[10rem] lg:w-[10rem] lg:h-[10rem] xl:w-[10rem] xl:h-[10rem] 2xl:w-[15rem] 2xl:h-[15rem]"
+              priority={false}
+            />
+          </div>
           <div className="border-t-[0.5px] h-[2.5rem] md:h-[3.5rem] lg:h-[4rem] xl:h-[4.5rem] 2xl:h-[5.5rem] border-gray-500 text-left pt-1 md:pt-1.5 lg:pt-2 xl:pt-2.5 2xl:pt-3 px-[0.4rem] md:px-[0.7rem] lg:px-[0.8rem] xl:px-[1rem] 2xl:px-[1.2rem]">
             <h2 className="font-pxg font-thin leading-[0.9rem] md:leading-[1.2rem] lg:leading-[1.4rem] xl:leading-[1.6rem] 2xl:leading-[1.8rem] text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl">{Name}</h2>
             <p className="text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-base font-thin font-pxg text-[#FEC20C]">
@@ -115,10 +118,13 @@ const Card = ({
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
+                    <Image
                       src={`/${icon}`}
                       alt={domain || "link"}
+                      width={24}
+                      height={24}
                       className="w-3 h-3 md:w-4 md:h-4 lg:w-6 lg:h-6 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5 object-contain"
+                      loading="lazy"
                     />
                   </a>
                 );
