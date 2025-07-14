@@ -118,7 +118,7 @@ const Card = ({
                     <img
                       src={`/${icon}`}
                       alt={domain || "link"}
-                      className="w-3 h-3 md:w-4 md:h-4 lg:w-6 lg:h-6 xl:w-7 xl:h-7 2xl:w-8 2xl:h-8 object-contain"
+                      className="w-3 h-3 md:w-4 md:h-4 lg:w-6 lg:h-6 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5 object-contain"
                     />
                   </a>
                 );
