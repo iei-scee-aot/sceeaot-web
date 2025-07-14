@@ -44,7 +44,7 @@ html {
 }
 
 body {
-  color: var(--foreground);
+  color: #fff; /* Make all text white by default */
   background: var(--background);
   font-family: PXG, sans-serif;
   background-color: #000000; /* Suggested change */
