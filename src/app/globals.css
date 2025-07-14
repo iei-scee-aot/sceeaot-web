@@ -47,7 +47,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: PXG, sans-serif;
-  background-color: #181818; /* Suggested change */
+  background-color: #000000; /* Suggested change */
 }
 
 /* Component-specific utilities */
