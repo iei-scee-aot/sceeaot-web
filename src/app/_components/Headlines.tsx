@@ -25,6 +25,7 @@ const Headlines = ({headLine="Headline", noMarquee=false}) => {
   const shouldDisableMarquee = noMarquee || (isDesktop && (headLine === "About Us" || headLine === "Live Events"));
 
   return (
+
     <div className={`h-[2.0625rem] lg:h-[4.375rem] overflow-hidden ${shouldDisableMarquee ? 'no-marquee' : ''}`}>
       <div className={`flex whitespace-nowrap ${isVisible ? "animate-marquee" : "opacity-0"}`}>
         <p className="text-[3rem] lg:text-[7.1075rem] font-bold text-transparent bg-clip-text mb-3 mt-[18px] lg:mb-0 lg:mt-12 mr-36"
@@ -57,6 +58,7 @@ const Headlines = ({headLine="Headline", noMarquee=false}) => {
         >{headLine}</p>
       </div>
     </div>
+
   )
 }
 

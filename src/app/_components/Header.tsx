@@ -23,11 +23,13 @@ const Header = () => {
           <div className=" flex items-center justify-center">
             <a href="https://discord.gg/mqNcynTs" target="_blank" rel="noopener noreferrer">
             <Image
+
               src="/discord.jpg" 
               width={25} 
               height={25} 
               alt="discord icon"
               className="mr-3 w-[28px] h-[28px] md:w-[24px] md:h-[24px] lg:w-[28px] lg:h-[28px] xl:w-[32px] xl:h-[32px] 2xl:w-[36px] 2xl:h-[36px]"/>
+
             </a>
           
           <table className="border-gray-500 border-l-[0.5px]">

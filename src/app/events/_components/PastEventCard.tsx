@@ -23,6 +23,7 @@ const PastEventCard: React.FC<PastEventCardProps> = ({
   description,
 }) => {
   return (
+
     <div>
       {/* -------- Mobile Layout (up to lg) -------- */}
       <div className="xl:hidden mb-4 overflow-hidden bg-[#000000] w-[20rem]">
@@ -39,7 +40,9 @@ const PastEventCard: React.FC<PastEventCardProps> = ({
             <span className="leading-none">GALLERY</span>
             <ArrowRight size={11} className="animate-float" />
           </div>
+
         </div>
+
 
         <div className="p-3 border border-gray-500 border-t-0.5">
           <div className="flex justify-between items-center border-gray-500 mx-[-16px] px-4 mb-2">
@@ -49,6 +52,7 @@ const PastEventCard: React.FC<PastEventCardProps> = ({
            
               <Image src="/closed.png" alt="Status Icon" width={70} height={40} />
             
+
           </div>
 
           <div className="grid grid-cols-[1fr_2fr] border-b border-gray-500 border-[0.5px] text-xs ml-[-16px] mr-[-16px]">
