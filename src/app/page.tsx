@@ -17,7 +17,7 @@ interface FAQ {
 }
 
 const HomePage = () => {
-  const [activeQuestion, setActiveQuestion] = useState<number | null>(null); // Track which question is active
+  const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
 
   // FAQ data with questions and answers
   const faqData: FAQ[] = [
@@ -49,7 +49,7 @@ const HomePage = () => {
   ];
 
   const toggleAnswer = (index: number) => {
-    setActiveQuestion(activeQuestion === index ? null : index); // Toggle visibility of answers
+    setActiveQuestion(activeQuestion === index ? null : index);
   };
 
   return (
@@ -62,8 +62,8 @@ const HomePage = () => {
         <div className="w-full hidden lg:flex py-3 border-gray-500 border-b-[0.5px]"></div>
 
         {/*Hero Section*/}
-        <div className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 min-h-[46.9375rem] lg:min-h-[37.1875rem] ">
-          <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden "></div>
+        <div className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 min-h-[46.9375rem] lg:min-h-[37.1875rem]">
+          <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden"></div>
           <div className="flex flex-wrap gap-7 justify-center items-stretch py-12"></div>
         </div>
         <Divider2 />
@@ -73,229 +73,161 @@ const HomePage = () => {
           id="About-Us"
           className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0"
         >
-          {/* Mobile Layout */}
-          <div className="block lg:hidden">
-            <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
-              <Headlines headLine="About Us" />
+          {/* Unified Header Section */}
+          <div className="lg:flex lg:h-[10rem]">
+            {/* Headline Section */}
+            <div className="flex items-center border-gray-500 border-b-[0.5px] lg:border-b-[0.8px] lg:border-r-[0.8px] lg:w-1/2 lg:pl-[1.6rem] overflow-hidden">
+              <div className="block lg:hidden w-full">
+                <Headlines headLine="About Us" />
+              </div>
+              <h1
+                className="hidden lg:block text-[94px] font-bold leading-[72px] tracking-[-0.47px]"
+                style={{
+                  fontFamily: "KMR Apparat1",
+                  WebkitTextStroke: "1px #fec20c",
+                  color: "transparent",
+                }}
+              >
+                About
+                <br />
+                us
+              </h1>
             </div>
-            <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
+
+            {/* Button and GIF Section */}
+            <div className="flex items-center border-gray-500 border-b-[0.5px] lg:border-b-[0.8px] lg:w-1/2 lg:relative lg:overflow-hidden overflow-hidden">
               <Link href="/team">
-                <div className="h-[3.75rem] w-[6rem] bg-[#fec20c] text-black py-1 px-3 flex flex-col items-start gap-0 text-sm hover:bg-[#fec20c]/90 transition-all duration-300">
-                  <span>TEAM</span>
-                  <ArrowRight size={14} className="animate-float" />
+                <div className="h-[3.75rem] w-[6rem] lg:absolute lg:bottom-0 lg:left-0 lg:w-[116px] lg:h-[81px] lg:z-10 bg-[#fec20c] text-black py-1 px-3 lg:bg-[#fec20c] flex flex-col items-start lg:items-center lg:justify-center gap-0 text-sm hover:bg-[#fec20c]/90 transition-all duration-300">
+                  <span className="lg:text-center">TEAM</span>
+                  <span className="hidden lg:block"></span>
+                  <ArrowRight
+                    size={14}
+                    className="animate-float lg:mt-1 lg:size-[19px]"
+                  />
                 </div>
               </Link>
-              <img
-                src="/GIF.gif"
-                alt="Campus GIF"
-                className="w-full h-[3.75rem] object-cover"
-              />
-            </div>
-            <div className="flex font-light flex-wrap gap-7 pl-[1.40625rem] pr-[1.40625rem] text-[10.5px] text-left justify-center items-stretch pt-[1.40625rem] font-pxg">
-              Welcome to the IEI Students&apos; Chapter of Electrical
-              Engineering! We may be the newest community on the block, but
-              we&apos;re definitely the most energetic and driven one.
-              <br />
-              <br />
-              Our mission is to create a space where students can dive into both
-              core and non-core topics, learn new skills, and push the limits of
-              what they can achieve. We organize everything from hands-on
-              workshops and ideathons to competitions and brainstorming
-              sessions, all designed to spark creativity and innovation.
-              <br />
-              <br />
-              It&apos;s not just about textbooks here - it&apos;s about
-              real-world experiences and connecting with others who share the
-              same passion for engineering.
-              <br />
-              <br />
-              So, if you&apos;re looking to learn, grow, and have a ton of fun,
-              join us on this exciting journey! We can&apos;t wait to see what
-              we can achieve together.
-            </div>
-            <div className="relative w-full h-[200px] md:h-[420px] lg:h-[609px] mt-4">
-              <Image
-                src="/oldteam.jpg"
-                alt="About Us"
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/85 to-transparent"></div>
+              <div className="flex-1 lg:absolute lg:inset-0 lg:bg-black/20">
+                <img
+                  src="/GIF.gif"
+                  alt="Campus GIF"
+                  className="w-full h-[3.75rem] lg:w-full lg:h-full object-cover"
+                  style={{
+                    backgroundSize: "cover",
+                    backgroundPosition: "50% 50%",
+                  }}
+                />
+              </div>
             </div>
           </div>
 
-          {/* Desktop Layout */}
-          <div className="hidden lg:block">
-            <div className="flex h-[10rem]">
-              {/* Left Section - About Us Heading */}
-              <div className="w-1/2 border-r-[0.8px] border-gray-500 border-b-[0.8px] flex pl-[1.6rem] items-center relative">
-                <h1
-                  className="text-[94px] font-bold leading-[72px] tracking-[-0.47px]"
-                  style={{
-                    fontFamily: "KMR Apparat1",
-                    WebkitTextStroke: "1px #fec20c",
-                    color: "transparent",
-                  }}
-                >
-                  About
-                  <br />
-                  us
-                </h1>
-              </div>
+          {/* Text Content */}
+          <div className="px-[1.40625rem] lg:px-8 py-[1.40625rem] lg:py-8 text-[10.5px] lg:text-[1.2rem] font-light leading-relaxed font-pxg text-left lg:text-center">
+            Welcome to the IEI Students&apos; Chapter of Electrical Engineering!
+            We may be the newest community on the block, but we&apos;re
+            definitely the most energetic and driven one.
+            <br />
+            <br />
+            Our mission is to create a space where students can dive into both
+            core and non-core topics, learn new skills, and push the limits of
+            what they can achieve. We organize everything from hands-on
+            workshops and ideathons to competitions and brainstorming sessions,
+            all designed to spark creativity and innovation.
+            <br />
+            <br />
+            It&apos;s not just about textbooks here - it&apos;s about real-world
+            experiences and connecting with others who share the same passion
+            for engineering.
+            <br />
+            <br />
+            So, if you&apos;re looking to learn, grow, and have a ton of fun,
+            join us on this exciting journey! We can&apos;t wait to see what we
+            can achieve together.
+          </div>
 
-              {/* Right Section - GIF Background with Button */}
-              <div
-                className="w-1/2 border-b-[0.8px] border-gray-500 relative overflow-hidden"
-                style={{
-                  backgroundImage: "url(/GIF.gif)",
-                  backgroundSize: "cover",
-                  backgroundPosition: "50% 50%",
-                }}
-              >
-                {/* Dark overlay */}
-                <div className="absolute inset-0 bg-black/20"></div>
-
-                {/* Button positioned at bottom left */}
-                <div className="absolute bottom-0 left-0 w-[116px] h-[81px] bg-black/80">
-                  <Link href="/team">
-                    <div className="w-full h-full bg-[#fec20c] text-black flex flex-col items-center justify-center text-sm font-medium hover:bg-[#fec20c]/90 transition-all duration-300 cursor-pointer">
-                      <span>TEAM</span>
-                      <ArrowRight size={19} className="mt-1" />
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Text Content Below - Desktop */}
-            <div className="px-8 py-8 lg:text-[1.2rem] font-light leading-relaxed font-pxg text-center">
-              Welcome to the IEI Students&apos; Chapter of Electrical
-              Engineering! We may be the newest community on the block, but
-              we&apos;re definitely the most energetic and driven one.
-              <br />
-              <br />
-              Our mission is to create a space where students can dive into both
-              core and non-core topics, learn new skills, and push the limits of
-              what they can achieve. We organize everything from hands-on
-              workshops and ideathons to competitions and brainstorming
-              sessions, all designed to spark creativity and innovation.
-              <br />
-              <br />
-              It&apos;s not just about textbooks here - it&apos;s about
-              real-world experiences and connecting with others who share the
-              same passion for engineering.
-              <br />
-              <br />
-              So, if you&apos;re looking to learn, grow, and have a ton of fun,
-              join us on this exciting journey! We can&apos;t wait to see what
-              we can achieve together.
-            </div>
-
-            {/* Team Image - Desktop */}
-            <div className="relative w-full h-[200px] md:h-[420px] lg:h-[609px]">
-              <Image
-                src="/oldteam.jpg"
-                alt="About Us"
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/85 to-transparent"></div>
-            </div>
+          {/* Team Image */}
+          <div className="relative w-full h-[200px] md:h-[420px] lg:h-[609px] mt-4 lg:mt-0">
+            <Image
+              src={
+                "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rhlcdh5oLMNJOCXnKiHD7Ua35Ww8EVepuQtP4Z"
+              }
+              alt="About Us"
+              loading="lazy"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/85 to-transparent"></div>
           </div>
         </div>
         <Divider2 />
 
         {/*Live Events*/}
         <div className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
-          {/* Mobile Layout */}
-          <div className="block lg:hidden">
-            <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
-              <Headlines headLine="Live Events" />
+          {/* Unified Header Section */}
+          <div className="lg:flex lg:h-[10rem]">
+            {/* Headline Section */}
+            <div className="flex items-center border-gray-500 border-b-[0.5px] lg:border-b-[0.8px] lg:border-r-[0.8px] lg:w-1/2 lg:pl-[1.6rem] overflow-hidden">
+              <div className="block lg:hidden w-full">
+                <Headlines headLine="Live Events" />
+              </div>
+              <h1
+                className="hidden lg:block text-[94px] font-bold leading-[72px] tracking-[-0.47px]"
+                style={{
+                  fontFamily: "KMR Apparat1",
+                  WebkitTextStroke: "1px #fec20c",
+                  color: "transparent",
+                }}
+              >
+                Live
+                <br />
+                Events
+              </h1>
             </div>
-            <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
+
+            {/* Button and GIF Section */}
+            <div className="flex items-center border-gray-500 border-b-[0.5px] lg:border-b-[0.8px] lg:w-1/2 lg:relative lg:overflow-hidden overflow-hidden">
               <Link href="/events">
-                <div className="bg-[#fec20c] w-[6rem] h-[3.75rem] text-black py-1 px-3 flex flex-col items-start gap-0 text-sm hover:bg-[#fec20c]/90 transition-all duration-300 cursor-pointer">
-                  <span>VIEW ALL</span>
-                  <span>EVENTS</span>
-                  <ArrowRight size={14} className="animate-float" />
+                <div className="h-[3.75rem] w-[6rem] lg:absolute lg:bottom-0 lg:left-0 lg:w-[116px] lg:h-[81px] lg:z-10 bg-[#fec20c] text-black py-1 px-3 lg:bg-[#fec20c] flex flex-col items-start lg:items-center lg:justify-center gap-0 text-sm hover:bg-[#fec20c]/90 transition-all duration-300 cursor-pointer">
+                  <span className="lg:block">EVENTS</span>
+                  <ArrowRight
+                    size={14}
+                    className="animate-float lg:mt-1 lg:size-[19px]"
+                  />
                 </div>
               </Link>
-              <img
-                src="/GIF.gif"
-                alt="Campus GIF"
-                className="w-full h-[3.75rem] object-cover"
-              />
-            </div>
-            <div className="flex flex-wrap gap-7 justify-center items-stretch py-12 text-sm font-pxg">
-              No ongoing events
+              <div className="flex-1 lg:absolute lg:inset-0 lg:bg-black/20">
+                <img
+                  src="/GIF.gif"
+                  alt="Campus GIF"
+                  className="w-full h-[3.75rem] lg:w-full lg:h-full object-cover"
+                  style={{
+                    backgroundSize: "cover",
+                    backgroundPosition: "50% 50%",
+                  }}
+                />
+              </div>
             </div>
           </div>
 
-          {/* Desktop Layout */}
-          <div className="hidden lg:block lg:min-h-[23.5rem]">
-            <div className="flex h-[10rem]">
-              {/* Left Section - Live Events Heading */}
-              <div className="w-1/2 border-r-[0.8px] border-gray-500 border-b-[0.8px] flex pl-[1.6rem] items-center relative">
-                <h1
-                  className="text-[94px] font-bold leading-[72px] tracking-[-0.47px]"
-                  style={{
-                    fontFamily: "KMR Apparat1",
-                    WebkitTextStroke: "1px #fec20c",
-                    color: "transparent",
-                  }}
-                >
-                  Live
-                  <br />
-                  Events
-                </h1>
-              </div>
-
-              {/* Right Section - GIF Background with Button */}
-              <div
-                className="w-1/2 border-b-[0.8px] border-gray-500 relative overflow-hidden"
-                style={{
-                  backgroundImage: "url(/GIF.gif)",
-                  backgroundSize: "cover",
-                  backgroundPosition: "50% 50%",
-                }}
-              >
-                {/* Dark overlay */}
-                <div className="absolute inset-0 bg-black/20"></div>
-
-                {/* Button positioned at bottom left */}
-                <div className="absolute bottom-0 left-0 w-[116px] h-[81px] bg-black/80">
-                  <Link href="/events">
-                    <div className="w-full h-full bg-[#fec20c] text-black flex flex-col items-center justify-center text-sm font-medium hover:bg-[#fec20c]/90 transition-all duration-300 cursor-pointer">
-                      <span>VIEW ALL</span>
-                      <span>EVENTS</span>
-                      <ArrowRight size={19} className="mt-1" />
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Content Below - Desktop */}
-            <div className="px-8 py-8 font-light leading-relaxed font-pxg flex justify-center items-center min-h-[23.5rem]">
-              <p className="text-center text-[2rem]">No ongoing events...</p>
-            </div>
+          {/* Content */}
+          <div className="px-4 lg:px-8 py-12 lg:py-8 text-sm lg:text-[2rem] font-pxg lg:font-light lg:leading-relaxed flex justify-center items-center lg:min-h-[23.5rem]">
+            <p className="text-center">No ongoing events...</p>
           </div>
         </div>
         <Divider2 />
 
+        {/* HOD's Desk */}
         <div className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
             <Headlines headLine="From The HOD's Desk" />
           </div>
-          <div className="lg:hidden flex gap-2 items-center py-[1.9375rem] pl-[0.5rem] pr-[0.5rem] text-[9px] font-pxg tracking-tight leading-snug">
+          <div className="flex gap-2 lg:gap-10 items-center py-[1.9375rem] lg:py-[1.5rem] pl-[0.5rem] lg:pl-[2rem] pr-[0.5rem] lg:pr-[1rem] text-[9px] lg:text-[1rem] font-pxg tracking-tight leading-snug">
             <Image
               src="/HOD.jpeg"
               alt="HOD's PIC"
               width={135}
               height={135}
-              className="border-2 rounded-md"
+              className="border-2 rounded-md lg:w-[400px] lg:h-[400px]"
             />
             <p className="flex-1 font-light">
               <span className="font-bolder text-left text-yellow">&quot; </span>
@@ -304,45 +236,13 @@ const HomePage = () => {
               electrical engineers who are well suited for both industry and
               society.
               <br />
+              <br className="hidden lg:block" />
               As HOD of this department, I endeavor to transform them into
               creators of technology with good human values and a commitment
               towards our nation.
               <span className="font-bolder text-left text-yellow"> &quot;</span>
               <br />
-              <span className="font-bolder text-left text-yellow">
-                {" "}
-                - Prof. Sandip Saha Chowdhury
-              </span>
-              <br />
-              <span className="font-bolder text-left text-grey italic">
-                {" "}
-                HOD, Department of Electrical Engineering
-              </span>
-            </p>
-          </div>
-          {/* for desktop */}
-          <div className="hidden lg:flex gap-10 items-center lg:py-[1.5rem] pl-[2rem] pr-[1rem] text-[9px] font-pxg tracking-tight  leading-snug">
-            <Image
-              src="/HOD.jpeg"
-              alt="HOD's PIC"
-              width={400}
-              height={400}
-              className="border-2 rounded-md"
-            />
-            <p className="flex-1 text-[1rem] font-light">
-              <span className="font-bolder text-left text-yellow">&quot; </span>
-              Our department has created a platform to deliver strong
-              fundamentals-based technical education. We strive to produce
-              electrical engineers who are well suited for both industry and
-              society.
-              <br />
-              <br />
-              As HOD of this department, I endeavor to transform them into
-              creators of technology with good human values and a commitment
-              towards our nation.
-              <span className="font-bolder text-left text-yellow"> &quot;</span>
-              <br />
-              <br />
+              <br className="hidden lg:block" />
               <span className="font-bolder text-left text-yellow">
                 {" "}
                 - Prof. Sandip Saha Chowdhury
@@ -359,11 +259,11 @@ const HomePage = () => {
         <Divider2 />
 
         {/*FAQs*/}
-        <div className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 ">
-          <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden ">
+        <div className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+          <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
             <Headlines headLine="FAQs" />
           </div>
-          <div className="flex flex-col lg:flex-col justify-center items-stretch py-8 lg:py-12 px-4 lg:px-8">
+          <div className="flex flex-col justify-center items-stretch py-8 lg:py-12 px-4 lg:px-8">
             {faqData.map((faq, index: number) => (
               <div
                 key={index}
@@ -372,7 +272,7 @@ const HomePage = () => {
                 <button
                   onClick={() => toggleAnswer(index)}
                   className={`w-full flex justify-between items-center text-left focus:outline-none transition-colors duration-200 font-medium text-[13px] lg:text-[1.5rem] ${
-                    activeQuestion === index ? "text-[#fec20c]" : "text-white "
+                    activeQuestion === index ? "text-[#fec20c]" : "text-white"
                   }`}
                 >
                   <span>{faq.question}</span>

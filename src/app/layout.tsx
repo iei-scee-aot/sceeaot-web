@@ -13,7 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SCEE AOT", // <-- Use a plain string here
+  title: "SCEEAOT",
+  description:
+    "The official website for Students Chapter of Electrical Engineering at Academy of Technology.",
 };
 
 export default function RootLayout({

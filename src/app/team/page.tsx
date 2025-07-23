@@ -1,15 +1,13 @@
 "use client";
 
-import React from "react";
-
-import Card from "./_components/Card";
-import Footer from "../_components/Footer";
-import Header from "../_components/Header";
+import Image from "next/image";
 import Divider from "../_components/Divider";
 import Divider2 from "../_components/Divider2";
-import Navbar from "../_components/Navbar";
-import Image from "next/image";
+import Footer from "../_components/Footer";
+import Header from "../_components/Header";
 import Headlines from "../_components/Headlines";
+import Navbar from "../_components/Navbar";
+import Card from "./_components/Card";
 
 const Page = () => {
   return (
@@ -20,7 +18,7 @@ const Page = () => {
         <Divider2 />
         <Navbar teamColor="#FEC20C" />
         <div className="w-full hidden lg:flex py-3 border-gray-500 border-b-[0.5px]"></div>
-        
+
         {/* Previous Team Section */}
         <div className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
@@ -53,7 +51,7 @@ const Page = () => {
                 "https://www.facebook.com/share/1EpY3SMJVj/",
                 "https://www.instagram.com/ritamdey68/",
                 "https://x.com/RitamDey315755?t=4SD9_iIsweoOuQspuSvVOA&s=09",
-                "https://www.linkedin.com/in/ritam-dey-9494a2326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                "https://www.linkedin.com/in/ritam-dey-9494a2326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
               ]}
             />
             <Card
@@ -75,7 +73,9 @@ const Page = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
             <Headlines headLine="Tech Team" />
           </div>
-<div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">            <Card
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">
+            {" "}
+            <Card
               Name="Debarshee Chakraborty"
               Designation="Lead"
               imagePath="/_pictures/Debarshee_Chatterjee.jpg"
@@ -182,7 +182,9 @@ const Page = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
             <Headlines headLine="Design Team" />
           </div>
-<div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">            <Card
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">
+            {" "}
+            <Card
               Name="Rhritwika Das"
               Designation="Lead"
               imagePath="/_pictures/Rhritwika_Das.jpg"
@@ -193,8 +195,7 @@ const Page = () => {
               Designation="Co-Lead"
               imagePath="/_pictures/Abhinandan_Shadhukhan.jpg"
               links={[
-
-              "https://www.linkedin.com/in/abhinandan-sadhukhan-5b011a269"
+                "https://www.linkedin.com/in/abhinandan-sadhukhan-5b011a269",
               ]}
             />
             <Card
@@ -261,7 +262,7 @@ const Page = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
             <Headlines headLine="Content Team" />
           </div>
-         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">
             <Card
               Name="Asmita Mukherjee"
               Designation="Lead"
@@ -308,7 +309,9 @@ const Page = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
             <Headlines headLine="PR & Marketing Team" />
           </div>
-<div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">            <Card
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">
+            {" "}
+            <Card
               Name="Swapnil Dassharma"
               Designation="Lead"
               imagePath="/_pictures/Swapnil_Dassharma.jpg"
@@ -387,13 +390,15 @@ const Page = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
             <Headlines headLine="Photography Team" />
           </div>
-<div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">            <Card
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">
+            {" "}
+            <Card
               Name="Dhrubajit ghosh"
               Designation="Lead"
               imagePath="/_pictures/Dhrubajit_Ghosh.jpg"
               links={[
                 "https://www.facebook.com/share/16qFXU7iDX/",
-                "https://www.instagram.com/photography_with_abirla?igsh=MWpvdnI3aXlwYmtocw==https://www.instagram.com/photography_with_abirla?igsh=MWpvdnI3aXlwYmtocw=="
+                "https://www.instagram.com/photography_with_abirla?igsh=MWpvdnI3aXlwYmtocw==https://www.instagram.com/photography_with_abirla?igsh=MWpvdnI3aXlwYmtocw==",
               ]}
             />
             <Card
@@ -403,7 +408,7 @@ const Page = () => {
               links={[
                 "https://www.facebook.com/profile.php?id=100094195157462",
                 "https://www.instagram.com/mostly_insane_0_0/?igsh=MTFvaWQyMGRlazg2Zw==",
-                "https://x.com/AsmitWick2005?t=H0w0MkyBjhNwTl0mLYTmOA&s=09"
+                "https://x.com/AsmitWick2005?t=H0w0MkyBjhNwTl0mLYTmOA&s=09",
               ]}
             />
             <Card
@@ -451,7 +456,9 @@ const Page = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
             <Headlines headLine="Videography Team" />
           </div>
-<div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">            <Card
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-x-2 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center">
+            {" "}
+            <Card
               Name="Suvadeep roy"
               Designation="Lead"
               imagePath="/_pictures/Suvadeep_Roy.jpg"
@@ -470,7 +477,7 @@ const Page = () => {
                 "https://www.facebook.com/anish.sasmal.9",
                 "https://www.instagram.com/iam_anish___?utm_source=ig_web_button_share_sheet&igsh=MW5sb2QxM2M3czczZA==",
                 "https://x.com/AnishSasmal",
-                "https://www.linkedin.com/in/anish-sasmal-9a8111291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                "https://www.linkedin.com/in/anish-sasmal-9a8111291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
               ]}
             />
             <Card
@@ -501,7 +508,7 @@ const Page = () => {
               links={[
                 "https://www.facebook.com/bikram.bhowmik.90475",
                 "https://www.instagram.com/bhowmick8462/",
-                "https://www.linkedin.com/in/bikram-bhowmick-59a379325/"
+                "https://www.linkedin.com/in/bikram-bhowmick-59a379325/",
               ]}
             />
           </div>
@@ -510,7 +517,6 @@ const Page = () => {
 
         {/* Footer */}
         <Footer />
-        
       </div>
     </>
   );

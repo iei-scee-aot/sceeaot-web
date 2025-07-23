@@ -6,7 +6,9 @@ const nextConfig: NextConfig = {
   },
   // You can keep other options here too:
   reactStrictMode: true,
-  // ...any other config
+  images: {
+    remotePatterns: [new URL("https://bywh0yntxo.ufs.sh/f/**")],
+  },
 };
 
 export default nextConfig;
