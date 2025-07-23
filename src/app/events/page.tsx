@@ -45,9 +45,6 @@ export default function EventsPage() {
             ))}
           </div>
         </div>
-
-        {/* Consistent bottom spacing */}
-        <div className="py-10"></div>
       </main>
     </>
   );
