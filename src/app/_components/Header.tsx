@@ -7,7 +7,7 @@ const Header = () => {
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center">
             <Image
-              src="/scee_logo.jpg"
+              src="/scee_logo.png"
               alt="SCEE Logo"
               width={100}
               height={50}
@@ -16,7 +16,7 @@ const Header = () => {
           </Link>
           <div className="flex mt-3 items-baseline">
             <span className="text-[7px] md:text-[8px] lg:text-[9px] xl:text-[10px] 2xl:text-[11px] text-[#747474]">
-              Student Chapter EE AOT
+              Student Chapter of Electrical Engineering
             </span>
           </div>
         </div>
