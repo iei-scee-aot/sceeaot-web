@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="flex justify-between items-center ">
             <div className="relative h-20 w-28 md:w-44 md:h-32">
               <Image
-                src="/scee_logo.jpg"
+                src="/scee_logo.png"
                 alt="SCEE Logo"
                 fill
                 style={{ objectFit: "contain" }}
@@ -31,7 +31,7 @@ const Footer = () => {
                 className="flex justify-center text-center items-center gap-1"
               >
                 <Image
-                  src="/linktree.jpg"
+                  src="/icons/linktree.jpg"
                   alt="Linktree"
                   width={16}
                   height={16}
