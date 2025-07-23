@@ -28,7 +28,7 @@ const Header = () => {
           rel="noopener noreferrer"
         >
           <Image
-            src="/discord.jpg"
+            src="/icons/discord.jpg"
             width={25}
             height={25}
             alt="discord icon"
@@ -47,7 +47,7 @@ const Header = () => {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="/facebook.jpg"
+                    src="/icons/facebook.jpg"
                     alt="Facebook"
                     className="w-[14px] h-[14px] md:w-[16px] md:h-[16px] lg:w-[18px] lg:h-[18px] xl:w-[20px] xl:h-[20px] 2xl:w-[22px] 2xl:h-[22px] object-contain"
                   />
@@ -61,7 +61,7 @@ const Header = () => {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="/x.jpg"
+                    src="/icons/x.jpg"
                     alt="X"
                     className="w-[14px] h-[14px] md:w-[16px] md:h-[16px] lg:w-[18px] lg:h-[18px] xl:w-[20px] xl:h-[20px] 2xl:w-[22px] 2xl:h-[22px] object-fill"
                   />
@@ -75,7 +75,7 @@ const Header = () => {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="/linkedin.jpg"
+                    src="/icons/linkedin.jpg"
                     alt="Linkedin"
                     className="w-[14px] h-[14px] md:w-[16px] md:h-[16px] lg:w-[18px] lg:h-[18px] xl:w-[20px] xl:h-[20px] 2xl:w-[22px] 2xl:h-[22px] object-contain"
                   />
@@ -91,7 +91,7 @@ const Header = () => {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="/instagram.jpg"
+                    src="/icons/instagram.jpg"
                     alt="Instagram"
                     className="w-[14px] h-[14px] md:w-[16px] md:h-[16px] lg:w-[18px] lg:h-[18px] xl:w-[20px] xl:h-[20px] 2xl:w-[22px] 2xl:h-[22px] object-contain"
                   />
@@ -105,7 +105,7 @@ const Header = () => {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="/threads.jpg"
+                    src="/icons/threads.jpg"
                     alt="Threads"
                     className="w-[14px] h-[14px] md:w-[16px] md:h-[16px] lg:w-[18px] lg:h-[18px] xl:w-[20px] xl:h-[20px] 2xl:w-[22px] 2xl:h-[22px] object-contain"
                   />
@@ -119,7 +119,7 @@ const Header = () => {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="/whatsapp.jpg"
+                    src="/icons/whatsapp.jpg"
                     alt="WhatsApp"
                     className="w-[14px] h-[14px] md:w-[16px] md:h-[16px] lg:w-[18px] lg:h-[18px] xl:w-[20px] xl:h-[20px] 2xl:w-[22px] 2xl:h-[22px] object-contain"
                   />
