@@ -1,14 +1,12 @@
 "use client";
 
-import React from "react";
-
-import PastEventCard from "./_components/PastEventCard";
-import Header from "../_components/Header";
 import Divider from "../_components/Divider";
-import Footer from "../_components/Footer";
-import Navbar from "../_components/Navbar";
 import Divider2 from "../_components/Divider2";
+import Footer from "../_components/Footer";
+import Header from "../_components/Header";
 import Headlines from "../_components/Headlines";
+import Navbar from "../_components/Navbar";
+import PastEventCard from "./_components/PastEventCard";
 
 export default function EventsPage() {
   return (
@@ -32,7 +30,6 @@ export default function EventsPage() {
           </div>
           <Divider2 />
 
-
           {/* Past Events Section */}
           <div className="w-[calc(100%-1.875rem)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
             <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
@@ -41,7 +38,6 @@ export default function EventsPage() {
 
             {/* Updated container with proper centering */}
             <div className="grid grid-cols-1 gap-8 px-4 lg:px-8 py-8 lg:py-12 place-items-center">
-
               <PastEventCard
                 key="hoverx"
                 imageSrc="/utils/hoverx.png"

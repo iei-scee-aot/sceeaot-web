@@ -13,7 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SCEE AOT", // <-- Use a plain string here
+  title: "SCEEAOT",
+  description:
+    "The official website for Students Chapter of Electrical Engineering at Academy of Technology.",
 };
 
 export default function RootLayout({
@@ -27,6 +29,7 @@ export default function RootLayout({
         <link rel="icon" href="/scee_icon.ico" />
       </head>
       <body
+        suppressHydrationWarning={true}
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
