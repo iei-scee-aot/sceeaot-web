@@ -27,6 +27,7 @@ export default function RootLayout({
         <link rel="icon" href="/scee_icon.ico" />
       </head>
       <body
+        suppressHydrationWarning={true}
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
