@@ -28,11 +28,11 @@ const Card = ({
 
   // Map known domains to their corresponding icon file names
   const domainToIconMap: { [key: string]: string } = {
-    "facebook.com": "facebook.jpg",
-    "instagram.com": "instagram.jpg",
-    "x.com": "x.jpg",
-    "threads.net": "threads.jpg",
-    "linkedin.com": "linkedin.jpg",
+    "facebook.com": "icons/facebook.jpg",
+    "instagram.com": "icons/instagram.jpg",
+    "x.com": "icons/x.jpg",
+    "threads.net": "icons/threads.jpg",
+    "linkedin.com": "icons/linkedin.jpg",
   };
 
   // Function to extract the domain from a URL
@@ -94,7 +94,7 @@ const Card = ({
               loading="lazy"
               width={160}
               height={160}
-              className="rounded-md object-cover w-[6.5rem] h-[6.5rem] md:w-[10rem] md:h-[10rem] lg:w-[10rem] lg:h-[10rem] xl:w-[10rem] xl:h-[10rem] 2xl:w-[15rem] 2xl:h-[15rem]"
+              className="object-cover w-[6.5rem] h-[6.5rem] md:w-[10rem] md:h-[10rem] lg:w-[10rem] lg:h-[10rem] xl:w-[10rem] xl:h-[10rem] 2xl:w-[15rem] 2xl:h-[15rem]"
               priority={false}
             />
           </div>

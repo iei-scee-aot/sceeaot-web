@@ -1,7 +1,11 @@
-import React from "react";
 import Link from "next/link";
 
-const Navbar = ({homeColor="#F6F6F4", teamColor="#F6F6F4", eventColor="#F6F6F4", aboutColor="#F6F6F4"}) => {
+const Navbar = ({
+  homeColor = "#F6F6F4",
+  teamColor = "#F6F6F4",
+  eventColor = "#F6F6F4",
+  aboutColor = "#F6F6F4",
+}) => {
   return (
     <>
       {/* Mobile view */}
@@ -9,7 +13,10 @@ const Navbar = ({homeColor="#F6F6F4", teamColor="#F6F6F4", eventColor="#F6F6F4",
         <div className="navigation h-16 w-[calc(100%-30px)] mx-auto border-l-[0.5px] border-r-[0.5px] border-gray-500  flex justify-between">
           <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
             <Link href="/" className="flex flex-col w-full">
-              <span className="pl-2 font-light text-lg " style={{color: homeColor}}>
+              <span
+                className="pl-2 font-light text-lg "
+                style={{ color: homeColor }}
+              >
                 HOME
               </span>
               <div className="home flex pr-2 justify-end ">
@@ -32,7 +39,10 @@ const Navbar = ({homeColor="#F6F6F4", teamColor="#F6F6F4", eventColor="#F6F6F4",
           </div>
           <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
             <Link href="/team" className="flex flex-col w-full">
-              <span className="pl-2 font-light text-lg " style={{color: teamColor}}>
+              <span
+                className="pl-2 font-light text-lg "
+                style={{ color: teamColor }}
+              >
                 TEAMS
               </span>
               <div className="teams flex pr-2 justify-end ">
@@ -55,7 +65,10 @@ const Navbar = ({homeColor="#F6F6F4", teamColor="#F6F6F4", eventColor="#F6F6F4",
           </div>
           <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
             <Link href="/events" className="flex flex-col w-full">
-              <span className="pl-2 font-light text-lg " style={{color: eventColor}}>
+              <span
+                className="pl-2 font-light text-lg "
+                style={{ color: eventColor }}
+              >
                 EVENTS
               </span>
               <div className="events flex pr-2 justify-end ">
@@ -96,7 +109,10 @@ const Navbar = ({homeColor="#F6F6F4", teamColor="#F6F6F4", eventColor="#F6F6F4",
           </div>
           <div className="w-1/4 flex justify-between items-center">
             <Link href="/#About-Us" className="flex flex-col w-full">
-              <span className="pl-2 font-light text-lg pt-[2.9px]" style={{color: aboutColor}}>
+              <span
+                className="pl-2 font-light text-lg pt-[2.9px]"
+                style={{ color: aboutColor }}
+              >
                 ABOUT
               </span>
               <div className="about flex pr-2 justify-end pb-[5px]">
@@ -128,16 +144,19 @@ const Navbar = ({homeColor="#F6F6F4", teamColor="#F6F6F4", eventColor="#F6F6F4",
         </div>
       </nav>
 
-
-
       {/* For bigger screen */}
-
 
       <nav className="hidden border-b-[0.5px] font-pxg w-full bg-[#000000] border-gray-500 z-50 lg:flex flex-col sticky top-0">
         <div className="navigation w-[calc(100%-25rem)] mx-auto border-l-[0.5px] border-r-[0.5px] border-gray-500  flex justify-between">
           <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
-            <Link href="/" className="flex justify-center items-baseline  w-full">
-              <span className=" font-light lg:text-2xl xl:text-[1rem] 2xl:text-4xl " style={{color: homeColor}}>
+            <Link
+              href="/"
+              className="flex justify-center items-baseline  w-full"
+            >
+              <span
+                className=" font-light lg:text-2xl xl:text-[1rem] 2xl:text-4xl "
+                style={{ color: homeColor }}
+              >
                 HOME
               </span>
               <div className="home  pl-1">
@@ -159,8 +178,14 @@ const Navbar = ({homeColor="#F6F6F4", teamColor="#F6F6F4", eventColor="#F6F6F4",
             </Link>
           </div>
           <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
-            <Link href="/team" className=" justify-center items-baseline flex  w-full">
-              <span className=" font-light lg:text-2xl xl:text-[1rem] 2xl:text-4xl " style={{color: teamColor}}>
+            <Link
+              href="/team"
+              className=" justify-center items-baseline flex  w-full"
+            >
+              <span
+                className=" font-light lg:text-2xl xl:text-[1rem] 2xl:text-4xl "
+                style={{ color: teamColor }}
+              >
                 TEAMS
               </span>
               <div className="teams pl-1  ">
@@ -182,8 +207,14 @@ const Navbar = ({homeColor="#F6F6F4", teamColor="#F6F6F4", eventColor="#F6F6F4",
             </Link>
           </div>
           <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
-            <Link href="/events" className="flex justify-center items-baseline   w-full">
-              <span className="font-light lg:text-2xl xl:text-[1rem] 2xl:text-4xl" style={{color: eventColor}}>
+            <Link
+              href="/events"
+              className="flex justify-center items-baseline   w-full"
+            >
+              <span
+                className="font-light lg:text-2xl xl:text-[1rem] 2xl:text-4xl"
+                style={{ color: eventColor }}
+              >
                 EVENTS
               </span>
               <div className="events  pl-1">
@@ -223,8 +254,14 @@ const Navbar = ({homeColor="#F6F6F4", teamColor="#F6F6F4", eventColor="#F6F6F4",
             </Link>
           </div>
           <div className="w-1/4 flex justify-between items-center">
-            <Link href="/#About-Us" className="flex justify-center items-baseline w-full">
-              <span className=" font-light lg:text-2xl xl:text-[1rem] 2xl:text-4xl " style={{color: aboutColor}}>
+            <Link
+              href="/#About-Us"
+              className="flex justify-center items-baseline w-full"
+            >
+              <span
+                className=" font-light lg:text-2xl xl:text-[1rem] 2xl:text-4xl "
+                style={{ color: aboutColor }}
+              >
                 ABOUT
               </span>
               <div className="about pl-1">
@@ -254,7 +291,6 @@ const Navbar = ({homeColor="#F6F6F4", teamColor="#F6F6F4", eventColor="#F6F6F4",
             </Link>
           </div>
         </div>
-        
       </nav>
     </>
   );
