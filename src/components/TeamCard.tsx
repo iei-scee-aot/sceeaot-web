@@ -64,11 +64,11 @@ const TeamCard = ({
         >
           <path
             d="M23.4141 32.9229C20.9366 35.2353 17.5013 36.6703 13.7146 36.6703C6.14131 36.6703 6.10352e-05 30.9385 6.10352e-05 23.87V-0.000347137H4.14694V22.6646C4.14694 27.5928 8.4344 31.5945 13.7146 31.5945C16.3592 31.5945 18.7489 30.594 20.4797 28.9786C22.2105 27.3632 23.2824 25.1328 23.2824 22.6646V-0.000347137H27.4292V23.87C27.4292 27.4042 25.9005 30.6022 23.4141 32.9229Z"
-            fill="#FEC20C"
+            fill="var(--primary)"
           />
           <path
             d="M13.7146 27.0024C10.6044 27.0024 8.09167 24.649 8.09167 21.7543V-0.000391006H11.6938V20.8769C11.6938 21.9183 12.5988 22.7712 13.7234 22.7712C14.2856 22.7712 14.7864 22.558 15.1554 22.2136C15.5244 21.8691 15.7529 21.4017 15.7529 20.8769V-0.000391006H19.355V21.7543C19.355 23.2058 18.7225 24.5178 17.7033 25.469C16.6754 26.412 15.2696 27.0024 13.7146 27.0024Z"
-            fill="#FEC20C"
+            fill="var(--primary)"
           />
         </svg>
 
@@ -102,7 +102,7 @@ const TeamCard = ({
             <h2 className="font-pxg font-thin leading-[1.8rem] md:leading-[1.2rem] lg:leading-[1.4rem] xl:leading-[1.6rem] 2xl:leading-[1.8rem] text-xl md:text-sm lg:text-base xl:text-lg 2xl:text-xl">
               {Name}
             </h2>
-            <p className="text-xl md:text-sm lg:text-sm xl:text-base 2xl:text-base font-thin font-pxg text-[#FEC20C]">
+            <p className="text-xl md:text-sm lg:text-sm xl:text-base 2xl:text-base font-thin font-pxg text-primary">
               {Designation}
             </p>
           </div>

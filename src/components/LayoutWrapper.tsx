@@ -17,11 +17,11 @@ export default function LayoutWrapper({ children }: LayoutWrapperProps) {
   // Determine navbar color based on current route
   const getNavbarProps = () => {
     if (pathname === "/") {
-      return { homeColor: "#FEC20C" };
+      return { homeColor: "var(--primary)" };
     } else if (pathname === "/team") {
-      return { teamColor: "#FEC20C" };
+      return { teamColor: "var(--primary)" };
     } else if (pathname === "/events") {
-      return { eventColor: "#FEC20C" };
+      return { eventColor: "var(--primary)" };
     }
     return {};
   };

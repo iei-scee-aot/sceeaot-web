@@ -9,7 +9,7 @@ const Navbar = ({
   return (
     <>
       {/* Mobile view */}
-      <nav className="lg:hidden fixed font-pxg w-full bottom-0 bg-[#000000] border-t-[0.5px] border-gray-500 z-50 flex flex-col">
+      <nav className="lg:hidden fixed font-pxg w-full bottom-0 bg-background border-t-[0.5px] border-gray-500 z-50 flex flex-col">
         <div className="navigation h-16 w-[calc(100%-30px)] mx-auto border-l-[0.5px] border-r-[0.5px] border-gray-500  flex justify-between">
           <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
             <Link href="/" className="flex flex-col w-full">
@@ -146,7 +146,7 @@ const Navbar = ({
 
       {/* For bigger screen */}
 
-      <nav className="hidden border-b-[0.5px] font-pxg w-full bg-[#000000] border-gray-500 z-50 lg:flex flex-col sticky top-0">
+      <nav className="hidden border-b-[0.5px] font-pxg w-full bg-background border-gray-500 z-50 lg:flex flex-col sticky top-0">
         <div className="navigation w-[calc(100%-25rem)] mx-auto border-l-[0.5px] border-r-[0.5px] border-gray-500  flex justify-between">
           <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
             <Link

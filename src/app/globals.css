@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: #FEC20C;
+  --secondary: #FFFFFF;
+  --background: #000000;
+  --foreground: #FFFFFF;
+}
+
 /* Base responsive sizing to ensure desktop elements maintain proper scale */
 html {
   font-size: 16px; /* Mobile base */
@@ -44,23 +51,11 @@ html {
   }
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  color: #fff; /* Make all text white by default */
+  color: var(--secondary);
   background: var(--background);
   font-family: PXG, sans-serif;
-  background-color: #000000; /* Suggested change */
 }
 
 /* Component-specific utilities */
