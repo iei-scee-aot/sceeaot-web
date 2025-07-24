@@ -1,10 +1,10 @@
 "use client";
+import Divider2 from "@/components/Divider2";
+import Headlines from "@/components/Headlines";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import Divider2 from "./_components/Divider2";
-import Headlines from "./_components/Headlines";
 
 // Define the type for FAQ items
 interface FAQ {

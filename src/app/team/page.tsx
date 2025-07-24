@@ -1,10 +1,10 @@
 "use client";
 
+import Divider2 from "@/components/Divider2";
+import Headlines from "@/components/Headlines";
+import TeamCard from "@/components/TeamCard";
 import Image from "next/image";
 import teamData from "../../../public/team.json";
-import Divider2 from "../_components/Divider2";
-import Headlines from "../_components/Headlines";
-import Card from "./_components/Card";
 
 const Page = () => {
   return (
@@ -39,7 +39,7 @@ const Page = () => {
               className={`grid ${team.gridCols} gap-x-4 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center`}
             >
               {team.members.map((member, memberIndex) => (
-                <Card
+                <TeamCard
                   key={memberIndex}
                   Name={member.name}
                   Designation={member.designation}

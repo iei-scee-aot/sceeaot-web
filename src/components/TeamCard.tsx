@@ -8,7 +8,7 @@ interface CardProps {
   links?: string[];
 }
 
-const Card = ({
+const TeamCard = ({
   Name = "Member Name",
   Designation = "Designation",
   imagePath = "",
@@ -143,4 +143,4 @@ const Card = ({
   );
 };
 
-export default Card;
+export default TeamCard;
