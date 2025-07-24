@@ -1,9 +1,9 @@
 "use client";
 
+import Divider2 from "@/components/Divider2";
+import EventCard from "@/components/EventCard";
+import Headlines from "@/components/Headlines";
 import eventsData from "../../../public/events.json";
-import Divider2 from "../_components/Divider2";
-import Headlines from "../_components/Headlines";
-import PastEventCard from "./_components/PastEventCard";
 
 export default function EventsPage() {
   const { pastEvents } = eventsData;
@@ -31,7 +31,7 @@ export default function EventsPage() {
           {/* Updated container with proper centering */}
           <div className="grid grid-cols-1 gap-8 px-4 lg:px-8 py-8 lg:py-12 place-items-center">
             {pastEvents.map((event) => (
-              <PastEventCard
+              <EventCard
                 key={event.id}
                 imageSrc={event.imageSrc}
                 title={event.title}
