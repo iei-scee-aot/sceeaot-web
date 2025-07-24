@@ -34,7 +34,7 @@
     },
     {
       "name": "Tech Team",
-      "gridCols": "grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2",
+      "gridCols": "grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3",
       "members": [
         {
           "name": "Debarshee Chakraborty",
@@ -138,7 +138,7 @@
     },
     {
       "name": "Design Team",
-      "gridCols": "grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2",
+      "gridCols": "grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3",
       "members": [
         {
           "name": "Rhritwika Das",
@@ -211,7 +211,7 @@
     },
     {
       "name": "Content Team",
-      "gridCols": "grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2",
+      "gridCols": "grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3",
       "members": [
         {
           "name": "Asmita Mukherjee",
@@ -240,7 +240,7 @@
     },
     {
       "name": "PR & Marketing Team",
-      "gridCols": "grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2",
+      "gridCols": "grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3",
       "members": [
         {
           "name": "Swapnil Dassharma",
@@ -305,7 +305,7 @@
     },
     {
       "name": "Photography Team",
-      "gridCols": "grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2",
+      "gridCols": "grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3",
       "members": [
         {
           "name": "Dhrubajit ghosh",
@@ -364,7 +364,7 @@
     },
     {
       "name": "Videography Team",
-      "gridCols": "grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2",
+      "gridCols": "grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3",
       "members": [
         {
           "name": "Suvadeep roy",
