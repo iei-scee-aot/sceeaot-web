@@ -73,7 +73,7 @@ const HomePage = () => {
               className="hidden lg:block text-[94px] font-bold leading-[72px] tracking-[-0.47px]"
               style={{
                 fontFamily: "KMR Apparat1",
-                WebkitTextStroke: "1px #fec20c",
+                WebkitTextStroke: "1px var(--primary)",
                 color: "transparent",
               }}
             >
@@ -86,7 +86,7 @@ const HomePage = () => {
           {/* Button and GIF Section */}
           <div className="flex items-center border-gray-500 border-b-[0.5px] lg:border-b-[0.8px] lg:w-1/2 lg:relative lg:overflow-hidden overflow-hidden">
             <Link href="/team">
-              <div className="h-[3.75rem] w-[6rem] lg:absolute lg:bottom-0 lg:left-0 lg:w-[116px] lg:h-[81px] lg:z-10 bg-[#fec20c] text-black py-1 px-3 lg:bg-[#fec20c] flex flex-col items-start lg:items-center lg:justify-center gap-0 text-sm hover:bg-[#fec20c]/90 transition-all duration-300">
+              <div className="h-[3.75rem] w-[6rem] lg:absolute lg:bottom-0 lg:left-0 lg:w-[116px] lg:h-[81px] lg:z-10 bg-primary text-black py-1 px-3 lg:bg-primary flex flex-col items-start lg:items-center lg:justify-center gap-0 text-sm hover:bg-primary/90 transition-all duration-300">
                 <span className="lg:text-center">TEAM</span>
                 <span className="hidden lg:block"></span>
                 <ArrowRight
@@ -163,7 +163,7 @@ const HomePage = () => {
               className="hidden lg:block text-[94px] font-bold leading-[72px] tracking-[-0.47px]"
               style={{
                 fontFamily: "KMR Apparat1",
-                WebkitTextStroke: "1px #fec20c",
+                WebkitTextStroke: "1px var(--primary)",
                 color: "transparent",
               }}
             >
@@ -176,7 +176,7 @@ const HomePage = () => {
           {/* Button and GIF Section */}
           <div className="flex items-center border-gray-500 border-b-[0.5px] lg:border-b-[0.8px] lg:w-1/2 lg:relative lg:overflow-hidden overflow-hidden">
             <Link href="/events">
-              <div className="h-[3.75rem] w-[6rem] lg:absolute lg:bottom-0 lg:left-0 lg:w-[116px] lg:h-[81px] lg:z-10 bg-[#fec20c] text-black py-1 px-3 lg:bg-[#fec20c] flex flex-col items-start lg:items-center lg:justify-center gap-0 text-sm hover:bg-[#fec20c]/90 transition-all duration-300 cursor-pointer">
+              <div className="h-[3.75rem] w-[6rem] lg:absolute lg:bottom-0 lg:left-0 lg:w-[116px] lg:h-[81px] lg:z-10 bg-primary text-black py-1 px-3 lg:bg-primary flex flex-col items-start lg:items-center lg:justify-center gap-0 text-sm hover:bg-primary/90 transition-all duration-300 cursor-pointer">
                 <span className="lg:block">EVENTS</span>
                 <ArrowRight
                   size={14}
@@ -222,7 +222,7 @@ const HomePage = () => {
             className="border-2 rounded-md lg:w-[400px] lg:h-[400px]"
           />
           <p className="flex-1 font-light">
-            <span className="font-bolder text-left text-yellow">&quot; </span>
+            <span className="font-bolder text-left text-primary">&quot; </span>
             Our department has created a platform to deliver strong
             fundamentals-based technical education. We strive to produce
             electrical engineers who are well suited for both industry and
@@ -232,10 +232,10 @@ const HomePage = () => {
             As HOD of this department, I endeavor to transform them into
             creators of technology with good human values and a commitment
             towards our nation.
-            <span className="font-bolder text-left text-yellow"> &quot;</span>
+            <span className="font-bolder text-left text-primary"> &quot;</span>
             <br />
             <br className="hidden lg:block" />
-            <span className="font-bolder text-left text-yellow">
+            <span className="font-bolder text-left text-primary">
               {" "}
               - Prof. Sandip Saha Chowdhury
             </span>
@@ -264,7 +264,7 @@ const HomePage = () => {
               <button
                 onClick={() => toggleAnswer(index)}
                 className={`w-full flex justify-between items-center text-left focus:outline-none transition-colors duration-200 font-medium text-[13px] lg:text-[1.5rem] ${
-                  activeQuestion === index ? "text-[#fec20c]" : "text-white"
+                  activeQuestion === index ? "text-primary" : "text-secondary"
                 }`}
               >
                 <span>{faq.question}</span>

@@ -10,7 +10,7 @@ export default function EventsPage() {
 
   return (
     <>
-      <main className="relative flex flex-col mx-auto min-h-screen bg-[#000000] text-white font-sans overflow-x-hidden">
+      <main className="relative flex flex-col mx-auto min-h-screen bg-background text-secondary font-sans overflow-x-hidden">
         {/* Ongoing Events Section */}
         <div className="w-[calc(100%-1.875rem)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
