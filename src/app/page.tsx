@@ -6,7 +6,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-// Define the type for FAQ items
 interface FAQ {
   question: string;
   answer: string;
@@ -15,7 +14,6 @@ interface FAQ {
 const HomePage = () => {
   const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
 
-  // FAQ data with questions and answers
   const faqData: FAQ[] = [
     {
       question: "What is the IEI Students' Chapter?",
@@ -33,14 +31,29 @@ const HomePage = () => {
         "We organize a range of events including hands-on workshops, ideathons, competitions, and brainstorming sessions focused on both core and non-core topics.",
     },
     {
-      question: "Do I need to be an engineering student to join?",
+      question: "How many events does the SCEE conduct in a year?",
       answer:
-        "No, the chapter is open to all students, regardless of their branch. If you're passionate about learning and innovating, you're welcome to join us!",
+        "The SCEE conducts approximately 3-4 events each year, including workshops, seminars, and competitions.",
     },
     {
-      question: "Can I contribute to organizing events?",
+      question: "Does event have any registration fee?",
       answer:
-        "Absolutely! We encourage students to take active roles in organizing and managing events. You can volunteer or propose new event ideas to get involved.",
+        "Yes, there is a registration fee for participating in the events. Please check the specific event details for more information.",
+    },
+    {
+      question: "Is there any criteria for participating in an event?",
+      answer:
+        "No, there are no specific criteria for participating in the events. All students are welcome to join and participate.",
+    },
+    {
+      question: "Are certificates provided for the events?",
+      answer:
+        "Yes, participants will receive certificates for attending and completing the events.",
+    },
+    {
+      question: "Are the certificates eligible for acquiring mar points?",
+      answer:
+        "Yes, the certificates provided by the SCEE are eligible for acquiring mar points.",
     },
   ];
 
@@ -53,6 +66,27 @@ const HomePage = () => {
       {/*Hero Section*/}
       <div className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 min-h-[46.9375rem] lg:min-h-[37.1875rem]">
         <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden"></div>
+        <div className="flex flex-col lg:flex-row items-center justify-between px-4 lg:px-8 py-12 lg:py-16">
+          <div className="flex-1 justify-center align-middle text-center lg:text-left">
+            <h1
+              className="text-[2.5rem] lg:text-[3.5rem] font-bold leading-tight tracking-tight"
+              style={{ fontFamily: "KMR Apparat1" }}
+            >
+              Welcome to <br /> the IEI Students&apos; Chapter of <br />
+              Electrical Engineering <br /> <br />
+            </h1>
+            <h1
+              className="text-[2.5rem] lg:text-[3.5rem] font-bold leading-tight tracking-tight"
+              style={{ fontFamily: "KMR Apparat1" }}
+            >
+              Academy of Technology
+            </h1>
+            <p className="mt-4 text-sm lg:text-lg font-light">
+              Join us in exploring the world of electrical engineering through
+              hands-on workshops, competitions, and networking opportunities.
+            </p>
+          </div>
+        </div>
         <div className="flex flex-wrap gap-7 justify-center items-stretch py-12"></div>
       </div>
       <Divider2 />
