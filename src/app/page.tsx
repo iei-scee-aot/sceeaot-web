@@ -36,7 +36,7 @@ const HomePage = () => {
         "The SCEE conducts approximately 3-4 events each year, including workshops, seminars, and competitions.",
     },
     {
-      question: "Does event have any registration fee?",
+      question: "Do events have any registration fee?",
       answer:
         "Yes, there is a registration fee for participating in the events. Please check the specific event details for more information.",
     },
