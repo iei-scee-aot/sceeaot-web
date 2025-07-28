@@ -1,12 +1,11 @@
 "use client";
+import Divider2 from "@/components/Divider2";
+import Headlines from "@/components/Headlines";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import Divider2 from "./_components/Divider2";
-import Headlines from "./_components/Headlines";
 
-// Define the type for FAQ items
 interface FAQ {
   question: string;
   answer: string;
@@ -15,7 +14,6 @@ interface FAQ {
 const HomePage = () => {
   const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
 
-  // FAQ data with questions and answers
   const faqData: FAQ[] = [
     {
       question: "What is the IEI Students' Chapter?",
@@ -33,14 +31,29 @@ const HomePage = () => {
         "We organize a range of events including hands-on workshops, ideathons, competitions, and brainstorming sessions focused on both core and non-core topics.",
     },
     {
-      question: "Do I need to be an engineering student to join?",
+      question: "How many events does the SCEE conduct in a year?",
       answer:
-        "No, the chapter is open to all students, regardless of their branch. If you're passionate about learning and innovating, you're welcome to join us!",
+        "The SCEE conducts approximately 3-4 events each year, including workshops, seminars, and competitions.",
     },
     {
-      question: "Can I contribute to organizing events?",
+      question: "Do events have any registration fee?",
       answer:
-        "Absolutely! We encourage students to take active roles in organizing and managing events. You can volunteer or propose new event ideas to get involved.",
+        "Yes, there is a registration fee for participating in the events. Please check the specific event details for more information.",
+    },
+    {
+      question: "Is there any criteria for participating in an event?",
+      answer:
+        "No, there are no specific criteria for participating in the events. All students are welcome to join and participate.",
+    },
+    {
+      question: "Are certificates provided for the events?",
+      answer:
+        "Yes, participants will receive certificates for attending and completing the events.",
+    },
+    {
+      question: "Are the certificates eligible for acquiring mar points?",
+      answer:
+        "Yes, the certificates provided by the SCEE are eligible for acquiring mar points.",
     },
   ];
 
@@ -94,7 +107,7 @@ const HomePage = () => {
               className="hidden lg:block text-[94px] font-bold leading-[72px] tracking-[-0.47px]"
               style={{
                 fontFamily: "KMR Apparat1",
-                WebkitTextStroke: "1px #fec20c",
+                WebkitTextStroke: "1px var(--primary)",
                 color: "transparent",
               }}
             >
@@ -107,7 +120,7 @@ const HomePage = () => {
           {/* Button and GIF Section */}
           <div className="flex items-center border-gray-500 border-b-[0.5px] lg:border-b-[0.8px] lg:w-1/2 lg:relative lg:overflow-hidden overflow-hidden">
             <Link href="/team">
-              <div className="h-[3.75rem] w-[6rem] lg:absolute lg:bottom-0 lg:left-0 lg:w-[116px] lg:h-[81px] lg:z-10 bg-[#fec20c] text-black py-1 px-3 lg:bg-[#fec20c] flex flex-col items-start lg:items-center lg:justify-center gap-0 text-sm hover:bg-[#fec20c]/90 transition-all duration-300">
+              <div className="h-[3.75rem] w-[6rem] lg:absolute lg:bottom-0 lg:left-0 lg:w-[116px] lg:h-[81px] lg:z-10 bg-primary text-black py-1 px-3 lg:bg-primary flex flex-col items-start lg:items-center lg:justify-center gap-0 text-sm hover:bg-primary/90 transition-all duration-300">
                 <span className="lg:text-center">TEAM</span>
                 <span className="hidden lg:block"></span>
                 <ArrowRight
@@ -184,7 +197,7 @@ const HomePage = () => {
               className="hidden lg:block text-[94px] font-bold leading-[72px] tracking-[-0.47px]"
               style={{
                 fontFamily: "KMR Apparat1",
-                WebkitTextStroke: "1px #fec20c",
+                WebkitTextStroke: "1px var(--primary)",
                 color: "transparent",
               }}
             >
@@ -197,7 +210,7 @@ const HomePage = () => {
           {/* Button and GIF Section */}
           <div className="flex items-center border-gray-500 border-b-[0.5px] lg:border-b-[0.8px] lg:w-1/2 lg:relative lg:overflow-hidden overflow-hidden">
             <Link href="/events">
-              <div className="h-[3.75rem] w-[6rem] lg:absolute lg:bottom-0 lg:left-0 lg:w-[116px] lg:h-[81px] lg:z-10 bg-[#fec20c] text-black py-1 px-3 lg:bg-[#fec20c] flex flex-col items-start lg:items-center lg:justify-center gap-0 text-sm hover:bg-[#fec20c]/90 transition-all duration-300 cursor-pointer">
+              <div className="h-[3.75rem] w-[6rem] lg:absolute lg:bottom-0 lg:left-0 lg:w-[116px] lg:h-[81px] lg:z-10 bg-primary text-black py-1 px-3 lg:bg-primary flex flex-col items-start lg:items-center lg:justify-center gap-0 text-sm hover:bg-primary/90 transition-all duration-300 cursor-pointer">
                 <span className="lg:block">EVENTS</span>
                 <ArrowRight
                   size={14}
@@ -243,7 +256,7 @@ const HomePage = () => {
             className="border-2 rounded-md lg:w-[400px] lg:h-[400px]"
           />
           <p className="flex-1 font-light">
-            <span className="font-bolder text-left text-yellow">&quot; </span>
+            <span className="font-bolder text-left text-primary">&quot; </span>
             Our department has created a platform to deliver strong
             fundamentals-based technical education. We strive to produce
             electrical engineers who are well suited for both industry and
@@ -253,10 +266,10 @@ const HomePage = () => {
             As HOD of this department, I endeavor to transform them into
             creators of technology with good human values and a commitment
             towards our nation.
-            <span className="font-bolder text-left text-yellow"> &quot;</span>
+            <span className="font-bolder text-left text-primary"> &quot;</span>
             <br />
             <br className="hidden lg:block" />
-            <span className="font-bolder text-left text-yellow">
+            <span className="font-bolder text-left text-primary">
               {" "}
               - Prof. Sandip Saha Chowdhury
             </span>
@@ -285,7 +298,7 @@ const HomePage = () => {
               <button
                 onClick={() => toggleAnswer(index)}
                 className={`w-full flex justify-between items-center text-left focus:outline-none transition-colors duration-200 font-medium text-[13px] lg:text-[1.5rem] ${
-                  activeQuestion === index ? "text-[#fec20c]" : "text-white"
+                  activeQuestion === index ? "text-primary" : "text-secondary"
                 }`}
               >
                 <span>{faq.question}</span>
