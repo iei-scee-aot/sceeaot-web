@@ -36,7 +36,7 @@ const Page = () => {
               <Headlines headLine={team.name} />
             </div>
             <div
-              className={`flex flex-wrap ${team.gridCols} gap-x-14 gap-y-20 md:gap-y-14 py-14 md:pb-16 items-center justify-center`}
+              className={`flex flex-wrap ${team.gridCols} gap-x-10 gap-y-20 md:gap-y-14 py-14 md:pb-16 items-center justify-center`}
             >
               {team.members.map((member, memberIndex) => (
                 <TeamCard
