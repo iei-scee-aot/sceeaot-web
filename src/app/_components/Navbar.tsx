@@ -147,7 +147,7 @@ const Navbar = ({
       {/* For bigger screen */}
 
       <nav className="hidden border-b-[0.5px] font-pxg w-full bg-[#000000] border-gray-500 z-50 lg:flex flex-col sticky top-0">
-        <div className="navigation w-[calc(100%-25rem)] mx-auto border-l-[0.5px] border-r-[0.5px] border-gray-500  flex justify-between">
+        <div className="navigation w-[calc(100%-16rem)] mx-auto border-l-[0.5px] border-r-[0.5px] border-gray-500  flex justify-between">
           <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
             <Link
               href="/"

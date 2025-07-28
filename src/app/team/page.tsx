@@ -10,7 +10,7 @@ const Page = () => {
   return (
     <>
       {/* Previous Team Section */}
-      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-16rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
         <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
           <Headlines headLine={teamData.previousTeam.headline} />
         </div>
@@ -31,12 +31,12 @@ const Page = () => {
       {/* Dynamic Team Sections */}
       {teamData.teams.map((team, teamIndex) => (
         <div key={teamIndex}>
-          <div className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+          <div className="w-[calc(100%-30px)] lg:w-[calc(100%-16rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
             <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
               <Headlines headLine={team.name} />
             </div>
             <div
-              className={`grid ${team.gridCols} gap-x-4 gap-y-8 md:gap-x-4 lg:gap-x-5 xl:gap-x-4 2xl:gap-x-6 lg:gap-y-12 px-2 md:px-4 lg:px-6 xl:px-4 2xl:px-8 py-8 lg:py-16 justify-items-center`}
+              className={`flex flex-wrap ${team.gridCols} gap-x-14 gap-y-20 md:gap-y-14 py-14 md:pb-16 items-center justify-center`}
             >
               {team.members.map((member, memberIndex) => (
                 <Card

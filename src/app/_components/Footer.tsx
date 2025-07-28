@@ -6,7 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 const Footer = () => {
   return (
     <>
-      <footer className="mx-auto w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] border-gray-500 border-l-[0.5px] border-r-[0.5px]">
+      <footer className="mx-auto w-[calc(100%-30px)] lg:w-[calc(100%-16rem)] border-gray-500 border-l-[0.5px] border-r-[0.5px]">
         <div className="py-6 px-6 md:px-32 border-t border-[#747474]/30">
           <div className="flex justify-between items-center ">
             <div className="relative h-20 w-28 md:w-44 md:h-32">

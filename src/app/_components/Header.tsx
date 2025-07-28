@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 const Header = () => {
   return (
-    <header className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] border-[0.5px] border-t-0 border-b-0 border-gray-500 flex justify-between items-center mx-auto">
+    <header className="w-[calc(100%-30px)] lg:w-[calc(100%-16rem)] border-[0.5px] border-t-0 border-b-0 border-gray-500 flex justify-between items-center mx-auto">
       <div className=" flex justify-end items-baseline">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center">

@@ -47,12 +47,12 @@ const Card = ({
   };
 
   return (
-    <div className="h-[180px] md:h-[280px] lg:h-[300px] xl:h-[400px] 2xl:h-[500px] m-1 md:m-2 lg:m-3 xl:m-4 2xl:m-5 mb-6 md:mb-8 lg:mb-9 xl:mb-10 2xl:mb-12">
+    <div className="scale-125 md:scale-100 h-[180px] md:h-[280px] lg:h-[300px] m-1 md:m-2 lg:m-3  ">
       <div
-        className={`relative cursor-pointer w-[6.5rem] md:w-[10rem] lg:w-[10rem] xl:w-[10rem] 2xl:w-[15rem] flex flex-col items-center justify-start transition-all duration-0 overflow-hidden ${
+        className={`relative cursor-pointer w-[6.5rem] md:w-[10rem] flex flex-col items-center justify-start transition-all duration-0 overflow-hidden ${
           isExpanded
-            ? "h-[12rem] md:h-[17rem] lg:h-[18.5rem] xl:h-[20rem] 2xl:h-[26.2rem]"
-            : "h-[11rem] md:h-[15.5rem] lg:h-[16.2rem] xl:h-[18rem] 2xl:h-[23.2rem]"
+            ? "h-[12rem] md:h-[17rem] lg:h-[18.5rem] "
+            : "h-[11rem] md:h-[15.5rem] lg:h-[16.2rem]"
         }`}
         onClick={toggleCard}
       >
@@ -109,7 +109,7 @@ const Card = ({
 
           {/* Links Section */}
           {isExpanded && (
-            <div className="flex items-center justify-around border-dashed border-gray-500 border-t-[0.5px] px-1 md:px-1.5 lg:px-2 xl:px-2.5 2xl:px-3 pt-1.5 md:pt-2 lg:pt-2.5 xl:pt-3 2xl:pt-4 mt-1.5 lg:mt-2 xl:mt-2.5 2xl:mt-3 mx-[0.4rem] md:mx-[0.7rem] lg:mx-[0.8rem] xl:mx-[1rem] 2xl:mx-[1.2rem]">
+            <div className="flex items-center justify-around border-dashed border-gray-500 border-t-[0.5px] px-1 md:px-1.5 lg:px-2  pt-1.5 md:pt-2  mt-1.5 lg:mt-2 xl:mt-2.5 2xl:mt-3 mx-[0.4rem] md:mx-[0.7rem]">
               {links.map((link, index) => {
                 const domain = getDomainFromUrl(link);
                 const icon =
@@ -129,7 +129,7 @@ const Card = ({
                       alt={domain || "link"}
                       width={24}
                       height={24}
-                      className="w-3 h-3 md:w-4 md:h-4 lg:w-6 lg:h-6 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5 object-contain"
+                      className="w-3 h-3 md:w-4 md:h-4  object-contain"
                       loading="lazy"
                     />
                   </a>
