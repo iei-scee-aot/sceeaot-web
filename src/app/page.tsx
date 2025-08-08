@@ -64,7 +64,7 @@ const HomePage = () => {
   return (
     <>
       {/*Hero Section*/}
-      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 min-h-[46.9375rem] lg:min-h-[37.1875rem]">
+      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-16rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 min-h-[46.9375rem] lg:min-h-[37.1875rem]">
         <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden"></div>
         <div className="flex flex-col lg:flex-row items-center justify-between px-4 lg:px-8 py-12 lg:py-16">
           <div className="flex-1 justify-center align-middle text-center lg:text-left">
