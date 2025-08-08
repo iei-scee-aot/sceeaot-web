@@ -27,7 +27,7 @@ const Headlines = ({ headLine = "Headline", noMarquee = false }) => {
 
   return (
     <div
-      className={`h-[2.0625rem] lg:h-[4.375rem] overflow-hidden ${
+      className={`h-[2rem] md:h-[4rem] overflow-hidden ${
         shouldDisableMarquee ? "no-marquee" : ""
       }`}
     >
@@ -37,7 +37,7 @@ const Headlines = ({ headLine = "Headline", noMarquee = false }) => {
         }`}
       >
         <p
-          className="text-[3rem] lg:text-[7.1075rem] font-bold text-transparent bg-clip-text mb-3 mt-[18px] lg:mb-0 lg:mt-12 mr-36"
+          className="text-[3.2rem] md:text-[7.1075rem] font-bold text-transparent bg-clip-text mb-3 mt-[18px] md:mb-0 md:mt-10 mr-36"
           style={{
             fontFamily: "KMR Apparat1",
             WebkitTextStroke: "1px var(--primary)",
@@ -47,7 +47,7 @@ const Headlines = ({ headLine = "Headline", noMarquee = false }) => {
           {headLine}
         </p>
         <p
-          className="text-[3rem] lg:text-[7.1075rem] font-bold text-transparent bg-clip-text mb-3 mt-[18px] lg:mb-0 lg:mt-12 mr-36"
+          className="text-[3.2rem] md:text-[7.1075rem] font-bold text-transparent bg-clip-text mb-3 mt-[18px] md:mb-0 md:mt-10 mr-36"
           style={{
             fontFamily: "KMR Apparat1",
             WebkitTextStroke: "1px var(--primary)",
@@ -57,7 +57,7 @@ const Headlines = ({ headLine = "Headline", noMarquee = false }) => {
           {headLine}
         </p>
         <p
-          className="text-[3rem] lg:text-[7.1075rem] font-bold text-transparent bg-clip-text mb-3 mt-[18px] lg:mb-0 lg:mt-12 mr-36"
+          className="text-[3.2rem] md:text-[7.1075rem] font-bold text-transparent bg-clip-text mb-3 mt-[18px] md:mb-0 md:mt-10 mr-36"
           style={{
             fontFamily: "KMR Apparat1",
             WebkitTextStroke: "1px var(--primary)",
@@ -67,7 +67,7 @@ const Headlines = ({ headLine = "Headline", noMarquee = false }) => {
           {headLine}
         </p>
         <p
-          className="text-[3rem] lg:text-[7.1075rem] font-bold text-transparent bg-clip-text mb-3 mt-[18px] lg:mb-0 lg:mt-12 mr-36"
+          className="text-[3.2rem] md:text-[7.1075rem] font-bold text-transparent bg-clip-text mb-3 mt-[18px] md:mb-0 md:mt-10 mr-36"
           style={{
             fontFamily: "KMR Apparat1",
             WebkitTextStroke: "1px var(--primary)",

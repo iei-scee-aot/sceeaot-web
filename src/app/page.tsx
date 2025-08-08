@@ -64,7 +64,7 @@ const HomePage = () => {
   return (
     <>
       {/*Hero Section*/}
-      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-16rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 min-h-[46.9375rem] lg:min-h-[37.1875rem]">
+      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 min-h-[46.9375rem] lg:min-h-[37.1875rem]">
         <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden"></div>
         <div className="flex flex-col lg:flex-row items-center justify-between px-4 lg:px-8 py-12 lg:py-16">
           <div className="flex-1 justify-center align-middle text-center lg:text-left">
@@ -94,7 +94,7 @@ const HomePage = () => {
       {/*About us*/}
       <div
         id="About-Us"
-        className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0"
+        className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0"
       >
         {/* Unified Header Section */}
         <div className="lg:flex lg:h-[10rem]">
@@ -185,7 +185,7 @@ const HomePage = () => {
       <Divider2 />
 
       {/*Live Events*/}
-      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
         {/* Unified Header Section */}
         <div className="lg:flex lg:h-[10rem]">
           {/* Headline Section */}
@@ -240,7 +240,7 @@ const HomePage = () => {
       <Divider2 />
 
       {/* HOD's Desk */}
-      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
         <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
           <Headlines headLine="From The HOD's Desk" />
         </div>
@@ -285,7 +285,7 @@ const HomePage = () => {
       <Divider2 />
 
       {/*FAQs*/}
-      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
         <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
           <Headlines headLine="FAQs" />
         </div>
