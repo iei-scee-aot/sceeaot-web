@@ -47,17 +47,17 @@ const TeamCard = ({
   };
 
   return (
-    <div className="h-[440px] md:h-[280px] lg:h-[300px] xl:h-[400px] 2xl:h-[500px] m-1 md:m-2 lg:m-3 xl:m-4 2xl:m-5 mb-6 md:mb-8 lg:mb-9 xl:mb-10 2xl:mb-12">
+    <div className="h-[440px] md:h-[280px]  mb-6 md:mb-8">
       <div
-        className={`relative cursor-pointer w-[16rem] md:w-[10rem] lg:w-[10rem] xl:w-[10rem] 2xl:w-[15rem] flex flex-col items-center justify-start transition-all duration-0 overflow-hidden ${
+        className={`relative cursor-pointer w-[16rem] md:w-[10rem] flex flex-col items-center justify-start transition-all duration-0 overflow-hidden ${
           isExpanded
-            ? "h-[28rem] md:h-[17rem] lg:h-[18.5rem] xl:h-[20rem] 2xl:h-[26.2rem]"
-            : "h-[26rem] md:h-[15.5rem] lg:h-[16.2rem] xl:h-[18rem] 2xl:h-[23.2rem]"
+            ? "h-[28rem] md:h-[18rem]"
+            : "h-[25rem] md:h-[16rem]"
         }`}
         onClick={toggleCard}
       >
         <svg
-          className="absolute top-0 right-[1.4rem] md:right-[0.9rem] lg:right-[1rem] xl:right-[1.2rem] 2xl:right-[1rem] z-10 w-10 h-14 md:w-5 md:h-7 lg:w-8 lg:h-10 xl:w-9 xl:h-12 2xl:w-10 2xl:h-13 origin-top-right"
+          className="absolute top-[-2px] right-[1.4rem] md:right-[0.9rem] z-10 w-10 h-14 md:w-5 md:h-7 origin-top-right"
           viewBox="0 0 28 37"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -94,22 +94,22 @@ const TeamCard = ({
               loading="lazy"
               width={160}
               height={160}
-              className="object-cover w-[16rem] h-[16rem] md:w-[10rem] md:h-[10rem] lg:w-[10rem] lg:h-[10rem] xl:w-[10rem] xl:h-[10rem] 2xl:w-[15rem] 2xl:h-[15rem]"
+              className="object-cover w-[16rem] h-[16rem] md:w-[10rem] md:h-[10rem]"
               priority={false}
             />
           </div>
-          <div className="border-t-[0.5px] h-[6rem] md:h-[3.5rem] lg:h-[4rem] xl:h-[4.5rem] 2xl:h-[5.5rem] border-gray-500 text-left pt-2 md:pt-1.5 lg:pt-2 xl:pt-2.5 2xl:pt-3 px-[1rem] md:px-[0.7rem] lg:px-[0.8rem] xl:px-[1rem] 2xl:px-[1.2rem]">
-            <h2 className="font-pxg font-thin leading-[1.8rem] md:leading-[1.2rem] lg:leading-[1.4rem] xl:leading-[1.6rem] 2xl:leading-[1.8rem] text-xl md:text-sm lg:text-base xl:text-lg 2xl:text-xl">
+          <div className="border-t-[0.5px] h-[6rem] md:h-[3.5rem] border-gray-500 text-left pt-2 md:pt-1.5 px-[1rem] md:px-[0.7rem]">
+            <h2 className="font-pxg font-thin leading-[1.8rem] md:leading-[1.2rem] text-xl md:text-sm">
               {Name}
             </h2>
-            <p className="text-xl md:text-sm lg:text-sm xl:text-base 2xl:text-base font-thin font-pxg text-primary">
+            <p className="text-xl md:text-sm font-thin font-pxg text-primary">
               {Designation}
             </p>
           </div>
 
           {/* Links Section */}
           {isExpanded && (
-            <div className="flex items-center justify-around border-dashed border-gray-500 border-t-[0.5px] px-2 md:px-1.5 lg:px-2 xl:px-2.5 2xl:px-3 pt-3 md:pt-2 lg:pt-2.5 xl:pt-3 2xl:pt-4 mt-3 lg:mt-2 xl:mt-2.5 2xl:mt-3 mx-[1rem] md:mx-[0.7rem] lg:mx-[0.8rem] xl:mx-[1rem] 2xl:mx-[1.2rem]">
+            <div className="flex items-center justify-around border-dashed border-gray-500 border-t-[0.5px] px-2 md:px-1.5 pt-3 md:pt-2  mt-3 mx-[1rem] md:mx-[0.7rem] ]">
               {links.map((link, index) => {
                 const domain = getDomainFromUrl(link);
                 const icon =
@@ -129,7 +129,7 @@ const TeamCard = ({
                       alt={domain || "link"}
                       width={24}
                       height={24}
-                      className="w-6 h-6 md:w-4 md:h-4 lg:w-6 lg:h-6 xl:w-4 xl:h-4 2xl:w-5 2xl:h-5 object-contain"
+                      className="w-5 h-5 md:w-4 md:h-4 object-contain"
                       loading="lazy"
                     />
                   </a>
