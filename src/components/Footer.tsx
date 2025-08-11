@@ -166,21 +166,16 @@ const Footer = () => {
               </p>
               <div className="flex gap-6 mt-4 md:mt-0">
                 <Link
-                  href="/privacy"
+                  href="/coc"
                   className="hover:text-white transition-colors duration-200"
                 >
-                  Privacy Policy
-                </Link>
-                <Link
-                  href="/terms"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  Terms of Service
+                  Code of Conduct
                 </Link>
               </div>
             </div>
           </div>
         </div>
+        <img src="/footer_background.svg" alt="background svg" />
       </footer>
       <div className="w-screen border-gray-500 border-b-[0.5px]"></div>
     </>
