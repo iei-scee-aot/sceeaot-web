@@ -42,6 +42,7 @@ const Countdown = () => {
         setEventSchedule(data);
       } catch (error) {
         console.error("Failed to load event schedule:", error);
+        setEventScheduleError("Sorry, we couldn't load the event schedule. Please try again later.");
       }
     };
 
