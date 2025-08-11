@@ -28,6 +28,7 @@ const Countdown = () => {
   });
   const [isClient, setIsClient] = useState(false);
   const [hasDatePassed, setHasDatePassed] = useState(false);
+  const [hasEventEnded, setHasEventEnded] = useState(false);
   const [eventSchedule, setEventSchedule] = useState<EventSchedule[]>([]);
 
   useEffect(() => {
@@ -48,9 +49,18 @@ const Countdown = () => {
 
     const calculateTimeRemaining = () => {
       const targetDate = new Date("2025-08-30T00:00:00").getTime();
+      const eventEndDate = new Date("2025-09-06T23:59:59").getTime();
       //   const now = new Date().getTime();
-      const now = new Date("2025-08-30T01:00:00").getTime();
+      const now = new Date("2025-08-31T01:00:00").getTime();
       const difference = targetDate - now;
+
+      // Check if the event has completely ended (after September 6th, 2025)
+      if (now > eventEndDate) {
+        setHasEventEnded(true);
+        setHasDatePassed(true);
+        setTimeRemaining({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        return;
+      }
 
       if (difference > 0) {
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -64,9 +74,11 @@ const Countdown = () => {
 
         setTimeRemaining({ days, hours, minutes, seconds });
         setHasDatePassed(false);
+        setHasEventEnded(false);
       } else {
         setTimeRemaining({ days: 0, hours: 0, minutes: 0, seconds: 0 });
         setHasDatePassed(true);
+        setHasEventEnded(false);
       }
     };
 
@@ -93,6 +105,71 @@ const Countdown = () => {
     { value: timeRemaining.minutes, label: "Minutes" },
     { value: timeRemaining.seconds, label: "Seconds" },
   ];
+
+  // If the event has completely ended (after September 6th, 2025), show thank you message
+  if (hasEventEnded) {
+    return (
+      <div className="flex flex-col items-center justify-center gap-4 py-8">
+        {/* Thank You Title with Gold Header Design */}
+        <div className="text-center mb-6">
+          <h2
+            className="text-[3rem] lg:text-[4rem] font-bold leading-tight tracking-tight mb-2"
+            style={{
+              fontFamily: "KMR Apparat1",
+              WebkitTextStroke: "1px var(--primary)",
+              color: "transparent",
+            }}
+          >
+            Thank You!
+          </h2>
+          <p className="text-lg lg:text-xl text-primary font-medium">
+            IOTricity Season 2.0 - Event Completed
+          </p>
+        </div>
+
+        {/* Thank You Message */}
+        <div className="w-full max-w-4xl bg-primary/10 border border-primary/30 rounded-lg p-8 text-center">
+          <div className="text-6xl mb-6">🎉</div>
+          <h3
+            className="text-xl lg:text-2xl font-bold text-primary mb-4"
+            style={{ fontFamily: "KMR Apparat1" }}
+          >
+            IOTricity Season 2.0 Has Concluded!
+          </h3>
+          <p className="text-base lg:text-lg text-secondary/80 mb-6 max-w-2xl mx-auto">
+            Thank you for participating in our amazing journey through IoT
+            innovation, workshops, hackathons, and competitions. Your enthusiasm
+            and creativity made this event truly special.
+          </p>
+          <div className="space-y-4 text-secondary/70">
+            <p className="text-lg font-medium text-primary">
+              We hope you enjoyed the experience and learned something new!
+            </p>
+            <p className="text-base">
+              Stay connected with us for future events and opportunities.
+            </p>
+            <div className="text-2xl mt-6">
+              <span
+                className="text-primary font-bold"
+                style={{ fontFamily: "KMR Apparat1" }}
+              >
+                See you next year!
+              </span>
+              <span className="ml-2">👋</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer Message */}
+        <div className="text-center mt-6 px-4">
+          <p className="text-sm lg:text-base text-secondary/60">
+            Keep innovating and stay curious about electrical engineering and
+            IoT!
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   // If the date has passed, show hackathon information
   if (hasDatePassed) {
