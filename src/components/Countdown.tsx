@@ -1,12 +1,22 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import EventScheduleItem from "./EventScheduleItem";
 
 interface TimeRemaining {
   days: number;
   hours: number;
   minutes: number;
   seconds: number;
+}
+
+interface EventSchedule {
+  id: number;
+  title: string;
+  icon: string;
+  date: string;
+  time: string;
+  type: string;
 }
 
 const Countdown = () => {
@@ -18,9 +28,23 @@ const Countdown = () => {
   });
   const [isClient, setIsClient] = useState(false);
   const [hasDatePassed, setHasDatePassed] = useState(false);
+  const [eventSchedule, setEventSchedule] = useState<EventSchedule[]>([]);
 
   useEffect(() => {
     setIsClient(true);
+
+    // Load event schedule data
+    const loadEventSchedule = async () => {
+      try {
+        const response = await fetch("/hackathon-schedule.json");
+        const data = await response.json();
+        setEventSchedule(data);
+      } catch (error) {
+        console.error("Failed to load event schedule:", error);
+      }
+    };
+
+    loadEventSchedule();
 
     const calculateTimeRemaining = () => {
       const targetDate = new Date("2025-08-30T00:00:00").getTime();
@@ -84,59 +108,37 @@ const Countdown = () => {
               color: "transparent",
             }}
           >
-            Online Hackathon
+            IOTricity Season2.0
           </h2>
           <p className="text-lg lg:text-xl text-primary font-medium">
-            Event Schedule
+            Complete Event and Hackathon Schedule
           </p>
         </div>
 
         {/* Hackathon Schedule */}
-        <div className="bg-primary/10 border border-primary/30 rounded-lg p-6 lg:p-8 max-w-4xl w-full">
-          <div className="text-center space-y-4">
-            <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-4">
-              <div className="flex-1">
-                <h3
-                  className="text-xl lg:text-2xl font-bold text-primary mb-2"
-                  style={{ fontFamily: "KMR Apparat1" }}
-                >
-                  Hacakathon Starts
-                </h3>
-                <p className="text-lg lg:text-xl text-secondary">
-                  August 30th, 2025
-                </p>
-                <p className="text-lg lg:text-xl text-primary font-semibold">
-                  8:00 PM
-                </p>
-              </div>
-
-              <div className="hidden lg:block w-px h-16 bg-primary/30"></div>
-              <div className="lg:hidden w-full h-px bg-primary/30"></div>
-
-              <div className="flex-1">
-                <h3
-                  className="text-xl lg:text-2xl font-bold text-primary mb-2"
-                  style={{ fontFamily: "KMR Apparat1" }}
-                >
-                  Hacakathon Ends
-                </h3>
-                <p className="text-lg lg:text-xl text-secondary">
-                  September 1st, 2025
-                </p>
-                <p className="text-lg lg:text-xl text-primary font-semibold">
-                  8:00 PM
-                </p>
-              </div>
-            </div>
+        <div className="w-full max-w-4xl">
+          {/* Timeline Container */}
+          <div className="relative">
+            {eventSchedule.map((event, index) => (
+              <EventScheduleItem
+                key={event.id}
+                title={event.title}
+                icon={event.icon}
+                date={event.date}
+                time={event.time}
+                type={event.type}
+                isLast={index === eventSchedule.length - 1}
+              />
+            ))}
           </div>
         </div>
 
         {/* Event Info */}
         <div className="text-center mt-6 px-4">
-          <p className="text-base lg:text-lg text-secondary/70 max-w-2xl">
-            Join us for our exciting online hackathon! Explore innovative
-            solutions and collaborate with fellow electrical engineering
-            enthusiasts over the weekend.
+          <p className="text-base lg:text-lg text-secondary/70 max-w-3xl">
+            Join us for IOTricity 2025! From online workshops and hackathon to
+            the offline finale, experience a complete journey through IoT
+            innovation and electrical engineering excellence.
           </p>
         </div>
       </div>
@@ -155,10 +157,10 @@ const Countdown = () => {
             color: "transparent",
           }}
         >
-          Event Countdown
+          IOTRICITY SEASON2.0
         </h2>
         <p className="text-lg lg:text-xl text-primary font-medium">
-          Counting down to August 30th, 2025
+          Counting down to the biggest event of the year.
         </p>
       </div>
 
