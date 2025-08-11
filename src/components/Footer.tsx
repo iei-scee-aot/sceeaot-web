@@ -1,3 +1,4 @@
+"use client";
 import {
   ArrowUpRight,
   Github,
@@ -7,8 +8,31 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const Footer = () => {
+  const [events, setEvents] = useState<any[]>([]);
+
+  useEffect(() => {
+    const loadEvents = async () => {
+      try {
+        const response = await fetch("/events.json");
+        const data = await response.json();
+        // Combine all events and take the first 5 most recent ones
+        const allEvents = [
+          ...data.futureEvents,
+          ...data.onGoingEvents,
+          ...data.pastEvents,
+        ].slice(0, 5);
+        setEvents(allEvents);
+      } catch (error) {
+        console.error("Failed to load events:", error);
+      }
+    };
+
+    loadEvents();
+  }, []);
+
   return (
     <>
       <footer className="mx-auto w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] border-gray-500 border-l-[0.5px] border-r-[0.5px] bg-black text-white">
@@ -25,7 +49,7 @@ const Footer = () => {
                 </p>
                 <Link
                   href="mailto:sceeaot@gmail.com"
-                  className="inline-flex items-center gap-4 text-2xl md:text-3xl font-semibold hover:text-primary transition-colors duration-300 group"
+                  className="inline-flex items-center gap-4 text-3xl md:text-5xl font-semibold hover:text-primary transition-colors duration-300 group"
                 >
                   <span>Contact Us</span>
                   <ArrowUpRight
@@ -49,68 +73,23 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Navigation and Social */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-12 border-t border-gray-800">
-              {/* Quick Links */}
-              <div>
-                <h3 className="text-sm font-medium text-gray-400 mb-4 uppercase tracking-wider">
-                  Navigate
-                </h3>
-                <nav className="space-y-3">
-                  {["About", "Programs", "Events", "Mentors", "Gallery"].map(
-                    (item) => (
-                      <Link
-                        key={item}
-                        href={`/${item.toLowerCase()}`}
-                        className="block text-gray-300 hover:text-white transition-colors duration-200"
-                      >
-                        {item}
-                      </Link>
-                    )
-                  )}
-                </nav>
-              </div>
-
-              {/* Events */}
-              <div>
-                <h3 className="text-sm font-medium text-gray-400 mb-4 uppercase tracking-wider">
-                  Events
-                </h3>
-                <nav className="space-y-3">
-                  {[
-                    "Tech Talk Series",
-                    "Innovation Summit",
-                    "Coding Bootcamp",
-                    "AI Workshop",
-                    "Career Fair",
-                  ].map((item) => (
-                    <Link
-                      key={item}
-                      href="#"
-                      className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    >
-                      {item}
-                    </Link>
-                  ))}
-                </nav>
-              </div>
-
-              {/* Social - Expanded */}
-              <div className="md:col-span-2 lg:col-span-1">
-                <h3 className="text-lg font-medium text-white mb-6 uppercase tracking-wider">
+            {/* Social */}
+            <div className="w-full gap-8 pt-12 border-t border-gray-800">
+              <div className="w-full flex flex-col justify-center items-center md:col-span-2 lg:col-span-1">
+                <h3 className="text-2xl font-medium text-white mb-6 uppercase tracking-wider">
                   Connect With Us
                 </h3>
                 <div className="space-y-6">
                   <Link
                     href="https://linktr.ee/sceeaot"
-                    className="flex items-center gap-4 text-gray-300 hover:text-primary transition-colors duration-200 text-lg"
+                    className="flex items-center gap-4 text-gray-300 hover:text-primary transition-colors duration-200 text-2xl"
                   >
                     <Image
                       src="/icons/linktree.jpg"
                       alt="Linktree"
-                      width={24}
-                      height={24}
-                      className="w-6 h-6 object-contain rounded"
+                      width={30}
+                      height={30}
+                      className="w-7 h-7 object-contain rounded"
                     />
                     <span>/sceeaot</span>
                   </Link>
