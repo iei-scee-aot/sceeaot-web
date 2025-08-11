@@ -5,15 +5,37 @@ import Headlines from "@/components/Headlines";
 import { ArrowRight, ExternalLink, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface FAQ {
   question: string;
   answer: string;
 }
 
+interface Mentor {
+  name: string;
+  designation: string;
+  imagePath: string;
+  links: string[];
+}
+
 const IOTricityPage = () => {
   const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
+  const [mentorsData, setMentorsData] = useState<Mentor[]>([]);
+
+  useEffect(() => {
+    const loadMentorsData = async () => {
+      try {
+        const response = await fetch("/mentors.json");
+        const data = await response.json();
+        setMentorsData(data);
+      } catch (error) {
+        console.error("Failed to load mentors data:", error);
+      }
+    };
+
+    loadMentorsData();
+  }, []);
 
   const iotricityFAQData: FAQ[] = [
     {
@@ -253,6 +275,25 @@ const IOTricityPage = () => {
         </div>
       </div>
       <Divider2 />
+
+      {/* Mentors Section */}
+      {/* <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+        <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
+          <Headlines headLine="Mentors" />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-5 md:gap-y-[4.5rem] mx-5 py-12 pb-5 md:pb-20 place-items-center">
+          {mentorsData.map((mentor, index) => (
+            <TeamCard
+              key={index}
+              Name={mentor.name}
+              Designation={mentor.designation}
+              imagePath={mentor.imagePath}
+              links={mentor.links}
+            />
+          ))}
+        </div>
+      </div>
+      <Divider2 /> */}
 
       {/* FAQ Section */}
       <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
