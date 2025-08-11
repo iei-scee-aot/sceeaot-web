@@ -2,10 +2,10 @@
 import Countdown from "@/components/Countdown";
 import Divider2 from "@/components/Divider2";
 import Headlines from "@/components/Headlines";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface FAQ {
   question: string;
@@ -14,6 +14,19 @@ interface FAQ {
 
 const HomePage = () => {
   const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
+  const [currentDate, setCurrentDate] = useState<Date | null>(null);
+
+  useEffect(() => {
+    setCurrentDate(new Date());
+  }, []);
+
+  // Date checks
+  const isAfterAugust27 = currentDate
+    ? currentDate >= new Date("2025-08-27T00:00:00")
+    : false;
+  const isAfterAugust30 = currentDate
+    ? currentDate >= new Date("2025-08-30T00:00:00")
+    : false;
 
   const faqData: FAQ[] = [
     {
@@ -141,8 +154,62 @@ const HomePage = () => {
         </div>
 
         {/* Content */}
-        <div className="px-4 lg:px-8 py-12 lg:py-8 text-sm lg:text-[2rem] font-pxg lg:font-light lg:leading-relaxed flex justify-center items-center lg:min-h-[23.5rem]">
-          <Countdown />
+        <div className="px-4 lg:px-8 py-12 lg:py-8 text-sm lg:text-[2rem] font-pxg lg:font-light lg:leading-relaxed">
+          {isAfterAugust30 ? (
+            /* Event Started Message */
+            <div className="flex flex-col justify-center items-center lg:min-h-[23.5rem] text-center">
+              <div className="mb-8">
+                <h3
+                  className="text-2xl lg:text-4xl font-bold text-primary mb-4"
+                  style={{ fontFamily: "KMR Apparat1" }}
+                >
+                  🎉 Event Has Started! 🎉
+                </h3>
+                <p className="text-base lg:text-xl text-secondary/80">
+                  IOTricity Season 2.0 is now live!
+                  <br />
+                  Check out the dedicated page for more details and updates.
+                </p>
+              </div>
+
+              {/* Checkout Button */}
+              <div className="flex justify-center">
+                <Link href="/iotricity" className="w-full sm:w-auto max-w-xs">
+                  <button className="w-full bg-primary text-black px-8 py-4 rounded-lg font-bold text-base lg:text-lg hover:bg-primary/90 transition-all duration-300 flex items-center gap-3 justify-center">
+                    <ExternalLink size={20} />
+                    Checkout IOTricity
+                    <ArrowRight size={18} />
+                  </button>
+                </Link>
+              </div>
+            </div>
+          ) : (
+            /* Countdown and Buttons */
+            <div className="flex flex-col justify-center items-center lg:min-h-[23.5rem]">
+              <div className="w-full flex justify-center mb-8">
+                <Countdown />
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md">
+                {!isAfterAugust27 && (
+                  <Link href="/iotricity#register" className="w-full sm:w-auto">
+                    <button className="w-full sm:w-auto bg-primary text-black px-6 py-3 rounded-lg font-bold text-sm lg:text-base hover:bg-primary/90 transition-all duration-300 flex items-center gap-2 justify-center">
+                      <Users size={18} />
+                      Register Now
+                      <ArrowRight size={16} />
+                    </button>
+                  </Link>
+                )}
+                <Link href="/iotricity" className="w-full sm:w-auto">
+                  <button className="w-full sm:w-auto border border-primary text-primary px-6 py-3 rounded-lg font-bold text-sm lg:text-base hover:bg-primary/10 transition-all duration-300 flex items-center gap-2 justify-center">
+                    <ExternalLink size={18} />
+                    Checkout IOTricity
+                  </button>
+                </Link>
+              </div>
+            </div>
+          )}
         </div>
       </div>
       <Divider2 />
