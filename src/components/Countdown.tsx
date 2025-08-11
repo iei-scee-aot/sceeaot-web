@@ -52,7 +52,7 @@ const Countdown = () => {
       const targetDate = new Date("2025-08-30T00:00:00").getTime();
       const eventEndDate = new Date("2025-09-06T23:59:59").getTime();
       const now = new Date().getTime();
-      //   const now = new Date("2025-09-01T01:00:00").getTime();
+      // const now = new Date("2025-09-10T00:00:00").getTime();
       const difference = targetDate - now;
 
       // Check if the event has completely ended (after September 6th, 2025)
@@ -187,7 +187,7 @@ const Countdown = () => {
               color: "transparent",
             }}
           >
-            IOTricity Season2.0
+            IOTricity Season 2.0
           </h2>
           <p className="text-lg lg:text-xl text-primary font-medium">
             Complete Event and Hackathon Schedule
@@ -237,7 +237,7 @@ const Countdown = () => {
             color: "transparent",
           }}
         >
-          IOTRICITY SEASON2.0
+          IOTRICITY SEASON 2.0
         </h2>
         <p className="text-lg lg:text-xl text-primary font-medium">
           Counting down to the biggest event of the year.

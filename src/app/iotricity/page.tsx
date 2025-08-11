@@ -96,7 +96,9 @@ const IOTricityPage = () => {
               style={{ fontFamily: "KMR Apparat1" }}
             >
               Welcome to <br />
-              <span className="text-primary">IOTricity Season 2.0</span>
+              <span className="text-primary text-7xl">
+                IOTricity Season 2.0
+              </span>
               <br />
               <br />
             </h1>
