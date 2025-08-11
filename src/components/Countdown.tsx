@@ -43,7 +43,6 @@ const Countdown = () => {
         setEventSchedule(data);
       } catch (error) {
         console.error("Failed to load event schedule:", error);
-        setEventScheduleError("Sorry, we couldn't load the event schedule. Please try again later.");
       }
     };
 
@@ -52,8 +51,8 @@ const Countdown = () => {
     const calculateTimeRemaining = () => {
       const targetDate = new Date("2025-08-30T00:00:00").getTime();
       const eventEndDate = new Date("2025-09-06T23:59:59").getTime();
-      //   const now = new Date().getTime();
-      const now = new Date("2025-09-01T01:00:00").getTime();
+      const now = new Date().getTime();
+      //   const now = new Date("2025-09-01T01:00:00").getTime();
       const difference = targetDate - now;
 
       // Check if the event has completely ended (after September 6th, 2025)
