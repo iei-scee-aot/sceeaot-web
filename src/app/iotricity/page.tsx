@@ -2,7 +2,15 @@
 import Countdown from "@/components/Countdown";
 import Divider2 from "@/components/Divider2";
 import Headlines from "@/components/Headlines";
-import { ArrowRight, ExternalLink, Users } from "lucide-react";
+import IOTricityTimeline from "@/components/IOTricityTimeline";
+import {
+  ArrowRight,
+  Award,
+  ExternalLink,
+  Medal,
+  Trophy,
+  Users,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -239,6 +247,52 @@ const IOTricityPage = () => {
           {/* Headline Section */}
           <div className="flex items-center border-gray-500 border-b-[0.5px] lg:border-b-[0.8px] lg:border-r-[0.8px] lg:w-1/2 lg:pl-[1.6rem] overflow-hidden">
             <div className="block lg:hidden w-full">
+              <Headlines headLine="Event Countdown" />
+            </div>
+            <h1
+              className="hidden lg:block text-[94px] font-bold leading-[72px] tracking-[-0.47px]"
+              style={{
+                fontFamily: "KMR Apparat1",
+                WebkitTextStroke: "1px var(--primary)",
+                color: "transparent",
+              }}
+            >
+              Event
+              <br />
+              Countdown
+            </h1>
+          </div>
+
+          {/* Button and GIF Section */}
+          <div className="flex items-center border-gray-500 border-b-[0.5px] lg:border-b-[0.8px] lg:w-1/2 lg:relative lg:overflow-hidden overflow-hidden">
+            <div className="flex-1 lg:absolute lg:inset-0 lg:bg-black/20">
+              <img
+                src="/GIF.gif"
+                alt="Countdown GIF"
+                className="w-full h-[3.75rem] lg:w-full lg:h-full object-cover"
+                style={{
+                  backgroundSize: "cover",
+                  backgroundPosition: "50% 50%",
+                }}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="px-4 lg:px-8 py-12 lg:py-8 text-sm lg:text-[2rem] font-pxg lg:font-light lg:leading-relaxed flex justify-center items-center lg:min-h-[23.5rem]">
+          <Countdown mode="multi-phase" showTimeline={false} />
+        </div>
+      </div>
+      <Divider2 />
+
+      {/* Timeline Section */}
+      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+        {/* Unified Header Section */}
+        <div className="lg:flex lg:h-[10rem]">
+          {/* Headline Section */}
+          <div className="flex items-center border-gray-500 border-b-[0.5px] lg:border-b-[0.8px] lg:border-r-[0.8px] lg:w-1/2 lg:pl-[1.6rem] overflow-hidden">
+            <div className="block lg:hidden w-full">
               <Headlines headLine="Event Timeline" />
             </div>
             <h1
@@ -272,8 +326,179 @@ const IOTricityPage = () => {
         </div>
 
         {/* Content */}
-        <div className="px-4 lg:px-8 py-12 lg:py-8 text-sm lg:text-[2rem] font-pxg lg:font-light lg:leading-relaxed flex justify-center items-center lg:min-h-[23.5rem]">
-          <Countdown />
+        <div className="px-4 lg:px-8 py-12 lg:py-8 text-sm lg:text-[2rem] font-pxg lg:font-light lg:leading-relaxed flex justify-center items-center">
+          <IOTricityTimeline />
+        </div>
+      </div>
+      <Divider2 />
+
+      {/* Hackathon Tracks Section */}
+      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+        <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
+          <Headlines headLine="Hackathon Tracks" />
+        </div>
+        <div className="px-4 lg:px-8 py-12 lg:py-16">
+          {/* Tracks Title */}
+          <div className="text-center mb-12">
+            <h2
+              className="text-[2.5rem] lg:text-[3.5rem] font-bold leading-tight tracking-tight mb-4"
+              style={{
+                fontFamily: "KMR Apparat1",
+                WebkitTextStroke: "1px var(--primary)",
+                color: "transparent",
+              }}
+            >
+              Choose Your Track
+            </h2>
+            <p className="text-lg lg:text-xl text-primary font-medium">
+              Multiple pathways to innovation and excellence
+            </p>
+          </div>
+
+          {/* Tracks Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Track 1: IoT Hardware */}
+            <div className="bg-primary/10 border border-primary/30 rounded-lg p-6 lg:p-8 text-center hover:bg-primary/20 transition-all duration-300">
+              <div className="text-4xl lg:text-5xl mb-4">🔧</div>
+              <h3
+                className="text-xl lg:text-2xl font-bold text-primary mb-4"
+                style={{ fontFamily: "KMR Apparat1" }}
+              >
+                IoT Hardware
+              </h3>
+              <p className="text-sm lg:text-base text-secondary/80 leading-relaxed">
+                Design and build innovative IoT devices using microcontrollers,
+                sensors, and actuators. Focus on hardware integration and
+                embedded systems.
+              </p>
+            </div>
+
+            {/* Track 2: Smart Software Solutions */}
+            <div className="bg-primary/10 border border-primary/30 rounded-lg p-6 lg:p-8 text-center hover:bg-primary/20 transition-all duration-300">
+              <div className="text-4xl lg:text-5xl mb-4">💻</div>
+              <h3
+                className="text-xl lg:text-2xl font-bold text-primary mb-4"
+                style={{ fontFamily: "KMR Apparat1" }}
+              >
+                Smart Software
+              </h3>
+              <p className="text-sm lg:text-base text-secondary/80 leading-relaxed">
+                Develop intelligent software applications with AI/ML
+                integration, cloud computing, and data analytics for IoT
+                ecosystems.
+              </p>
+            </div>
+
+            {/* Track 3: Sustainability & Green Tech */}
+            <div className="bg-primary/10 border border-primary/30 rounded-lg p-6 lg:p-8 text-center hover:bg-primary/20 transition-all duration-300">
+              <div className="text-4xl lg:text-5xl mb-4">🌱</div>
+              <h3
+                className="text-xl lg:text-2xl font-bold text-primary mb-4"
+                style={{ fontFamily: "KMR Apparat1" }}
+              >
+                Green Tech
+              </h3>
+              <p className="text-sm lg:text-base text-secondary/80 leading-relaxed">
+                Create sustainable IoT solutions for environmental monitoring,
+                energy efficiency, and green technology innovations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Divider2 />
+
+      {/* Winners & Prizes Section */}
+      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+        <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
+          <Headlines headLine="Winners & Prizes" />
+        </div>
+        <div className="px-4 lg:px-8 py-12 lg:py-16">
+          {/* Winners Title */}
+          <div className="text-center mb-12">
+            <h2
+              className="text-[2.5rem] lg:text-[3.5rem] font-bold leading-tight tracking-tight mb-4"
+              style={{
+                fontFamily: "KMR Apparat1",
+                WebkitTextStroke: "1px var(--primary)",
+                color: "transparent",
+              }}
+            >
+              Prize Pool
+            </h2>
+            <p className="text-lg lg:text-xl text-primary font-medium">
+              Compete for exciting prizes and recognition
+            </p>
+          </div>
+
+          {/* Winners Podium */}
+          <div className="flex flex-col lg:flex-row items-end justify-center gap-8 max-w-4xl mx-auto">
+            {/* 2nd Place - Left */}
+            <div className="order-2 lg:order-1 bg-secondary/10 border border-secondary/30 rounded-lg p-6 lg:p-8 text-center hover:bg-secondary/20 transition-all duration-300 w-full lg:w-80">
+              <div className="flex justify-center mb-4">
+                <Medal className="w-12 h-12 lg:w-16 lg:h-16 text-secondary" />
+              </div>
+              <h3
+                className="text-xl lg:text-2xl font-bold text-secondary mb-4"
+                style={{ fontFamily: "KMR Apparat1" }}
+              >
+                Runner Up
+              </h3>
+              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">
+                ₹3,000
+              </div>
+              <p className="text-sm lg:text-base text-secondary/80">
+                Certificate + Cash Prize + IoT Kit
+              </p>
+            </div>
+
+            {/* 1st Place - Center (Elevated) */}
+            <div className="order-1 lg:order-2 bg-primary/10 border border-primary/30 rounded-lg p-8 lg:p-10 text-center hover:bg-primary/20 transition-all duration-300 w-full lg:w-96 lg:transform lg:scale-110">
+              <div className="flex justify-center mb-6">
+                <Trophy className="w-16 h-16 lg:w-20 lg:h-20 text-primary" />
+              </div>
+              <h3
+                className="text-2xl lg:text-3xl font-bold text-primary mb-6"
+                style={{ fontFamily: "KMR Apparat1" }}
+              >
+                Winner
+              </h3>
+              <div className="text-4xl lg:text-5xl font-bold text-primary mb-4">
+                ₹5,000
+              </div>
+              <p className="text-base lg:text-lg text-secondary/80">
+                Certificate + Cash Prize + Premium IoT Kit + Internship
+                Opportunity
+              </p>
+            </div>
+
+            {/* 3rd Place - Right */}
+            <div className="order-3 bg-secondary/10 border border-secondary/30 rounded-lg p-6 lg:p-8 text-center hover:bg-secondary/20 transition-all duration-300 w-full lg:w-80">
+              <div className="flex justify-center mb-4">
+                <Award className="w-12 h-12 lg:w-16 lg:h-16 text-secondary" />
+              </div>
+              <h3
+                className="text-xl lg:text-2xl font-bold text-secondary mb-4"
+                style={{ fontFamily: "KMR Apparat1" }}
+              >
+                2nd Runner Up
+              </h3>
+              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">
+                ₹2,000
+              </div>
+              <p className="text-sm lg:text-base text-secondary/80">
+                Certificate + Cash Prize + Basic IoT Kit
+              </p>
+            </div>
+          </div>
+
+          {/* Additional Info */}
+          <div className="text-center mt-12">
+            <p className="text-base lg:text-lg text-secondary/70 max-w-3xl mx-auto">
+              All participants will receive certificates of participation and
+              access to exclusive workshops and networking opportunities.
+            </p>
+          </div>
         </div>
       </div>
       <Divider2 />
