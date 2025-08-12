@@ -17,29 +17,23 @@ export const metadata: Metadata = {
     "AOT electrical department",
     "student organization leadership",
   ],
-  //   openGraph: {
-  //     title: "Our Team - SCEE AOT",
-  //     description:
-  //       "Meet the dedicated team members of SCEE AOT - Students Chapter of Electrical Engineering at Academy of Technology.",
-  //     url: "https://sceeaot.in/team", // Replace with your actual domain
-  //     images: [
-  //       {
-  //         url: "/team-og-image.jpg",
-  //         width: 1200,
-  //         height: 630,
-  //         alt: "SCEE AOT Team - Students Chapter of Electrical Engineering",
-  //       },
-  //     ],
-  //   },
-  //   twitter: {
-  //     card: "summary_large_image",
-  //     title: "Our Team - SCEE AOT",
-  //     description:
-  //       "Meet the dedicated team members of SCEE AOT - Students Chapter of Electrical Engineering at Academy of Technology.",
-  //     images: ["/team-twitter-image.jpg"],
-  //   },
+
+  authors: [{ name: "IEI Students Chapter - SCEE" }],
+  creator: "IEI Students Chapter - SCEE",
+  publisher: "IEI Students Chapter - SCEE",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   alternates: {
-    canonical: "https://sceeaot.in/team", // Replace with your actual domain
+    canonical: "https://sceeaot.in/team",
   },
 };
 
