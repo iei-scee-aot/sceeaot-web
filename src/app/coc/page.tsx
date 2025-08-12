@@ -1,4 +1,5 @@
 "use client";
+
 import Divider2 from "@/components/ui/Divider2";
 import Headlines from "@/components/ui/Headlines";
 import {
