@@ -3,7 +3,7 @@
 import Countdown from "@/components/iotricity/Countdown";
 import Accordion from "@/components/ui/Accordion";
 import Button from "@/components/ui/Button";
-import Divider2 from "@/components/ui/Divider2";
+import Divider2 from "@/components/ui/Divider";
 import Headlines from "@/components/ui/Headlines";
 import { ArrowRight, ExternalLink, Users } from "lucide-react";
 import Image from "next/image";

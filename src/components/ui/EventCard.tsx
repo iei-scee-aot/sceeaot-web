@@ -47,7 +47,6 @@ const EventCard: React.FC<EventCardProps> = ({
               strokeLinecap="square"
               strokeDasharray="4 4"
             />
-            
           </svg>
           <div className=" bg-primary w-[100%] text-black py-[0.6rem] px-[0.5rem] flex flex-col items-start text-[12px] font-semibold hover:bg-primary/90 transition-all duration-300 z-10">
             <span className="leading-none">VIEW</span>

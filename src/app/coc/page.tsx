@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/components/ui/Button";
-import Divider2 from "@/components/ui/Divider2";
+import Divider2 from "@/components/ui/Divider";
 import Headlines from "@/components/ui/Headlines";
 import {
   AlertTriangle,
