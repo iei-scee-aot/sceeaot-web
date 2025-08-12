@@ -1,6 +1,7 @@
 "use client";
 
 import Countdown from "@/components/iotricity/Countdown";
+import Accordion from "@/components/ui/Accordion";
 import Button from "@/components/ui/Button";
 import Divider2 from "@/components/ui/Divider2";
 import Headlines from "@/components/ui/Headlines";
@@ -15,7 +16,6 @@ interface FAQ {
 }
 
 const HomePage = () => {
-  const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
   const [currentDate, setCurrentDate] = useState<Date | null>(null);
 
   useEffect(() => {
@@ -72,10 +72,6 @@ const HomePage = () => {
         "Yes, the certificates provided by the SCEE are eligible for acquiring mar points.",
     },
   ];
-
-  const toggleAnswer = (index: number) => {
-    setActiveQuestion(activeQuestion === index ? null : index);
-  };
 
   return (
     <>
@@ -361,35 +357,7 @@ const HomePage = () => {
         <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
           <Headlines headLine="FAQs" />
         </div>
-        <div className="flex flex-col justify-center items-stretch py-8 lg:py-12 px-4 lg:px-8">
-          {faqData.map((faq, index: number) => (
-            <div
-              key={index}
-              className="w-full border-b border-gray-700 last:border-b-0 py-4 lg:py-6"
-            >
-              <button
-                onClick={() => toggleAnswer(index)}
-                className={`w-full flex justify-between items-center text-left focus:outline-none transition-colors duration-200 font-medium text-[13px] lg:text-[1.5rem] ${
-                  activeQuestion === index ? "text-primary" : "text-secondary"
-                }`}
-              >
-                <span>{faq.question}</span>
-                <img
-                  src="/arrow-down.svg"
-                  alt="Toggle"
-                  className={`w-4 h-4 lg:w-5 lg:h-5 transition-transform duration-300 ${
-                    activeQuestion === index ? "rotate-180" : "rotate-0"
-                  }`}
-                />
-              </button>
-              {activeQuestion === index && (
-                <p className="text-[13px] lg:text-[1.5rem] text-gray-500 mt-3 lg:mt-4 leading-relaxed">
-                  {faq.answer}
-                </p>
-              )}
-            </div>
-          ))}
-        </div>
+        <Accordion items={faqData} />
       </div>
     </>
   );

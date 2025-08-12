@@ -5,6 +5,7 @@ import IOTricityPrizes from "@/components/iotricity/IOTricityPrizes";
 import IOTricityTimeline from "@/components/iotricity/IOTricityTimeline";
 import IOTricityTracks from "@/components/iotricity/IOTricityTracks";
 import ComingSoon from "@/components/shared/ComingSoon";
+import Accordion from "@/components/ui/Accordion";
 import Button from "@/components/ui/Button";
 import Divider2 from "@/components/ui/Divider2";
 import Headlines from "@/components/ui/Headlines";
@@ -26,7 +27,6 @@ interface Mentor {
 }
 
 const IOTricityPage = () => {
-  const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
   const [mentorsData, setMentorsData] = useState<Mentor[]>([]);
 
   // Visibility controls for different sections
@@ -90,10 +90,6 @@ const IOTricityPage = () => {
         "Yes! Industry experts and faculty mentors will be available throughout the hackathon to guide teams, provide technical support, and help with project development.",
     },
   ];
-
-  const toggleAnswer = (index: number) => {
-    setActiveQuestion(activeQuestion === index ? null : index);
-  };
 
   return (
     <>
@@ -381,35 +377,7 @@ const IOTricityPage = () => {
         <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
           <Headlines headLine="IOTricity FAQs" />
         </div>
-        <div className="flex flex-col justify-center items-stretch py-8 lg:py-12 px-4 lg:px-8">
-          {iotricityFAQData.map((faq, index: number) => (
-            <div
-              key={index}
-              className="w-full border-b border-gray-700 last:border-b-0 py-4 lg:py-6"
-            >
-              <button
-                onClick={() => toggleAnswer(index)}
-                className={`w-full flex justify-between items-center text-left focus:outline-none transition-colors duration-200 font-medium text-[13px] lg:text-[1.5rem] ${
-                  activeQuestion === index ? "text-primary" : "text-secondary"
-                }`}
-              >
-                <span>{faq.question}</span>
-                <img
-                  src="/arrow-down.svg"
-                  alt="Toggle"
-                  className={`w-4 h-4 lg:w-5 lg:h-5 transition-transform duration-300 ${
-                    activeQuestion === index ? "rotate-180" : "rotate-0"
-                  }`}
-                />
-              </button>
-              {activeQuestion === index && (
-                <p className="text-[13px] lg:text-[1.5rem] text-gray-500 mt-3 lg:mt-4 leading-relaxed">
-                  {faq.answer}
-                </p>
-              )}
-            </div>
-          ))}
-        </div>
+        <Accordion items={iotricityFAQData} allowMultipleOpen />
       </div>
     </>
   );
