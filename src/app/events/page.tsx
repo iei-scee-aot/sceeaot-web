@@ -25,7 +25,7 @@ export default function EventsPage() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await fetch("/events.json");
+        const res = await fetch("/data/events.json");
         const data = await res.json();
         setFutureEvents(data.futureEvents || []);
         setOngoingEvents(data.ongoingEvents || []);

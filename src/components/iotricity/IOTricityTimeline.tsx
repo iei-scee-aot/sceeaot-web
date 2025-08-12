@@ -111,7 +111,7 @@ const IOTricityTimeline = () => {
   useEffect(() => {
     const loadEventSchedule = async () => {
       try {
-        const response = await fetch("/hackathon-schedule.json");
+        const response = await fetch("/data/hackathon-schedule.json");
         const data = await response.json();
         setEventSchedule(data);
       } catch (error) {
