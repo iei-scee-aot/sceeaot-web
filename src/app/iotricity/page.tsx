@@ -37,7 +37,7 @@ const IOTricityPage = () => {
   useEffect(() => {
     const loadMentorsData = async () => {
       try {
-        const response = await fetch("/mentors.json");
+        const response = await fetch("/data/mentors.json");
         const data = await response.json();
         setMentorsData(data);
       } catch (error) {
@@ -179,7 +179,7 @@ const IOTricityPage = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] lg:border-b-[0.8px] lg:w-1/2 lg:relative lg:overflow-hidden overflow-hidden">
             <div className="flex-1 lg:absolute lg:inset-0 lg:bg-black/20">
               <img
-                src="/GIF.gif"
+                src="/images/GIF.gif"
                 alt="IOTricity GIF"
                 className="w-full h-[3.75rem] lg:w-full lg:h-full object-cover"
                 style={{
@@ -239,7 +239,7 @@ const IOTricityPage = () => {
         {/* Event Image */}
         <div className="relative w-full h-[200px] md:h-[420px] lg:h-[609px] mt-4 lg:mt-0">
           <Image
-            src="/GIF.gif"
+            src="/images/GIF.gif"
             alt="IOTricity Event"
             loading="lazy"
             layout="fill"
@@ -289,7 +289,7 @@ const IOTricityPage = () => {
           <div className="flex items-center border-gray-500 border-b-[0.5px] lg:border-b-[0.8px] lg:w-1/2 lg:relative lg:overflow-hidden overflow-hidden">
             <div className="flex-1 lg:absolute lg:inset-0 lg:bg-black/20">
               <img
-                src="/GIF.gif"
+                src="/images/GIF.gif"
                 alt="Countdown GIF"
                 className="w-full h-[3.75rem] lg:w-full lg:h-full object-cover"
                 style={{

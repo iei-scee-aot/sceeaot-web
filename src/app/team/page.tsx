@@ -30,7 +30,7 @@ const Page = () => {
   useEffect(() => {
     const fetchTeamData = async () => {
       try {
-        const res = await fetch("/team.json");
+        const res = await fetch("/data/team.json");
         if (!res.ok) throw new Error("Failed to fetch team data");
         const data = await res.json();
         setTeamData(data);

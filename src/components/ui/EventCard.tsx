@@ -65,7 +65,12 @@ const EventCard: React.FC<EventCardProps> = ({
             {title}
           </h3>
           <div className="pb-3">
-            <Image src="/closed.png" alt="Status Icon" width={70} height={40} />
+            <Image
+              src="/images/closed.png"
+              alt="Status Icon"
+              width={70}
+              height={40}
+            />
           </div>
         </div>
 

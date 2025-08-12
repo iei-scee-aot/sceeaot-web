@@ -155,7 +155,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <img src="/footer_background.svg" alt="background svg" />
+        <img src="/images/footer_background.svg" alt="background svg" />
       </footer>
       <div className="w-screen border-gray-500 border-b-[0.5px]"></div>
     </>

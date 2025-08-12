@@ -139,7 +139,7 @@ const HomePage = () => {
             </Link>
             <div className="flex-1 lg:absolute lg:inset-0 lg:bg-black/20">
               <img
-                src="/GIF.gif"
+                src="/images/GIF.gif"
                 alt="Campus GIF"
                 className="w-full h-[3.75rem] lg:w-full lg:h-full object-cover"
                 style={{
@@ -254,7 +254,7 @@ const HomePage = () => {
             </Link>
             <div className="flex-1 lg:absolute lg:inset-0 lg:bg-black/20">
               <img
-                src="/GIF.gif"
+                src="/images/GIF.gif"
                 alt="Campus GIF"
                 className="w-full h-[3.75rem] lg:w-full lg:h-full object-cover"
                 style={{
