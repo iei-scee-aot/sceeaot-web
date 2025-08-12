@@ -19,6 +19,16 @@ interface FAQ {
   answer: string;
 }
 
+interface FAQData {
+  faqs: FAQ[];
+  metadata: {
+    lastUpdated: string;
+    eventName: string;
+    organization: string;
+    contact: string;
+  };
+}
+
 interface Mentor {
   name: string;
   designation: string;
@@ -28,6 +38,9 @@ interface Mentor {
 
 const IOTricityPage = () => {
   const [mentorsData, setMentorsData] = useState<Mentor[]>([]);
+  const [faqData, setFaqData] = useState<FAQ[]>([]);
+  const [faqLoading, setFaqLoading] = useState(true);
+  const [faqError, setFaqError] = useState<string | null>(null);
 
   // Visibility controls for different sections
   const [isTimelineVisible, setIsTimelineVisible] = useState(false);
@@ -48,48 +61,42 @@ const IOTricityPage = () => {
     loadMentorsData();
   }, []);
 
-  const iotricityFAQData: FAQ[] = [
-    {
-      question: "What is IOTricity?",
-      answer:
-        "IOTricity is our flagship event combining Internet of Things (IoT) innovation with electrical engineering excellence. It features workshops, hackathons, and competitions focused on IoT technologies.",
-    },
-    {
-      question: "Who can participate in IOTricity?",
-      answer:
-        "IOTricity is open to all students interested in IoT, electrical engineering, and technology innovation. No prior experience required - we welcome beginners and experts alike.",
-    },
-    {
-      question: "What does the event schedule include?",
-      answer:
-        "The event includes online workshops on embedded systems, machine learning, cloud computing for IoT, networking, a multi-day hackathon, judging sessions, and an offline finale with prize distribution.",
-    },
-    {
-      question: "Is there a registration fee for IOTricity?",
-      answer:
-        "Yes, there is a nominal registration fee to cover event costs, materials, and refreshments. Early bird discounts are available for the first 100 registrations.",
-    },
-    {
-      question: "What can I win at IOTricity?",
-      answer:
-        "Winners will receive cash prizes, certificates, IoT development kits, internship opportunities, and recognition from industry partners. All participants get participation certificates.",
-    },
-    {
-      question: "Do I need to form a team?",
-      answer:
-        "Teams of 2-4 members are preferred for the hackathon portion. However, individual participants can join our team formation session or participate in workshops individually.",
-    },
-    {
-      question: "What should I bring to the event?",
-      answer:
-        "Bring your laptop, any IoT development boards you own (Arduino, Raspberry Pi, etc.), enthusiasm to learn, and creative ideas. We'll provide additional components during workshops.",
-    },
-    {
-      question: "Will there be mentorship during the hackathon?",
-      answer:
-        "Yes! Industry experts and faculty mentors will be available throughout the hackathon to guide teams, provide technical support, and help with project development.",
-    },
-  ];
+  useEffect(() => {
+    const fetchFAQs = async () => {
+      try {
+        setFaqLoading(true);
+        const response = await fetch("/data/iotricitys2-faq.json");
+
+        if (!response.ok) {
+          throw new Error(`Failed to fetch FAQs: ${response.status}`);
+        }
+
+        const data: FAQData = await response.json();
+        setFaqData(data.faqs);
+        setFaqError(null);
+      } catch (err) {
+        console.error("Failed to fetch IOTricity FAQs:", err);
+        setFaqError(err instanceof Error ? err.message : "Failed to load FAQs");
+        // Fallback FAQ data
+        setFaqData([
+          {
+            question: "What is IOTricity?",
+            answer:
+              "IOTricity is our flagship event combining Internet of Things (IoT) innovation with electrical engineering excellence. It features workshops, hackathons, and competitions focused on IoT technologies.",
+          },
+          {
+            question: "Who can participate in IOTricity?",
+            answer:
+              "IOTricity is open to all students interested in IoT, electrical engineering, and technology innovation. No prior experience required - we welcome beginners and experts alike.",
+          },
+        ]);
+      } finally {
+        setFaqLoading(false);
+      }
+    };
+
+    fetchFAQs();
+  }, []);
 
   return (
     <>
@@ -377,7 +384,20 @@ const IOTricityPage = () => {
         <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
           <Headlines headLine="IOTricity FAQs" />
         </div>
-        <Accordion items={iotricityFAQData} allowMultipleOpen />
+        {faqLoading ? (
+          <div className="flex items-center justify-center py-12">
+            <p className="text-lg">Loading FAQs...</p>
+          </div>
+        ) : faqError ? (
+          <div className="flex items-center justify-center py-12">
+            <div className="text-center">
+              <p className="text-lg text-red-400 mb-2">Failed to load FAQs</p>
+              <p className="text-sm text-gray-400">{faqError}</p>
+            </div>
+          </div>
+        ) : (
+          <Accordion items={faqData} allowMultipleOpen />
+        )}
       </div>
     </>
   );
