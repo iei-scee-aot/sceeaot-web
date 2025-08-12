@@ -14,7 +14,7 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-background text-secondary">
       {/* Main container with side borders */}
-      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-25rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 min-h-screen flex flex-col items-center justify-center px-4 relative">
+      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 min-h-screen flex flex-col items-center justify-center px-4 relative">
         {/* Animated 404 */}
         <div
           className={`transition-all duration-1000 ${
