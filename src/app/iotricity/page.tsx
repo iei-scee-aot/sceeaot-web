@@ -1,11 +1,11 @@
 "use client";
-import ComingSoon from "@/components/ComingSoon";
-import Countdown from "@/components/Countdown";
-import Divider2 from "@/components/Divider2";
-import Headlines from "@/components/Headlines";
-import IOTricityPrizes from "@/components/IOTricityPrizes";
-import IOTricityTimelineNew from "@/components/IOTricityTimeline";
-import IOTricityTracks from "@/components/IOTricityTracks";
+import Countdown from "@/components/iotricity/Countdown";
+import IOTricityPrizes from "@/components/iotricity/IOTricityPrizes";
+import IOTricityTimelineNew from "@/components/iotricity/IOTricityTimeline";
+import IOTricityTracks from "@/components/iotricity/IOTricityTracks";
+import ComingSoon from "@/components/shared/ComingSoon";
+import Divider2 from "@/components/ui/Divider2";
+import Headlines from "@/components/ui/Headlines";
 import { ArrowRight, ExternalLink, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -296,10 +296,7 @@ const IOTricityPage = () => {
           {isTimelineVisible ? (
             <IOTricityTimelineNew />
           ) : (
-            <ComingSoon
-              title="Event Timeline"
-              description="Detailed schedule and timeline for the hackathon is being finalized. Stay tuned for complete event schedule and important dates."
-            />
+            <ComingSoon description="Detailed schedule and timeline for the hackathon is being finalized. Stay tuned for complete event schedule and important dates." />
           )}
         </div>
       </div>
@@ -314,10 +311,7 @@ const IOTricityPage = () => {
           {isTracksVisible ? (
             <IOTricityTracks />
           ) : (
-            <ComingSoon
-              title="Event Tracks"
-              description="Exciting tracks and categories for the hackathon are being finalized. Stay tuned for detailed information about different competition tracks and specializations."
-            />
+            <ComingSoon description="Exciting tracks and categories for the hackathon are being finalized. Stay tuned for detailed information about different competition tracks and specializations." />
           )}
         </div>
       </div>
@@ -332,10 +326,7 @@ const IOTricityPage = () => {
           {isPrizesVisible ? (
             <IOTricityPrizes />
           ) : (
-            <ComingSoon
-              title="Event Prizes"
-              description="Prize structure and rewards for the hackathon are being finalized. Stay tuned for exciting prizes and recognition opportunities."
-            />
+            <ComingSoon description="Prize structure and rewards for the hackathon are being finalized. Stay tuned for exciting prizes and recognition opportunities." />
           )}
         </div>
       </div>

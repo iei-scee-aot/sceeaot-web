@@ -1,7 +1,7 @@
 "use client";
-import Countdown from "@/components/Countdown";
-import Divider2 from "@/components/Divider2";
-import Headlines from "@/components/Headlines";
+import Countdown from "@/components/iotricity/Countdown";
+import Divider2 from "@/components/ui/Divider2";
+import Headlines from "@/components/ui/Headlines";
 import { ArrowRight, ExternalLink, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
