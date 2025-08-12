@@ -67,6 +67,8 @@ const Countdown = ({ mode = "basic", showTimeline = true }: CountdownProps) => {
 
         const now = new Date().getTime();
 
+        // const now = new Date("2025-09-20T20:00:00").getTime(); // for testing
+
         let targetDate: number;
         let phase: "initial" | "hackathon" | "winners" | "ended";
         let title: string;

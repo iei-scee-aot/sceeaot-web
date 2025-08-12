@@ -43,7 +43,7 @@ const Navbar = ({
                 className="pl-2 font-light text-lg "
                 style={{ color: teamColor }}
               >
-                TEAMS
+                TEAM
               </span>
               <div className="teams flex pr-2 justify-end ">
                 <svg
@@ -186,7 +186,7 @@ const Navbar = ({
                 className=" font-light lg:text-2xl xl:text-[1rem] 2xl:text-4xl "
                 style={{ color: teamColor }}
               >
-                TEAMS
+                TEAM
               </span>
               <div className="teams pl-1  ">
                 <svg
