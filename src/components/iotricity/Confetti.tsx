@@ -19,10 +19,9 @@ const Confetti = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Generate confetti pieces
     const generateConfetti = () => {
       const pieces: ConfettiPiece[] = [];
-      const colors = ["#FEC20C", "#FFFFFF", "#FEC20C", "#FFFFFF"]; // Using only globals.css colors
+      const colors = ["#FEC20C", "#FFFFFF", "#FEC20C", "#FFFFFF"];
 
       for (let i = 0; i < 50; i++) {
         pieces.push({
@@ -42,7 +41,7 @@ const Confetti = () => {
 
     setConfettiPieces(generateConfetti());
 
-    // Animation loop
+    // Animation loop with Gravity Effect
     const animate = () => {
       setConfettiPieces((prevPieces) =>
         prevPieces
@@ -51,13 +50,13 @@ const Confetti = () => {
             x: piece.x + piece.velocityX,
             y: piece.y + piece.velocityY,
             rotation: piece.rotation + piece.rotationSpeed,
-            velocityY: piece.velocityY + 0.1, // Gravity effect
+            velocityY: piece.velocityY + 0.1,
           }))
           .filter((piece) => piece.y < window.innerHeight + 50)
       );
     };
 
-    const animationId = setInterval(animate, 16); // ~60fps
+    const animationId = setInterval(animate, 16);
 
     // Hide confetti after 5 seconds
     const hideTimer = setTimeout(() => {

@@ -1,8 +1,8 @@
 "use client";
 
-import Divider2 from "@/components/Divider2";
-import EventCard from "@/components/EventCard";
-import Headlines from "@/components/Headlines";
+import Divider2 from "@/components/ui/Divider2";
+import EventCard from "@/components/ui/EventCard";
+import Headlines from "@/components/ui/Headlines";
 import eventsData from "../../../public/events.json";
 
 export default function EventsPage() {

@@ -47,7 +47,6 @@ const Countdown = ({ mode = "basic", showTimeline = true }: CountdownProps) => {
   useEffect(() => {
     setIsClient(true);
 
-    // Load event schedule data
     const loadEventSchedule = async () => {
       try {
         const response = await fetch("/hackathon-schedule.json");
@@ -62,7 +61,6 @@ const Countdown = ({ mode = "basic", showTimeline = true }: CountdownProps) => {
 
     const calculateTimeRemaining = () => {
       if (mode === "multi-phase") {
-        // Multi-phase countdown logic
         const hackathonStartDate = new Date("2025-08-30T20:00:00").getTime();
         const hackathonEndDate = new Date("2025-09-01T20:00:00").getTime();
         const winnersDate = new Date("2025-09-06T20:00:00").getTime();
@@ -126,7 +124,6 @@ const Countdown = ({ mode = "basic", showTimeline = true }: CountdownProps) => {
           setTimeRemaining({ days: 0, hours: 0, minutes: 0, seconds: 0 });
         }
       } else {
-        // Basic countdown logic (original functionality)
         const targetDate = new Date("2025-08-30T20:00:00").getTime();
         const eventEndDate = new Date("2025-09-06T23:59:59").getTime();
         const now = new Date().getTime();
@@ -184,52 +181,6 @@ const Countdown = ({ mode = "basic", showTimeline = true }: CountdownProps) => {
     { value: timeRemaining.seconds, label: "Seconds" },
   ];
 
-  // Phase-specific styling using CSS variables
-  const getPhaseStyles = () => {
-    if (mode !== "multi-phase") {
-      return {
-        titleColor: "text-primary",
-        bgColor: "bg-primary/10",
-        borderColor: "border-primary/30",
-        textColor: "text-primary",
-      };
-    }
-
-    switch (currentPhase) {
-      case "initial":
-        return {
-          titleColor: "text-primary",
-          bgColor: "bg-primary/10",
-          borderColor: "border-primary/30",
-          textColor: "text-primary",
-        };
-      case "hackathon":
-        return {
-          titleColor: "text-secondary",
-          bgColor: "bg-secondary/10",
-          borderColor: "border-secondary/30",
-          textColor: "text-secondary",
-        };
-      case "winners":
-        return {
-          titleColor: "text-primary",
-          bgColor: "bg-primary/10",
-          borderColor: "border-primary/30",
-          textColor: "text-primary",
-        };
-      default:
-        return {
-          titleColor: "text-primary",
-          bgColor: "bg-primary/10",
-          borderColor: "border-primary/30",
-          textColor: "text-primary",
-        };
-    }
-  };
-
-  const styles = getPhaseStyles();
-
-  // If the event has completely ended, show thank you message
   if (hasEventEnded || (mode === "multi-phase" && currentPhase === "ended")) {
     return (
       <div className="flex flex-col items-center justify-center gap-4 py-8 relative">
@@ -297,7 +248,6 @@ const Countdown = ({ mode = "basic", showTimeline = true }: CountdownProps) => {
     );
   }
 
-  // If the date has passed and we want to show timeline, show hackathon information
   if (hasDatePassed && showTimeline && mode !== "multi-phase") {
     return (
       <div className="flex flex-col items-center justify-center gap-4 py-8">
@@ -329,7 +279,6 @@ const Countdown = ({ mode = "basic", showTimeline = true }: CountdownProps) => {
                 icon={event.icon}
                 date={event.date}
                 time={event.time}
-                type={event.type}
                 isLast={index === eventSchedule.length - 1}
                 index={index}
               />
@@ -354,9 +303,7 @@ const Countdown = ({ mode = "basic", showTimeline = true }: CountdownProps) => {
       {/* Countdown Title */}
       <div className="text-center mb-6">
         <h2
-          className={`text-[2.5rem] lg:text-[3.5rem] font-bold leading-tight tracking-tight mb-2 ${
-            mode === "multi-phase" ? styles.titleColor : "text-primary"
-          }`}
+          className="text-[2.5rem] lg:text-[3.5rem] font-bold leading-tight tracking-tight mb-2 text-primary"
           style={{ fontFamily: "KMR Apparat1" }}
         >
           {mode === "multi-phase" ? phaseTitle : "IOTRICITY SEASON 2.0"}
@@ -394,10 +341,10 @@ const Countdown = ({ mode = "basic", showTimeline = true }: CountdownProps) => {
         {timeUnits.map((unit, index) => (
           <div
             key={unit.label}
-            className={`flex flex-col items-center justify-center ${styles.bgColor} border ${styles.borderColor} rounded-lg p-4 lg:p-6 min-h-[120px] lg:min-h-[140px]`}
+            className="flex flex-col items-center justify-center bg-primary/10 border border-primary/30 rounded-lg p-4 lg:p-6 min-h-[120px] lg:min-h-[140px]"
           >
             <div
-              className={`text-3xl lg:text-4xl xl:text-5xl font-bold ${styles.textColor} mb-2`}
+              className="text-3xl lg:text-4xl xl:text-5xl font-bold text-primary mb-2"
               style={{ fontFamily: "KMR Apparat1" }}
             >
               {unit.value.toString().padStart(2, "0")}
