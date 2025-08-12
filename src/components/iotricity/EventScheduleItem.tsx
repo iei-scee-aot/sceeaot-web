@@ -7,7 +7,6 @@ interface EventScheduleItemProps {
   icon: string;
   date: string;
   time: string;
-  type: string;
   isLast?: boolean;
   index?: number;
 }
@@ -17,7 +16,6 @@ const EventScheduleItem = ({
   icon,
   date,
   time,
-  type,
   isLast = false,
   index = 0,
 }: EventScheduleItemProps) => {
@@ -27,31 +25,10 @@ const EventScheduleItem = ({
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, index * 150); // Stagger animation by 150ms per item
+    }, index * 150);
 
     return () => clearTimeout(timer);
   }, [index]);
-  const getTypeStyles = (type: string) => {
-    // Using only colors from globals.css: primary, secondary, background, foreground
-    switch (type) {
-      case "start":
-        return "bg-primary text-background border-primary";
-      case "end":
-        return "bg-primary text-background border-primary";
-      case "session":
-        return "bg-primary/20 text-primary border-primary/40";
-      case "judging":
-      case "announcement":
-        return "bg-secondary/10 text-secondary border-secondary/30";
-      case "finale":
-      case "result":
-        return "bg-primary/30 text-primary border-primary/60";
-      case "ceremony":
-        return "bg-primary text-background border-primary";
-      default:
-        return "bg-primary/10 text-primary border-primary/30";
-    }
-  };
 
   return (
     <div
@@ -71,9 +48,7 @@ const EventScheduleItem = ({
 
       {/* Timeline Node */}
       <div
-        className={`w-12 h-12 rounded-full flex items-center justify-center border-2 ${getTypeStyles(
-          type
-        )} z-10 flex-shrink-0 transition-all duration-500 ${
+        className={`w-12 h-12 rounded-full flex items-center justify-center border-2 bg-primary text-background border-primary z-10 flex-shrink-0 transition-all duration-500 ${
           isVisible ? "scale-100 rotate-0" : "scale-0 rotate-180"
         } hover:scale-110 hover:rotate-12`}
       >
@@ -89,11 +64,7 @@ const EventScheduleItem = ({
       {/* Content */}
       <div className="flex-1 pb-8">
         <div
-          className={`p-4 rounded-lg border transition-all duration-500 hover:shadow-lg hover:scale-[1.02] hover:-translate-y-1 ${
-            type === "start" || type === "end" || type === "ceremony"
-              ? "bg-primary/10 border-primary/40"
-              : "bg-secondary/5 border-secondary/20"
-          } ${
+          className={`p-4 rounded-lg border bg-primary/10 border-primary/40 transition-all duration-500 hover:shadow-lg hover:scale-[1.02] hover:-translate-y-1 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >

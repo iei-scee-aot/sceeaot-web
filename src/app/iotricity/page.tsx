@@ -1,7 +1,7 @@
 "use client";
 import Countdown from "@/components/iotricity/Countdown";
 import IOTricityPrizes from "@/components/iotricity/IOTricityPrizes";
-import IOTricityTimelineNew from "@/components/iotricity/IOTricityTimeline";
+import IOTricityTimeline from "@/components/iotricity/IOTricityTimeline";
 import IOTricityTracks from "@/components/iotricity/IOTricityTracks";
 import ComingSoon from "@/components/shared/ComingSoon";
 import Divider2 from "@/components/ui/Divider2";
@@ -294,7 +294,7 @@ const IOTricityPage = () => {
         </div>
         <div className="px-4 lg:px-8 py-12 lg:py-8 text-sm lg:text-[2rem] font-pxg lg:font-light lg:leading-relaxed flex justify-center items-center">
           {isTimelineVisible ? (
-            <IOTricityTimelineNew />
+            <IOTricityTimeline />
           ) : (
             <ComingSoon description="Detailed schedule and timeline for the hackathon is being finalized. Stay tuned for complete event schedule and important dates." />
           )}

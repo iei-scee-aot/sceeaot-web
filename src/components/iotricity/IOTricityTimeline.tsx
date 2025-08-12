@@ -6,16 +6,23 @@ interface EventScheduleItemProps {
   title: string;
   date: string;
   time: string;
-  type: string;
   isLast?: boolean;
   index?: number;
+}
+
+interface EventSchedule {
+  id: number;
+  title: string;
+  icon: string;
+  date: string;
+  time: string;
+  type: string;
 }
 
 const TimelineItem = ({
   title,
   date,
   time,
-  type,
   isLast = false,
   index = 0,
 }: EventScheduleItemProps) => {
@@ -50,42 +57,6 @@ const TimelineItem = ({
     };
   }, [index]);
 
-  const getTypeStyles = (type: string) => {
-    switch (type) {
-      case "start":
-      case "end":
-        return {
-          dot: "bg-primary border-primary/50",
-          card: "bg-primary/10 border-primary/30",
-        };
-      case "session":
-        return {
-          dot: "bg-secondary border-secondary/50",
-          card: "bg-secondary/5 border-secondary/20",
-        };
-      case "judging":
-      case "announcement":
-        return {
-          dot: "bg-primary/70 border-primary/50",
-          card: "bg-primary/5 border-primary/20",
-        };
-      case "finale":
-      case "result":
-      case "ceremony":
-        return {
-          dot: "bg-primary border-primary/50",
-          card: "bg-primary/10 border-primary/30",
-        };
-      default:
-        return {
-          dot: "bg-secondary border-secondary/50",
-          card: "bg-secondary/5 border-secondary/20",
-        };
-    }
-  };
-
-  const styles = getTypeStyles(type);
-
   return (
     <div
       ref={itemRef}
@@ -96,9 +67,9 @@ const TimelineItem = ({
       {/* Timeline Dot */}
       <div className="relative flex items-center justify-center flex-shrink-0 z-10">
         <div
-          className={`w-4 h-4 rounded-full border-2 ${
-            styles.dot
-          } transition-all duration-500 ${isVisible ? "scale-100" : "scale-0"}`}
+          className={`w-4 h-4 rounded-full border-2 bg-primary border-primary/50 transition-all duration-500 ${
+            isVisible ? "scale-100" : "scale-0"
+          }`}
         />
       </div>
 
@@ -108,9 +79,7 @@ const TimelineItem = ({
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
       >
-        <div
-          className={`p-4 lg:p-6 rounded-lg border ${styles.card} hover:shadow-lg hover:scale-[1.02] transition-all duration-300`}
-        >
+        <div className="p-4 lg:p-6 rounded-lg border bg-primary/10 border-primary/30 hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
           <h3
             className="font-bold text-lg lg:text-xl mb-3 text-secondary"
             style={{ fontFamily: "KMR Apparat1" }}
@@ -133,16 +102,7 @@ const TimelineItem = ({
   );
 };
 
-interface EventSchedule {
-  id: number;
-  title: string;
-  icon: string;
-  date: string;
-  time: string;
-  type: string;
-}
-
-const IOTricityTimelineNew = () => {
+const IOTricityTimeline = () => {
   const [eventSchedule, setEventSchedule] = useState<EventSchedule[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [lineProgress, setLineProgress] = useState(0);
@@ -249,7 +209,6 @@ const IOTricityTimelineNew = () => {
                 title={event.title}
                 date={event.date}
                 time={event.time}
-                type={event.type}
                 isLast={index === eventSchedule.length - 1}
                 index={index}
               />
@@ -270,4 +229,4 @@ const IOTricityTimelineNew = () => {
   );
 };
 
-export default IOTricityTimelineNew;
+export default IOTricityTimeline;
