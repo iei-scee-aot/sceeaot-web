@@ -2,7 +2,6 @@
 
 import { usePathname } from "next/navigation";
 import Divider from "./Divider";
-import Divider2 from "./Divider2";
 import Footer from "./Footer";
 import Header from "./Header";
 import Navbar from "./Navbar";
@@ -30,13 +29,11 @@ export default function LayoutWrapper({ children }: LayoutWrapperProps) {
     <div className="h-full border-gray-500 border-b-[0.5px] w-full mb-[29px] pb-[60px] lg:pb-0 font-pxg">
       <Divider />
       <Header />
-      <Divider2 />
+      <Divider />
       <Navbar {...getNavbarProps()} />
       <div className="w-full hidden lg:flex py-3 border-gray-500 border-b-[0.5px]"></div>
-
       {children}
-
-      <Divider2 />
+      <Divider />
       <Footer />
     </div>
   );

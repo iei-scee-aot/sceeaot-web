@@ -7,7 +7,7 @@ import IOTricityTracks from "@/components/iotricity/IOTricityTracks";
 import ComingSoon from "@/components/shared/ComingSoon";
 import Accordion from "@/components/ui/Accordion";
 import Button from "@/components/ui/Button";
-import Divider2 from "@/components/ui/Divider2";
+import Divider2 from "@/components/ui/Divider";
 import Headlines from "@/components/ui/Headlines";
 import { ArrowRight, ExternalLink, Users } from "lucide-react";
 import Image from "next/image";

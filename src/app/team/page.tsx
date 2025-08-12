@@ -1,6 +1,6 @@
 "use client";
 
-import Divider2 from "@/components/ui/Divider2";
+import Divider2 from "@/components/ui/Divider";
 import Headlines from "@/components/ui/Headlines";
 import TeamCard from "@/components/ui/TeamCard";
 import Image from "next/image";

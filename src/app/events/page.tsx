@@ -1,6 +1,6 @@
 "use client";
 
-import Divider2 from "@/components/ui/Divider2";
+import Divider2 from "@/components/ui/Divider";
 import EventCard from "@/components/ui/EventCard";
 import Headlines from "@/components/ui/Headlines";
 import { useEffect, useState } from "react";
