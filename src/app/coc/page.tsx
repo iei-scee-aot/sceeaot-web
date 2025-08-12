@@ -358,12 +358,10 @@ const CodeOfConductPage = () => {
                 <p className="text-sm lg:text-base text-gray-300 mb-4">
                   Send a detailed report to our community moderators:
                 </p>
-                <a
-                  href="mailto:sceeaot@gmail.com"
-                  className="inline-flex items-center gap-2 bg-primary text-black px-6 py-3 rounded-lg font-bold hover:bg-primary/90 transition-all duration-300"
-                >
-                  <Mail size={18} />
-                  sceeaot@gmail.com
+                <a href="mailto:sceeaot@gmail.com">
+                  <Button variant="primary" icon={<Mail size={18} />}>
+                    sceeaot@gmail.com
+                  </Button>
                 </a>
               </div>
 

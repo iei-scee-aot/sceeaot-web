@@ -1,6 +1,7 @@
 "use client";
 
 import Countdown from "@/components/iotricity/Countdown";
+import Button from "@/components/ui/Button";
 import Divider2 from "@/components/ui/Divider2";
 import Headlines from "@/components/ui/Headlines";
 import { ArrowRight, ExternalLink, Users } from "lucide-react";
@@ -176,11 +177,15 @@ const HomePage = () => {
               {/* Checkout Button */}
               <div className="flex justify-center">
                 <Link href="/iotricity" className="w-full sm:w-auto max-w-xs">
-                  <button className="w-full bg-primary text-black px-8 py-4 rounded-lg font-bold text-base lg:text-lg hover:bg-primary/90 transition-all duration-300 flex items-center gap-3 justify-center">
-                    <ExternalLink size={20} />
+                  <Button
+                    variant="primary"
+                    size="lg"
+                    icon={<ExternalLink size={20} />}
+                    className="justify-center"
+                  >
                     Checkout IOTricity
                     <ArrowRight size={18} />
-                  </button>
+                  </Button>
                 </Link>
               </div>
             </div>
@@ -195,18 +200,16 @@ const HomePage = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md">
                 {!isAfterAugust27 && (
                   <Link href="/iotricity#register" className="w-full sm:w-auto">
-                    <button className="w-full sm:w-auto bg-primary text-black px-6 py-3 rounded-lg font-bold text-sm lg:text-base hover:bg-primary/90 transition-all duration-300 flex items-center gap-2 justify-center">
-                      <Users size={18} />
+                    <Button variant="primary" icon={<Users size={18} />}>
                       Register Now
                       <ArrowRight size={16} />
-                    </button>
+                    </Button>
                   </Link>
                 )}
                 <Link href="/iotricity" className="w-full sm:w-auto">
-                  <button className="w-full sm:w-auto border border-primary text-primary px-6 py-3 rounded-lg font-bold text-sm lg:text-base hover:bg-primary/10 transition-all duration-300 flex items-center gap-2 justify-center">
-                    <ExternalLink size={18} />
+                  <Button variant="secondary" icon={<ExternalLink size={18} />}>
                     Checkout IOTricity
-                  </button>
+                  </Button>
                 </Link>
               </div>
             </div>
