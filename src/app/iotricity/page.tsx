@@ -1,4 +1,5 @@
 "use client";
+
 import Countdown from "@/components/iotricity/Countdown";
 import IOTricityPrizes from "@/components/iotricity/IOTricityPrizes";
 import IOTricityTimeline from "@/components/iotricity/IOTricityTimeline";
@@ -213,6 +214,21 @@ const IOTricityPage = () => {
           <br />
           Get ready to electrify your imagination and create the future of
           connected devices. The revolution starts here, and it starts with you!
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-4 mt-8 mb-12 px-4 justify-center items-center">
+          <Link href="/problems" className="w-full sm:w-auto">
+            <button className="w-full sm:w-auto border border-primary text-primary px-6 py-3 rounded-lg font-bold text-sm lg:text-base hover:bg-primary/10 transition-all duration-300 flex items-center gap-2 justify-center">
+              Problem Statements
+              <ExternalLink size={18} />
+            </button>
+          </Link>
+          <Link href="/rules" target="_blank" className="w-full sm:w-auto">
+            <button className="w-full sm:w-auto border border-primary text-primary px-6 py-3 rounded-lg font-bold text-sm lg:text-base hover:bg-primary/10 transition-all duration-300 flex items-center gap-2 justify-center">
+              Rules and Regulations
+              <ExternalLink size={18} />
+            </button>
+          </Link>
         </div>
 
         {/* Event Image */}
