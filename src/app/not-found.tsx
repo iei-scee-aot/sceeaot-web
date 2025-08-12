@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/components/ui/Button";
 import { ArrowLeft, Home } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -54,19 +55,23 @@ export default function NotFound() {
           }`}
         >
           <Link href="/">
-            <div className="flex items-center gap-3 bg-primary text-black px-6 py-3 hover:bg-primary/90 transition-all duration-300 font-pxg font-medium text-sm md:text-base cursor-pointer">
-              <Home size={18} />
-              <span>Go Home</span>
-            </div>
+            <Button
+              variant="primary"
+              icon={<Home size={18} />}
+              className="font-pxg font-medium text-sm md:text-base"
+            >
+              Go Home
+            </Button>
           </Link>
 
-          <button
+          <Button
+            variant="secondary"
+            icon={<ArrowLeft size={18} />}
             onClick={() => window.history.back()}
-            className="flex items-center gap-3 border border-primary text-primary px-6 py-3 hover:bg-primary hover:text-black transition-all duration-300 font-pxg font-medium text-sm md:text-base"
+            className="font-pxg font-medium text-sm md:text-base hover:bg-primary hover:text-black"
           >
-            <ArrowLeft size={18} />
-            <span>Go Back</span>
-          </button>
+            Go Back
+          </Button>
         </div>
         {/* Footer Message */}
         <div

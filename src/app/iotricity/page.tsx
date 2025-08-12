@@ -5,6 +5,7 @@ import IOTricityPrizes from "@/components/iotricity/IOTricityPrizes";
 import IOTricityTimeline from "@/components/iotricity/IOTricityTimeline";
 import IOTricityTracks from "@/components/iotricity/IOTricityTracks";
 import ComingSoon from "@/components/shared/ComingSoon";
+import Button from "@/components/ui/Button";
 import Divider2 from "@/components/ui/Divider2";
 import Headlines from "@/components/ui/Headlines";
 import { ArrowRight, ExternalLink, Users } from "lucide-react";
@@ -128,21 +129,23 @@ const IOTricityPage = () => {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center items-center">
               <Link href="#register" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto bg-primary text-black px-6 py-3 rounded-lg font-bold text-sm lg:text-base hover:bg-primary/90 transition-all duration-300 flex items-center gap-2 justify-center">
-                  <Users size={18} />
+                <Button
+                  variant="primary"
+                  icon={<Users size={18} />}
+                  iconPosition="left"
+                >
                   Register Now
                   <ArrowRight size={16} />
-                </button>
+                </Button>
               </Link>
               <Link
                 href="https://discord.gg/your-server"
                 target="_blank"
                 className="w-full sm:w-auto"
               >
-                <button className="w-full sm:w-auto border border-primary text-primary px-6 py-3 rounded-lg font-bold text-sm lg:text-base hover:bg-primary/10 transition-all duration-300 flex items-center gap-2 justify-center">
-                  <ExternalLink size={18} />
+                <Button variant="secondary" icon={<ExternalLink size={18} />}>
                   Join Discord
-                </button>
+                </Button>
               </Link>
             </div>
           </div>
@@ -218,16 +221,22 @@ const IOTricityPage = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 mt-8 mb-12 px-4 justify-center items-center">
           <Link href="/problems" className="w-full sm:w-auto">
-            <button className="w-full sm:w-auto border border-primary text-primary px-6 py-3 rounded-lg font-bold text-sm lg:text-base hover:bg-primary/10 transition-all duration-300 flex items-center gap-2 justify-center">
+            <Button
+              variant="secondary"
+              icon={<ExternalLink size={18} />}
+              iconPosition="right"
+            >
               Problem Statements
-              <ExternalLink size={18} />
-            </button>
+            </Button>
           </Link>
           <Link href="/rules" target="_blank" className="w-full sm:w-auto">
-            <button className="w-full sm:w-auto border border-primary text-primary px-6 py-3 rounded-lg font-bold text-sm lg:text-base hover:bg-primary/10 transition-all duration-300 flex items-center gap-2 justify-center">
+            <Button
+              variant="secondary"
+              icon={<ExternalLink size={18} />}
+              iconPosition="right"
+            >
               Rules and Regulations
-              <ExternalLink size={18} />
-            </button>
+            </Button>
           </Link>
         </div>
 
