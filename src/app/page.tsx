@@ -15,11 +15,60 @@ interface FAQ {
   answer: string;
 }
 
+interface FAQData {
+  faqs: FAQ[];
+  metadata: {
+    lastUpdated: string;
+    organization: string;
+    contact: string;
+  };
+}
+
 const HomePage = () => {
   const [currentDate, setCurrentDate] = useState<Date | null>(null);
+  const [faqData, setFaqData] = useState<FAQ[]>([]);
+  const [faqLoading, setFaqLoading] = useState(true);
+  const [faqError, setFaqError] = useState<string | null>(null);
 
   useEffect(() => {
     setCurrentDate(new Date());
+  }, []);
+
+  useEffect(() => {
+    const fetchFAQs = async () => {
+      try {
+        setFaqLoading(true);
+        const response = await fetch("/data/faq.json");
+
+        if (!response.ok) {
+          throw new Error(`Failed to fetch FAQs: ${response.status}`);
+        }
+
+        const data: FAQData = await response.json();
+        setFaqData(data.faqs);
+        setFaqError(null);
+      } catch (err) {
+        console.error("Failed to fetch FAQs:", err);
+        setFaqError(err instanceof Error ? err.message : "Failed to load FAQs");
+        // Fallback FAQ data
+        setFaqData([
+          {
+            question: "What is the IEI Students' Chapter?",
+            answer:
+              "The IEI Students' Chapter is a student community that aims to provide a platform for students to explore engineering topics through workshops, competitions, and networking opportunities.",
+          },
+          {
+            question: "How can I join the IEI Students' Chapter?",
+            answer:
+              "You can join by signing up at any of our events or by contacting one of our members. Visit the 'Contact Us' section for more information.",
+          },
+        ]);
+      } finally {
+        setFaqLoading(false);
+      }
+    };
+
+    fetchFAQs();
   }, []);
 
   // Date checks
@@ -29,49 +78,6 @@ const HomePage = () => {
   const isAfterAugust30 = currentDate
     ? currentDate >= new Date("2025-08-30T00:00:00")
     : false;
-
-  const faqData: FAQ[] = [
-    {
-      question: "What is the IEI Students' Chapter?",
-      answer:
-        "The IEI Students' Chapter is a student community that aims to provide a platform for students to explore engineering topics through workshops, competitions, and networking opportunities.",
-    },
-    {
-      question: "How can I join the IEI Students' Chapter?",
-      answer:
-        "You can join by signing up at any of our events or by contacting one of our members. Visit the 'Contact Us' section for more information.",
-    },
-    {
-      question: "What type of events does the chapter organize?",
-      answer:
-        "We organize a range of events including hands-on workshops, ideathons, competitions, and brainstorming sessions focused on both core and non-core topics.",
-    },
-    {
-      question: "How many events does the SCEE conduct in a year?",
-      answer:
-        "The SCEE conducts approximately 3-4 events each year, including workshops, seminars, and competitions.",
-    },
-    {
-      question: "Do events have any registration fee?",
-      answer:
-        "Yes, there is a registration fee for participating in the events. Please check the specific event details for more information.",
-    },
-    {
-      question: "Is there any criteria for participating in an event?",
-      answer:
-        "No, there are no specific criteria for participating in the events. All students are welcome to join and participate.",
-    },
-    {
-      question: "Are certificates provided for the events?",
-      answer:
-        "Yes, participants will receive certificates for attending and completing the events.",
-    },
-    {
-      question: "Are the certificates eligible for acquiring mar points?",
-      answer:
-        "Yes, the certificates provided by the SCEE are eligible for acquiring mar points.",
-    },
-  ];
 
   return (
     <>
@@ -357,7 +363,20 @@ const HomePage = () => {
         <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
           <Headlines headLine="FAQs" />
         </div>
-        <Accordion items={faqData} />
+        {faqLoading ? (
+          <div className="flex items-center justify-center py-12">
+            <p className="text-lg">Loading FAQs...</p>
+          </div>
+        ) : faqError ? (
+          <div className="flex items-center justify-center py-12">
+            <div className="text-center">
+              <p className="text-lg text-red-400 mb-2">Failed to load FAQs</p>
+              <p className="text-sm text-gray-400">{faqError}</p>
+            </div>
+          </div>
+        ) : (
+          <Accordion items={faqData} />
+        )}
       </div>
     </>
   );
