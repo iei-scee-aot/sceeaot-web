@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/components/ui/Button";
 import Divider2 from "@/components/ui/Divider2";
 import Headlines from "@/components/ui/Headlines";
 import {
@@ -42,16 +43,14 @@ const CodeOfConductPage = () => {
             {/* Quick Links */}
             <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center items-center">
               <a href="#reporting" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto bg-primary text-black px-6 py-3 rounded-lg font-bold text-sm lg:text-base hover:bg-primary/90 transition-all duration-300 flex items-center gap-2 justify-center">
-                  <AlertTriangle size={18} />
+                <Button variant="primary" icon={<AlertTriangle size={18} />}>
                   Report Issue
-                </button>
+                </Button>
               </a>
               <a href="#guidelines" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto border border-primary text-primary px-6 py-3 rounded-lg font-bold text-sm lg:text-base hover:bg-primary/10 transition-all duration-300 flex items-center gap-2 justify-center">
-                  <CheckCircle size={18} />
+                <Button variant="secondary" icon={<CheckCircle size={18} />}>
                   View Guidelines
-                </button>
+                </Button>
               </a>
             </div>
           </div>
