@@ -1,6 +1,6 @@
 "use client";
-import Headlines from "@/components/Headlines";
 import Divider2 from "@/components/ui/Divider2";
+import Headlines from "@/components/ui/Headlines";
 import {
   AlertTriangle,
   CheckCircle,

@@ -22,22 +22,6 @@ export const metadata: Metadata = {
   authors: [{ name: "IEI Students Chapter - SCEE" }],
   creator: "IEI Students Chapter - SCEE",
   publisher: "IEI Students Chapter - SCEE",
-  openGraph: {
-    title: "IOTricity Season 2.0 | IEI Students Chapter - SCEE",
-    description:
-      "Join the ultimate IoT and electrical engineering experience! Participate in workshops, hackathons, and competitions that bridge theory and innovation.",
-    url: "/iotricity",
-    siteName: "IEI Students Chapter - SCEE",
-    type: "website",
-    locale: "en_US",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "IOTricity Season 2.0 | IEI Students Chapter - SCEE",
-    description:
-      "Join the ultimate IoT and electrical engineering experience! Participate in workshops, hackathons, and competitions.",
-    creator: "@IEI_SCEE",
-  },
   robots: {
     index: true,
     follow: true,
@@ -49,11 +33,8 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-verification-code",
-  },
   alternates: {
-    canonical: "/iotricity",
+    canonical: "https://sceeaot.in/iotricity",
   },
 };
 

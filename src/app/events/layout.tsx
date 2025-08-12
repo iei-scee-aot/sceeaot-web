@@ -19,29 +19,22 @@ export const metadata: Metadata = {
     "research presentations",
     "networking events",
   ],
-  //   openGraph: {
-  //     title: "Events & Activities - SCEE AOT",
-  //     description:
-  //       "Discover upcoming and past events organized by SCEE AOT - Students Chapter of Electrical Engineering at Academy of Technology.",
-  //     url: "https://sceeaot.in/events", // Replace with your actual domain
-  //     images: [
-  //       {
-  //         url: "/events-og-image.jpg",
-  //         width: 1200,
-  //         height: 630,
-  //         alt: "SCEE AOT Events - Students Chapter of Electrical Engineering",
-  //       },
-  //     ],
-  //   },
-  //   twitter: {
-  //     card: "summary_large_image",
-  //     title: "Events & Activities - SCEE AOT",
-  //     description:
-  //       "Discover upcoming and past events organized by SCEE AOT - Students Chapter of Electrical Engineering.",
-  //     images: ["/events-twitter-image.jpg"],
-  //   },
+  authors: [{ name: "IEI Students Chapter - SCEE" }],
+  creator: "IEI Students Chapter - SCEE",
+  publisher: "IEI Students Chapter - SCEE",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   alternates: {
-    canonical: "https://sceeaot.in/events", // Replace with your actual domain
+    canonical: "https://sceeaot.in/events",
   },
 };
 
