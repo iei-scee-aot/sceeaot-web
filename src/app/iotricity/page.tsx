@@ -2,7 +2,7 @@
 import Countdown from "@/components/Countdown";
 import Divider2 from "@/components/Divider2";
 import Headlines from "@/components/Headlines";
-import IOTricityTimeline from "@/components/IOTricityTimeline";
+import IOTricityTimelineNew from "@/components/IOTricityTimeline";
 import {
   ArrowRight,
   Award,
@@ -327,7 +327,7 @@ const IOTricityPage = () => {
 
         {/* Content */}
         <div className="px-4 lg:px-8 py-12 lg:py-8 text-sm lg:text-[2rem] font-pxg lg:font-light lg:leading-relaxed flex justify-center items-center">
-          <IOTricityTimeline />
+          <IOTricityTimelineNew />
         </div>
       </div>
       <Divider2 />
