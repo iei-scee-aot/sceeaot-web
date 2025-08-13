@@ -257,9 +257,9 @@ const IOTricityPage = () => {
         </div>
 
         {/* Event Image */}
-        <div className="relative w-full h-[240px] md:h-[560px] lg:h-[860px] mt-4 lg:mt-0">
+        <div className="relative w-full h-[200px] md:h-[480px] lg:h-[720px] mt-4 lg:mt-0">
           <Image
-            src="https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhCEVOdP5SuCJt3og8b1BvxhNMQVyXjLYfia7A"
+            src="https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rh1sbxjJ7QV5tB8ivhMZbY4dapLFmDuzfUgolI"
             alt="IOTricity Event"
             loading="lazy"
             layout="fill"
