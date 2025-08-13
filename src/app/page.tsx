@@ -1,7 +1,6 @@
 "use client";
 
 import Countdown from "@/components/iotricity/Countdown";
-import LoadingAnimation from "@/components/shared/LoadingAnimation";
 import Accordion from "@/components/ui/Accordion";
 import Button from "@/components/ui/Button";
 import Divider2 from "@/components/ui/Divider";
@@ -30,20 +29,10 @@ const HomePage = () => {
   const [faqData, setFaqData] = useState<FAQ[]>([]);
   const [faqLoading, setFaqLoading] = useState(true);
   const [faqError, setFaqError] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
     setCurrentDate(new Date());
   }, []);
-
-  const handleLoadingComplete = () => {
-    setIsLoading(false);
-    // Small delay before showing content for smooth transition
-    setTimeout(() => {
-      setShowContent(true);
-    }, 100);
-  };
 
   useEffect(() => {
     const fetchFAQs = async () => {
@@ -74,19 +63,6 @@ const HomePage = () => {
       } catch (err) {
         console.error("Failed to fetch FAQs:", err);
         setFaqError(err instanceof Error ? err.message : "Failed to load FAQs");
-        // Fallback FAQ data
-        setFaqData([
-          {
-            question: "What is the IEI Students' Chapter?",
-            answer:
-              "The IEI Students' Chapter is a student community that aims to provide a platform for students to explore engineering topics through workshops, competitions, and networking opportunities.",
-          },
-          {
-            question: "How can I join the IEI Students' Chapter?",
-            answer:
-              "You can join by signing up at any of our events or by contacting one of our members. Visit the 'Contact Us' section for more information.",
-          },
-        ]);
       } finally {
         setFaqLoading(false);
       }
@@ -105,15 +81,8 @@ const HomePage = () => {
 
   return (
     <>
-      {/* Loading Animation */}
-      {isLoading && <LoadingAnimation onComplete={handleLoadingComplete} />}
-
       {/* Main Content */}
-      <div
-        className={`transition-opacity duration-700 ${
-          showContent ? "opacity-100" : "opacity-0"
-        }`}
-      >
+      <div>
         {/*Hero Section*/}
         <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 min-h-[46.9375rem] lg:min-h-[37.1875rem]">
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden"></div>

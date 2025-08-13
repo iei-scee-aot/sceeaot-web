@@ -21,7 +21,7 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
     // Complete the animation and call onComplete
     const completeTimer = setTimeout(() => {
       setAnimationStage("complete");
-      setTimeout(onComplete, 600); // Small delay before hiding the loader
+      setTimeout(onComplete, 600);
     }, 3000);
 
     return () => {
@@ -85,7 +85,7 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
         }`}
       >
         <h1 className="text-white text-lg md:text-xl lg:text-2xl font-medium tracking-wide text-center">
-          IEI Students Chapter - SCEE
+          IEI Students Chapter - SCEE AOT
         </h1>
       </div>
 
