@@ -68,7 +68,20 @@ const IOTricityPage = () => {
         const response = await fetch("/data/iotricitys2-faq.json");
 
         if (!response.ok) {
-          throw new Error(`Failed to fetch FAQs: ${response.status}`);
+          console.error(
+            "Response not OK:",
+            response.status,
+            response.statusText
+          );
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+
+        const contentType = response.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+          console.error("Invalid content type:", contentType);
+          const text = await response.text();
+          console.error("Response body:", text.substring(0, 200));
+          throw new Error(`Expected JSON but received: ${contentType}`);
         }
 
         const data: FAQData = await response.json();
