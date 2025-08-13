@@ -41,7 +41,20 @@ const HomePage = () => {
         const response = await fetch("/data/faq.json");
 
         if (!response.ok) {
-          throw new Error(`Failed to fetch FAQs: ${response.status}`);
+          console.error(
+            "Response not OK:",
+            response.status,
+            response.statusText
+          );
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+
+        const contentType = response.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+          console.error("Invalid content type:", contentType);
+          const text = await response.text();
+          console.error("Response body:", text.substring(0, 200));
+          throw new Error(`Expected JSON but received: ${contentType}`);
         }
 
         const data: FAQData = await response.json();
@@ -308,7 +321,7 @@ const HomePage = () => {
             objectFit="cover"
             objectPosition="center"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/85 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-b to-black/65 from-transparent"></div>
         </div>
       </div>
       <Divider2 />

@@ -68,7 +68,20 @@ const IOTricityPage = () => {
         const response = await fetch("/data/iotricitys2-faq.json");
 
         if (!response.ok) {
-          throw new Error(`Failed to fetch FAQs: ${response.status}`);
+          console.error(
+            "Response not OK:",
+            response.status,
+            response.statusText
+          );
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+
+        const contentType = response.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+          console.error("Invalid content type:", contentType);
+          const text = await response.text();
+          console.error("Response body:", text.substring(0, 200));
+          throw new Error(`Expected JSON but received: ${contentType}`);
         }
 
         const data: FAQData = await response.json();
@@ -244,16 +257,16 @@ const IOTricityPage = () => {
         </div>
 
         {/* Event Image */}
-        <div className="relative w-full h-[200px] md:h-[420px] lg:h-[609px] mt-4 lg:mt-0">
+        <div className="relative w-full h-[200px] md:h-[480px] lg:h-[720px] mt-4 lg:mt-0">
           <Image
-            src="/images/GIF.gif"
+            src="https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rh1sbxjJ7QV5tB8ivhMZbY4dapLFmDuzfUgolI"
             alt="IOTricity Event"
             loading="lazy"
             layout="fill"
             objectFit="cover"
             objectPosition="center"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/85 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-b to-black/85 from-transparent"></div>
           <div className="absolute bottom-8 left-8 text-white">
             <h3
               className="text-2xl lg:text-4xl font-bold mb-2"

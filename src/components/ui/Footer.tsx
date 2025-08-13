@@ -9,31 +9,8 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 const Footer = () => {
-  const [events, setEvents] = useState<any[]>([]);
-
-  useEffect(() => {
-    const loadEvents = async () => {
-      try {
-        const response = await fetch("/events.json");
-        const data = await response.json();
-        // Combine all events and take the first 5 most recent ones
-        const allEvents = [
-          ...data.futureEvents,
-          ...data.onGoingEvents,
-          ...data.pastEvents,
-        ].slice(0, 5);
-        setEvents(allEvents);
-      } catch (error) {
-        console.error("Failed to load events:", error);
-      }
-    };
-
-    loadEvents();
-  }, []);
-
   return (
     <>
       <footer className="mx-auto w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] border-gray-500 border-l-[0.5px] border-r-[0.5px] bg-black text-white">
