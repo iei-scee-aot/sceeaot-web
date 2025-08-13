@@ -257,16 +257,16 @@ const IOTricityPage = () => {
         </div>
 
         {/* Event Image */}
-        <div className="relative w-full h-[200px] md:h-[420px] lg:h-[609px] mt-4 lg:mt-0">
+        <div className="relative w-full h-[240px] md:h-[560px] lg:h-[860px] mt-4 lg:mt-0">
           <Image
-            src="/images/GIF.gif"
+            src="https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhCEVOdP5SuCJt3og8b1BvxhNMQVyXjLYfia7A"
             alt="IOTricity Event"
             loading="lazy"
             layout="fill"
             objectFit="cover"
             objectPosition="center"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/85 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-b to-black/85 from-transparent"></div>
           <div className="absolute bottom-8 left-8 text-white">
             <h3
               className="text-2xl lg:text-4xl font-bold mb-2"

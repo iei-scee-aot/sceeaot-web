@@ -277,6 +277,24 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Previous Convenors",
+      "gridCols": "grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3",
+      "members": [
+        {
+          "name": "Arpan Das",
+          "designation": "2023-2024",
+          "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhtUhJBWyl9yR4kMYh85zcN0PeJE2WZUsnxqIw",
+          "links": []
+        },
+        {
+          "name": "Sayan Mallick",
+          "designation": "2022-2023",
+          "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhijsPvzTnETD9VYlwRobzQy4hqUA5OBimscIp",
+          "links": []
+        }
+      ]
     }
   ]
 }
