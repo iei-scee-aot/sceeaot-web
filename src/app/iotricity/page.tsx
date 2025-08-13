@@ -90,19 +90,6 @@ const IOTricityPage = () => {
       } catch (err) {
         console.error("Failed to fetch IOTricity FAQs:", err);
         setFaqError(err instanceof Error ? err.message : "Failed to load FAQs");
-        // Fallback FAQ data
-        setFaqData([
-          {
-            question: "What is IOTricity?",
-            answer:
-              "IOTricity is our flagship event combining Internet of Things (IoT) innovation with electrical engineering excellence. It features workshops, hackathons, and competitions focused on IoT technologies.",
-          },
-          {
-            question: "Who can participate in IOTricity?",
-            answer:
-              "IOTricity is open to all students interested in IoT, electrical engineering, and technology innovation. No prior experience required - we welcome beginners and experts alike.",
-          },
-        ]);
       } finally {
         setFaqLoading(false);
       }
