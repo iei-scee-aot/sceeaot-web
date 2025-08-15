@@ -223,7 +223,7 @@ const IOTricityPage = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 mt-8 mb-12 px-4 justify-center items-center">
-          <Link href="/iotricity/problems" className="w-full sm:w-auto">
+          {/* <Link href="/iotricity/problems" className="w-full sm:w-auto">
             <Button
               variant="secondary"
               icon={<ExternalLink size={18} />}
@@ -231,7 +231,7 @@ const IOTricityPage = () => {
             >
               Problem Statements
             </Button>
-          </Link>
+          </Link> */}
           <Link href="/iotricity/rules" className="w-full sm:w-auto">
             <Button
               variant="secondary"
