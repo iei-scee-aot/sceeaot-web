@@ -56,26 +56,16 @@ const EventCard: React.FC<EventCardProps> = ({
         </div>
       </div>
 
-      <div className="p-3 border-gray-500 border-[0.5px] border-t-0.5 md:w-3/5">
-        <div className="flex justify-between items-center mb-0 border-t-0 border-gray-500 border-[0.5px] mx-[-16px] px-4">
-          <h3
-            className="text-lg pb-2"
-            style={{ fontFamily: "'KMR Apparat1', sans-serif" }}
-          >
-            {title}
-          </h3>
-          <div className="pb-3">
-            <Image
-              src="/images/closed.png"
-              alt="Status Icon"
-              width={70}
-              height={40}
-            />
-          </div>
-        </div>
+      <div className=" border-gray-500 border-[0.5px] border-t-0.5 md:w-3/5">
+        <h3
+          className="text-xl pb-2 p-3"
+          style={{ fontFamily: "'KMR Apparat1', sans-serif" }}
+        >
+          {title}
+        </h3>
 
-        <div className="grid grid-cols-[1fr_2fr] border-b border-gray-500 border-[0.5px] text-xs ml-[-16px] mr-[-16px]">
-          <div className="p-2 border-r border-gray-500 border-[0.5px] flex items-center justify-center font-pxg">
+        <div className="grid grid-cols-[1fr_2fr] border-t-[0.5px] border-gray-500  text-xs ">
+          <div className="p-2 border-r-[0.5px] border-gray-500  flex items-center justify-center font-pxg">
             Date
           </div>
           <div className="p-2 text-primary flex items-center justify-center font-pxg">
@@ -83,14 +73,14 @@ const EventCard: React.FC<EventCardProps> = ({
           </div>
         </div>
 
-        <div className="grid grid-cols-[1fr_1fr_2fr_1fr] border-b border-gray-500 border-[0.5px] text-xs ml-[-16px] mr-[-16px]">
-          <div className="p-2 border-r border-gray-500 border-[0.5px] flex items-center justify-center font-pxg">
+        <div className="grid grid-cols-[1fr_1fr_2fr_1fr] border-t-[0.5px]  border-gray-500  text-xs ">
+          <div className="p-2 border-r-[0.5px] border-gray-500 flex items-center justify-center font-pxg">
             Mode
           </div>
-          <div className="p-2 border-r border-gray-500 border-[0.5px] text-primary flex items-center justify-center font-pxg">
+          <div className="p-2 border-r-[0.5px] border-gray-500 text-primary flex items-center justify-center font-pxg">
             {mode}
           </div>
-          <div className="p-2 border-r border-gray-500 border-[0.5px] flex items-center justify-center font-pxg">
+          <div className="p-2 border-r-[0.5px] border-gray-500 flex items-center justify-center font-pxg">
             Registration Fees
           </div>
           <div className="p-2 text-primary flex items-center justify-center font-pxg">
@@ -98,8 +88,8 @@ const EventCard: React.FC<EventCardProps> = ({
           </div>
         </div>
 
-        <div className="grid grid-cols-[1fr_2fr] border-b border-gray-500 border-[0.5px] text-xs ml-[-16px] mr-[-16px]">
-          <div className="p-2 border-r border-gray-500 border-[0.5px] flex items-center justify-center font-pxg">
+        <div className="grid grid-cols-[1fr_2fr] border-t-[0.5px] border-b-[0.5px] border-gray-500  text-xs ">
+          <div className="p-2  border-gray-500 border-r-[0.5px]  flex items-center justify-center font-pxg">
             Team Size
           </div>
           <div className="p-2 text-primary flex items-center justify-center font-pxg">
@@ -107,7 +97,7 @@ const EventCard: React.FC<EventCardProps> = ({
           </div>
         </div>
 
-        <p className="text-xs text-secondary mt-2 font-pxg">{description}</p>
+        <p className="text-xs px-3 text-secondary mt-2 font-pxg">{description}</p>
       </div>
     </div>
   );
