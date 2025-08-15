@@ -383,3 +383,22 @@ body {
 .animate-fade-in {
   animation: fade-in 0.3s ease-out;
 }
+
+/* Floating animation for hero section cards */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(var(--rotation, 0deg));
+  }
+  50% {
+    transform: translateY(-10px) rotate(var(--rotation, 0deg));
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Gradient radial utility */
+.bg-gradient-radial {
+  background: radial-gradient(var(--tw-gradient-stops));
+}

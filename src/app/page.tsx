@@ -5,7 +5,14 @@ import Accordion from "@/components/ui/Accordion";
 import Button from "@/components/ui/Button";
 import Divider2 from "@/components/ui/Divider";
 import Headlines from "@/components/ui/Headlines";
-import { ArrowRight, ExternalLink, Users } from "lucide-react";
+import {
+  ArrowRight,
+  Award,
+  BookOpen,
+  ExternalLink,
+  Users,
+  Zap,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -83,31 +90,142 @@ const HomePage = () => {
     <>
       {/* Main Content */}
       <div>
-        {/*Hero Section*/}
-        <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 min-h-[46.9375rem] lg:min-h-[37.1875rem]">
-          <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden"></div>
-          <div className="flex flex-col lg:flex-row items-center justify-between px-4 lg:px-8 py-12 lg:py-16">
-            <div className="flex-1 justify-center align-middle text-center lg:text-left">
-              <h1
-                className="text-[2.5rem] lg:text-[3.5rem] font-bold leading-tight tracking-tight"
-                style={{ fontFamily: "KMR Apparat1" }}
-              >
-                Welcome to <br /> the IEI Students&apos; Chapter of <br />
-                Electrical Engineering <br /> <br />
-              </h1>
-              <h1
-                className="text-[2.5rem] lg:text-[3.5rem] font-bold leading-tight tracking-tight"
-                style={{ fontFamily: "KMR Apparat1" }}
-              >
-                Academy of Technology
-              </h1>
-              <p className="mt-4 text-sm lg:text-lg font-light">
-                Join us in exploring the world of electrical engineering through
-                hands-on workshops, competitions, and networking opportunities.
-              </p>
+        {/* Modern Hero Section */}
+        <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 relative overflow-hidden">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFBE00' fill-opacity='0.4'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+              }}
+            ></div>
+          </div>
+
+          {/* Main Hero Content */}
+          <div className="relative px-4 lg:px-8 py-16 lg:py-24">
+            {/* Content Grid */}
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Left Content */}
+              <div className="space-y-8">
+                {/* Badge */}
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm">
+                  <Zap size={16} className="text-primary animate-pulse" />
+                  <span className="text-sm font-medium text-primary">
+                    Innovation • Engineering • Excellence
+                  </span>
+                </div>
+
+                {/* Main Heading */}
+                <div className="space-y-4">
+                  <h1
+                    className="text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight"
+                    style={{ fontFamily: "KMR Apparat1" }}
+                  >
+                    <span className="block text-secondary">Welcome to the</span>
+                    <span className="block bg-gradient-to-r from-primary to-yellow-300 bg-clip-text text-transparent">
+                      IEI Students' Chapter
+                    </span>
+                    <span className="block text-secondary text-3xl lg:text-4xl xl:text-5xl mt-2 font-light">
+                      of Electrical Engineering
+                    </span>
+                  </h1>
+
+                  <div className="flex items-center gap-3 mt-6">
+                    <div className="h-1 w-16 bg-gradient-to-r from-primary to-transparent rounded-full"></div>
+                    <span className="text-lg lg:text-xl font-medium text-primary">
+                      Academy of Technology
+                    </span>
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p className="text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl">
+                  Join us in exploring the world of electrical engineering
+                  through
+                  <span className="text-primary font-medium">
+                    {" "}
+                    hands-on workshops
+                  </span>
+                  ,
+                  <span className="text-primary font-medium">
+                    {" "}
+                    competitions
+                  </span>
+                  , and
+                  <span className="text-primary font-medium">
+                    {" "}
+                    networking opportunities
+                  </span>
+                  .
+                </p>
+              </div>
+
+              {/* Right Content - Visual Element */}
+              <div className="relative lg:h-[600px] flex items-center justify-center">
+                {/* Main Visual Container */}
+                <div className="relative w-full max-w-md lg:max-w-lg">
+                  {/* Floating Cards */}
+                  <div className="absolute inset-0 pointer-events-none">
+                    {/* Card 1 - Top Left */}
+                    <div className="absolute top-0 left-0 w-24 h-24 lg:w-32 lg:h-32 bg-gradient-to-br from-primary/20 to-transparent border border-primary/30 rounded-xl backdrop-blur-sm transform -rotate-12 animate-float">
+                      <div className="flex items-center justify-center h-full">
+                        <Zap size={32} className="text-primary" />
+                      </div>
+                    </div>
+
+                    {/* Card 2 - Top Right */}
+                    <div
+                      className="absolute top-16 right-0 w-20 h-20 lg:w-28 lg:h-28 bg-gradient-to-br from-yellow-400/20 to-transparent border border-yellow-400/30 rounded-xl backdrop-blur-sm transform rotate-12 animate-float"
+                      style={{ animationDelay: "1s" }}
+                    >
+                      <div className="flex items-center justify-center h-full">
+                        <Award size={24} className="text-yellow-400" />
+                      </div>
+                    </div>
+
+                    {/* Card 3 - Bottom Left */}
+                    <div
+                      className="absolute bottom-16 left-8 w-28 h-20 lg:w-36 lg:h-24 bg-gradient-to-br from-blue-400/20 to-transparent border border-blue-400/30 rounded-xl backdrop-blur-sm transform rotate-6 animate-float"
+                      style={{ animationDelay: "2s" }}
+                    >
+                      <div className="flex items-center justify-center h-full">
+                        <BookOpen size={24} className="text-blue-400" />
+                      </div>
+                    </div>
+
+                    {/* Card 4 - Bottom Right */}
+                    <div
+                      className="absolute bottom-0 right-8 w-24 h-24 lg:w-32 lg:h-32 bg-gradient-to-br from-green-400/20 to-transparent border border-green-400/30 rounded-xl backdrop-blur-sm transform -rotate-6 animate-float"
+                      style={{ animationDelay: "0.5s" }}
+                    >
+                      <div className="flex items-center justify-center h-full">
+                        <Users size={28} className="text-green-400" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Central Logo/Image */}
+                  <div className="relative z-10 mx-auto w-48 h-48 lg:w-64 lg:h-64 rounded-2xl bg-gradient-to-br from-primary/10 to-yellow-400/10 border border-primary/20 backdrop-blur-sm flex items-center justify-center group hover:scale-105 transition-transform duration-500">
+                    <div className="w-32 h-32 lg:w-40 lg:h-40 relative">
+                      <Image
+                        src="/scee_logo.png"
+                        alt="SCEE Logo"
+                        fill
+                        className="object-contain filter drop-shadow-2xl group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+
+                    {/* Glowing border effect */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/20 via-transparent to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+
+                  {/* Background Glow */}
+                  <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent blur-3xl"></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="flex flex-wrap gap-7 justify-center items-stretch py-12"></div>
         </div>
         <Divider2 />
 
