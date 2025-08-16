@@ -1,0 +1,136 @@
+{
+  "rules": [
+    {
+      "section": "General Rules",
+      "items": [
+        {
+          "title": "Eligibility Criteria",
+          "content": "IOTricity Season 2.0 is open to all undergraduate students from recognized engineering institutions. Participants must be currently enrolled in Computer Science Engineering or Electrical Engineering programs. Mixed teams from different institutions are allowed and encouraged."
+        },
+        {
+          "title": "Team Formation",
+          "content": "Teams must consist of 2-4 members. Each team can have members from different academic years and institutions. At least one team member should have basic knowledge of IoT concepts, microcontrollers, or embedded systems. Team composition cannot be changed after the registration deadline."
+        },
+        {
+          "title": "Registration Process",
+          "content": "Registration is mandatory and free of charge. Teams must register through the official IOTricity website with complete details of all team members. Each participant can only be part of one team. Registration deadline is strictly enforced and no late registrations will be accepted."
+        },
+        {
+          "title": "Code of Conduct",
+          "content": "All participants must maintain professional behavior throughout the event. Respectful communication, collaborative spirit, and ethical practices are mandatory. Any form of harassment, discrimination, or misconduct will result in immediate disqualification. Participants should follow all venue guidelines and safety protocols."
+        }
+      ]
+    },
+    {
+      "section": "Competition Guidelines",
+      "items": [
+        {
+          "title": "Problem Statement Selection",
+          "content": "Teams will be assigned to houses (Yellow, Green, Blue, Red) based on their academic year and discipline. Each house has 10 unique problem statements. Teams must choose one problem statement from their assigned house and cannot switch between houses or problem statements after selection."
+        },
+        {
+          "title": "Development Phase",
+          "content": "The hackathon duration is 24 hours with designated breaks for meals and rest. Teams must develop their IoT solution from scratch during the event. Pre-written code is not allowed, but teams can use open-source libraries and frameworks. All development must happen at the designated venue or online platform."
+        },
+        {
+          "title": "Hardware and Software Requirements",
+          "content": "Basic hardware components (Arduino, Raspberry Pi, sensors) will be provided by the organizers. Teams can bring additional components but must declare them during registration. All software development should use commonly available platforms and tools. Cloud services and APIs are allowed for enhanced functionality."
+        },
+        {
+          "title": "Mentorship and Support",
+          "content": "Industry mentors and technical experts will be available throughout the event for guidance. Teams can approach mentors for technical advice, troubleshooting, and project direction. However, mentors cannot write code or directly contribute to the solution. Technical support will be available for hardware issues and setup problems."
+        }
+      ]
+    },
+    {
+      "section": "Submission Requirements",
+      "items": [
+        {
+          "title": "Project Deliverables",
+          "content": "Teams must submit a working prototype demonstrating their IoT solution. A comprehensive project report (5-10 pages) documenting the approach, technical implementation, and results is required. All source code must be uploaded to a public GitHub repository with proper documentation and setup instructions."
+        },
+        {
+          "title": "Presentation Guidelines",
+          "content": "Each team gets 7 minutes for presentation followed by 3 minutes for Q&A. Presentations should cover problem understanding, solution approach, technical implementation, demonstration, and future scope. Teams must prepare slides and ensure their prototype is ready for live demonstration."
+        },
+        {
+          "title": "Submission Deadline",
+          "content": "All submissions must be completed before the designated deadline. Late submissions will not be accepted under any circumstances. Teams should ensure their GitHub repositories are public and accessible. Presentation materials should be submitted in PDF format through the official submission portal."
+        },
+        {
+          "title": "Intellectual Property",
+          "content": "Teams retain ownership of their developed solutions and code. However, by participating, teams grant IOTricity organizers the right to showcase and promote their projects. Open-source components used must be properly attributed. Commercial use of developed solutions is allowed after the competition."
+        }
+      ]
+    },
+    {
+      "section": "Judging Criteria",
+      "items": [
+        {
+          "title": "Technical Implementation (30%)",
+          "content": "Evaluation of the technical complexity, code quality, and proper use of IoT components. Judges will assess the integration of sensors, actuators, communication protocols, and cloud services. Bonus points for innovative use of emerging technologies like AI/ML, blockchain, or edge computing in the IoT solution."
+        },
+        {
+          "title": "Innovation and Creativity (25%)",
+          "content": "Assessment of the uniqueness and creative approach to solving the problem statement. Judges will look for novel applications of IoT technology, creative user interfaces, and innovative features that set the solution apart from conventional approaches."
+        },
+        {
+          "title": "Problem Solving Approach (20%)",
+          "content": "Evaluation of how well the team understood and addressed the problem statement. Judges will assess the logical approach, feasibility of the solution, and effectiveness in solving real-world challenges. Comprehensive problem analysis and solution design will be rewarded."
+        },
+        {
+          "title": "Presentation and Communication (15%)",
+          "content": "Assessment of the team's ability to effectively communicate their solution, technical concepts, and project outcomes. Clear presentation skills, proper demonstration, and ability to answer technical questions will be evaluated. Professional presentation materials and delivery style are important."
+        },
+        {
+          "title": "Scalability and Impact (10%)",
+          "content": "Evaluation of the potential for real-world deployment, commercial viability, and social impact. Judges will consider the solution's scalability, sustainability, cost-effectiveness, and potential to create positive change in society or industry."
+        }
+      ]
+    },
+    {
+      "section": "Awards and Recognition",
+      "items": [
+        {
+          "title": "Prize Categories",
+          "content": "Overall Winners: 1st, 2nd, and 3rd place teams receive cash prizes and certificates. Best Innovation Award for the most creative solution. Best Technical Implementation Award for superior coding and technical execution. Best Presentation Award for outstanding communication skills. People's Choice Award voted by participants and audience."
+        },
+        {
+          "title": "Special Recognitions",
+          "content": "All participants receive digital certificates of participation. Winning teams get featured on official social media and websites. Industry internship opportunities and job referrals for outstanding performers. Mentorship opportunities with industry experts for continued project development."
+        },
+        {
+          "title": "Networking Opportunities",
+          "content": "Access to industry professionals, startup founders, and technical experts. Opportunity to connect with like-minded peers and potential co-founders. Access to exclusive workshops and technical sessions. Platform to showcase projects to potential investors and industry partners."
+        }
+      ]
+    },
+    {
+      "section": "Important Policies",
+      "items": [
+        {
+          "title": "Disqualification Criteria",
+          "content": "Plagiarism or use of pre-existing solutions will result in immediate disqualification. Violation of code of conduct, harassment, or unprofessional behavior. Failure to submit required deliverables by the deadline. Use of prohibited resources or external assistance beyond allowed mentorship."
+        },
+        {
+          "title": "Health and Safety",
+          "content": "All participants must follow venue safety guidelines and protocols. Proper handling of electronic components and equipment is mandatory. Participants should report any health issues or emergencies immediately. First aid and medical assistance will be available throughout the event."
+        },
+        {
+          "title": "Technical Support",
+          "content": "Technical helpdesk will be available for hardware issues, software installation, and connectivity problems. Wi-Fi and power outlets will be provided at all workstations. Backup hardware components available in case of equipment failure. Technical documentation and tutorial resources accessible online."
+        },
+        {
+          "title": "Event Modifications",
+          "content": "Organizers reserve the right to modify rules, timelines, or event format if necessary due to unforeseen circumstances. All participants will be notified immediately of any changes. In case of technical difficulties or emergencies, the organizers' decision will be final. Refund or rescheduling policies will be communicated if applicable."
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "lastUpdated": "August 2025",
+    "supportEmail": "sceeaot@gmail.com",
+    "eventName": "IOTricity Season 2.0",
+    "organization": "IEI Students Chapter - SCEE"
+  }
+}
