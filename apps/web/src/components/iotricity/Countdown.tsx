@@ -21,11 +21,10 @@ interface EventSchedule {
 }
 
 interface CountdownProps {
-  mode?: "basic" | "multi-phase";
   showTimeline?: boolean;
 }
 
-const Countdown = ({ mode = "basic", showTimeline = true }: CountdownProps) => {
+const Countdown = ({ showTimeline = true }: CountdownProps) => {
   const [timeRemaining, setTimeRemaining] = useState<TimeRemaining>({
     days: 0,
     hours: 0,
@@ -36,13 +35,6 @@ const Countdown = ({ mode = "basic", showTimeline = true }: CountdownProps) => {
   const [hasDatePassed, setHasDatePassed] = useState(false);
   const [hasEventEnded, setHasEventEnded] = useState(false);
   const [eventSchedule, setEventSchedule] = useState<EventSchedule[]>([]);
-
-  // Multi-phase countdown states
-  const [currentPhase, setCurrentPhase] = useState<
-    "initial" | "hackathon" | "winners" | "ended"
-  >("initial");
-  const [phaseTitle, setPhaseTitle] = useState("");
-  const [phaseDescription, setPhaseDescription] = useState("");
 
   useEffect(() => {
     setIsClient(true);
@@ -60,102 +52,35 @@ const Countdown = ({ mode = "basic", showTimeline = true }: CountdownProps) => {
     loadEventSchedule();
 
     const calculateTimeRemaining = () => {
-      if (mode === "multi-phase") {
-        const hackathonStartDate = new Date("2025-08-30T20:00:00").getTime();
-        const hackathonEndDate = new Date("2025-09-01T20:00:00").getTime();
-        const winnersDate = new Date("2025-09-06T20:00:00").getTime();
+      const targetDate = new Date("2025-08-30T20:00:00").getTime();
+      const eventEndDate = new Date("2025-09-06T23:59:59").getTime();
+      const now = new Date().getTime();
+      const difference = targetDate - now;
 
-        const now = new Date().getTime();
+      if (now > eventEndDate) {
+        setHasEventEnded(true);
+        setHasDatePassed(true);
+        setTimeRemaining({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        return;
+      }
 
-        // const now = new Date("2025-09-20T20:00:00").getTime(); // for testing
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-        let targetDate: number;
-        let phase: "initial" | "hackathon" | "winners" | "ended";
-        let title: string;
-        let description: string;
-
-        if (now < hackathonStartDate) {
-          targetDate = hackathonStartDate;
-          phase = "initial";
-          title = "IOTricity Season 2.0 Begins";
-          description =
-            "Get ready for workshops, networking, and the start of our amazing IoT journey!";
-        } else if (now < hackathonEndDate) {
-          targetDate = hackathonEndDate;
-          phase = "hackathon";
-          title = "Online Hackathon Ends";
-          description =
-            "The hackathon is live! Teams are building amazing IoT solutions. Time remaining for submissions:";
-        } else if (now < winnersDate) {
-          targetDate = winnersDate;
-          phase = "winners";
-          title = "Winners Will Be Declared";
-          description =
-            "Hackathon submissions are closed! Judging is in progress. Winners will be announced soon:";
-        } else {
-          phase = "ended";
-          title = "IOTricity Season 2.0 Completed";
-          description = "Thank you for participating! See you next year.";
-          targetDate = winnersDate;
-        }
-
-        setCurrentPhase(phase);
-        setPhaseTitle(title);
-        setPhaseDescription(description);
-
-        if (phase === "ended") {
-          setHasEventEnded(true);
-          setTimeRemaining({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-          return;
-        }
-
-        const difference = targetDate - now;
-
-        if (difference > 0) {
-          const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-          const hours = Math.floor(
-            (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-          );
-          const minutes = Math.floor(
-            (difference % (1000 * 60 * 60)) / (1000 * 60)
-          );
-          const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-          setTimeRemaining({ days, hours, minutes, seconds });
-        } else {
-          setTimeRemaining({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        }
+        setTimeRemaining({ days, hours, minutes, seconds });
+        setHasDatePassed(false);
+        setHasEventEnded(false);
       } else {
-        const targetDate = new Date("2025-08-30T20:00:00").getTime();
-        const eventEndDate = new Date("2025-09-06T23:59:59").getTime();
-        const now = new Date().getTime();
-        const difference = targetDate - now;
-
-        if (now > eventEndDate) {
-          setHasEventEnded(true);
-          setHasDatePassed(true);
-          setTimeRemaining({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-          return;
-        }
-
-        if (difference > 0) {
-          const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-          const hours = Math.floor(
-            (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-          );
-          const minutes = Math.floor(
-            (difference % (1000 * 60 * 60)) / (1000 * 60)
-          );
-          const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-          setTimeRemaining({ days, hours, minutes, seconds });
-          setHasDatePassed(false);
-          setHasEventEnded(false);
-        } else {
-          setTimeRemaining({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-          setHasDatePassed(true);
-          setHasEventEnded(false);
-        }
+        setTimeRemaining({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        setHasDatePassed(true);
+        setHasEventEnded(false);
       }
     };
 
@@ -163,7 +88,7 @@ const Countdown = ({ mode = "basic", showTimeline = true }: CountdownProps) => {
     const interval = setInterval(calculateTimeRemaining, 1000);
 
     return () => clearInterval(interval);
-  }, [mode]);
+  }, []);
 
   if (!isClient) {
     return (
@@ -183,7 +108,7 @@ const Countdown = ({ mode = "basic", showTimeline = true }: CountdownProps) => {
     { value: timeRemaining.seconds, label: "Seconds" },
   ];
 
-  if (hasEventEnded || (mode === "multi-phase" && currentPhase === "ended")) {
+  if (hasEventEnded) {
     return (
       <div className="flex flex-col items-center justify-center gap-4 py-8 relative">
         <Confetti />
@@ -200,9 +125,7 @@ const Countdown = ({ mode = "basic", showTimeline = true }: CountdownProps) => {
             Thank You!
           </h2>
           <p className="text-lg lg:text-xl text-primary font-medium animate-fade-in-delay">
-            {mode === "multi-phase"
-              ? phaseTitle
-              : "IOTricity Season 2.0 - Event Completed"}
+            IOTricity Season 2.0 - Event Completed
           </p>
         </div>
 
@@ -250,7 +173,7 @@ const Countdown = ({ mode = "basic", showTimeline = true }: CountdownProps) => {
     );
   }
 
-  if (hasDatePassed && showTimeline && mode !== "multi-phase") {
+  if (hasDatePassed && showTimeline) {
     return (
       <div className="flex flex-col items-center justify-center gap-4 py-8">
         {/* Hackathon Title with Gold Header Design */}
@@ -308,35 +231,12 @@ const Countdown = ({ mode = "basic", showTimeline = true }: CountdownProps) => {
           className="text-[2.5rem] lg:text-[3.5rem] font-bold leading-tight tracking-tight mb-2 text-primary"
           style={{ fontFamily: "KMR Apparat1" }}
         >
-          {mode === "multi-phase" ? phaseTitle : "IOTRICITY SEASON 2.0"}
+          IOTRICITY SEASON 2.0
         </h2>
         <p className="text-lg lg:text-xl text-secondary/80 font-medium max-w-2xl mx-auto">
-          {mode === "multi-phase"
-            ? phaseDescription
-            : "Counting down to the biggest event of the year."}
+          Counting down to the biggest event of the year.
         </p>
       </div>
-
-      {/* Phase indicator for multi-phase mode */}
-      {mode === "multi-phase" && (
-        <div className="flex items-center gap-2 mb-4">
-          <div
-            className={`w-3 h-3 rounded-full ${
-              currentPhase === "initial" ? "bg-primary" : "bg-gray-600"
-            }`}
-          ></div>
-          <div
-            className={`w-3 h-3 rounded-full ${
-              currentPhase === "hackathon" ? "bg-secondary" : "bg-gray-600"
-            }`}
-          ></div>
-          <div
-            className={`w-3 h-3 rounded-full ${
-              currentPhase === "winners" ? "bg-primary" : "bg-gray-600"
-            }`}
-          ></div>
-        </div>
-      )}
 
       {/* Countdown Display */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 w-full max-w-4xl">
@@ -358,35 +258,12 @@ const Countdown = ({ mode = "basic", showTimeline = true }: CountdownProps) => {
         ))}
       </div>
 
-      {/* Phase-specific information */}
+      {/* Basic countdown information */}
       <div className="text-center mt-6 px-4">
-        {mode === "multi-phase" ? (
-          <>
-            {currentPhase === "initial" && (
-              <p className="text-base lg:text-lg text-secondary/70 max-w-2xl">
-                Join us for IOTricity Season 2.0! The countdown to our flagship
-                IoT event has begun.
-              </p>
-            )}
-            {currentPhase === "hackathon" && (
-              <p className="text-base lg:text-lg text-secondary/80 max-w-2xl">
-                🚀 The hackathon is LIVE! Teams are working on innovative IoT
-                solutions. Submit your projects before time runs out!
-              </p>
-            )}
-            {currentPhase === "winners" && (
-              <p className="text-base lg:text-lg text-primary/80 max-w-2xl">
-                🏆 Judging in progress! Our expert panel is reviewing all
-                submissions. Winners will be announced at the finale event.
-              </p>
-            )}
-          </>
-        ) : (
-          <p className="text-base lg:text-lg text-secondary/70 max-w-2xl">
-            Join us for our upcoming event! Stay tuned for more details about
-            this exciting opportunity to explore electrical engineering.
-          </p>
-        )}
+        <p className="text-base lg:text-lg text-secondary/70 max-w-2xl">
+          Join us for our upcoming event! Stay tuned for more details about this
+          exciting opportunity to explore electrical engineering.
+        </p>
       </div>
     </div>
   );
