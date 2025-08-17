@@ -1,7 +1,6 @@
 export interface LinkItem {
   title: string;
   url: string;
-  lucideIcon?: React.ElementType;
+  iconImage?: string;
   description?: string;
-  variant?: "primary" | "secondary";
 }

@@ -1,5 +1,4 @@
 import { LoadingProvider } from "@/components/providers/LoadingProvider";
-import LayoutWrapper from "@/components/ui/LayoutWrapper";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -67,7 +66,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <LoadingProvider>
-          <LayoutWrapper>{children}</LayoutWrapper>
+          <div>{children}</div>
         </LoadingProvider>
       </body>
     </html>
