@@ -45,9 +45,9 @@ const HomePage = () => {
   const [faqError, setFaqError] = useState<string | null>(null);
 
   // Visibility controls for different sections
-  const [isTimelineVisible, setIsTimelineVisible] = useState(true);
-  const [isTracksVisible, setIsTracksVisible] = useState(true);
-  const [isPrizesVisible, setIsPrizesVisible] = useState(true);
+  const [isTimelineVisible, setIsTimelineVisible] = useState(false);
+  const [isTracksVisible, setIsTracksVisible] = useState(false);
+  const [isPrizesVisible, setIsPrizesVisible] = useState(false);
 
   useEffect(() => {
     setCurrentDate(new Date());
