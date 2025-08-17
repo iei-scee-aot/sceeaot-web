@@ -298,7 +298,14 @@ const HomePage = () => {
 
                 {/* Checkout Button */}
                 <div className="flex justify-center">
-                  <Link href="/iotricity" className="w-full sm:w-auto max-w-xs">
+                  <Link
+                    href={
+                      process.env.NODE_ENV === "development"
+                        ? "http://localhost:3001"
+                        : "https://iotricity.sceeaot.in"
+                    }
+                    className="w-full sm:w-auto max-w-xs"
+                  >
                     <Button
                       variant="primary"
                       size="lg"
@@ -331,7 +338,14 @@ const HomePage = () => {
                       </Button>
                     </Link>
                   )}
-                  <Link href="/iotricity" className="w-full sm:w-auto">
+                  <Link
+                    href={
+                      process.env.NODE_ENV === "development"
+                        ? "http://localhost:3001"
+                        : "https://iotricity.sceeaot.in"
+                    }
+                    className="w-full sm:w-auto"
+                  >
                     <Button
                       variant="secondary"
                       icon={<ExternalLink size={18} />}

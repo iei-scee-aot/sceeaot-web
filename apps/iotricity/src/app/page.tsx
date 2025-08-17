@@ -9,7 +9,6 @@ import Accordion from "@/components/ui/Accordion";
 import Button from "@/components/ui/Button";
 import Divider2 from "@/components/ui/Divider";
 import Headlines from "@/components/ui/Headlines";
-import MentorsCard from "@/components/ui/MentorsCard";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -391,7 +390,7 @@ const HomePage = () => {
         <Divider2 />
 
         {/* Mentors Section */}
-        <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+        {/* <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
             <Headlines headLine="Mentors" />
           </div>
@@ -407,7 +406,7 @@ const HomePage = () => {
             ))}
           </div>
         </div>
-        <Divider2 />
+        <Divider2 /> */}
 
         {/* FAQ Section */}
         <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
