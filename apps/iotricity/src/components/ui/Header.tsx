@@ -11,7 +11,7 @@ const Header = () => {
               alt="SCEE Logo"
               width={100}
               height={50}
-              className="object-contain pl-3 w-[85px] h-[40px] md:w-[100px] md:h-[45px] lg:w-[120px] lg:h-[50px] xl:w-[110px] xl:h-[55px] 2xl:w-[120px] 2xl:h-[60px]"
+              className="object-contain pl-3 w-[85px] h-[40px] md:w-[100px] md:h-[45px] lg:w-[120px] lg:h-[50px] xl:w-[110px] xl:h-[55px] 2xl:w-[120px] 2xl:h-[60px] brightness-0 invert"
             />
           </Link>
           <div className="flex mt-3 items-baseline">
