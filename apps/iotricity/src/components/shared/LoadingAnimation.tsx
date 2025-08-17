@@ -54,8 +54,8 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
             }}
           >
             <Image
-              src="/scee_logo.png"
-              alt="SCEE Logo"
+              src="/iotricity.svg"
+              alt="Iotricity Logo"
               fill
               className="object-contain filter drop-shadow-2xl"
               priority
@@ -85,7 +85,7 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
         }`}
       >
         <h1 className="text-white text-lg md:text-xl lg:text-2xl font-medium tracking-wide text-center">
-          IEI Students Chapter - SCEE AOT
+          Welcome to IoTricity Season 2
         </h1>
       </div>
 
