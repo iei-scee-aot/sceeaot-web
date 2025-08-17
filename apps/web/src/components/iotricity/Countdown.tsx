@@ -52,8 +52,8 @@ const Countdown = ({ showTimeline = true }: CountdownProps) => {
     loadEventSchedule();
 
     const calculateTimeRemaining = () => {
-      const targetDate = new Date("2025-08-30T20:00:00").getTime();
-      const eventEndDate = new Date("2025-09-06T23:59:59").getTime();
+      const targetDate = new Date("2025-08-30T20:00:00").getTime(); // The Day Event Starts
+      const eventEndDate = new Date("2025-09-06T23:59:59").getTime(); // The Day Event Ends
       const now = new Date().getTime();
       const difference = targetDate - now;
 

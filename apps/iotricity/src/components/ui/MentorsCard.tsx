@@ -8,7 +8,7 @@ interface CardProps {
   links?: string[];
 }
 
-const TeamCard = ({
+const MentorsCard = ({
   Name = "Member Name",
   Designation = "Designation",
   imagePath = "",
@@ -50,9 +50,7 @@ const TeamCard = ({
     <div className="h-[440px] md:h-[280px]  mb-6 md:mb-8">
       <div
         className={`relative cursor-pointer w-[16rem] md:w-[10rem] flex flex-col items-center justify-start transition-all duration-0 overflow-hidden ${
-          isExpanded
-            ? "h-[28rem] md:h-[18rem]"
-            : "h-[25rem] md:h-[16rem]"
+          isExpanded ? "h-[28rem] md:h-[18rem]" : "h-[25rem] md:h-[16rem]"
         }`}
         onClick={toggleCard}
       >
@@ -143,4 +141,4 @@ const TeamCard = ({
   );
 };
 
-export default TeamCard;
+export default MentorsCard;
