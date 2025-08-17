@@ -1,11 +1,16 @@
 "use client";
 
 import Countdown from "@/components/iotricity/Countdown";
+import IOTricityPrizes from "@/components/iotricity/IOTricityPrizes";
+import IOTricityTimeline from "@/components/iotricity/IOTricityTimeline";
+import IOTricityTracks from "@/components/iotricity/IOTricityTracks";
+import ComingSoon from "@/components/shared/ComingSoon";
 import Accordion from "@/components/ui/Accordion";
 import Button from "@/components/ui/Button";
 import Divider2 from "@/components/ui/Divider";
 import Headlines from "@/components/ui/Headlines";
-import { ArrowRight, ExternalLink, Users } from "lucide-react";
+import TeamCard from "@/components/ui/TeamCard";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -19,26 +24,54 @@ interface FAQData {
   faqs: FAQ[];
   metadata: {
     lastUpdated: string;
+    eventName: string;
     organization: string;
     contact: string;
   };
 }
 
+interface Mentor {
+  name: string;
+  designation: string;
+  imagePath: string;
+  links: string[];
+}
+
 const HomePage = () => {
   const [currentDate, setCurrentDate] = useState<Date | null>(null);
+  const [mentorsData, setMentorsData] = useState<Mentor[]>([]);
   const [faqData, setFaqData] = useState<FAQ[]>([]);
   const [faqLoading, setFaqLoading] = useState(true);
   const [faqError, setFaqError] = useState<string | null>(null);
+
+  // Visibility controls for different sections
+  const [isTimelineVisible, setIsTimelineVisible] = useState(true);
+  const [isTracksVisible, setIsTracksVisible] = useState(true);
+  const [isPrizesVisible, setIsPrizesVisible] = useState(true);
 
   useEffect(() => {
     setCurrentDate(new Date());
   }, []);
 
   useEffect(() => {
+    const loadMentorsData = async () => {
+      try {
+        const response = await fetch("/data/mentors.json");
+        const data = await response.json();
+        setMentorsData(data);
+      } catch (error) {
+        console.error("Failed to load mentors data:", error);
+      }
+    };
+
+    loadMentorsData();
+  }, []);
+
+  useEffect(() => {
     const fetchFAQs = async () => {
       try {
         setFaqLoading(true);
-        const response = await fetch("/data/faq.json");
+        const response = await fetch("/data/iotricitys2-faq.json");
 
         if (!response.ok) {
           console.error(
@@ -61,7 +94,7 @@ const HomePage = () => {
         setFaqData(data.faqs);
         setFaqError(null);
       } catch (err) {
-        console.error("Failed to fetch FAQs:", err);
+        console.error("Failed to fetch IOTricity FAQs:", err);
         setFaqError(err instanceof Error ? err.message : "Failed to load FAQs");
       } finally {
         setFaqLoading(false);
@@ -129,13 +162,12 @@ const HomePage = () => {
               <div className="flex flex-col sm:flex-row gap-4 mt-12">
                 <Button
                   variant="primary"
-                  size="lg"
                   className="group relative overflow-hidden"
                 >
                   <span className="relative z-10 flex items-center gap-2">
                     Register Now
                     <ArrowRight
-                      size={20}
+                      size={18}
                       className="transition-transform group-hover:translate-x-1"
                     />
                   </span>
@@ -144,13 +176,12 @@ const HomePage = () => {
 
                 <Button
                   variant="secondary"
-                  size="lg"
                   className="group border-primary/20 hover:border-primary/50"
                 >
                   <span className="flex items-center gap-2">
                     Learn More
                     <ExternalLink
-                      size={18}
+                      size={16}
                       className="transition-transform group-hover:scale-110"
                     />
                   </span>
@@ -161,124 +192,9 @@ const HomePage = () => {
         </div>
         <Divider2 />
 
-        {/*Timeline*/}
-        <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
-          {/* Unified Header Section */}
-          <div className="lg:flex lg:h-[10rem]">
-            {/* Headline Section */}
-            <div className="flex items-center border-gray-500 border-b-[0.5px] lg:border-b-[0.8px] lg:border-r-[0.8px] lg:w-1/2 lg:pl-[1.6rem] overflow-hidden">
-              <div className="block lg:hidden w-full">
-                <Headlines headLine="Timeline" />
-              </div>
-              <h1
-                className="hidden lg:block text-[94px] font-bold leading-[72px] tracking-[-0.47px]"
-                style={{
-                  fontFamily: "KMR Apparat1",
-                  WebkitTextStroke: "1px var(--primary)",
-                  color: "transparent",
-                }}
-              >
-                Timeline
-              </h1>
-            </div>
-
-            {/* Button and GIF Section */}
-            <div className="flex items-center border-gray-500 border-b-[0.5px] lg:border-b-[0.8px] lg:w-1/2 lg:relative lg:overflow-hidden overflow-hidden">
-              <Link href="/events">
-                <div className="h-[3.75rem] w-[6rem] lg:absolute lg:bottom-0 lg:left-0 lg:w-[116px] lg:h-[81px] lg:z-10 bg-primary text-black py-1 px-3 lg:bg-primary flex flex-col items-start lg:items-center lg:justify-center gap-0 text-sm hover:bg-primary/90 transition-all duration-300 cursor-pointer">
-                  <span className="lg:block">EVENTS</span>
-                  <ArrowRight
-                    size={14}
-                    className="animate-float lg:mt-1 lg:size-[19px]"
-                  />
-                </div>
-              </Link>
-              <div className="flex-1 lg:absolute lg:inset-0 lg:bg-black/20">
-                <img
-                  src="/images/GIF.gif"
-                  alt="Campus GIF"
-                  className="w-full h-[3.75rem] lg:w-full lg:h-full object-cover"
-                  style={{
-                    backgroundSize: "cover",
-                    backgroundPosition: "50% 50%",
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Content */}
-          <div className="px-4 lg:px-8 py-12 lg:py-8 text-sm lg:text-[2rem] font-pxg lg:font-light lg:leading-relaxed">
-            {isAfterAugust30 ? (
-              /* Event Started Message */
-              <div className="flex flex-col justify-center items-center lg:min-h-[23.5rem] text-center">
-                <div className="mb-8">
-                  <h3
-                    className="text-2xl lg:text-4xl font-bold text-primary mb-4"
-                    style={{ fontFamily: "KMR Apparat1" }}
-                  >
-                    🎉 Event Has Started! 🎉
-                  </h3>
-                  <p className="text-base lg:text-xl text-secondary/80">
-                    IOTricity Season 2.0 is now live!
-                    <br />
-                    Check out the dedicated page for more details and updates.
-                  </p>
-                </div>
-
-                {/* Checkout Button */}
-                <div className="flex justify-center">
-                  <Link href="/iotricity" className="w-full sm:w-auto max-w-xs">
-                    <Button
-                      variant="primary"
-                      size="lg"
-                      icon={<ExternalLink size={20} />}
-                      className="justify-center"
-                    >
-                      Checkout IOTricity
-                      <ArrowRight size={18} />
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            ) : (
-              /* Countdown and Buttons */
-              <div className="flex flex-col justify-center items-center lg:min-h-[23.5rem]">
-                <div className="w-full flex justify-center mb-8">
-                  <Countdown />
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md">
-                  {!isAfterAugust27 && (
-                    <Link
-                      href="/iotricity#register"
-                      className="w-full sm:w-auto"
-                    >
-                      <Button variant="primary" icon={<Users size={18} />}>
-                        Register Now
-                        <ArrowRight size={16} />
-                      </Button>
-                    </Link>
-                  )}
-                  <Link href="/iotricity" className="w-full sm:w-auto">
-                    <Button
-                      variant="secondary"
-                      icon={<ExternalLink size={18} />}
-                    >
-                      Checkout IOTricity
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-        <Divider2 />
-
-        {/*About us*/}
+        {/* About IOTricity */}
         <div
-          id="About-Us"
+          id="About-IOTricity"
           className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0"
         >
           {/* Unified Header Section */}
@@ -286,7 +202,7 @@ const HomePage = () => {
             {/* Headline Section */}
             <div className="flex items-center border-gray-500 border-b-[0.5px] lg:border-b-[0.8px] lg:border-r-[0.8px] lg:w-1/2 lg:pl-[1.6rem] overflow-hidden">
               <div className="block lg:hidden w-full">
-                <Headlines headLine="About Us" />
+                <Headlines headLine="About IOTricity" />
               </div>
               <h1
                 className="hidden lg:block text-[94px] font-bold leading-[72px] tracking-[-0.47px]"
@@ -298,26 +214,16 @@ const HomePage = () => {
               >
                 About
                 <br />
-                IoTricity
+                IOTricity
               </h1>
             </div>
 
             {/* Button and GIF Section */}
             <div className="flex items-center border-gray-500 border-b-[0.5px] lg:border-b-[0.8px] lg:w-1/2 lg:relative lg:overflow-hidden overflow-hidden">
-              <Link href="/team">
-                <div className="h-[3.75rem] w-[6rem] lg:absolute lg:bottom-0 lg:left-0 lg:w-[116px] lg:h-[81px] lg:z-10 bg-primary text-black py-1 px-3 lg:bg-primary flex flex-col items-start lg:items-center lg:justify-center gap-0 text-sm hover:bg-primary/90 transition-all duration-300">
-                  <span className="lg:text-center">TEAM</span>
-                  <span className="hidden lg:block"></span>
-                  <ArrowRight
-                    size={14}
-                    className="animate-float lg:mt-1 lg:size-[19px]"
-                  />
-                </div>
-              </Link>
               <div className="flex-1 lg:absolute lg:inset-0 lg:bg-black/20">
                 <img
                   src="/images/GIF.gif"
-                  alt="Campus GIF"
+                  alt="IOTricity GIF"
                   className="w-full h-[3.75rem] lg:w-full lg:h-full object-cover"
                   style={{
                     backgroundSize: "cover",
@@ -330,99 +236,183 @@ const HomePage = () => {
 
           {/* Text Content */}
           <div className="px-[1.40625rem] lg:px-8 py-[1.40625rem] lg:py-8 text-[10.5px] lg:text-[1.2rem] font-light leading-relaxed font-pxg text-left lg:text-center">
-            Welcome to the IEI Students&apos; Chapter of Electrical Engineering!
-            We may be the newest community on the block, but we&apos;re
-            definitely the most energetic and driven one.
+            Welcome to IOTricity Season 2.0 - where innovation meets
+            electricity! This flagship event represents the perfect fusion of
+            Internet of Things (IoT) technology and electrical engineering
+            excellence.
             <br />
             <br />
-            Our mission is to create a space where students can dive into both
-            core and non-core topics, learn new skills, and push the limits of
-            what they can achieve. We organize everything from hands-on
-            workshops and ideathons to competitions and brainstorming sessions,
-            all designed to spark creativity and innovation.
+            IOTricity is more than just a competition; it&apos;s a comprehensive
+            learning experience that spans multiple days of workshops, hands-on
+            sessions, and collaborative projects. From embedded systems to
+            machine learning, from cloud computing to networking protocols - we
+            cover the entire IoT ecosystem.
             <br />
             <br />
-            It&apos;s not just about textbooks here - it&apos;s about real-world
-            experiences and connecting with others who share the same passion
-            for engineering.
+            Whether you&apos;re a beginner curious about IoT or an experienced
+            developer ready to push boundaries, IOTricity offers something for
+            everyone. Join industry experts, connect with like-minded
+            innovators, and transform your ideas into reality through
+            cutting-edge technology.
             <br />
             <br />
-            So, if you&apos;re looking to learn, grow, and have a ton of fun,
-            join us on this exciting journey! We can&apos;t wait to see what we
-            can achieve together.
+            Get ready to electrify your imagination and create the future of
+            connected devices. The revolution starts here, and it starts with
+            you!
           </div>
 
-          {/* Team Image */}
-          <div className="relative w-full h-[200px] md:h-[420px] lg:h-[609px] mt-4 lg:mt-0">
+          <div className="flex flex-col sm:flex-row gap-4 mt-8 mb-12 px-4 justify-center items-center">
+            <Link href="/iotricity/rules" className="w-full sm:w-auto">
+              <Button
+                variant="secondary"
+                icon={<ExternalLink size={18} />}
+                iconPosition="right"
+              >
+                Rules and Regulations
+              </Button>
+            </Link>
+          </div>
+
+          {/* Event Image */}
+          <div className="relative w-full h-[200px] md:h-[480px] lg:h-[720px] mt-4 lg:mt-0">
             <Image
-              src={
-                "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rhlcdh5oLMNJOCXnKiHD7Ua35Ww8EVepuQtP4Z"
-              }
-              alt="About Us"
+              src="https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rh1sbxjJ7QV5tB8ivhMZbY4dapLFmDuzfUgolI"
+              alt="IOTricity Event"
               loading="lazy"
               layout="fill"
               objectFit="cover"
               objectPosition="center"
             />
-            <div className="absolute inset-0 bg-gradient-to-b to-black/65 from-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-b to-black/85 from-transparent"></div>
+            <div className="absolute bottom-8 left-8 text-white">
+              <h3
+                className="text-2xl lg:text-4xl font-bold mb-2"
+                style={{ fontFamily: "KMR Apparat1" }}
+              >
+                IOTricity 2025
+              </h3>
+              <p className="text-sm lg:text-lg">
+                Innovation • Technology • Community
+              </p>
+            </div>
           </div>
         </div>
         <Divider2 />
 
-        {/* HOD's Desk */}
+        {/* Countdown Section */}
         <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
-          <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
-            <Headlines headLine="From The HOD's Desk" />
+          {/* Unified Header Section */}
+          <div className="lg:flex lg:h-[10rem]">
+            {/* Headline Section */}
+            <div className="flex items-center border-gray-500 border-b-[0.5px] lg:border-b-[0.8px] lg:border-r-[0.8px] lg:w-1/2 lg:pl-[1.6rem] overflow-hidden">
+              <div className="block lg:hidden w-full">
+                <Headlines headLine="Event Countdown" />
+              </div>
+              <h1
+                className="hidden lg:block text-[94px] font-bold leading-[72px] tracking-[-0.47px]"
+                style={{
+                  fontFamily: "KMR Apparat1",
+                  WebkitTextStroke: "1px var(--primary)",
+                  color: "transparent",
+                }}
+              >
+                Event
+                <br />
+                Countdown
+              </h1>
+            </div>
+
+            {/* Button and GIF Section */}
+            <div className="flex items-center border-gray-500 border-b-[0.5px] lg:border-b-[0.8px] lg:w-1/2 lg:relative lg:overflow-hidden overflow-hidden">
+              <div className="flex-1 lg:absolute lg:inset-0 lg:bg-black/20">
+                <img
+                  src="/images/GIF.gif"
+                  alt="Countdown GIF"
+                  className="w-full h-[3.75rem] lg:w-full lg:h-full object-cover"
+                  style={{
+                    backgroundSize: "cover",
+                    backgroundPosition: "50% 50%",
+                  }}
+                />
+              </div>
+            </div>
           </div>
-          <div className="flex gap-2 lg:gap-10 items-center py-[1.9375rem] lg:py-[1.5rem] pl-[0.5rem] lg:pl-[2rem] pr-[0.5rem] lg:pr-[1rem] text-[9px] lg:text-[1rem] font-pxg tracking-tight leading-snug">
-            <Image
-              src={
-                "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhLv4BBIDz7N63BHlPeJLcnjgKxb4RGhXAq8D9"
-              }
-              loading="lazy"
-              alt="HOD's PIC"
-              width={135}
-              height={135}
-              className="border-2 rounded-md lg:w-[400px] lg:h-[400px]"
-            />
-            <p className="flex-1 font-light">
-              <span className="font-bolder text-left text-primary">
-                &quot;{" "}
-              </span>
-              Our department has created a platform to deliver strong
-              fundamentals-based technical education. We strive to produce
-              electrical engineers who are well suited for both industry and
-              society.
-              <br />
-              <br className="hidden lg:block" />
-              As HOD of this department, I endeavor to transform them into
-              creators of technology with good human values and a commitment
-              towards our nation.
-              <span className="font-bolder text-left text-primary">
-                {" "}
-                &quot;
-              </span>
-              <br />
-              <br className="hidden lg:block" />
-              <span className="font-bolder text-left text-primary">
-                {" "}
-                - Prof. Sandip Saha Chowdhury
-              </span>
-              <br />
-              <span className="font-bolder text-left text-grey italic">
-                {" "}
-                HOD, Department of Electrical Engineering
-              </span>
-            </p>
+
+          {/* Content */}
+          <div className="px-4 lg:px-8 py-12 lg:py-8 text-sm lg:text-[2rem] font-pxg lg:font-light lg:leading-relaxed flex justify-center items-center lg:min-h-[23.5rem]">
+            <Countdown mode="multi-phase" showTimeline={false} />
           </div>
         </div>
-
         <Divider2 />
 
-        {/*FAQs*/}
+        {/* Event Timeline Section */}
         <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
-            <Headlines headLine="FAQs" />
+            <Headlines headLine="Event Timeline" />
+          </div>
+          <div className="px-4 lg:px-8 py-12 lg:py-8 text-sm lg:text-[2rem] font-pxg lg:font-light lg:leading-relaxed flex justify-center items-center">
+            {isTimelineVisible ? (
+              <IOTricityTimeline />
+            ) : (
+              <ComingSoon description="Detailed schedule and timeline for the hackathon is being finalized. Stay tuned for complete event schedule and important dates." />
+            )}
+          </div>
+        </div>
+        <Divider2 />
+
+        {/* Event Tracks Section */}
+        <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+          <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
+            <Headlines headLine="Event Tracks" />
+          </div>
+          <div className="px-4 lg:px-8 py-12 lg:py-8 text-sm lg:text-[2rem] font-pxg lg:font-light lg:leading-relaxed flex justify-center items-center">
+            {isTracksVisible ? (
+              <IOTricityTracks />
+            ) : (
+              <ComingSoon description="Exciting tracks and categories for the hackathon are being finalized. Stay tuned for detailed information about different competition tracks and specializations." />
+            )}
+          </div>
+        </div>
+        <Divider2 />
+
+        {/* Event Prizes Section */}
+        <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+          <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
+            <Headlines headLine="Event Prizes" />
+          </div>
+          <div className="px-4 lg:px-8 py-12 lg:py-8 text-sm lg:text-[2rem] font-pxg lg:font-light lg:leading-relaxed flex justify-center items-center">
+            {isPrizesVisible ? (
+              <IOTricityPrizes />
+            ) : (
+              <ComingSoon description="Prize structure and rewards for the hackathon are being finalized. Stay tuned for exciting prizes and recognition opportunities." />
+            )}
+          </div>
+        </div>
+        <Divider2 />
+
+        {/* Mentors Section */}
+        <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+          <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
+            <Headlines headLine="Mentors" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-5 md:gap-y-[4.5rem] mx-5 py-12 pb-5 md:pb-20 place-items-center">
+            {mentorsData.map((mentor, index) => (
+              <TeamCard
+                key={index}
+                Name={mentor.name}
+                Designation={mentor.designation}
+                imagePath={mentor.imagePath}
+                links={mentor.links}
+              />
+            ))}
+          </div>
+        </div>
+        <Divider2 />
+
+        {/* FAQ Section */}
+        <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+          <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
+            <Headlines headLine="IOTricity FAQs" />
           </div>
           {faqLoading ? (
             <div className="flex items-center justify-center py-12">
@@ -436,7 +426,7 @@ const HomePage = () => {
               </div>
             </div>
           ) : (
-            <Accordion items={faqData} />
+            <Accordion items={faqData} allowMultipleOpen />
           )}
         </div>
       </div>

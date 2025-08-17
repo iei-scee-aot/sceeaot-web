@@ -64,14 +64,14 @@ const Navbar = ({
             </Link>
           </div>
           <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
-            <Link href="/events" className="flex flex-col w-full">
+            <Link href="/rules" className="flex flex-col w-full">
               <span
                 className="pl-2 font-light text-lg "
                 style={{ color: eventColor }}
               >
-                EVENTS
+                RULES
               </span>
-              <div className="events flex pr-2 justify-end ">
+              <div className="rules flex pr-2 justify-end ">
                 <svg
                   width="26"
                   height="28"
@@ -108,7 +108,7 @@ const Navbar = ({
             </Link>
           </div>
           <div className="w-1/4 flex justify-between items-center">
-            <Link href="/#About-Us" className="flex flex-col w-full">
+            <Link href="/#About-IOTricity" className="flex flex-col w-full">
               <span
                 className="pl-2 font-light text-lg pt-[2.9px]"
                 style={{ color: aboutColor }}
@@ -208,16 +208,16 @@ const Navbar = ({
           </div>
           <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
             <Link
-              href="/events"
+              href="/rules"
               className="flex justify-center items-baseline   w-full"
             >
               <span
                 className="font-light lg:text-2xl xl:text-[1rem] 2xl:text-4xl"
                 style={{ color: eventColor }}
               >
-                EVENTS
+                RULES
               </span>
-              <div className="events  pl-1">
+              <div className="rules  pl-1">
                 <svg
                   width="20"
                   height="15"
@@ -255,7 +255,7 @@ const Navbar = ({
           </div>
           <div className="w-1/4 flex justify-between items-center">
             <Link
-              href="/#About-Us"
+              href="/#About-IOTricity"
               className="flex justify-center items-baseline w-full"
             >
               <span
