@@ -1,7 +1,7 @@
 "use client";
 
+import { LinkItem } from "../../types/types";
 import { LinkCard } from "./LinkCard";
-import { LinkItem } from "./types";
 
 interface LinksGridProps {
   links: LinkItem[];

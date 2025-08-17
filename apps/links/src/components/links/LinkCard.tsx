@@ -1,8 +1,9 @@
 "use client";
 
 import { ExternalLink } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
-import { LinkItem } from "./types";
+import { LinkItem } from "../../types/types";
 
 interface LinkCardProps {
   link: LinkItem;
@@ -16,11 +17,15 @@ export const LinkCard = ({ link }: LinkCardProps) => {
     <div className="group relative overflow-hidden rounded-sm border border-gray-700 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20 mt-4">
       <div className="flex items-center p-4 lg:p-6">
         {/* Icon */}
-        {link.lucideIcon && (
-          <div className="flex-shrink-0 mr-4">
-            <link.lucideIcon className="w-8 h-8 lg:w-10 lg:h-10 text-gray-400 group-hover:text-primary transition-colors" />
-          </div>
-        )}
+        {link.iconImage ? (
+          <Image
+            src={link.iconImage}
+            alt={`${link.title} icon`}
+            width={40}
+            height={40}
+            className="w-8 h-8 lg:w-10 lg:h-10 rounded-lg object-cover mr-4"
+          />
+        ) : null}
 
         {/* Content */}
         <div className="flex-grow min-w-0">

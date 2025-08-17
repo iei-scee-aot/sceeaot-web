@@ -1,8 +1,8 @@
 "use client";
 
-import LoadingAnimation from "@/components/shared/LoadingAnimation";
 import { useGlobalLoading } from "@/hooks/useGlobalLoading";
 import { createContext, ReactNode, useContext } from "react";
+import LoadingAnimation from "./LoadingAnimation";
 
 interface LoadingContextType {
   shouldShowLoading: boolean;

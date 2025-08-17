@@ -1,8 +1,5 @@
 "use client";
 
-import Button from "@/components/ui/Button";
-import { ArrowLeft, Home } from "lucide-react";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function NotFound() {
@@ -15,7 +12,7 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-background text-secondary">
       {/* Main container with side borders */}
-      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 min-h-screen flex flex-col items-center justify-center px-4 relative">
+      <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto min-h-screen flex flex-col items-center justify-center px-4 relative">
         {/* Animated 404 */}
         <div
           className={`transition-all duration-1000 ${
@@ -47,31 +44,6 @@ export default function NotFound() {
             the digital void. It might have been moved, deleted, or perhaps it
             never existed at all.
           </p>
-        </div>
-        {/* Navigation Buttons */}
-        <div
-          className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-500 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          <Link href="/">
-            <Button
-              variant="primary"
-              icon={<Home size={18} />}
-              className="font-pxg font-medium text-sm md:text-base"
-            >
-              Go Home
-            </Button>
-          </Link>
-
-          <Button
-            variant="secondary"
-            icon={<ArrowLeft size={18} />}
-            onClick={() => window.history.back()}
-            className="font-pxg font-medium text-sm md:text-base hover:bg-primary hover:text-black"
-          >
-            Go Back
-          </Button>
         </div>
         {/* Footer Message */}
         <div

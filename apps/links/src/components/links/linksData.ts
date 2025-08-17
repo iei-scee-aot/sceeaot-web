@@ -1,69 +1,56 @@
-import {
-  BookOpen,
-  Facebook,
-  Globe,
-  Instagram,
-  Linkedin,
-  MessageSquare,
-  Twitter,
-  Youtube,
-  Zap,
-} from "lucide-react";
-import { LinkItem } from "./types";
+import { LinkItem } from "@/types/types";
 
 export const linksData: LinkItem[] = [
   {
-    title: "IoTricity",
-    url: "/iotricity",
-    lucideIcon: Zap,
-    description: "Our flagship hackathon event",
-  },
-  {
-    title: "Main Website",
+    title: "Main App",
     url: "/",
-    lucideIcon: Globe,
     description: "Visit our main website",
   },
   {
-    title: "Blogs",
-    url: "https://medium.com/@scee-aot",
-    lucideIcon: BookOpen,
-    description: "Read our latest articles and insights",
+    title: "IoTricity",
+    url: "/iotricity",
+    description: "Our flagship hackathon event",
   },
   {
     title: "Instagram",
     url: "https://instagram.com/scee.aot",
-    lucideIcon: Instagram,
+    iconImage: "/icons/instagram.jpg",
     description: "Follow us for updates and behind-the-scenes content",
   },
   {
     title: "Facebook",
     url: "https://facebook.com/scee.aot",
-    lucideIcon: Facebook,
+    iconImage: "/icons/facebook.jpg",
     description: "Connect with our community on Facebook",
   },
   {
-    title: "Twitter",
+    title: "X (Twitter)",
     url: "https://twitter.com/scee_aot",
-    lucideIcon: Twitter,
+    iconImage: "/icons/x.jpg",
     description: "Get real-time updates and announcements",
   },
   {
     title: "LinkedIn",
     url: "https://linkedin.com/company/scee-aot",
-    lucideIcon: Linkedin,
+    iconImage: "/icons/linkedin.jpg",
     description: "Professional networking and career opportunities",
   },
   {
     title: "Discord",
     url: "https://discord.gg/scee-aot",
-    lucideIcon: MessageSquare,
+    iconImage: "/icons/discord.jpg",
     description: "Join our community discussions and events",
   },
   {
-    title: "YouTube",
-    url: "https://youtube.com/@scee-aot",
-    lucideIcon: Youtube,
-    description: "Watch our workshops, events, and tutorials",
+    title: "Threads",
+    url: "https://threads.net/@scee.aot",
+    iconImage: "/icons/threads.jpg",
+    description: "Connect with us on Threads",
+  },
+  {
+    title: "WhatsApp",
+    url: "https://wa.me/your-number",
+    iconImage: "/icons/whatsapp.jpg",
+    description: "Get in touch via WhatsApp",
   },
 ];

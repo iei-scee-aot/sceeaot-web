@@ -3,7 +3,13 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
+    "build:web": "turbo run web#build",
+    "build:iotricity": "turbo run iotricity#build",
+    "build:links": "turbo run links#build",
     "dev": "turbo run dev",
+    "dev:web": "turbo run web#dev",
+    "dev:iotricity": "turbo run iotricity#dev",
+    "dev:links": "turbo run links#dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types"
