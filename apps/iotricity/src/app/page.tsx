@@ -9,7 +9,7 @@ import Accordion from "@/components/ui/Accordion";
 import Button from "@/components/ui/Button";
 import Divider2 from "@/components/ui/Divider";
 import Headlines from "@/components/ui/Headlines";
-import TeamCard from "@/components/ui/TeamCard";
+import MentorsCard from "@/components/ui/MentorsCard";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -340,7 +340,7 @@ const HomePage = () => {
 
           {/* Content */}
           <div className="px-4 lg:px-8 py-12 lg:py-8 text-sm lg:text-[2rem] font-pxg lg:font-light lg:leading-relaxed flex justify-center items-center lg:min-h-[23.5rem]">
-            <Countdown mode="multi-phase" showTimeline={false} />
+            <Countdown />
           </div>
         </div>
         <Divider2 />
@@ -397,7 +397,7 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-5 md:gap-y-[4.5rem] mx-5 py-12 pb-5 md:pb-20 place-items-center">
             {mentorsData.map((mentor, index) => (
-              <TeamCard
+              <MentorsCard
                 key={index}
                 Name={mentor.name}
                 Designation={mentor.designation}
