@@ -38,7 +38,9 @@ const Navbar = ({
             </Link>
           </div>
           <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
-            <Link href="/team" className="flex flex-col w-full">
+            <Link href={process.env.NODE_ENV==="development"?
+            "http://localhost:3000/team":"https://www.sceeaot.in/team"}
+             className="flex flex-col w-full">
               <span
                 className="pl-2 font-light text-lg "
                 style={{ color: teamColor }}
@@ -179,7 +181,7 @@ const Navbar = ({
           </div>
           <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
             <Link
-              href="/team"
+              href={process.env.NODE_ENV==="development"?"http://localhost:3000/team":"https://www.sceeaot.in/team"}
               className=" justify-center items-baseline flex  w-full"
             >
               <span
