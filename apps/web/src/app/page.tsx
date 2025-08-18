@@ -461,7 +461,7 @@ const HomePage = () => {
           <div className="flex gap-2 lg:gap-10 items-center py-[1.9375rem] lg:py-[1.5rem] pl-[0.5rem] lg:pl-[2rem] pr-[0.5rem] lg:pr-[1rem] text-[9px] lg:text-[1rem] font-pxg tracking-tight leading-snug">
             <Image
               src={
-                "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhLv4BBIDz7N63BHlPeJLcnjgKxb4RGhXAq8D9"
+                "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rh9cttxvAeQlUgIYx42MXEpDAwvuC5fqiKakHh"
               }
               loading="lazy"
               alt="HOD's PIC"
