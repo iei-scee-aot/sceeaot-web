@@ -85,6 +85,8 @@ const Footer = () => {
                     <div className="flex gap-4">
                       <Link
                         href="https://github.com/iei-scee-aot"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="p-2 border border-gray-700 rounded-lg text-gray-400 hover:text-white hover:border-primary transition-all duration-200"
                       >
                         <Github size={24} />
