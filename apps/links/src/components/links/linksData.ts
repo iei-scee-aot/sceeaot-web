@@ -1,6 +1,6 @@
 import { LinkItem } from "@/types/types";
 
-export const linksData: LinkItem[] = [
+export const websiteLinks: LinkItem[] = [
   {
     title: "Main App",
     url: "/",
@@ -11,6 +11,9 @@ export const linksData: LinkItem[] = [
     url: "/iotricity",
     description: "Our flagship hackathon event",
   },
+];
+
+export const socialMediaLinks: LinkItem[] = [
   {
     title: "Instagram",
     url: "https://instagram.com/scee.aot",
@@ -54,3 +57,6 @@ export const linksData: LinkItem[] = [
     description: "Get in touch via WhatsApp",
   },
 ];
+
+// Backward compatibility - keeping the original export for existing imports
+export const linksData: LinkItem[] = [...websiteLinks, ...socialMediaLinks];
