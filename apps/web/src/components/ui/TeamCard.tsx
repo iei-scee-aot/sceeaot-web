@@ -50,9 +50,7 @@ const TeamCard = ({
     <div className="h-[440px] md:h-[280px]  mb-6 md:mb-8">
       <div
         className={`relative cursor-pointer w-[16rem] md:w-[10rem] flex flex-col items-center justify-start transition-all duration-0 overflow-hidden ${
-          isExpanded
-            ? "h-[28rem] md:h-[18rem]"
-            : "h-[25rem] md:h-[16rem]"
+          isExpanded ? "h-[28rem] md:h-[18rem]" : "h-[25rem] md:h-[16rem]"
         }`}
         onClick={toggleCard}
       >
@@ -89,6 +87,7 @@ const TeamCard = ({
         <div className="absolute inset-0 top-0 flex flex-col z-0 text-center">
           <div className="flex justify-center items-center w-full">
             <Image
+              unoptimized
               src={imagePath}
               alt={Name}
               loading="lazy"
@@ -125,6 +124,7 @@ const TeamCard = ({
                     rel="noopener noreferrer"
                   >
                     <Image
+                      unoptimized
                       src={`/${icon}`}
                       alt={domain || "link"}
                       width={24}

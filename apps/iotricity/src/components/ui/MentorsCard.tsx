@@ -87,6 +87,7 @@ const MentorsCard = ({
         <div className="absolute inset-0 top-0 flex flex-col z-0 text-center">
           <div className="flex justify-center items-center w-full">
             <Image
+              unoptimized
               src={imagePath}
               alt={Name}
               loading="lazy"
@@ -123,6 +124,7 @@ const MentorsCard = ({
                     rel="noopener noreferrer"
                   >
                     <Image
+                      unoptimized
                       src={`/${icon}`}
                       alt={domain || "link"}
                       width={24}
