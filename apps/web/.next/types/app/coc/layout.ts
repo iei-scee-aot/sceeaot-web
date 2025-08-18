@@ -1,4 +1,4 @@
-// File: C:\Users\arnab\OneDrive\Desktop\SCEE WEBSITE\sceeaot-web\apps\web\src\app\coc\layout.tsx
+// File: C:\Users\arnab\OneDrive\Desktop\sceeaot-web\apps\web\src\app\coc\layout.tsx
 import * as entry from '../../../../src/app/coc/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

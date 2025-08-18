@@ -105,7 +105,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\arnab\\OneDrive\\Desktop\\SCEE WEBSITE\\sceeaot-web",
+    "outputFileTracingRoot": "C:\\Users\\arnab\\OneDrive\\Desktop\\sceeaot-web",
     "experimental": {
       "useSkewCookie": false,
       "nodeMiddleware": false,
@@ -296,10 +296,10 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
     "turbopack": {
-      "root": "C:\\Users\\arnab\\OneDrive\\Desktop\\SCEE WEBSITE\\sceeaot-web"
+      "root": "C:\\Users\\arnab\\OneDrive\\Desktop\\sceeaot-web"
     }
   },
-  "appDir": "C:\\Users\\arnab\\OneDrive\\Desktop\\SCEE WEBSITE\\sceeaot-web\\apps\\iotricity",
+  "appDir": "C:\\Users\\arnab\\OneDrive\\Desktop\\sceeaot-web\\apps\\iotricity",
   "relativeAppDir": "apps\\iotricity",
   "files": [
     ".next\\routes-manifest.json",

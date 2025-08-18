@@ -1,4 +1,4 @@
-// File: C:\Users\arnab\OneDrive\Desktop\SCEE WEBSITE\sceeaot-web\apps\web\src\app\events\page.tsx
+// File: C:\Users\arnab\OneDrive\Desktop\sceeaot-web\apps\web\src\app\events\page.tsx
 import * as entry from '../../../../src/app/events/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

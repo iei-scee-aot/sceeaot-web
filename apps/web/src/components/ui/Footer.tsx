@@ -59,7 +59,13 @@ const Footer = () => {
                 </h3>
                 <div className="space-y-6">
                   <Link
-                    href="https://linktr.ee/sceeaot"
+                    href={
+                      process.env.NODE_ENV === "development"
+                        ? "http://localhost:3002"
+                        : "https://ioticity.sceeaot.in"
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-4 text-gray-300 hover:text-primary transition-colors duration-200 text-2xl"
                   >
                     <Image
@@ -78,7 +84,7 @@ const Footer = () => {
                     </p>
                     <div className="flex gap-4">
                       <Link
-                        href="#"
+                        href="https://github.com/iei-scee-aot"
                         className="p-2 border border-gray-700 rounded-lg text-gray-400 hover:text-white hover:border-primary transition-all duration-200"
                       >
                         <Github size={24} />
