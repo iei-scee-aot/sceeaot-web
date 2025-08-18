@@ -3,7 +3,7 @@ import Link from "next/link";
 const Navbar = ({
   homeColor = "#F6F6F4",
   teamColor = "#F6F6F4",
-  eventColor = "#F6F6F4",
+  ruleColor = "#F6F6F4",
   aboutColor = "#F6F6F4",
 }) => {
   return (
@@ -67,7 +67,7 @@ const Navbar = ({
             <Link href="/rules" className="flex flex-col w-full">
               <span
                 className="pl-2 font-light text-lg "
-                style={{ color: eventColor }}
+                style={{ color: ruleColor }}
               >
                 RULES
               </span>
@@ -81,25 +81,25 @@ const Navbar = ({
                 >
                   <path
                     d="M1.24774 16.8937C1.24774 17.9588 2.1112 18.8222 3.17631 18.8222H22.8237C23.8887 18.8222 24.7523 17.9588 24.7523 16.8937V13.3457C23.1896 12.9221 22.0402 11.4938 22.0402 9.79709C22.0402 8.10039 23.1896 6.67213 24.7523 6.24852V2.70054C24.7523 1.63543 23.8887 0.771973 22.8237 0.771973H3.17631C2.1112 0.771973 1.24774 1.63543 1.24774 2.70054V6.24048C2.82572 6.65381 3.98992 8.08949 3.98992 9.79709C3.98992 11.5047 2.82572 12.9404 1.24774 13.3537V16.8937Z"
-                    stroke={eventColor}
+                    stroke={ruleColor}
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
                   <path
                     d="M17.068 0.787109V3.95118"
-                    stroke={eventColor}
+                    stroke={ruleColor}
                     strokeLinecap="square"
                     strokeLinejoin="round"
                   />
                   <path
                     d="M17.068 8.21509V11.3791"
-                    stroke={eventColor}
+                    stroke={ruleColor}
                     strokeLinecap="square"
                     strokeLinejoin="round"
                   />
                   <path
                     d="M17.068 15.6582V18.8222"
-                    stroke={eventColor}
+                    stroke={ruleColor}
                     strokeLinecap="square"
                     strokeLinejoin="round"
                   />
@@ -209,11 +209,11 @@ const Navbar = ({
           <div className="w-1/4 flex border-gray-500 border-r-[0.5px] justify-between items-center">
             <Link
               href="/rules"
-              className="flex justify-center items-baseline   w-full"
+              className="flex justify-center items-baseline w-full"
             >
               <span
                 className="font-light lg:text-2xl xl:text-[1rem] 2xl:text-4xl"
-                style={{ color: eventColor }}
+                style={{ color: ruleColor }}
               >
                 RULES
               </span>
@@ -227,25 +227,25 @@ const Navbar = ({
                 >
                   <path
                     d="M1.24774 16.8937C1.24774 17.9588 2.1112 18.8222 3.17631 18.8222H22.8237C23.8887 18.8222 24.7523 17.9588 24.7523 16.8937V13.3457C23.1896 12.9221 22.0402 11.4938 22.0402 9.79709C22.0402 8.10039 23.1896 6.67213 24.7523 6.24852V2.70054C24.7523 1.63543 23.8887 0.771973 22.8237 0.771973H3.17631C2.1112 0.771973 1.24774 1.63543 1.24774 2.70054V6.24048C2.82572 6.65381 3.98992 8.08949 3.98992 9.79709C3.98992 11.5047 2.82572 12.9404 1.24774 13.3537V16.8937Z"
-                    stroke={eventColor}
+                    stroke={ruleColor}
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
                   <path
                     d="M17.068 0.787109V3.95118"
-                    stroke={eventColor}
+                    stroke={ruleColor}
                     strokeLinecap="square"
                     strokeLinejoin="round"
                   />
                   <path
                     d="M17.068 8.21509V11.3791"
-                    stroke={eventColor}
+                    stroke={ruleColor}
                     strokeLinecap="square"
                     strokeLinejoin="round"
                   />
                   <path
                     d="M17.068 15.6582V18.8222"
-                    stroke={eventColor}
+                    stroke={ruleColor}
                     strokeLinecap="square"
                     strokeLinejoin="round"
                   />
