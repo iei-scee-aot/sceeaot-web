@@ -56,6 +56,17 @@ body {
   color: var(--secondary);
   background: var(--background);
   font-family: PXG, sans-serif;
+  cursor: url('/icons/arrowhead-rounded-outline.svg') 12 12, auto;
+}
+
+/* Custom cursor styles */
+* {
+  cursor: url('/icons/arrowhead-rounded-outline.svg') 12 12, auto;
+}
+
+a, button, [role="button"], input[type="submit"], input[type="button"], 
+.cursor-pointer, [onclick], select, option, textarea:focus, input:focus {
+  cursor: url('/icons/hand-pointer.svg') 12 12, pointer !important;
 }
 
 /* Component-specific utilities */
