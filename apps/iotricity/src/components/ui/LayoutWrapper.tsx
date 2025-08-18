@@ -19,8 +19,8 @@ export default function LayoutWrapper({ children }: LayoutWrapperProps) {
       return { homeColor: "var(--primary)" };
     } else if (pathname === "/team") {
       return { teamColor: "var(--primary)" };
-    } else if (pathname === "/events") {
-      return { eventColor: "var(--primary)" };
+    } else if (pathname === "/rules") {
+      return { ruleColor: "var(--primary)" };
     }
     return {};
   };
