@@ -173,7 +173,7 @@ const HomePage = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-yellow-400/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Button>
 
-                <Button
+                {/* <Button
                   variant="secondary"
                   className="group border-primary/20 hover:border-primary/50"
                 >
@@ -184,7 +184,7 @@ const HomePage = () => {
                       className="transition-transform group-hover:scale-110"
                     />
                   </span>
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>
@@ -261,7 +261,7 @@ const HomePage = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-8 mb-12 px-4 justify-center items-center">
-            <Link href="/iotricity/rules" className="w-full sm:w-auto">
+            <Link href="rules" className="w-full sm:w-auto">
               <Button
                 variant="secondary"
                 icon={<ExternalLink size={18} />}

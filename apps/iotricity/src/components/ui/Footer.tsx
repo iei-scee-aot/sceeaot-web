@@ -25,7 +25,7 @@ const Footer = () => {
                   Ready to start your tech journey? Get in touch and let's build
                   something amazing together.
                 </p>
-                <Link
+                <Link target="_blank" rel="noopener noreferrer"
                   href="mailto:sceeaot@gmail.com"
                   className="inline-flex items-center gap-4 text-3xl md:text-5xl font-semibold hover:text-primary transition-colors duration-300 group"
                 >
@@ -58,8 +58,8 @@ const Footer = () => {
                   Connect With Us
                 </h3>
                 <div className="space-y-6">
-                  <Link
-                    href="https://linktr.ee/sceeaot"
+                  <Link target="_blank" rel="noopener noreferrer"
+                    href={process.env.NODE_ENV==="development"?"http://localhost:3002/":"https://www.links.sceeaot.in"}
                     className="flex items-center gap-4 text-gray-300 hover:text-primary transition-colors duration-200 text-2xl"
                   >
                     <Image
@@ -77,26 +77,26 @@ const Footer = () => {
                       Follow us on social media
                     </p>
                     <div className="flex gap-4">
-                      <Link
-                        href="#"
+                      <Link target="_blank" rel="noopener noreferrer"
+                        href="https://github.com/iei-scee-aot"
                         className="p-2 border border-gray-700 rounded-lg text-gray-400 hover:text-white hover:border-primary transition-all duration-200"
                       >
                         <Github size={24} />
                       </Link>
-                      <Link
-                        href="#"
+                      <Link target="_blank" rel="noopener noreferrer"
+                        href="https://www.linkedin.com/company/iei-students-chapter-of-ee-academy-of-technology/posts/?feedView=all"
                         className="p-2 border border-gray-700 rounded-lg text-gray-400 hover:text-white hover:border-primary transition-all duration-200"
                       >
                         <Linkedin size={24} />
                       </Link>
-                      <Link
-                        href="#"
+                      <Link target="_blank" rel="noopener noreferrer"
+                        href="https://x.com/sceeaot"
                         className="p-2 border border-gray-700 rounded-lg text-gray-400 hover:text-white hover:border-primary transition-all duration-200"
                       >
                         <Twitter size={24} />
                       </Link>
-                      <Link
-                        href="#"
+                      <Link target="_blank" rel="noopener noreferrer"
+                        href="https://www.instagram.com/sceeaot"
                         className="p-2 border border-gray-700 rounded-lg text-gray-400 hover:text-white hover:border-primary transition-all duration-200"
                       >
                         <Instagram size={24} />
@@ -122,8 +122,8 @@ const Footer = () => {
                 from Academy fo Technology. All rights reserved.
               </p>
               <div className="flex gap-6 mt-4 md:mt-0">
-                <Link
-                  href="/coc"
+                <Link target="_blank" rel="noopener noreferrer"
+                  href={process.env.NODE_ENV==="development"?"http://localhost:3000/coc":"https://www.sceeaot.in/coc"}
                   className="hover:text-white transition-colors duration-200"
                 >
                   Code of Conduct
