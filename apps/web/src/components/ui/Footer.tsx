@@ -62,7 +62,7 @@ const Footer = () => {
                     href={
                       process.env.NODE_ENV === "development"
                         ? "http://localhost:3002"
-                        : "https://ioticity.sceeaot.in"
+                        : "https://links.sceeaot.in"
                     }
                     target="_blank"
                     rel="noopener noreferrer"
