@@ -84,19 +84,25 @@ const Footer = () => {
                         <Github size={24} />
                       </Link>
                       <Link
-                        href="#"
+                        href="https://www.linkedin.com/company/iei-students-chapter-of-ee-academy-of-technology/posts/?feedView=all"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="p-2 border border-gray-700 rounded-lg text-gray-400 hover:text-white hover:border-primary transition-all duration-200"
                       >
                         <Linkedin size={24} />
                       </Link>
                       <Link
-                        href="#"
+                        href="https://x.com/sceeaot"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="p-2 border border-gray-700 rounded-lg text-gray-400 hover:text-white hover:border-primary transition-all duration-200"
                       >
                         <Twitter size={24} />
                       </Link>
                       <Link
-                        href="#"
+                        href="https://www.instagram.com/sceeaot"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="p-2 border border-gray-700 rounded-lg text-gray-400 hover:text-white hover:border-primary transition-all duration-200"
                       >
                         <Instagram size={24} />
