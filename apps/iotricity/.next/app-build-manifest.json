@@ -1,0 +1,42 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/apps_iotricity_src_3bc51ca2._.js",
+      "static/chunks/node_modules__pnpm_ee1ca577._.js",
+      "static/chunks/[root-of-the-server]__dd66f1d5._.css",
+      "static/chunks/apps_iotricity_src_app_layout_tsx_2b26b22a._.js",
+      "static/chunks/_ec85d6f0._.js",
+      "static/chunks/apps_iotricity_src_app_not-found_tsx_2f7e040f._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_59fa045a._.js",
+      "static/chunks/daffc_next_dist_compiled_react-dom_c9850b61._.js",
+      "static/chunks/daffc_next_dist_compiled_next-devtools_index_84cb0120.js",
+      "static/chunks/daffc_next_dist_compiled_30721bf9._.js",
+      "static/chunks/daffc_next_dist_client_409e946a._.js",
+      "static/chunks/daffc_next_dist_5555606f._.js",
+      "static/chunks/61dca_@swc_helpers_cjs_28edb73c._.js",
+      "static/chunks/apps_iotricity_e69f0d32._.js",
+      "static/chunks/apps_iotricity_435c43fd._.js"
+    ],
+    "/page": [
+      "static/chunks/apps_iotricity_src_3bc51ca2._.js",
+      "static/chunks/node_modules__pnpm_ee1ca577._.js",
+      "static/chunks/[root-of-the-server]__dd66f1d5._.css",
+      "static/chunks/apps_iotricity_src_app_layout_tsx_2b26b22a._.js",
+      "static/chunks/_ec85d6f0._.js",
+      "static/chunks/apps_iotricity_src_app_not-found_tsx_2f7e040f._.js",
+      "static/chunks/daffc_next_dist_client_components_builtin_global-error_2f7e040f.js",
+      "static/chunks/apps_iotricity_src_decaf6b8._.js",
+      "static/chunks/11dc6_lucide-react_dist_esm_icons_89ed5a25._.js",
+      "static/chunks/apps_iotricity_src_app_page_tsx_2f7e040f._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_59fa045a._.js",
+      "static/chunks/daffc_next_dist_compiled_react-dom_c9850b61._.js",
+      "static/chunks/daffc_next_dist_compiled_next-devtools_index_84cb0120.js",
+      "static/chunks/daffc_next_dist_compiled_30721bf9._.js",
+      "static/chunks/daffc_next_dist_client_409e946a._.js",
+      "static/chunks/daffc_next_dist_5555606f._.js",
+      "static/chunks/61dca_@swc_helpers_cjs_28edb73c._.js",
+      "static/chunks/apps_iotricity_e69f0d32._.js",
+      "static/chunks/apps_iotricity_435c43fd._.js"
+    ]
+  }
+}

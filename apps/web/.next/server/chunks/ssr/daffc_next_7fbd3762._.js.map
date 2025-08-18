@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/arnab/OneDrive/Desktop/SCEE%20WEBSITE/sceeaot-web/node_modules/.pnpm/next%4015.4.6_react-dom%4019.1.1_react%4019.1.1__react%4019.1.1/node_modules/next/image.js"],"sourcesContent":["module.exports = require('./dist/shared/lib/image-external')\n"],"names":[],"mappings":"AAAA,OAAO,OAAO","ignoreList":[0],"debugId":null}},
+    {"offset": {"line": 12, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/arnab/OneDrive/Desktop/SCEE%20WEBSITE/sceeaot-web/node_modules/.pnpm/next%4015.4.6_react-dom%4019.1.1_react%4019.1.1__react%4019.1.1/node_modules/next/navigation.js"],"sourcesContent":["module.exports = require('./dist/client/components/navigation')\n"],"names":[],"mappings":"AAAA,OAAO,OAAO","ignoreList":[0],"debugId":null}}]
+}
