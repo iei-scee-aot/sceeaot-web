@@ -1,0 +1,404 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #FEC20C;
+  --secondary: #FFFFFF;
+  --background: #000000;
+  --foreground: #FFFFFF;
+}
+
+/* Base responsive sizing to ensure desktop elements maintain proper scale */
+html {
+  font-size: 16px; /* Mobile base */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px; /* Tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 20px; /* Desktop */
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 22px; /* Large desktop */
+  }
+}
+
+@media (min-width: 1536px) {
+  html {
+    font-size: 24px; /* Ultra-wide */
+  }
+}
+
+
+body {
+  color: var(--secondary);
+  background: var(--background);
+  font-family: PXG, sans-serif;
+}
+
+/* Component-specific utilities */
+.responsive-container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (min-width: 640px) {
+  .responsive-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive-container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .responsive-container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .responsive-container {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+/* Team container utility - makes containers flexible for any card size */
+.team-container {
+  overflow: visible; /* Allow content to expand naturally */
+  min-height: fit-content; /* Container adapts to content height */
+}
+
+.team-grid {
+  width: 100%;
+  height: auto; /* Grid height adapts to content */
+  overflow: visible; /* Prevent clipping of card content */
+}
+
+.team-card-wrapper {
+  position: relative;
+  overflow: visible; /* Allow cards to expand */
+  min-height: fit-content;
+}
+
+@font-face {
+  font-family: "KMR Apparat1";
+  src: url("/fonts/KMR-Apparat-Light.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KMR Apparat2";
+  src: url("/fonts/KMR-Apparat-Book.ttf") format("truetype");
+  font-weight: 350;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KMR Apparat3";
+  src: url("/fonts/KMR-Apparat-Regular.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KMR Apparat4";
+  src: url("/fonts/KMR-Apparat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KMR Apparat5";
+  src: url("/fonts/KMR-Apparat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KMR Apparat6";
+  src: url("/fonts/KMR-Apparat-Heavy.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KMR Apparat7";
+  src: url("/fonts/KMR-Apparat-Black.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PXG';
+  src: url('/fonts/Px-Grotesk-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Marquee animation for Headlines */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
+/* Disable marquee animation for About Us and Live Events sections on desktop */
+@media (min-width: 1024px) {
+  .no-marquee .animate-marquee {
+    animation: none;
+    transform: translateX(0);
+  }
+}
+
+/* Fade-in animation for social icons */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+/* Timeline and Event Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceGentle {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes waveHand {
+  0%, 100% { transform: rotate(0deg); }
+  10%, 30%, 50%, 70%, 90% { transform: rotate(14deg); }
+  20%, 40%, 60%, 80% { transform: rotate(-8deg); }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in-delay {
+  animation: fadeInUp 0.8s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-delay-2 {
+  animation: fadeInUp 0.8s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-delay-3 {
+  animation: fadeInUp 0.8s ease-out 0.9s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-delay-4 {
+  animation: fadeInUp 0.8s ease-out 1.2s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-delay-5 {
+  animation: fadeInUp 0.8s ease-out 1.5s forwards;
+  opacity: 0;
+}
+
+.animate-slide-up {
+  animation: slideUp 1s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+.animate-bounce-slow {
+  animation: bounceGentle 2s ease-in-out infinite;
+}
+
+.animate-wave {
+  animation: fadeInUp 0.8s ease-out 1.8s forwards;
+  opacity: 0;
+}
+
+.animate-wave-hand {
+  animation: waveHand 2s ease-in-out infinite;
+}
+
+/* New Timeline Animations */
+@keyframes timelineProgress {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes timelineDotPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes timelineSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-timeline-progress {
+  animation: timelineProgress 2s ease-out forwards;
+}
+
+.animate-timeline-dot {
+  animation: timelineDotPulse 2s ease-in-out infinite;
+}
+
+.animate-timeline-slide {
+  animation: timelineSlideIn 0.6s ease-out forwards;
+}
+
+/* Coming Soon Animation */
+@keyframes typingDots {
+  0%, 20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 1;
+  }
+  60%, 100% {
+    opacity: 0.2;
+  }
+}
+
+.animate-typing-dots {
+  animation: typingDots 1.5s ease-in-out infinite;
+}
+
+.animate-typing-dots:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.animate-typing-dots:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Accordion animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+/* Floating animation for hero section cards */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(var(--rotation, 0deg));
+  }
+  50% {
+    transform: translateY(-10px) rotate(var(--rotation, 0deg));
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Gradient radial utility */
+.bg-gradient-radial {
+  background: radial-gradient(var(--tw-gradient-stops));
+}

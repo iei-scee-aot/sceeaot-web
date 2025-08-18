@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 General Discussion
+    url: https://github.com/iei-scee-aot/sceeaot-web/discussions
+    about: Ask questions, share ideas, or discuss the project
+  - name: 🤝 Contributing Guidelines
+    url: https://github.com/iei-scee-aot/sceeaot-web/blob/main/CONTRIBUTING.md
+    about: Learn how to contribute to the project
