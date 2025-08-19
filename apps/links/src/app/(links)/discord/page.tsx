@@ -6,7 +6,7 @@ import { useEffect } from "react";
 export default function DiscordPage() {
   useEffect(() => {
     // Redirect immediately when the component mounts
-    window.location.href = "https://discord.gg/K6GfRPAS";
+    window.location.href = "https://discord.gg/yYmhfC3Qdq";
   }, []);
 
   // This content will only be visible for a brief moment before redirect
@@ -47,7 +47,7 @@ export default function DiscordPage() {
               If you are not redirected automatically:
             </p>
             <a
-              href="https://discord.gg/K6GfRPAS"
+              href="https://discord.gg/yYmhfC3Qdq"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-black font-medium rounded-lg hover:bg-primary/90 transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
