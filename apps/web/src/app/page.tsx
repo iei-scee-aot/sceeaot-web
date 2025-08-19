@@ -86,6 +86,11 @@ const HomePage = () => {
     ? currentDate >= new Date("2025-08-30T00:00:00")
     : false;
 
+  // Check if target date has passed (same as Countdown component)
+  const targetDate = new Date("2025-08-30T20:00:00").getTime();
+  const now = new Date().getTime();
+  const hasTargetDatePassed = now >= targetDate;
+
   return (
     <>
       {/* Main Content */}
@@ -332,9 +337,20 @@ const HomePage = () => {
                       href="/iotricity#register"
                       className="w-full sm:w-auto"
                     >
-                      <Button variant="primary" icon={<Users size={18} />}>
-                        Register Now
-                        <ArrowRight size={16} />
+                      <Button
+                        variant="primary"
+                        icon={<Users size={18} />}
+                        className={`${
+                          hasTargetDatePassed
+                            ? "opacity-50 cursor-not-allowed"
+                            : ""
+                        }`}
+                        disabled={hasTargetDatePassed}
+                      >
+                        {hasTargetDatePassed
+                          ? "Registration Closed"
+                          : "Register Now"}
+                        {!hasTargetDatePassed && <ArrowRight size={16} />}
                       </Button>
                     </Link>
                   )}
