@@ -1,5 +1,6 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight} from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface EventCardProps {
   imageSrc: string;
@@ -10,6 +11,7 @@ interface EventCardProps {
   fees: string;
   teamSize: string;
   description: string;
+  gallery: string;
 }
 
 const EventCard: React.FC<EventCardProps> = ({
@@ -21,6 +23,7 @@ const EventCard: React.FC<EventCardProps> = ({
   fees,
   teamSize,
   description,
+  gallery,
 }) => {
   return (
     <div className=" mb-4 overflow-hidden bg-background  flex  flex-col md:flex-row w-full">
@@ -49,9 +52,12 @@ const EventCard: React.FC<EventCardProps> = ({
             />
           </svg>
           <div className=" bg-primary w-[100%] text-black py-[0.6rem] px-[0.5rem] flex flex-col items-start text-[12px] font-semibold hover:bg-primary/90 transition-all duration-300 z-10">
-            <span className="leading-none">VIEW</span>
-            <span className="leading-none">GALLERY</span>
-            <ArrowRight size={11} className="mt-2 animate-float" />
+            <Link target="_blank" rel="noopener noreferer" href={gallery} >
+              <span className="leading-none">VIEW</span>
+              <span className="leading-none">GALLERY</span>
+              <ArrowRight size={11} className="mt-2 animate-float" />
+            </Link>
+            
           </div>
         </div>
       </div>
