@@ -5,7 +5,7 @@ import { useEffect } from "react";
 export default function RegistrationPage() {
   useEffect(() => {
     // Redirect immediately when the component mounts
-    window.location.href = "https://unstop.com/o/jlaz2pf";
+    // window.location.href = "https://unstop.com/o/jlaz2pf";
   }, []);
 
   // This content will only be visible for a brief moment before redirect
