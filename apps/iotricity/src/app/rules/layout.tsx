@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "IOTricity Rules | IEI Students Chapter - SCEE",
+  title: "IOTricity Rules and Regulations",
   description:
     "Read the complete rules and guidelines for IOTricity Season 2.0. Understand eligibility criteria, submission guidelines, judging criteria, and competition protocols for the IoT hackathon.",
   keywords: [

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "IOTricity Problems | IEI Students Chapter - SCEE",
+  title: "IOTricity Problems Statements",
   description:
     "Explore IoT problem statements for IOTricity Season 2.0. Find challenging problems categorized by academic year and engineering discipline - CSE and EE tracks with real-world IoT applications.",
   keywords: [

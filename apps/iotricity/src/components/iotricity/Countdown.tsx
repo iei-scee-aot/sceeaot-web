@@ -33,7 +33,7 @@ const Countdown = () => {
     const calculateTimeRemaining = () => {
       const hackathonStartDate = new Date("2025-08-30T20:00:00").getTime();
       const hackathonEndDate = new Date("2025-09-01T20:00:00").getTime();
-      const winnersDate = new Date("2025-09-06T20:00:00").getTime();
+      const winnersDate = new Date("2025-09-03T16:00:00").getTime();
 
       const now = new Date().getTime();
 

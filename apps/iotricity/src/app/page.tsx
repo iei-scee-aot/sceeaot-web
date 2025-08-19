@@ -48,7 +48,7 @@ const HomePage = () => {
   const [isTracksVisible, setIsTracksVisible] = useState(false);
   const [isPrizesVisible, setIsPrizesVisible] = useState(false);
 
-  // Check if target date has passed (same as Countdown component)
+  // Target Date controls the end of registration date
   const targetDate = new Date("2025-08-29T23:59:59").getTime();
   const now = new Date().getTime();
   const hasTargetDatePassed = now >= targetDate;
@@ -108,14 +108,6 @@ const HomePage = () => {
     fetchFAQs();
   }, []);
 
-  // Date checks
-  const isAfterAugust27 = currentDate
-    ? currentDate >= new Date("2025-08-27T00:00:00")
-    : false;
-  const isAfterAugust30 = currentDate
-    ? currentDate >= new Date("2025-08-30T00:00:00")
-    : false;
-
   return (
     <>
       {/* Main Content */}
@@ -164,35 +156,37 @@ const HomePage = () => {
 
               {/* Call to Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mt-12">
-                <Button
-                  variant="primary"
-                  className={`group relative overflow-hidden ${
-                    hasTargetDatePassed ? "opacity-50 cursor-not-allowed" : ""
-                  }`}
-                  disabled={hasTargetDatePassed}
-                >
-                  <span className="relative z-10 flex items-center gap-2">
-                    {hasTargetDatePassed
-                      ? "Registration Closed"
-                      : "Register Now"}
+                <Link href="https://unstop.com/o/jlaz2pf">
+                  <Button
+                    variant="primary"
+                    className={`group relative overflow-hidden ${
+                      hasTargetDatePassed ? "opacity-50 cursor-not-allowed" : ""
+                    }`}
+                    disabled={hasTargetDatePassed}
+                  >
+                    <span className="relative z-10 flex items-center gap-2">
+                      {hasTargetDatePassed
+                        ? "Registration Closed"
+                        : "Register Now"}
+                      {!hasTargetDatePassed && (
+                        <ArrowRight
+                          size={18}
+                          className="transition-transform group-hover:translate-x-1"
+                        />
+                      )}
+                    </span>
                     {!hasTargetDatePassed && (
-                      <ArrowRight
-                        size={18}
-                        className="transition-transform group-hover:translate-x-1"
-                      />
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-yellow-400/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     )}
-                  </span>
-                  {!hasTargetDatePassed && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-yellow-400/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  )}
-                </Button>
+                  </Button>
+                </Link>
 
                 {/* <Button
                   variant="secondary"
                   className="group border-primary/20 hover:border-primary/50"
                 >
                   <span className="flex items-center gap-2">
-                    Learn More
+                    Hackers Guild
                     <ExternalLink
                       size={16}
                       className="transition-transform group-hover:scale-110"
