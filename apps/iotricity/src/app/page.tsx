@@ -48,6 +48,11 @@ const HomePage = () => {
   const [isTracksVisible, setIsTracksVisible] = useState(false);
   const [isPrizesVisible, setIsPrizesVisible] = useState(false);
 
+  // Check if target date has passed (same as Countdown component)
+  const targetDate = new Date("2025-08-29T23:59:59").getTime();
+  const now = new Date().getTime();
+  const hasTargetDatePassed = now >= targetDate;
+
   useEffect(() => {
     setCurrentDate(new Date());
   }, []);
@@ -161,16 +166,25 @@ const HomePage = () => {
               <div className="flex flex-col sm:flex-row gap-4 mt-12">
                 <Button
                   variant="primary"
-                  className="group relative overflow-hidden"
+                  className={`group relative overflow-hidden ${
+                    hasTargetDatePassed ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
+                  disabled={hasTargetDatePassed}
                 >
                   <span className="relative z-10 flex items-center gap-2">
-                    Register Now
-                    <ArrowRight
-                      size={18}
-                      className="transition-transform group-hover:translate-x-1"
-                    />
+                    {hasTargetDatePassed
+                      ? "Registration Closed"
+                      : "Register Now"}
+                    {!hasTargetDatePassed && (
+                      <ArrowRight
+                        size={18}
+                        className="transition-transform group-hover:translate-x-1"
+                      />
+                    )}
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-yellow-400/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  {!hasTargetDatePassed && (
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-yellow-400/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  )}
                 </Button>
 
                 {/* <Button

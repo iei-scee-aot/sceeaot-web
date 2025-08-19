@@ -9,14 +9,22 @@
   },
   {
     "id": 2,
-    "title": "Embedded System in Every Day Life",
-    "icon": "🔧",
+    "title": "How to use Cloud for IOT",
+    "icon": "☁️",
+    "date": "August 30, 2025",
+    "time": "20:00 → 22:00",
+    "type": "session"
+  },
+  {
+    "id": 3,
+    "title": "Using IOT devices for Networking and Hacking",
+    "icon": "👾",
     "date": "August 31, 2025",
     "time": "20:00 → 21:00",
     "type": "session"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Build Robots with Machine Learning",
     "icon": "🤖",
     "date": "August 31, 2025",
@@ -24,23 +32,7 @@
     "type": "session"
   },
   {
-    "id": 4,
-    "title": "How to use Cloud for IOT",
-    "icon": "☁️",
-    "date": "September 1, 2025",
-    "time": "20:00 → 21:00",
-    "type": "session"
-  },
-  {
     "id": 5,
-    "title": "Using IOT devices for Networking and Hacking",
-    "icon": "👾",
-    "date": "September 1, 2025",
-    "time": "21:00 → 22:00",
-    "type": "session"
-  },
-  {
-    "id": 6,
     "title": "Online Hackathon Period Ends",
     "icon": "🤩",
     "date": "September 1, 2025",
@@ -48,7 +40,7 @@
     "type": "end"
   },
   {
-    "id": 7,
+    "id": 6,
     "title": "Online Hackathon Judging Day",
     "icon": "⚖️",
     "date": "September 2, 2025",
@@ -56,7 +48,7 @@
     "type": "judging"
   },
   {
-    "id": 8,
+    "id": 7,
     "title": "Online Hackathon Top 10 Teams Announcement",
     "icon": "😍",
     "date": "September 2, 2025",
@@ -64,7 +56,7 @@
     "type": "announcement"
   },
   {
-    "id": 9,
+    "id": 8,
     "title": "Offline Hackathon Day - Finale",
     "icon": "🤩",
     "date": "September 3, 2025",
@@ -72,19 +64,19 @@
     "type": "finale"
   },
   {
-    "id": 10,
+    "id": 9,
     "title": "IOTricity Finale Result Declaration",
     "icon": "🎯",
-    "date": "September 4, 2025",
+    "date": "September 3, 2025",
     "time": "",
     "type": "result"
   },
   {
-    "id": 11,
+    "id": 10,
     "title": "Closing Ceremony and Prize Distribution",
     "icon": "🏆",
-    "date": "September 6, 2025",
-    "time": "20:00 → 21:00",
+    "date": "September 3, 2025",
+    "time": "15:00 → 16:00",
     "type": "ceremony"
   }
 ]

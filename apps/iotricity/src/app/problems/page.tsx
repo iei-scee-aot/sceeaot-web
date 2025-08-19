@@ -31,16 +31,23 @@ export default function ProblemsPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  // Date logic: show message until 30th August 2025 (inclusive)
+  const now = new Date();
+  const goLiveDate = new Date("2025-08-30T20:00:00+05:30");
+  const beforeGoLive = now < goLiveDate;
+
   useEffect(() => {
+    if (beforeGoLive) {
+      setLoading(false);
+      return;
+    }
     const fetchQuestions = async () => {
       try {
         setLoading(true);
         const response = await fetch("/data/iotricitys2-questions.json");
-
         if (!response.ok) {
           throw new Error(`Failed to fetch questions: ${response.status}`);
         }
-
         const data = await response.json();
         setQuestionsData(data);
         setError(null);
@@ -54,9 +61,8 @@ export default function ProblemsPage() {
         setLoading(false);
       }
     };
-
     fetchQuestions();
-  }, []);
+  }, [beforeGoLive]);
 
   const formatAccordionItems = (questions: Question[]) => {
     return questions.map((question) => ({
@@ -64,6 +70,35 @@ export default function ProblemsPage() {
       answer: question.description,
     }));
   };
+
+  if (beforeGoLive) {
+    return (
+      <div className="min-h-screen bg-background text-secondary">
+        {/* Main container with side borders */}
+        <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 min-h-screen flex flex-col items-center justify-center px-4 relative">
+          {/* Main Message */}
+          <div className="text-center max-w-2xl">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-primary font-apparat">
+              Coming Soon
+            </h2>
+            <p className="text-base md:text-lg lg:text-xl mb-8 text-secondary/80 font-pxg leading-relaxed">
+              Problem Statements will go live on{" "}
+              <span className="font-semibold text-primary">
+                30th August 2025
+              </span>
+            </p>
+          </div>
+
+          {/* Footer Message */}
+          <div className="mt-12 text-center">
+            <p className="text-sm text-secondary/60 font-pxg">
+              Stay tuned! The challenges are being carefully crafted for you.
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (loading) {
     return (
