@@ -16,6 +16,7 @@ export default function EventsPage() {
     fees: string;
     teamSize: string;
     description: string;
+    gallery: string;
   };
 
   const [futureEvents, setFutureEvents] = useState<Event[]>([]);
@@ -62,6 +63,7 @@ export default function EventsPage() {
                     fees={event.fees}
                     teamSize={event.teamSize}
                     description={event.description}
+                    gallery={event.gallery}
                   />
                 ))}
               </div>
@@ -91,6 +93,7 @@ export default function EventsPage() {
                     fees={event.fees}
                     teamSize={event.teamSize}
                     description={event.description}
+                    gallery={event.gallery}
                   />
                 ))}
               </div>
@@ -120,6 +123,7 @@ export default function EventsPage() {
                 fees={event.fees}
                 teamSize={event.teamSize}
                 description={event.description}
+                gallery={event.gallery}
               />
             ))}
           </div>
