@@ -45,7 +45,7 @@ export const socialMediaLinks: LinkItem[] = [
   },
   {
     title: "Discord",
-    url: "https://discord.gg/K6GfRPAS",
+    url: "https://discord.gg/yYmhfC3Qdq",
     iconImage: "/icons/discord.svg",
     description: "Join our community discussions and events",
   },
