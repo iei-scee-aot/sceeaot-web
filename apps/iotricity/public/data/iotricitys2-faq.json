@@ -1,36 +1,104 @@
 {
   "faqs": [
     {
-      "question": "What is IOTricity?",
-      "answer": "IOTricity is our flagship event combining Internet of Things (IoT) innovation with electrical engineering excellence. It features workshops, hackathons, and competitions focused on IoT technologies."
+      "question": "Who can participate in this event?",
+      "answer": "Any undergraduate student of Academy of Technology who are interested in technology, IoT, hardware, or software development can register. Teams can be interdisciplinary, and both beginners and experienced students are welcome."
     },
     {
-      "question": "Who can participate in IOTricity?",
-      "answer": "IOTricity is open to all students interested in IoT, electrical engineering, and technology innovation. No prior experience required - we welcome beginners and experts alike."
+      "question": "Is this event open to students outside our institution?",
+      "answer": "As of now, the event is primarily intended for students of Academy of Technology."
     },
     {
-      "question": "What does the event schedule include?",
-      "answer": "The event includes online workshops on embedded systems, machine learning, cloud computing for IoT, networking, a multi-day hackathon, judging sessions, and an offline finale with prize distribution."
+      "question": "What is the format of IOTricity 2.0?",
+      "answer": "The event is divided into three main stages: Seminar and Workshop (online), Online Hackathon (project submission and evaluation), and Offline Hardware Finale (for top 10 teams)."
     },
     {
-      "question": "Is there a registration fee for IOTricity?",
-      "answer": "Yes, there is a nominal registration fee to cover event costs, materials, and refreshments. Early bird discounts are available for the first 100 registrations."
+      "question": "What's the theme or problem statement for the hackathon?",
+      "answer": "Problem Statements will be provided by us when the hacking time starts."
     },
     {
-      "question": "What can I win at IOTricity?",
-      "answer": "Winners will receive cash prizes, certificates, IoT development kits, internship opportunities, and recognition from industry partners. All participants get participation certificates."
+      "question": "Can I participate individually or do I need a team?",
+      "answer": "Participation is team-based. You need to form a team (usually 3-5 members). Solo entries are allowed and will have a separate team building activity for them, as you must be a team of two to be able to submit the project."
     },
     {
-      "question": "Do I need to form a team?",
-      "answer": "Teams of 2-4 members are preferred for the hackathon portion. However, individual participants can join our team formation session or participate in workshops individually."
+      "question": "How do I register for the event?",
+      "answer": "You can register via the event registration link shared by SCEE starting from August 19, 2025, till August 29, 2025. Offline registration desk will be setup in the canteen, where the registration fee will be collected."
     },
     {
-      "question": "What should I bring to the event?",
-      "answer": "Bring your laptop, any IoT development boards you own (Arduino, Raspberry Pi, etc.), enthusiasm to learn, and creative ideas. We'll provide additional components during workshops."
+      "question": "Can team members be from different branches or years?",
+      "answer": "Yes! We encourage diversity in teams. Members can be from different departments and academic years."
     },
     {
-      "question": "Will there be mentorship during the hackathon?",
-      "answer": "Yes! Industry experts and faculty mentors will be available throughout the hackathon to guide teams, provide technical support, and help with project development."
+      "question": "Can we change our team members after registration?",
+      "answer": "No. Team members must be finalized before the registration deadline. Changes will not be permitted after August 29, 2025."
+    },
+    {
+      "question": "When does the hackathon start and end?",
+      "answer": "The online hackathon starts on August 30, 2025, at 08:00 PM and ends on September 1, 2025, at 08:00 PM."
+    },
+    {
+      "question": "What should we submit during the online hackathon?",
+      "answer": "You must submit a project pitch deck, source code, and a demo video explaining your idea and its implementation."
+    },
+    {
+      "question": "Are there any restrictions on tech stack or tools?",
+      "answer": "No, you are free to use any hardware platforms, software tools, or programming languages that support your idea."
+    },
+    {
+      "question": "Can we work on an idea we've already started before?",
+      "answer": "The idea must be original and must not have been submitted in any prior hackathon. Reusing components is allowed but the overall project should be new."
+    },
+    {
+      "question": "Is plagiarism allowed?",
+      "answer": "No. All forms of plagiarism or uncredited copying of projects will lead to immediate disqualification."
+    },
+    {
+      "question": "How will the projects be judged?",
+      "answer": "Judging will be based on innovation and originality, technical feasibility and implementation, relevance to the problem statement, presentation and documentation, and hardware functionality (for final round)."
+    },
+    {
+      "question": "Who are the judges?",
+      "answer": "The judging panel consists of domain experts, faculty members, and industry professionals experienced in IoT, embedded systems, and AI."
+    },
+    {
+      "question": "How will the top 10 teams be selected?",
+      "answer": "Based on online submissions, judges will shortlist the top 10 teams who will qualify for the offline hardware finale round."
+    },
+    {
+      "question": "Will we get feedback on our projects?",
+      "answer": "Yes, detailed feedback will be provided after the evaluation of submissions."
+    },
+    {
+      "question": "When is the offline hardware finale happening?",
+      "answer": "The offline finale will take place on September 3, 2025, from 10:00 AM to 03:00 PM."
+    },
+    {
+      "question": "Do we need to bring our own hardware components?",
+      "answer": "No, components will be provided by the organizing team in the venue for the particular problem statement."
+    },
+    {
+      "question": "What if our project doesn't work as intended during the finale?",
+      "answer": "Judges will evaluate the attempt, logic, and troubleshooting effort, even if the prototype isn't 100% functional."
+    },
+    {
+      "question": "What are the prizes for winners?",
+      "answer": "Winners will receive exciting prizes, certificates, trophies, and recognition through official social media and SCEE platforms."
+    },
+    {
+      "question": "When and where is the prize distribution?",
+      "answer": "The Closing Ceremony and Prize Distribution will be held on September 4, 2025, from 03:00 PM to 05:00 PM."
+    },
+    {
+      "question": "Will participation certificates be provided?",
+      "answer": "Yes, all participants will receive certificates of participation. Special awards will be given to winners and top-performing teams."
+    },
+    {
+      "question": "Will food and accommodation be provided during the finale?",
+      "answer": "Further details regarding logistics for the offline round will be communicated via email to the top 10 teams."
+    },
+    {
+      "question": "Who do I contact in case of any queries or technical issues?",
+      "answer": "You can reach out to the SCEE event coordination team through the contact info mentioned in the registration form or the official brochure."
     }
   ],
   "metadata": {

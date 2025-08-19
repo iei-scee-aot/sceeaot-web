@@ -5,15 +5,15 @@
       "items": [
         {
           "title": "Eligibility Criteria",
-          "content": "IOTricity Season 2.0 is open to all undergraduate students from recognized engineering institutions. Participants must be currently enrolled in Computer Science Engineering or Electrical Engineering programs. Mixed teams from different institutions are allowed and encouraged."
+          "content": "IOTricity Season 2.0 is open to all undergraduate students of Academy of Technology (i.e. 1st to 4th Year Students). Mixed teams from different departments and years are allowed and encouraged."
         },
         {
           "title": "Team Formation",
-          "content": "Teams must consist of 2-4 members. Each team can have members from different academic years and institutions. At least one team member should have basic knowledge of IoT concepts, microcontrollers, or embedded systems. Team composition cannot be changed after the registration deadline."
+          "content": "Teams must consist of 3-5 members. Each team can have members from different academic years and departments. At least one team member should have basic knowledge of IoT concepts, microcontrollers, or embedded systems. Team composition cannot be changed after the registration deadline."
         },
         {
           "title": "Registration Process",
-          "content": "Registration is mandatory and free of charge. Teams must register through the official IOTricity website with complete details of all team members. Each participant can only be part of one team. Registration deadline is strictly enforced and no late registrations will be accepted."
+          "content": "Registration will happen both offline and online. Teams must register through the official IOTricity website with complete details of all team members. Each participant can only be part of one team. Registration deadline is strictly enforced and no late registrations will be accepted."
         },
         {
           "title": "Code of Conduct",
@@ -30,11 +30,11 @@
         },
         {
           "title": "Development Phase",
-          "content": "The hackathon duration is 24 hours with designated breaks for meals and rest. Teams must develop their IoT solution from scratch during the event. Pre-written code is not allowed, but teams can use open-source libraries and frameworks. All development must happen at the designated venue or online platform."
+          "content": "The online hackathon duration is 48 hours, and for the finals the duration is 5 hours. Teams must develop their IoT solution from scratch during the event. Pre-written code is not allowed, but teams can use open-source libraries and frameworks."
         },
         {
           "title": "Hardware and Software Requirements",
-          "content": "Basic hardware components (Arduino, Raspberry Pi, sensors) will be provided by the organizers. Teams can bring additional components but must declare them during registration. All software development should use commonly available platforms and tools. Cloud services and APIs are allowed for enhanced functionality."
+          "content": "Basic hardware components (Arduino, Raspberry Pi, sensors) will be provided by the organizers during offline finals. But do note no components will be provided during the online hackathon. Teams can bring additional components but must declare them during registration. All software development should use commonly available platforms and tools. Cloud services and APIs are allowed for enhanced functionality."
         },
         {
           "title": "Mentorship and Support",
@@ -47,11 +47,11 @@
       "items": [
         {
           "title": "Project Deliverables",
-          "content": "Teams must submit a working prototype demonstrating their IoT solution. A comprehensive project report (5-10 pages) documenting the approach, technical implementation, and results is required. All source code must be uploaded to a public GitHub repository with proper documentation and setup instructions."
+          "content": "Teams must submit a working prototype demonstrating their IoT solution. A comprehensive project presentation (5-10 pages) documenting the approach, technical implementation, and results is required. All source code must be uploaded to a public GitHub repository with proper documentation and setup instructions. A video must be uploaded to YouTube explain the project with a demo."
         },
         {
           "title": "Presentation Guidelines",
-          "content": "Each team gets 7 minutes for presentation followed by 3 minutes for Q&A. Presentations should cover problem understanding, solution approach, technical implementation, demonstration, and future scope. Teams must prepare slides and ensure their prototype is ready for live demonstration."
+          "content": "Presentations should cover problem understanding, solution approach, technical implementation, demonstration, and future scope. Teams must prepare slides and ensure their prototype is ready for demonstration."
         },
         {
           "title": "Submission Deadline",
@@ -67,7 +67,7 @@
       "section": "Judging Criteria",
       "items": [
         {
-          "title": "Technical Implementation (30%)",
+          "title": "Technical Implementation (20%)",
           "content": "Evaluation of the technical complexity, code quality, and proper use of IoT components. Judges will assess the integration of sensors, actuators, communication protocols, and cloud services. Bonus points for innovative use of emerging technologies like AI/ML, blockchain, or edge computing in the IoT solution."
         },
         {
@@ -75,7 +75,7 @@
           "content": "Assessment of the uniqueness and creative approach to solving the problem statement. Judges will look for novel applications of IoT technology, creative user interfaces, and innovative features that set the solution apart from conventional approaches."
         },
         {
-          "title": "Problem Solving Approach (20%)",
+          "title": "Problem Solving Approach (30%)",
           "content": "Evaluation of how well the team understood and addressed the problem statement. Judges will assess the logical approach, feasibility of the solution, and effectiveness in solving real-world challenges. Comprehensive problem analysis and solution design will be rewarded."
         },
         {
@@ -89,23 +89,6 @@
       ]
     },
     {
-      "section": "Awards and Recognition",
-      "items": [
-        {
-          "title": "Prize Categories",
-          "content": "Overall Winners: 1st, 2nd, and 3rd place teams receive cash prizes and certificates. Best Innovation Award for the most creative solution. Best Technical Implementation Award for superior coding and technical execution. Best Presentation Award for outstanding communication skills. People's Choice Award voted by participants and audience."
-        },
-        {
-          "title": "Special Recognitions",
-          "content": "All participants receive digital certificates of participation. Winning teams get featured on official social media and websites. Industry internship opportunities and job referrals for outstanding performers. Mentorship opportunities with industry experts for continued project development."
-        },
-        {
-          "title": "Networking Opportunities",
-          "content": "Access to industry professionals, startup founders, and technical experts. Opportunity to connect with like-minded peers and potential co-founders. Access to exclusive workshops and technical sessions. Platform to showcase projects to potential investors and industry partners."
-        }
-      ]
-    },
-    {
       "section": "Important Policies",
       "items": [
         {
@@ -114,7 +97,7 @@
         },
         {
           "title": "Health and Safety",
-          "content": "All participants must follow venue safety guidelines and protocols. Proper handling of electronic components and equipment is mandatory. Participants should report any health issues or emergencies immediately. First aid and medical assistance will be available throughout the event."
+          "content": "All participants must follow safety guidelines and protocols. Proper handling of electronic components and equipment is mandatory. Participants should report any health issues or emergencies immediately. First aid and medical assistance will be available throughout the event."
         },
         {
           "title": "Technical Support",
