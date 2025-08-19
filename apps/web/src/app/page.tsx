@@ -334,7 +334,7 @@ const HomePage = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md">
                   {!isAfterAugust27 && (
                     <Link
-                      href="/iotricity#register"
+                      href="https://unstop.com/o/jlaz2pf"
                       className="w-full sm:w-auto"
                     >
                       <Button
