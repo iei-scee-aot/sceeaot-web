@@ -31,10 +31,10 @@ export default function ProblemsPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Date logic: show message until 30th August 2025 (inclusive)
+  // Problem Statements will go live on 30th August 2025 8PM
   const now = new Date();
-  const goLiveDate = new Date("2025-08-30T20:00:00+05:30");
-  const beforeGoLive = now < goLiveDate;
+  const goLiveDate = new Date("2025-08-30T20:00:00").getTime();
+  const beforeGoLive = now.getTime() < goLiveDate;
 
   useEffect(() => {
     if (beforeGoLive) {

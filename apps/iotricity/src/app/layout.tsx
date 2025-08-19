@@ -16,8 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default:
-      "SCEE AOT - Students Chapter of Electrical Engineering | Academy of Technology",
+    default: "IoTricity Season 2",
     template: "%s | SCEE AOT",
   },
   description:
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://sceeaot.in",
+    canonical: "https://iotricity.sceeaot.in",
   },
   category: "education",
 };
