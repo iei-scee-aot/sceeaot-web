@@ -1,4 +1,6 @@
 import { LoadingProvider } from "@/components/providers/LoadingProvider";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -67,6 +69,8 @@ export default function RootLayout({
         <LoadingProvider>
           <div>{children}</div>
         </LoadingProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
