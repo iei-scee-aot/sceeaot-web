@@ -23,7 +23,7 @@ export const LinkCard = ({ link }: LinkCardProps) => {
             alt={`${link.title} icon`}
             width={40}
             height={40}
-            className="w-8 h-8 lg:w-10 lg:h-10 rounded-lg object-cover mr-4"
+            className="w-8 h-8 lg:w-10 lg:h-10 rounded-lg object-cover mr-4 invert"
           />
         ) : null}
 
