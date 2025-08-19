@@ -23,7 +23,7 @@ const Header = () => {
       </div>
       <div className=" flex items-center justify-center">
         <a
-          href="https://discord.gg/mqNcynTs"
+          href="https://discord.gg/K6GfRPAS"
           target="_blank"
           rel="noopener noreferrer"
         >
