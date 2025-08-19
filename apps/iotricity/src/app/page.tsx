@@ -192,7 +192,7 @@ const HomePage = () => {
                   className="group border-primary/20 hover:border-primary/50"
                 >
                   <span className="flex items-center gap-2">
-                    Learn More
+                    Hackers Guild
                     <ExternalLink
                       size={16}
                       className="transition-transform group-hover:scale-110"

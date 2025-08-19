@@ -2,13 +2,18 @@ import { LinkItem } from "@/types/types";
 
 export const websiteLinks: LinkItem[] = [
   {
-    title: "Main App",
-    url: "/",
+    title: "SCEEAOT Main Website",
+    url: "https://www.sceeaot.in",
     description: "Visit our main website",
   },
   {
-    title: "IoTricity",
-    url: "/iotricity",
+    title: "IoTricity Website",
+    url: "https://iotricity.sceeaot.in",
+    description: "Our flagship hackathon event",
+  },
+  {
+    title: "IoTricity S2 Registration",
+    url: "https://unstop.com/o/jlaz2pf",
     description: "Our flagship hackathon event",
   },
 ];
@@ -52,5 +57,4 @@ export const socialMediaLinks: LinkItem[] = [
   },
 ];
 
-// Backward compatibility - keeping the original export for existing imports
 export const linksData: LinkItem[] = [...websiteLinks, ...socialMediaLinks];

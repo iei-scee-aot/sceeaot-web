@@ -15,12 +15,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default:
-      "SCEE AOT - Students Chapter of Electrical Engineering | Academy of Technology",
+    default: "Links",
     template: "%s | SCEE AOT",
   },
   description:
-    "Join SCEE AOT - the premier Students Chapter of Electrical Engineering at Academy of Technology. Explore technical workshops, research projects, industry connections, and career opportunities in electrical engineering.",
+    "SCEE AOT - the premier Students Chapter of Electrical Engineering at Academy of Technology. Explore technical workshops, research projects, industry connections, and career opportunities in electrical engineering.",
   keywords: [
     "SCEE AOT",
     "Students Chapter Electrical Engineering",
@@ -49,7 +48,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://sceeaot.in",
+    canonical: "https://links.sceeaot.in",
   },
   category: "education",
 };
