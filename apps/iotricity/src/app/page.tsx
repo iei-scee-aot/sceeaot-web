@@ -114,6 +114,14 @@ const HomePage = () => {
       <div>
         {/* Modern Hero Section */}
         <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0 relative overflow-hidden">
+          {/* Hero Background SVG */}
+          <div
+            className="absolute inset-0 opacity-40 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url('/images/hero_background.svg')`,
+            }}
+          ></div>
+
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-5">
             <div
@@ -147,11 +155,11 @@ const HomePage = () => {
               {/* Main Text */}
 
               <div className="flex items-center justify-center gap-3 mt-6">
-                <div className="h-1 w-16 bg-gradient-to-r from-primary to-transparent rounded-full"></div>
-                <span className="text-lg lg:text-xl font-medium text-primary">
-                  The Ultimate IoT Hackathon
+                {/* <div className="h-1 w-16 bg-gradient-to-r from-primary to-transparent rounded-full"></div> */}
+                <span className="text-lg lg:text-xl font-medium text-primary uppercase">
+                  The Ultimate IoT Hackathon hosted by IEI SCEE AOT
                 </span>
-                <div className="h-1 w-16 bg-gradient-to-l from-primary to-transparent rounded-full"></div>
+                {/* <div className="h-1 w-16 bg-gradient-to-l from-primary to-transparent rounded-full"></div> */}
               </div>
 
               {/* Call to Action Buttons */}
