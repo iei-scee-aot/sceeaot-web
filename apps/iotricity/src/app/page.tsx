@@ -9,6 +9,7 @@ import Accordion from "@/components/ui/Accordion";
 import Button from "@/components/ui/Button";
 import Divider2 from "@/components/ui/Divider";
 import Headlines from "@/components/ui/Headlines";
+import MentorsCard from "@/components/ui/MentorsCard";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -47,6 +48,7 @@ const HomePage = () => {
   const [isTimelineVisible, setIsTimelineVisible] = useState(true);
   const [isTracksVisible, setIsTracksVisible] = useState(true);
   const [isPrizesVisible, setIsPrizesVisible] = useState(true);
+  const [isMentorsVisible, setIsMentorsVisible] = useState(false);
 
   // Target Date controls the end of registration date
   const targetDate = new Date("2025-08-29T23:59:59").getTime();
@@ -456,6 +458,31 @@ const HomePage = () => {
         </div>
         <Divider2 />
 
+        {/* Mentors Section */}
+        <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+          <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
+            <Headlines headLine="Mentors" />
+          </div>
+          <div className="px-4 lg:px-8 py-12 lg:py-8 text-sm lg:text-[2rem] font-pxg lg:font-light lg:leading-relaxed flex justify-center items-center">
+            {isMentorsVisible ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-5 md:gap-y-[4.5rem] mx-5 py-12 pb-5 md:pb-20 place-items-center">
+                {mentorsData.map((mentor, index) => (
+                  <MentorsCard
+                    key={index}
+                    Name={mentor.name}
+                    Designation={mentor.designation}
+                    imagePath={mentor.imagePath}
+                    links={mentor.links}
+                  />
+                ))}
+              </div>
+            ) : (
+              <ComingSoon description="Our expert mentors and industry professionals are being finalized. Stay tuned to meet the amazing mentors who will guide you throughout your IOTricity journey." />
+            )}
+          </div>
+        </div>
+        <Divider2 />
+
         {/* Event Tracks Section */}
         <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
@@ -485,25 +512,6 @@ const HomePage = () => {
           </div>
         </div>
         <Divider2 />
-
-        {/* Mentors Section */}
-        {/* <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
-          <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
-            <Headlines headLine="Mentors" />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-5 md:gap-y-[4.5rem] mx-5 py-12 pb-5 md:pb-20 place-items-center">
-            {mentorsData.map((mentor, index) => (
-              <MentorsCard
-                key={index}
-                Name={mentor.name}
-                Designation={mentor.designation}
-                imagePath={mentor.imagePath}
-                links={mentor.links}
-              />
-            ))}
-          </div>
-        </div>
-        <Divider2 /> */}
 
         {/* FAQ Section */}
         <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
