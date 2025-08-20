@@ -1,6 +1,6 @@
 "use client";
 
-import { Award, Medal, Trophy } from "lucide-react";
+import Image from "next/image";
 
 const IOTricityPrizes = () => {
   return (
@@ -27,7 +27,13 @@ const IOTricityPrizes = () => {
         {/* 2nd Place - Left */}
         <div className="order-2 lg:order-1 bg-secondary/10 border border-secondary/30 rounded-lg p-6 lg:p-8 text-center hover:bg-secondary/20 transition-all duration-300 w-full lg:w-80">
           <div className="flex justify-center mb-4">
-            <Medal className="w-12 h-12 lg:w-16 lg:h-16 text-secondary" />
+            <Image
+              src="/icons/second.svg"
+              alt="Second Place"
+              width={64}
+              height={64}
+              className="w-12 h-12 lg:w-16 lg:h-16"
+            />
           </div>
           <h3
             className="text-xl lg:text-2xl font-bold text-secondary mb-4"
@@ -39,14 +45,20 @@ const IOTricityPrizes = () => {
             ₹3,000
           </div>
           <p className="text-sm lg:text-base text-secondary/80">
-            Certificate + Cash Prize + IoT Kit
+            Certificate + Cash Prize + Swags
           </p>
         </div>
 
         {/* 1st Place - Center (Elevated) */}
         <div className="order-1 lg:order-2 bg-primary/10 border border-primary/30 rounded-lg p-8 lg:p-10 text-center hover:bg-primary/20 transition-all duration-300 w-full lg:w-96 lg:transform lg:scale-110">
           <div className="flex justify-center mb-6">
-            <Trophy className="w-16 h-16 lg:w-20 lg:h-20 text-primary" />
+            <Image
+              src="/icons/first.svg"
+              alt="First Place"
+              width={80}
+              height={80}
+              className="w-16 h-16 lg:w-20 lg:h-20"
+            />
           </div>
           <h3
             className="text-2xl lg:text-3xl font-bold text-primary mb-6"
@@ -58,14 +70,20 @@ const IOTricityPrizes = () => {
             ₹5,000
           </div>
           <p className="text-base lg:text-lg text-secondary/80">
-            Certificate + Cash Prize + Premium IoT Kit + Internship Opportunity
+            Certificate + Cash Prize + Swags
           </p>
         </div>
 
         {/* 3rd Place - Right */}
         <div className="order-3 bg-secondary/10 border border-secondary/30 rounded-lg p-6 lg:p-8 text-center hover:bg-secondary/20 transition-all duration-300 w-full lg:w-80">
           <div className="flex justify-center mb-4">
-            <Award className="w-12 h-12 lg:w-16 lg:h-16 text-secondary" />
+            <Image
+              src="/icons/third.svg"
+              alt="Third Place"
+              width={64}
+              height={64}
+              className="w-12 h-12 lg:w-16 lg:h-16"
+            />
           </div>
           <h3
             className="text-xl lg:text-2xl font-bold text-secondary mb-4"
@@ -77,7 +95,7 @@ const IOTricityPrizes = () => {
             ₹2,000
           </div>
           <p className="text-sm lg:text-base text-secondary/80">
-            Certificate + Cash Prize + Basic IoT Kit
+            Certificate + Cash Prize + Swags
           </p>
         </div>
       </div>

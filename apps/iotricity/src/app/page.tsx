@@ -44,9 +44,9 @@ const HomePage = () => {
   const [faqError, setFaqError] = useState<string | null>(null);
 
   // Visibility controls for different sections
-  const [isTimelineVisible, setIsTimelineVisible] = useState(false);
-  const [isTracksVisible, setIsTracksVisible] = useState(false);
-  const [isPrizesVisible, setIsPrizesVisible] = useState(false);
+  const [isTimelineVisible, setIsTimelineVisible] = useState(true);
+  const [isTracksVisible, setIsTracksVisible] = useState(true);
+  const [isPrizesVisible, setIsPrizesVisible] = useState(true);
 
   // Target Date controls the end of registration date
   const targetDate = new Date("2025-08-29T23:59:59").getTime();
@@ -189,18 +189,20 @@ const HomePage = () => {
                   </Button>
                 </Link>
 
-                {/* <Button
-                  variant="secondary"
-                  className="group border-primary/20 hover:border-primary/50"
-                >
-                  <span className="flex items-center gap-2">
-                    Hackers Guild
-                    <ExternalLink
-                      size={16}
-                      className="transition-transform group-hover:scale-110"
-                    />
-                  </span>
-                </Button> */}
+                <Link href="https://iotricitys2.notion.site/IOTricity-S2-Hackers-Guild-245b2a014830804cabe3ef4a6817fab5?pvs=74">
+                  <Button
+                    variant="secondary"
+                    className="group border-primary/20 hover:border-primary/50"
+                  >
+                    <span className="flex items-center gap-2">
+                      Hackers Guild
+                      <ExternalLink
+                        size={16}
+                        className="transition-transform group-hover:scale-110"
+                      />
+                    </span>
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
