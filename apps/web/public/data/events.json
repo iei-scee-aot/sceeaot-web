@@ -1,5 +1,18 @@
 {
-  "futureEvents": [],
+  "futureEvents": [
+    {
+      "id": "iotricitys2",
+      "imageSrc": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhIKZ7WY8XBiE7hCZo24eUpHdkmLYfMlFRqOc8",
+      "title": "IOTricity Season 2",
+      "status": "Open",
+      "date": "30th August 2025 - 1st Sept 2025",
+      "mode": "Online and Offline",
+      "fees": "₹50",
+      "teamSize": "3-5 members",
+      "description": "The season 2 of hardware ideathon event, the first of its kind at AOT campus. The event focused on IoT (Internet of Things), a rapidly growing field. The event had a prize pool of ₹10000.",
+      "gallery": "https://drive.google.com/drive/folders/1An9r3poZaGRwzNInmtUaB65uXzW1Zbqi"
+    }
+  ],
   "onGoingEvents": [],
   "pastEvents": [
     {
