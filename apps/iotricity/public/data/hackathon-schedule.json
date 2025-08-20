@@ -1,80 +1,96 @@
 [
   {
     "id": 1,
-    "title": "Online Hackathon Period Starts",
-    "icon": "🤩",
-    "date": "August 30, 2025",
+    "title": "IoTricity Registration Starts",
+    "icon": "",
+    "date": "August 19, 2025",
     "time": "20:00",
     "type": "start"
   },
   {
     "id": 2,
+    "title": "Iotricity Registration Ends",
+    "icon": "",
+    "date": "August 30, 2025",
+    "time": "20:00",
+    "type": "end"
+  },
+  {
+    "id": 3,
+    "title": "Online Hackathon Period Starts",
+    "icon": "",
+    "date": "August 30, 2025",
+    "time": "20:00",
+    "type": "start"
+  },
+  {
+    "id": 4,
     "title": "How to use Cloud for IOT",
-    "icon": "☁️",
+    "icon": "",
     "date": "August 30, 2025",
     "time": "20:00 → 22:00",
     "type": "session"
   },
   {
-    "id": 3,
+    "id": 5,
     "title": "Using IOT devices for Networking and Hacking",
-    "icon": "👾",
+    "icon": "",
     "date": "August 31, 2025",
     "time": "20:00 → 21:00",
     "type": "session"
   },
   {
-    "id": 4,
+    "id": 6,
     "title": "Build Robots with Machine Learning",
-    "icon": "🤖",
+    "icon": "",
     "date": "August 31, 2025",
     "time": "21:00 → 22:00",
     "type": "session"
   },
   {
-    "id": 5,
+    "id": 7,
     "title": "Online Hackathon Period Ends",
-    "icon": "🤩",
+    "icon": "",
     "date": "September 1, 2025",
     "time": "20:00",
     "type": "end"
   },
   {
-    "id": 6,
+    "id": 8,
     "title": "Online Hackathon Judging Day",
-    "icon": "⚖️",
+    "icon": "",
     "date": "September 2, 2025",
     "time": "",
     "type": "judging"
   },
   {
-    "id": 7,
+    "id": 9,
     "title": "Online Hackathon Top 10 Teams Announcement",
-    "icon": "😍",
+    "icon": "",
     "date": "September 2, 2025",
     "time": "",
     "type": "announcement"
   },
   {
-    "id": 8,
+    "id": 10,
     "title": "Offline Hackathon Day - Finale",
-    "icon": "🤩",
+    "icon": "",
     "date": "September 3, 2025",
     "time": "10:00 → 17:00",
     "type": "finale"
   },
   {
-    "id": 9,
+    "id": 11,
     "title": "IOTricity Finale Result Declaration",
-    "icon": "🎯",
+    "icon": "",
     "date": "September 3, 2025",
     "time": "",
     "type": "result"
   },
   {
-    "id": 10,
+    "id": 12,
     "title": "Closing Ceremony and Prize Distribution",
-    "icon": "🏆",
+    "icon": "",
     "date": "September 3, 2025",
     "time": "15:00 → 16:00",
     "type": "ceremony"
