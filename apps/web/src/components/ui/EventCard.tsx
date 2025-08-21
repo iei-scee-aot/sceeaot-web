@@ -51,11 +51,15 @@ const EventCard: React.FC<EventCardProps> = ({
               strokeDasharray="4 4"
             />
           </svg>
-          <div className=" bg-primary w-[100%] text-black py-[0.6rem] px-[0.5rem] flex flex-col items-start text-[12px] font-semibold hover:bg-primary/90 transition-all duration-300 z-10">
+          <div className=" bg-primary w-[100%] text-black py-[0.6rem] px-[0.5rem] text-[12px] font-semibold hover:bg-primary/90 transition-all duration-300 z-10">
             <Link target="_blank" rel="noopener noreferer" href={gallery} >
-              <span className="leading-none">VIEW</span>
-              <span className="leading-none">GALLERY</span>
-              <ArrowRight size={11} className="mt-2 animate-float" />
+              <div className="flex flex-col items-start">
+                <span className="leading-none">VIEW</span>
+                <span className="leading-none">GALLERY</span>
+                <ArrowRight size={14} className="mt-2 animate-float" />
+
+              </div>
+              
             </Link>
             
           </div>

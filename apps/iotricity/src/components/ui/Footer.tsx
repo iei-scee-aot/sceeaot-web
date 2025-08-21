@@ -59,7 +59,9 @@ const Footer = () => {
                 </h3>
                 <div className="space-y-6">
                   <Link target="_blank" rel="noopener noreferrer"
-                    href={process.env.NODE_ENV==="development"?"http://localhost:3002/":"https://www.links.sceeaot.in"}
+                    href={process.env.NODE_ENV==="development"
+                      ?"http://localhost:3002/"
+                      :"https://links.sceeaot.in/"}
                     className="flex items-center gap-4 text-gray-300 hover:text-primary transition-colors duration-200 text-2xl"
                   >
                     <Image

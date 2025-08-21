@@ -34,7 +34,7 @@
         },
         {
           "title": "Hardware and Software Requirements",
-          "content": "Basic hardware components (Arduino, sensors, breadboards, etc.) will be provided by the organizers during offline finals. But do note no components will be provided during the online hackathon. Teams can bring additional components but must declare them during registration. All software development should use commonly available platforms and tools. Cloud services and APIs are allowed for enhanced functionality."
+          "content": "Basic hardware components (ESP8266, sensors, bread boards, jumper wires etc) will be provided by the organizers during offline finals. But do note no components will be provided during the ONLINE hackathon. Teams can bring additional components but must declare them during registration. All software development should use commonly available platforms and tools. Cloud services and APIs are allowed for enhanced functionality.DO BRING MICRO USB CABLE CAPABLE OF TRANSFERRING DATA, at least one laptop and charger during the OFFLINE FINALE."
         },
         {
           "title": "Mentorship and Support",
