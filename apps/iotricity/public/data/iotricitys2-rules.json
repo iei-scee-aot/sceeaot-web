@@ -26,7 +26,7 @@
       "items": [
         {
           "title": "Problem Statement Selection",
-          "content": "Teams will be assigned to houses (Yellow, Green, Blue, Red) based on their academic year and discipline. Each house has 10 unique problem statements. Teams must choose one problem statement from their assigned house and cannot switch between houses or problem statements after selection."
+          "content": "Teams will be assigned to houses (Yellow for 1st and 2nd year CSE and CSBS, Green for 1st and 2nd year ECE, EE, EEE and ME, Blue for 3rd and 4th year CSE and CSBS, Red for 3rd and 4th year ECE, EE, EEE and ME). Each house has 10 unique problem statements. Teams must choose one problem statement from their assigned house and cannot switch between houses or problem statements after selection."
         },
         {
           "title": "Development Phase",
@@ -34,7 +34,7 @@
         },
         {
           "title": "Hardware and Software Requirements",
-          "content": "Basic hardware components (Arduino, Raspberry Pi, sensors) will be provided by the organizers during offline finals. But do note no components will be provided during the online hackathon. Teams can bring additional components but must declare them during registration. All software development should use commonly available platforms and tools. Cloud services and APIs are allowed for enhanced functionality."
+          "content": "Basic hardware components (Arduino, sensors, breadboards, etc.) will be provided by the organizers during offline finals. But do note no components will be provided during the online hackathon. Teams can bring additional components but must declare them during registration. All software development should use commonly available platforms and tools. Cloud services and APIs are allowed for enhanced functionality."
         },
         {
           "title": "Mentorship and Support",

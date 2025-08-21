@@ -1,5 +1,6 @@
 {
-  "futureEvents": [
+  "futureEvents": [],
+  "onGoingEvents": [
     {
       "id": "iotricitys2",
       "imageSrc": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhIKZ7WY8XBiE7hCZo24eUpHdkmLYfMlFRqOc8",
@@ -13,7 +14,6 @@
       "gallery": "https://drive.google.com/drive/folders/1An9r3poZaGRwzNInmtUaB65uXzW1Zbqi"
     }
   ],
-  "onGoingEvents": [],
   "pastEvents": [
     {
       "id": "hoverx",
@@ -49,7 +49,7 @@
       "fees": "₹50",
       "teamSize": "3-5 members",
       "description": "A hardware ideathon event, the first of its kind at AOT campus. The event focused on IoT (Internet of Things), a rapidly growing field. The event had a prize pool of ₹6000.",
-      "gallery":"https://drive.google.com/drive/folders/1An9r3poZaGRwzNInmtUaB65uXzW1Zbqi"
+      "gallery": "https://drive.google.com/drive/folders/1An9r3poZaGRwzNInmtUaB65uXzW1Zbqi"
     },
     {
       "id": "electroforge",
