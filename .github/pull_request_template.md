@@ -8,52 +8,31 @@
 
 <!-- Mark the appropriate option with an "x" -->
 
-- [ ] 🐛 Bug fix (non-breaking change which fixes an issue)
-- [ ] ✨ New feature (non-breaking change which adds functionality)
-- [ ] 💥 Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] 📚 Documentation update
-- [ ] 🎨 Style/UI improvements
-- [ ] ♻️ Code refactoring (no functional changes)
-- [ ] ⚡ Performance improvements
-- [ ] 🧪 Test improvements
-- [ ] 🔧 Build/CI improvements
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] Documentation update
+- [ ] Style/UI improvements
+- [ ] Code refactoring (no functional changes)
+- [ ] Performance improvements
+- [ ] Test improvements
+- [ ] Build/CI improvements
 
 ## Related Issue(s)
 
 <!-- Link to the issue(s) this PR addresses -->
 
-Fixes #(issue number)
-Closes #(issue number)
-Related to #(issue number)
+<!-- Fixes #(issue number) -->
+<!-- Closes #(issue number) -->
+<!-- Related to #(issue number) -->
 
 ## Changes Made
 
-### Key Changes
-
 <!-- List the main changes made in this PR -->
-
-- Item 1
-- Item 2
-- Item 3
-
-### Files Modified
 
 <!-- List the key files that were modified -->
 
-- File 1
-- File 2
-- File 3
-
-## Testing
-
-### How Has This Been Tested?
-
-<!-- Describe the tests that you ran to verify your changes -->
-
-- [ ] Unit tests
-- [ ] Integration tests
-- [ ] Manual testing
-- [ ] Cross-browser testing
+## How Has This Been Tested?
 
 ### Test Details
 
@@ -80,7 +59,7 @@ Related to #(issue number)
 
 ## Checklist
 
-### Development
+<!-- ### Development
 
 - [ ] My code follows the project's coding standards
 - [ ] I have performed a self-review of my own code
@@ -111,39 +90,21 @@ Related to #(issue number)
 
 - [ ] I have tested keyboard navigation (if applicable)
 - [ ] I have checked color contrast ratios (if UI changes)
-- [ ] I have added appropriate ARIA labels (if applicable)
+- [ ] I have added appropriate ARIA labels (if applicable) -->
 
 ## Additional Notes
 
-### Breaking Changes
-
 <!-- If this is a breaking change, describe what breaks and how to migrate -->
-
-### Performance Impact
 
 <!-- Describe any performance implications of your changes -->
 
-### Security Considerations
-
 <!-- Note any security implications or considerations -->
-
-### Deployment Notes
 
 <!-- Any special deployment considerations -->
 
-## Reviewers
-
-### Requested Reviewers
-
 <!-- @mention specific people you'd like to review this PR -->
 
-### Review Focus Areas
-
 <!-- Highlight specific areas where you'd like focused review -->
-
-- Area 1
-- Area 2
-- Area 3
 
 ---
 

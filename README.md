@@ -1,135 +1,55 @@
-# Turborepo starter
+# Mono repo for SCEE's websites
 
-This Turborepo starter is maintained by the Turborepo core team.
+Why a Mono Repo? Main because the LLMs cans see the design and logical changes in one app and implement it into the others, which removing errors, and component reuse is another main factor for going this route (yet we have not taken the time to do so). The app is build totally on `Vercel` stack which is Nextjs, Turborepo and deployed on Vercel. With plans to use Supabase for upcoming backend needs and requirements, as it is a simple one stop backend solution.
 
-## Using this example
+## Projects
 
-Run the following command:
+`apps/web` [`sceeaot.in`](sceeaot.in) - The main website for our student chapter hosting the about our student chapter, team members and our events.
 
-```sh
-npx create-turbo@latest
-```
+`apps/iotricity` [`iotricity.sceeaot.in`](iotricity.sceeaot.in) - Scee's flagship events webiste.
 
-## What's inside?
+`apps/links` [`links.sceeaot.in`](links.sceeaot.in) - Linktree sucks so we made our own and it is fast.
 
-This Turborepo includes the following packages/apps:
+`packages/eslint-config` - All `eslint` related configurations for the whole repo (needs to be configured).
 
-### Apps and Packages
+`packages/typescript-config` - All `typescript` related configurations for the whole repo (needs to be configured).
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+`packages/ui` - All components and styling for all the apps in this repository (needs to be configured).
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+## Setup
 
-### Utilities
+First install git and setup node in your machine, and pnpm package manager for this project. If thats done you can get started locally.
 
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
+Fork the repository and clone it.
 
 ```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build
-yarn dlx turbo build
-pnpm exec turbo build
+git clone https://github.com/iei-scee-aot/sceeaot-web.git
+cd sceeaot-web
 ```
 
-You can build a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+Make sure that you have pnpm **package manager** installed and then install all the packages and run the apps to see if it working.
 
 ```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build --filter=docs
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build --filter=docs
-yarn exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
+pnpm install
+pnpm run dev
 ```
 
-### Develop
-
-To develop all apps and packages, run the following command:
+You can also lint and build all the apps at once.
 
 ```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev
-yarn exec turbo dev
-pnpm exec turbo dev
+pnpm run lint
+pnpm run build
 ```
 
-You can develop a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+## Contributing
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev --filter=web
+If you are member of SCEE you are free to contribute to the project. While coding keep sure to follow the coding practices.
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev --filter=web
-yarn exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
-```
+- if you want to work on a feature or bug which is independent of the current plan, raise an issue and describe it well.
+- always create new branch while working on features(`feat/`), updates(`update/`), and bug-fixes(`fix/`) and the give a PR to the main branch.
+- use proper version control when face with issues in the current version/branch.
+- always link and build the app locally, if you find any issue fix it and then give the PR.
 
-### Remote Caching
+## License
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo login
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo login
-yarn exec turbo login
-pnpm exec turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo link
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo link
-yarn exec turbo link
-pnpm exec turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+It is open source with MIT License, so use it accordingly.
