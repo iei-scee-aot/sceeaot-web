@@ -26,38 +26,13 @@ assignees: ""
 
 <!-- Describe specific use cases for this feature -->
 
-1. As a [user type], I want [goal] so that [benefit]
-2. As a [user type], I want [goal] so that [benefit]
-3. As a [user type], I want [goal] so that [benefit]
-
 ## Acceptance Criteria
 
 <!-- Define what "done" looks like for this feature -->
 
-- [ ] Criterion 1
-- [ ] Criterion 2
-- [ ] Criterion 3
-
 ## Implementation Details
 
 <!-- If you have ideas about how this could be implemented, describe them here -->
-
-### Technical Considerations
-
-- [ ] Frontend changes required
-- [ ] Backend changes required
-- [ ] Database changes required
-- [ ] API changes required
-- [ ] Third-party integrations required
-
-### Affected Components
-
-- [ ] IOTricity App
-- [ ] Links App
-- [ ] Web App
-- [ ] UI Package
-- [ ] Build/CI
-- [ ] Documentation
 
 ## Design Mockups/Wireframes
 
@@ -66,50 +41,6 @@ assignees: ""
 ## User Experience Impact
 
 <!-- How will this feature affect the user experience? -->
-
-### Benefits
-
-- Benefit 1
-- Benefit 2
-- Benefit 3
-
-### Potential Concerns
-
-- Concern 1
-- Concern 2
-- Concern 3
-
-## Success Metrics
-
-<!-- How will we measure the success of this feature? -->
-
-- Metric 1
-- Metric 2
-- Metric 3
-
-## Priority and Timeline
-
-### Business Priority
-
-- [ ] Critical (Blocking current users)
-- [ ] High (Significant user impact)
-- [ ] Medium (Nice to have)
-- [ ] Low (Future consideration)
-
-### Estimated Effort
-
-- [ ] Small (1-3 days)
-- [ ] Medium (1-2 weeks)
-- [ ] Large (2-4 weeks)
-- [ ] Extra Large (1+ months)
-
-### Dependencies
-
-<!-- List any dependencies or blockers -->
-
-- Dependency 1
-- Dependency 2
-- Dependency 3
 
 ## Additional Context
 

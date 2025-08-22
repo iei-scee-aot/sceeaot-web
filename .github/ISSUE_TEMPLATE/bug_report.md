@@ -28,11 +28,6 @@ assignees: ""
 
 <!-- Steps to reproduce the behavior -->
 
-1. Go to '...'
-2. Click on '...'
-3. Scroll down to '...'
-4. See error
-
 ## Expected Behavior
 
 <!-- A clear and concise description of what you expected to happen -->
@@ -48,10 +43,6 @@ assignees: ""
 ## Console Logs
 
 <!-- If applicable, include any error messages from the browser console -->
-
-```text
-Paste console logs here
-```
 
 ## Network Requests
 
@@ -86,10 +77,6 @@ Paste console logs here
 ## Code Context
 
 <!-- If relevant, include code snippets that might be related to the issue -->
-
-```typescript
-// Include relevant code here
-```
 
 ---
 
