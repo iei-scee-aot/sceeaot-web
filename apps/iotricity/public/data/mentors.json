@@ -1,13 +1,20 @@
 [
   {
-    "name": "Debarshee Chakraborty",
-    "designation": "Machine Learning Mentor",
-    "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhPa78TnfbY9dtjrPTuZONcCWVk0BKfF5aXIoD",
-    "links": [
-      "https://www.facebook.com/share/1FLHrYDQ18/",
-      "https://www.instagram.com/dino04.ai/",
-      "https://x.com/dinocodes69",
-      "https://www.linkedin.com/in/debarshee-chakraborty-dc2004"
-    ]
+    "name": "Gourav Ghosal",
+    "designation": "Fullstack SDE@Truxt.ai",
+    "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhbcqgYSbELC8OUR5HEvuXeK0TG6d2ASjInlty",
+    "links": ["https://www.linkedin.com/in/gourav-ghosal/"]
+  },
+  {
+    "name": "Imran Roshan",
+    "designation": "Security Specialist and GDE-GCP",
+    "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhbydJqqELC8OUR5HEvuXeK0TG6d2ASjInltyc",
+    "links": ["https://www.linkedin.com/in/imranfosec/"]
+  },
+  {
+    "name": "Om Ashish Mishra",
+    "designation": "Product Data Scientist @Deloitte",
+    "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhepUcLCzhIsqAxZXnSYW2za5EbC8wpjygto7v",
+    "links": ["https://www.linkedin.com/in/om-ashish-mishra/"]
   }
 ]
