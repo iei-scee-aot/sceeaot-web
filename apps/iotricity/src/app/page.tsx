@@ -581,7 +581,7 @@ const HomePage = () => {
               {/* Sponsor Title */}
               <div className="text-center">
                 <h3 className="text-lg lg:text-xl font-medium text-primary mb-2">
-                  Registration Partner
+                  Powered By Partner
                 </h3>
                 <p className="text-sm lg:text-base text-secondary/70 max-w-md mx-auto">
                   Unstop is powering the registration experience for IOTricity
