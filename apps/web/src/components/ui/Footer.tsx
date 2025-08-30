@@ -62,7 +62,7 @@ const Footer = () => {
                     href={
                       process.env.NODE_ENV === "development"
                         ? "http://localhost:3002"
-                        : "https://links.sceeaot.in"
+                        : "https://sceeaot-links.vercel.app"
                     }
                     target="_blank"
                     rel="noopener noreferrer"

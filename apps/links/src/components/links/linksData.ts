@@ -3,12 +3,12 @@ import { LinkItem } from "@/types/types";
 export const websiteLinks: LinkItem[] = [
   {
     title: "SCEEAOT Main Website",
-    url: "https://www.sceeaot.in",
+    url: "https://www.sceeaot.vercel.app",
     description: "Visit our main website",
   },
   {
     title: "IoTricity Website",
-    url: "https://iotricity.sceeaot.in",
+    url: "https://iotricity.sceeaot.vercel.app",
     description: "Our flagship hackathon event",
   },
   {

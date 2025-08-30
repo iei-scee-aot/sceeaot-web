@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://sceeaot.in/team",
+    canonical: "https://sceeaot.vercel.app/team",
   },
 };
 

@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://links.sceeaot.in",
+    canonical: "https://sceeaot-links.vercel.app",
   },
   category: "education",
 };
