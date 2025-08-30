@@ -34,7 +34,7 @@ export default function ProblemsPage() {
   // Problem Statements will go live on 30th August 2025 8PM
   const now = new Date();
   // const now = new Date("2025-08-30T22:00:00");
-  const goLiveDate = new Date("2025-08-30T20:00:00").getTime();
+  const goLiveDate = new Date("2025-08-30T19:00:00").getTime();
   const beforeGoLive = now.getTime() < goLiveDate;
 
   useEffect(() => {
