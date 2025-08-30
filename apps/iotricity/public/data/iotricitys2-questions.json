@@ -1,7 +1,7 @@
 {
   "2nd_year_cse": {
     "title": "Yellow House Questions",
-    "description": "Early CSE students build foundational IoT skills by programming microcontrollers and interfacing sensors. Suitable hackathon problems involve home automation, basic sensor networks, and wearable monitoring. These projects typically use IoT to collect and process data in real time.",
+    "description": "Problem Statements for Students of 2nd Year CSE and CSBS Students.",
     "questions": [
       {
         "id": 1,
@@ -57,7 +57,7 @@
   },
   "2nd_year_ee": {
     "title": "Green House Questions",
-    "description": "Second-year EE students leverage their hardware skills to build sensor and actuator systems. Hackathon tasks can involve power management, analog/digital sensors, and control systems. Typical projects use IoT to monitor electrical and environmental parameters.",
+    "description": "Problem Statements for Students of 2nd Year EE, EEE, ECE and ME Students.",
     "questions": [
       {
         "id": 1,
@@ -113,7 +113,7 @@
   },
   "3rd_year_cse": {
     "title": "Blue House Questions",
-    "description": "Third-year CSE students can tackle complex IoT applications combining cloud computing, AI, and data analytics. These advanced challenges include smart city and industrial projects. Studies estimate smart traffic IoT systems could save cities $277 billion by 2025.",
+    "description": "Problem Statements for Students of 3rd Year CSE and CSBS Students.",
     "questions": [
       {
         "id": 1,
@@ -169,7 +169,7 @@
   },
   "3rd_year_ee": {
     "title": "Red House Questions",
-    "description": "Advanced EE students focus on large-scale IoT systems and embedded control. Their projects may involve industrial automation, energy systems, or robotics. Experts predict future factories will be fully automated with sophisticated machine-to-machine IoT communication.",
+    "description": "Problem Statements for Students of 3rd Year EE, EEE, ECE and ME Students.",
     "questions": [
       {
         "id": 1,
