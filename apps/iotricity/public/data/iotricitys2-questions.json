@@ -113,7 +113,7 @@
   },
   "3rd_year_cse": {
     "title": "Blue House Questions",
-    "description": "Problem Statements for Students of 3rd Year CSE and CSBS Students.",
+    "description": "Problem Statements for Students of 3rd and 4th Year CSE and CSBS Students.",
     "questions": [
       {
         "id": 1,
@@ -169,7 +169,7 @@
   },
   "3rd_year_ee": {
     "title": "Red House Questions",
-    "description": "Problem Statements for Students of 3rd Year EE, EEE, ECE and ME Students.",
+    "description": "Problem Statements for Students of 3rd and 4th Year EE, EEE, ECE and ME Students.",
     "questions": [
       {
         "id": 1,
