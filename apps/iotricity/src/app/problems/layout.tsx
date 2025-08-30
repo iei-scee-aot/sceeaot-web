@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://sceeaot.in/iotricity/problems",
+    canonical: "https://sceeaot.vercel.app/iotricity/problems",
   },
 };
 

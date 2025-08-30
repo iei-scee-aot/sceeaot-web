@@ -10,7 +10,7 @@ import Button from "@/components/ui/Button";
 import Divider2 from "@/components/ui/Divider";
 import Headlines from "@/components/ui/Headlines";
 import MentorsCard from "@/components/ui/MentorsCard";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -166,7 +166,7 @@ const HomePage = () => {
 
               {/* Call to Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mt-12">
-                <Link href="https://unstop.com/o/jlaz2pf">
+                {/* <Link href="https://unstop.com/o/jlaz2pf">
                   <Button
                     variant="primary"
                     className={`group relative overflow-hidden ${
@@ -189,6 +189,10 @@ const HomePage = () => {
                       <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-yellow-400/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     )}
                   </Button>
+                </Link> */}
+
+                <Link href="problems" className="w-full sm:w-auto">
+                  <Button variant="primary">Problem Statements</Button>
                 </Link>
 
                 <Link href="https://iotricitys2.notion.site/IOTricity-S2-Hackers-Guild-245b2a014830804cabe3ef4a6817fab5?pvs=74">
@@ -279,17 +283,24 @@ const HomePage = () => {
             connected devices. The revolution starts here, and it starts with
             you!
           </div>
+          <div className="flex justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 mt-8 mb-12 px-4 justify-center items-center">
+              <Link href="rules" className="w-full sm:w-auto">
+                <Button
+                  variant="secondary"
+                  icon={<ExternalLink size={18} />}
+                  iconPosition="right"
+                >
+                  Rules and Regulations
+                </Button>
+              </Link>
+            </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 mt-8 mb-12 px-4 justify-center items-center">
-            <Link href="rules" className="w-full sm:w-auto">
-              <Button
-                variant="secondary"
-                icon={<ExternalLink size={18} />}
-                iconPosition="right"
-              >
-                Rules and Regulations
-              </Button>
-            </Link>
+            {/* <div className="flex flex-col sm:flex-row gap-4 mt-8 mb-12 px-4 justify-center items-center">
+              <Link href="problems" className="w-full sm:w-auto">
+                <Button variant="primary">Problem Statements</Button>
+              </Link>
+            </div> */}
           </div>
 
           {/* Event Image */}

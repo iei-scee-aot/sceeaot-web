@@ -307,7 +307,7 @@ const HomePage = () => {
                     href={
                       process.env.NODE_ENV === "development"
                         ? "http://localhost:3001"
-                        : "https://iotricity.sceeaot.in"
+                        : "https://iotricity.vercel.app"
                     }
                     className="w-full sm:w-auto max-w-xs"
                   >
@@ -358,7 +358,7 @@ const HomePage = () => {
                     href={
                       process.env.NODE_ENV === "development"
                         ? "http://localhost:3001"
-                        : "https://iotricity.sceeaot.in"
+                        : "https://iotricity.sceeaot.vercel.app"
                     }
                     className="w-full sm:w-auto"
                   >
