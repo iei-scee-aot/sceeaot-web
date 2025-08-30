@@ -33,6 +33,7 @@ export default function ProblemsPage() {
 
   // Problem Statements will go live on 30th August 2025 8PM
   const now = new Date();
+  // const now = new Date("2025-08-30T22:00:00");
   const goLiveDate = new Date("2025-08-30T20:00:00").getTime();
   const beforeGoLive = now.getTime() < goLiveDate;
 
@@ -146,8 +147,8 @@ export default function ProblemsPage() {
             </div>
 
             <div className="px-4 lg:px-8 py-6 lg:py-8">
-              <div className="mb-6 lg:mb-8">
-                <p className="text-sm lg:text-base text-gray-300 leading-relaxed">
+              <div className="w-full flex justify-center mb-6 lg:mb-8">
+                <p className="text-3xl lg:text-4xl text-gray-300 leading-relaxed">
                   {category.data.description}
                 </p>
               </div>
