@@ -15,7 +15,7 @@ const IOTricityPrizes = () => {
             color: "transparent",
           }}
         >
-          Prize Pool
+          WINNERS
         </h2>
         <p className="text-lg lg:text-xl text-primary font-medium">
           Compete for exciting prizes and recognition

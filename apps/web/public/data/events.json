@@ -1,6 +1,7 @@
 {
   "futureEvents": [],
-  "onGoingEvents": [
+  "onGoingEvents": [],
+  "pastEvents": [
     {
       "id": "iotricitys2",
       "imageSrc": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhIKZ7WY8XBiE7hCZo24eUpHdkmLYfMlFRqOc8",
@@ -11,10 +12,8 @@
       "fees": "₹50",
       "teamSize": "3-5 members",
       "description": "The season 2 of hardware ideathon event, the first of its kind at AOT campus. The event focused on IoT (Internet of Things), a rapidly growing field. The event had a prize pool of ₹10000.",
-      "gallery": "https://drive.google.com/drive/folders/1An9r3poZaGRwzNInmtUaB65uXzW1Zbqi"
-    }
-  ],
-  "pastEvents": [
+      "gallery": "https://drive.google.com/drive/folders/1RawkgELoOl6BvUNoYWbLbEe-VXSc-NbU"
+    },
     {
       "id": "hoverx",
       "imageSrc": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhkKCM9xaT9Rhqgw3ZutmXcDyl4e7WBaNEs6G8",
