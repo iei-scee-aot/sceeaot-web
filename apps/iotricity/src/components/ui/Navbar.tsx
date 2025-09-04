@@ -42,7 +42,7 @@ const Navbar = ({
               href={
                 process.env.NODE_ENV === "development"
                   ? "http://localhost:3000/team"
-                  : "https://www.sceeaot.vercel.app/team"
+                  : "https://www.sceeaot.in/team"
               }
               className="flex flex-col w-full"
             >
