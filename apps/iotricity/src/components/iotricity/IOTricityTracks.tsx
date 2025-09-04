@@ -41,7 +41,16 @@ const IOTricityTracks = () => {
           >
             Best use of Machine Learning
           </h3>
-          <p className="text-sm lg:text-base text-secondary/80 leading-relaxed">
+          {/* Winner Information */}
+          <div className="border-b border-primary/20 pb-4 mb-4">
+            <p className="text-xs lg:text-sm text-primary font-medium mb-1">
+              WINNER
+            </p>
+            <p className="text-2lg lg:text-3xl font-bold text-secondary">
+              Infinite Loop
+            </p>
+          </div>
+          <p className="text-sm lg:text-base text-secondary/80 leading-relaxed mb-4">
             Recognition for the most innovative and effective implementation of
             machine learning algorithms and AI in IoT solutions.
           </p>
@@ -64,7 +73,16 @@ const IOTricityTracks = () => {
           >
             Best use of Cloud
           </h3>
-          <p className="text-sm lg:text-base text-secondary/80 leading-relaxed">
+          {/* Winner Information */}
+          <div className="border-b border-primary/20 pb-4 mb-4">
+            <p className="text-xs lg:text-sm text-primary font-medium mb-1">
+              WINNER
+            </p>
+            <p className="text-2lg lg:text-3xl font-bold text-secondary">
+              Sorcerers
+            </p>
+          </div>
+          <p className="text-sm lg:text-base text-secondary/80 leading-relaxed mb-4">
             Award for outstanding cloud computing integration, scalability, and
             distributed architecture in IoT applications.
           </p>
@@ -87,7 +105,16 @@ const IOTricityTracks = () => {
           >
             Best implementation of Security
           </h3>
-          <p className="text-sm lg:text-base text-secondary/80 leading-relaxed">
+          {/* Winner Information */}
+          <div className="border-b border-primary/20 pb-4 mb-4">
+            <p className="text-xs lg:text-sm text-primary font-medium mb-1">
+              WINNER
+            </p>
+            <p className="text-2lg lg:text-3xl font-bold text-secondary">
+              Thingdom
+            </p>
+          </div>
+          <p className="text-sm lg:text-base text-secondary/80 leading-relaxed mb-4">
             Celebrating excellence in cybersecurity, data protection, and secure
             communication protocols in IoT systems.
           </p>
@@ -110,7 +137,16 @@ const IOTricityTracks = () => {
           >
             Best all girls team
           </h3>
-          <p className="text-sm lg:text-base text-secondary/80 leading-relaxed">
+          {/* Winner Information */}
+          <div className="border-b border-primary/20 pb-4 mb-4">
+            <p className="text-xs lg:text-sm text-primary font-medium mb-1">
+              WINNER
+            </p>
+            <p className="text-2lg lg:text-3xl font-bold text-secondary">
+              Powerpuff Girls
+            </p>
+          </div>
+          <p className="text-sm lg:text-base text-secondary/80 leading-relaxed mb-4">
             Special recognition for the most outstanding project created by an
             all-female team, promoting diversity in tech.
           </p>

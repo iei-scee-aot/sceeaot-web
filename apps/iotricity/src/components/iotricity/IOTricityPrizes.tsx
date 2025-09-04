@@ -23,9 +23,9 @@ const IOTricityPrizes = () => {
       </div>
 
       {/* Winners Podium */}
-      <div className="flex flex-col lg:flex-row items-end justify-center gap-8 max-w-4xl mx-auto">
+      <div className="flex flex-col lg:flex-row items-end justify-center gap-6 lg:gap-8 max-w-6xl mx-auto px-4">
         {/* 2nd Place - Left */}
-        <div className="order-2 lg:order-1 bg-secondary/10 border border-secondary/30 rounded-lg p-6 lg:p-8 text-center hover:bg-secondary/20 transition-all duration-300 w-full lg:w-80">
+        <div className="order-2 lg:order-1 bg-secondary/10 border border-secondary/30 rounded-lg p-4 sm:p-6 lg:p-8 text-center hover:bg-secondary/20 transition-all duration-300 w-full max-w-sm sm:max-w-md lg:w-72 lg:max-w-none mx-auto lg:mx-0">
           <div className="flex justify-center mb-4">
             <Image
               src="/icons/second.svg"
@@ -36,21 +36,21 @@ const IOTricityPrizes = () => {
             />
           </div>
           <h3
-            className="text-xl lg:text-2xl font-bold text-secondary mb-4"
+            className="text-lg sm:text-xl lg:text-2xl font-bold text-secondary mb-4"
             style={{ fontFamily: "KMR Apparat1" }}
           >
             Runner Up
           </h3>
-          <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">
-            ₹3,000
+          <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-2 break-words">
+            AAMCA
           </div>
-          <p className="text-sm lg:text-base text-secondary/80">
+          {/* <p className="text-sm lg:text-base text-secondary/80">
             Certificate + Cash Prize + Swags
-          </p>
+          </p> */}
         </div>
 
         {/* 1st Place - Center (Elevated) */}
-        <div className="order-1 lg:order-2 bg-primary/10 border border-primary/30 rounded-lg p-8 lg:p-10 text-center hover:bg-primary/20 transition-all duration-300 w-full lg:w-96 lg:transform lg:scale-110">
+        <div className="order-1 lg:order-2 bg-primary/10 border border-primary/30 rounded-lg p-6 sm:p-8 lg:p-10 text-center hover:bg-primary/20 transition-all duration-300 w-full max-w-sm sm:max-w-md lg:w-80 lg:max-w-none mx-auto lg:mx-0 lg:transform lg:scale-110">
           <div className="flex justify-center mb-6">
             <Image
               src="/icons/first.svg"
@@ -61,21 +61,21 @@ const IOTricityPrizes = () => {
             />
           </div>
           <h3
-            className="text-2xl lg:text-3xl font-bold text-primary mb-6"
+            className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary mb-6"
             style={{ fontFamily: "KMR Apparat1" }}
           >
             Winner
           </h3>
-          <div className="text-4xl lg:text-5xl font-bold text-primary mb-4">
-            ₹5,000
+          <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-4xl font-bold text-primary mb-4 break-words">
+            Team Pentabytes
           </div>
-          <p className="text-base lg:text-lg text-secondary/80">
+          {/* <p className="text-base lg:text-lg text-secondary/80">
             Certificate + Cash Prize + Swags
-          </p>
+          </p> */}
         </div>
 
         {/* 3rd Place - Right */}
-        <div className="order-3 bg-secondary/10 border border-secondary/30 rounded-lg p-6 lg:p-8 text-center hover:bg-secondary/20 transition-all duration-300 w-full lg:w-80">
+        <div className="order-3 bg-secondary/10 border border-secondary/30 rounded-lg p-4 sm:p-6 lg:p-8 text-center hover:bg-secondary/20 transition-all duration-300 w-full max-w-sm sm:max-w-md lg:w-72 lg:max-w-none mx-auto lg:mx-0">
           <div className="flex justify-center mb-4">
             <Image
               src="/icons/third.svg"
@@ -86,17 +86,17 @@ const IOTricityPrizes = () => {
             />
           </div>
           <h3
-            className="text-xl lg:text-2xl font-bold text-secondary mb-4"
+            className="text-lg sm:text-xl lg:text-2xl font-bold text-secondary mb-4"
             style={{ fontFamily: "KMR Apparat1" }}
           >
             2nd Runner Up
           </h3>
-          <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">
-            ₹2,000
+          <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-2 break-words">
+            Tactinomikon
           </div>
-          <p className="text-sm lg:text-base text-secondary/80">
+          {/* <p className="text-sm lg:text-base text-secondary/80">
             Certificate + Cash Prize + Swags
-          </p>
+          </p> */}
         </div>
       </div>
 

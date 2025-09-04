@@ -285,19 +285,19 @@ const HomePage = () => {
           {/* Content */}
           <div className="px-4 lg:px-8 py-12 lg:py-8 text-sm lg:text-[2rem] font-pxg lg:font-light lg:leading-relaxed">
             {isAfterAugust30 ? (
-              /* Event Started Message */
+              /* Event Ended Message */
               <div className="flex flex-col justify-center items-center lg:min-h-[23.5rem] text-center">
                 <div className="mb-8">
                   <h3
                     className="text-2xl lg:text-4xl font-bold text-primary mb-4"
                     style={{ fontFamily: "KMR Apparat1" }}
                   >
-                    🎉 Event Has Started! 🎉
+                    🎉 Event Has Concluded! 🎉
                   </h3>
                   <p className="text-base lg:text-xl text-secondary/80">
-                    IOTricity Season 2.0 is now live!
+                    IOTricity Season 2.0 has now concluded! See You Next Year.
                     <br />
-                    Check out the dedicated page for more details and updates.
+                    Check out the dedicated page for the Highlights and Winners.
                   </p>
                 </div>
 
