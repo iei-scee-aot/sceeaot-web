@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://iotricity.sceeaot.in",
+    canonical: "https://iotricity.vercel.app",
   },
   category: "education",
 };

@@ -191,24 +191,9 @@ const HomePage = () => {
                   </Button>
                 </Link> */}
 
-                <Link href="problems" className="w-full sm:w-auto">
+                {/* <Link href="problems" className="w-full sm:w-auto">
                   <Button variant="primary">Problem Statements</Button>
-                </Link>
-
-                <Link href="https://iotricitys2.notion.site/IOTricity-S2-Hackers-Guild-245b2a014830804cabe3ef4a6817fab5?pvs=74">
-                  <Button
-                    variant="secondary"
-                    className="group border-primary/20 hover:border-primary/50"
-                  >
-                    <span className="flex items-center gap-2">
-                      Hackers Guild
-                      <ExternalLink
-                        size={16}
-                        className="transition-transform group-hover:scale-110"
-                      />
-                    </span>
-                  </Button>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
@@ -292,6 +277,20 @@ const HomePage = () => {
                   iconPosition="right"
                 >
                   Rules and Regulations
+                </Button>
+              </Link>
+              <Link href="https://iotricitys2.notion.site/IOTricity-S2-Hackers-Guild-245b2a014830804cabe3ef4a6817fab5?pvs=74">
+                <Button
+                  variant="secondary"
+                  className="group border-primary/20 hover:border-primary/50"
+                >
+                  <span className="flex items-center gap-2">
+                    Hackers Guild
+                    <ExternalLink
+                      size={16}
+                      className="transition-transform group-hover:scale-110"
+                    />
+                  </span>
                 </Button>
               </Link>
             </div>
