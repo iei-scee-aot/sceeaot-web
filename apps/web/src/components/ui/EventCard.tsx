@@ -17,7 +17,6 @@ interface EventCardProps {
 const EventCard: React.FC<EventCardProps> = ({
   imageSrc,
   title,
-  status,
   date,
   mode,
   fees,
@@ -107,7 +106,7 @@ const EventCard: React.FC<EventCardProps> = ({
           </div>
         </div>
 
-        <p className="text-xs px-3 text-secondary mt-2 font-pxg">{description}</p>
+        <p className="text-xs m-3 px-3 text-secondary mt-2 font-pxg">{description}</p>
       </div>
     </div>
   );
