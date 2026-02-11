@@ -1,0 +1,344 @@
+import { currentTeamProps, prevTeamProps } from "@/types";
+
+export const prevTeam: prevTeamProps[] = [
+    {
+        "id": 1,
+        "headline": "The Previous Team",
+        "imageUrl": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rhlcdh5oLMNJOCXnKiHD7Ua35Ww8EVepuQtP4Z",
+        "imageAlt": "scee-old-team"
+    }
+];
+
+export const currentTeam: currentTeamProps[] = [
+    {
+        "id": 1,
+        "name": "Core Team",
+        "gridCols": "grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2",
+        "members": [
+            {
+                "id": 1,
+                "name": "Ritam Dey",
+                "designation": "Convener",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhhDlwIjQtwXgj4lN2y8f5YkdRqHosM7AuUQTL",
+                "links": [
+                    "https://www.facebook.com/share/1EpY3SMJVj/",
+                    "https://www.instagram.com/ritamdey68/",
+                    "https://x.com/RitamDey315755?t=4SD9_iIsweoOuQspuSvVOA&s=09",
+                    "https://www.linkedin.com/in/ritam-dey-9494a2326"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Sovan Mondal",
+                "designation": "Treasurer",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhLVJPfrDz7N63BHlPeJLcnjgKxb4RGhXAq8D9",
+                "links": [
+                    "https://www.facebook.com/share/1McVJvidNu/",
+                    "https://www.instagram.com/sovanm_07/",
+                    "https://www.linkedin.com/in/sovan-mondal-99b440262"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Tech Team",
+        "gridCols": "grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3",
+        "members": [
+            {
+                "id": 1,
+                "name": "Debarshee Chakraborty",
+                "designation": "Lead",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhPa78TnfbY9dtjrPTuZONcCWVk0BKfF5aXIoD",
+                "links": [
+                    "https://www.facebook.com/dinocodesx",
+                    "https://www.instagram.com/dinocodesx/",
+                    "https://x.com/dinocodesx",
+                    "https://www.linkedin.com/in/dinocodesx"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Arnab Biswas",
+                "designation": "Co-Lead",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhC2cKWl5SuCJt3og8b1BvxhNMQVyXjLYfia7A",
+                "links": [
+                    "https://www.facebook.com/share/1VQAZ6ggo8/",
+                    "https://www.instagram.com/arnab.biswas.1512/",
+                    "https://x.com/_Arnab_Biswas/",
+                    "https://www.linkedin.com/in/arnab-biswas-rk108"
+                ]
+            },
+
+            {
+                "id": 3,
+                "name": "Achinta Siddhanta",
+                "designation": "Member",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rhs2gawYqaV7Lb1qtDJpHmYyO9jMBFgXerwEAv",
+                "links": [
+                    "https://www.facebook.com/sidd.a03",
+                    "https://www.instagram.com/sidd.a03/",
+                    "https://x.com/sidd_a03",
+                    "https://www.linkedin.com/in/achinta-siddhanta"
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Debpratim Sharma",
+                "designation": "Member",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhDh8Ryq5dcmHwh0xITrgBvq8fu7tJpUZsdCyK",
+                "links": [
+                    "https://www.facebook.com/share/18eYsdYadd/",
+                    "https://www.instagram.com/me_ur_deb/",
+                    "https://x.com/DebpratimSharm1/",
+                    "https://www.linkedin.com/in/debpratim-sharma-916203267"
+                ]
+            },
+            {
+                "id": 5,
+                "name": "Indranil Das",
+                "designation": "Member",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rh5vbsRlI2A5xdTCzp14NZgUqi9tnQVbMWFfI3",
+                "links": [
+                    "https://www.instagram.com/neel.sg_",
+                    "https://www.linkedin.com/in/indranil-das-586837284"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Design Team",
+        "gridCols": "grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3",
+        "members": [
+            {
+                "id": 1,
+                "name": "Rhritwika Das",
+                "designation": "Lead",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rh53DNuHI2A5xdTCzp14NZgUqi9tnQVbMWFfI3",
+                "links": ["https://www.linkedin.com/in/rhritwika-das-b1b74b262/"]
+            },
+            {
+                "id": 2,
+                "name": "Abhinandan Shadhukhan",
+                "designation": "Co-Lead",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhRTivYlBcz4gusHZkNxi5Fjn8XvYemS2adVc7",
+                "links": [
+                    "https://www.linkedin.com/in/abhinandan-sadhukhan-5b011a269"
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Aditya Kumar Gupta",
+                "designation": "Member",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhD2DIwdcmHwh0xITrgBvq8fu7tJpUZsdCyKzS",
+                "links": [
+                    "https://www.facebook.com/share/12GmE4ownR1/?mibextid=qi2Omg",
+                    "https://www.instagram.com/_adiiiiiii._.04",
+                    "https://x.com/EddY___04",
+                    "https://www.linkedin.com/in/aditya-kumar-gupta-5616a129b"
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Jayeeta Das",
+                "designation": "Member",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhqLwCsrnJC7rcFY8KOnjVMTdwWvNki6x92AEB",
+                "links": [
+                    "https://www.facebook.com/share/1BBcYsWTeM/?mibextid=qi2Omg",
+                    "https://www.instagram.com/jayeeta908",
+                    "https://x.com/17Jayeeta?t=t5r_BBXj-0JYHxidTsrjVw&s=08",
+                    "https://www.linkedin.com/in/jayeeta-das-8014ba2a4"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Content Team",
+        "gridCols": "grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3",
+        "members": [
+            {
+                "id": 1,
+                "name": "Asmita Mukherjee",
+                "designation": "Lead",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rh8QDJj9SxEsPRyQ2pufkncJYveINZTb753qa4",
+                "links": ["https://www.linkedin.com/in/asmita-mukherjee-53b494242"]
+            },
+            {
+                "id": 2,
+                "name": "Anisha Singha",
+                "designation": "Co-Lead",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhTj1V53stG9rZqRND8HX3fYsFbxPuVpkIdcoQ",
+                "links": ["https://www.linkedin.com/in/anisha-singha-b6381931b"]
+            },
+            {
+                "id": 3,
+                "name": "Koushani Kundu",
+                "designation": "Member",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RheVFmNNzhIsqAxZXnSYW2za5EbC8wpjygto7v",
+                "links": [
+                    "https://www.instagram.com/roop_zafaarian",
+                    "https://www.linkedin.com/in/koushani-kundu-b02199284",
+                    "https://www.facebook.com/share/1DhwpnHTyV/"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "PR & Marketing Team",
+        "gridCols": "grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3",
+        "members": [
+            {
+                "id": 1,
+                "name": "Swapnil Dassharma",
+                "designation": "Lead",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rh1VoT3Et7QV5tB8ivhMZbY4dapLFmDuzfUgol",
+                "links": [
+                    "https://www.facebook.com/share/1E9EQicMRM/",
+                    "https://www.instagram.com/swapnil_dassharma",
+                    "https://www.linkedin.com/in/swapnil-dassharma-1b664b213"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Aritrika chatterjee",
+                "designation": "Co-Lead",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhC8WndO05SuCJt3og8b1BvxhNMQVyXjLYfia7",
+                "links": [
+                    "https://www.facebook.com/share/1B76dPjtYJ/",
+                    "https://www.instagram.com/_a_riiy",
+                    "https://www.linkedin.com/in/aritrika-chatterjee-247104308"
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Amritesh Singh",
+                "designation": "Member",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rhr8R1brCwB0yc3xHao2nJslKUpdEFifIAGShC",
+                "links": [
+                    "https://www.facebook.com/share/1D6e4YqY9J/",
+                    "https://www.instagram.com/justamrit__",
+                    "https://www.linkedin.com/in/amritesh-singh-bb6b92346"
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Anindya Sundar Das",
+                "designation": "Member",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhAQCX4VWjGkhi1g3pRxlCEBz7e4M6XLbqQnyF",
+                "links": [
+                    "https://www.facebook.com/share/1Dasrb3pgu/",
+                    "https://www.instagram.com/_aninz",
+                    "https://www.linkedin.com/in/anindya-sundar-das-798b942a1"
+                ]
+            },
+            {
+                "id": 5,
+                "name": "Anurati Bhaduri",
+                "designation": "Member",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rh9NzXCGAeQlUgIYx42MXEpDAwvuC5fqiKakHh",
+                "links": [
+                    "https://www.instagram.com/anurati__",
+                    "http://www.linkedin.com/in/anurati-bhaduri-807773353"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Photography Team",
+        "gridCols": "grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3",
+        "members": [
+            {
+                "id": 1,
+                "name": "Dhrubajit ghosh",
+                "designation": "Lead",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rh2h3mPxtvh6KipNB1PlcXbs3dEYI79S0CgMzH",
+                "links": [
+                    "https://www.facebook.com/share/16qFXU7iDX/",
+                    "https://www.instagram.com/photography_with_abirla"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Asmit Putatunda",
+                "designation": "Co-Lead",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhhxHCJ9QtwXgj4lN2y8f5YkdRqHosM7AuUQTL",
+                "links": [
+                    "https://www.facebook.com/profile.php?id=100094195157462",
+                    "https://www.instagram.com/mostly_insane_0_0",
+                    "https://x.com/AsmitWick2005"
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Hrisikesh Ghosh",
+                "designation": "Member",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhzviMyk3Dl6Uym4bapcM3Yt0wOosHeCi1Z5XB",
+                "links": [
+                    "https://www.facebook.com/share/16HwyVvMdH/",
+                    "https://www.instagram.com/hrisi_onroads",
+                    "https://www.linkedin.com/in/hrisikesh-ghosh-771709353"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Videography Team",
+        "gridCols": "grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3",
+        "members": [
+            {
+                "id": 1,
+                "name": "Suvadeep roy",
+                "designation": "Lead",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhGbWfNm0R7mbe0Lq2XWIACxz3tvgYlT8ydcuU",
+                "links": [
+                    "https://www.facebook.com/share/172aqqpBjC/",
+                    "https://www.instagram.com/suvadeep_roy_777",
+                    "https://x.com/RoySuvadeep7",
+                    "https://www.linkedin.com/in/suvadeep-roy-a6281b273"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Anish Sasmal",
+                "designation": "Co-Lead",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhXjJJUZuGWVQD4pK8tOly7YxTrwJNnsoMI3CB",
+                "links": [
+                    "https://www.facebook.com/anish.sasmal.9",
+                    "https://www.instagram.com/iam_anish___",
+                    "https://x.com/AnishSasmal",
+                    "https://www.linkedin.com/in/anish-sasmal-9a8111291"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Previous Convenors",
+        "gridCols": "grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3",
+        "members": [
+            {
+                "id": 1,
+                "name": "Arpan Das",
+                "designation": "2023-2024",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhaY0IdMBCJHgGD4AEjcfi19I578KrslXnxLN6",
+                "links": [
+                    "https://www.facebook.com/share/1E2vLaWC7Z/",
+                    "https://www.instagram.com/arpan_in_ashes/",
+                    "https://www.linkedin.com/in/arpan-das-33713b2bb/"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Sayan Mallick",
+                "designation": "2022-2023",
+                "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhrIZfyylCwB0yc3xHao2nJslKUpdEFifIAGSh",
+                "links": []
+            }
+        ]
+    }
+]
