@@ -1,30 +1,12 @@
+"use client"
+
 import Image from "next/image";
 import { useState } from "react";
+import { teamMembersProps } from "@/types";
 
-interface CardProps {
-  Name?: string;
-  Designation?: string;
-  imagePath?: string;
-  links?: string[];
-}
-
-const TeamCard = ({
-  Name = "Member Name",
-  Designation = "Designation",
-  imagePath = "",
-  links = [
-    "https://facebook.com",
-    "https://instagram.com",
-    "https://x.com/",
-    "https://threads.net",
-    "https://linkedin.com",
-  ],
-}: CardProps) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const toggleCard = () => {
-    setIsExpanded(!isExpanded);
-  };
+const TeamCard = (props: teamMembersProps) => {
+  const { links } = props;
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
   // Map known domains to their corresponding icon file names
   const domainToIconMap: { [key: string]: string } = {
@@ -38,7 +20,7 @@ const TeamCard = ({
   // Function to extract the domain from a URL
   const getDomainFromUrl = (url: string) => {
     try {
-      const domain = new URL(url).hostname.replace("www.", "");
+      const domain: string = new URL(url).hostname.replace("www.", "");
       return domain;
     } catch {
       console.error("Invalid URL:", url);
@@ -49,10 +31,10 @@ const TeamCard = ({
   return (
     <div className="h-[440px] md:h-[280px]  mb-6 md:mb-8">
       <div
-        className={`relative cursor-pointer w-[16rem] md:w-[10rem] flex flex-col items-center justify-start transition-all duration-0 overflow-hidden ${
-          isExpanded ? "h-[28rem] md:h-[18rem]" : "h-[25rem] md:h-[16rem]"
+        className={`relative cursor-pointer w-[16rem] md:w-[10rem] flex flex-col items-center justify-start transition-all duration-0 overflow-hidden h-[25rem] md:h-[16rem] ${
+            isExpanded ? "h-[28rem] md:h-[18rem]" : "h-[25rem] md:h-[16rem]"
         }`}
-        onClick={toggleCard}
+        onClick={() => setIsExpanded(prev => !prev)}
       >
         <svg
           className="absolute top-[-2px] right-[1.4rem] md:right-[0.9rem] z-10 w-10 h-14 md:w-5 md:h-7 origin-top-right"
@@ -88,8 +70,8 @@ const TeamCard = ({
           <div className="flex justify-center items-center w-full">
             <Image
               unoptimized
-              src={imagePath}
-              alt={Name}
+              src={props.imagePath}
+              alt={props.name}
               loading="lazy"
               width={160}
               height={160}
@@ -99,43 +81,44 @@ const TeamCard = ({
           </div>
           <div className="border-t-[0.5px] h-[6rem] md:h-[3.5rem] border-gray-500 text-left pt-2 md:pt-1.5 px-[1rem] md:px-[0.7rem]">
             <h2 className="font-pxg font-thin leading-[1.8rem] md:leading-[1.2rem] text-xl md:text-sm">
-              {Name}
+              {props.name}
             </h2>
             <p className="text-xl md:text-sm font-thin font-pxg text-primary">
-              {Designation}
+              {props.designation}
             </p>
           </div>
 
           {/* Links Section */}
-          {isExpanded && (
-            <div className="flex items-center justify-around border-dashed border-gray-500 border-t-[0.5px] px-2 md:px-1.5 pt-3 md:pt-2  mt-3 mx-[1rem] md:mx-[0.7rem] ]">
-              {links.map((link, index) => {
-                const domain = getDomainFromUrl(link);
-                const icon =
-                  domain && domainToIconMap[domain]
-                    ? domainToIconMap[domain]
-                    : "default.jpg";
 
-                return (
-                  <a
-                    key={index}
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      unoptimized
-                      src={`/${icon}`}
-                      alt={domain || "link"}
-                      width={24}
-                      height={24}
-                      className="w-5 h-5 md:w-4 md:h-4 object-contain"
-                      loading="lazy"
-                    />
-                  </a>
-                );
-              })}
-            </div>
+          { isExpanded && (
+              <div className="flex items-center justify-around border-dashed border-gray-500 border-t-[0.5px] px-2 md:px-1.5 pt-3 md:pt-2  mt-3 mx-[1rem] md:mx-[0.7rem] ]">
+                {links?.map((link: string, index: number) => {
+                  const domain = getDomainFromUrl(link);
+                  const icon =
+                      domain && domainToIconMap[domain]
+                          ? domainToIconMap[domain]
+                          : "default.jpg";
+
+                  return (
+                      <a
+                          key={index}
+                          href={link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                      >
+                        <Image
+                            unoptimized
+                            src={`/${icon}`}
+                            alt={domain || "link"}
+                            width={24}
+                            height={24}
+                            className="w-5 h-5 md:w-4 md:h-4 object-contain"
+                            loading="lazy"
+                        />
+                      </a>
+                  );
+                })}
+              </div>
           )}
         </div>
       </div>
