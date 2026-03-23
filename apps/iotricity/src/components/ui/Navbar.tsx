@@ -6,6 +6,7 @@ const Navbar = ({
   ruleColor = "#F6F6F4",
   aboutColor = "#F6F6F4",
 }) => {
+  console.log(process.env.NODE_ENV);
   return (
     <>
       {/* Mobile view */}
@@ -189,7 +190,7 @@ const Navbar = ({
               href={
                 process.env.NODE_ENV === "development"
                   ? "http://localhost:3000/team"
-                  : "https://www.sceeaot.vercel.app/team"
+                  : "https://www.sceeaot.in/team"
               }
               className=" justify-center items-baseline flex  w-full"
             >
