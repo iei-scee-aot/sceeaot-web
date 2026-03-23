@@ -113,7 +113,7 @@ const Header = () => {
               </td>
               <td className="w-[24px] h-[24px] md:w-[28px] md:h-[28px] lg:w-[32px] lg:h-[32px] xl:w-[36px] xl:h-[36px] 2xl:w-[40px] 2xl:h-[40px] border-l-[0.5px] border-t-[0.5px] border-gray-500 text-xs font-semibold">
                 <a
-                  href="https://whatsapp.com"
+                  href="https://chat.whatsapp.com/DuI1NQ4y1hpGp33mL0lWp8"
                   className="flex justify-center items-center rounded-md"
                   target="_blank"
                   rel="noopener noreferrer"
