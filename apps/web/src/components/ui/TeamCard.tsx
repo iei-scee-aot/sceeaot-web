@@ -93,7 +93,7 @@ const TeamCard = ({
               loading="lazy"
               width={160}
               height={160}
-              className="object-cover w-[16rem] h-[16rem] md:w-[10rem] md:h-[10rem]"
+              className="object-cover w-[16rem] h-[18rem] md:w-[10rem] md:h-[10rem]"
               priority={false}
             />
           </div>
