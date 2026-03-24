@@ -85,7 +85,8 @@ const TeamCard = ({
 
         {/* Inner Content */}
         <div className="absolute inset-0 top-0 flex flex-col z-0 text-center">
-          <div className="flex justify-center items-center w-full">
+          <div className="flex justify-center items-center w-full relative">
+            <div className="w-full h-full rounded-t-full blur-2xl bg-gradient-to-t from-[#FEC20C]/50 via-#FEC20C]/20 to-background absolute bottom-0 -z-10 "/>
             <Image
               unoptimized
               src={imagePath}
