@@ -147,6 +147,51 @@ export const faqData: FAQItem[] = [
   }
 ];
 
+export const eventSchedule = [
+  {
+    id: 1,
+    title: "Online Registration Opens",
+    date: "March 29, 2026",
+    type: "Registration",
+  },
+  {
+    id: 2,
+    title: "Offile Registration Opens",
+    date: "April 01, 2026",
+    type: "Registration",
+  },
+  {
+    id: 3,
+    title: "Registration Ends",
+    date: "April 09, 2026",
+    type: "Registration",
+  },
+  {
+    id: 4,
+    title: "Day 1",
+    date: "April 12, 2026",
+    type: "Tournament",
+  },
+  {
+    id: 5,
+    title: "Day 2",
+    date: "April 13, 2026",
+    type: "Tournament",
+  },
+  {
+    id: 6,
+    title: "Day 3 - Final Round",
+    date: "April 16, 2026",
+    type: "Tournament",
+  },
+  {
+    id: 7,
+    title: "Prize Distribution",
+    date: "April 16, 2026",
+    type: "Ceremony",
+  }
+]
+
 export const hasTrackPrizes = false;
 export const hasSponsors = true;
 export const isPrizesVisible = false;
