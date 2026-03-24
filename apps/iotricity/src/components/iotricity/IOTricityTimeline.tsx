@@ -191,9 +191,7 @@ const IOTricityTimeline = () => {
       {/* Timeline Info */}
       <div className="text-center mt-8 px-4">
         <p className="text-base lg:text-lg text-secondary/70 max-w-2xl mx-auto">
-          Follow the complete journey of IOTricity Season 2.0! From online
-          workshops and hackathon to the offline finale, every moment is
-          designed to enhance your IoT and electrical engineering skills.
+          Follow the complete journey of our Gaming Event! From intense online qualifiers to the thrilling finale, every moment is packed with action, competition, and unforgettable gameplay.
         </p>
       </div>
     </div>
