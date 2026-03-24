@@ -5,8 +5,6 @@ import Headlines from '../ui/Headlines'
 import { event } from '../../../constants'
 
 const CountdownSection = () => {
-  const currentTime = new Date().getTime();
-
   return (
     <>
         <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
@@ -49,7 +47,7 @@ const CountdownSection = () => {
 
           {/* Content */}
           <div className="px-4 lg:px-8 py-12 lg:py-8 text-sm lg:text-[2rem] font-pxg lg:font-light lg:leading-relaxed flex justify-center items-center lg:min-h-[23.5rem]">
-            <Countdown now={currentTime} />
+            <Countdown serverNow={Date.now()} />
           </div>
         </div>
         <Divider />

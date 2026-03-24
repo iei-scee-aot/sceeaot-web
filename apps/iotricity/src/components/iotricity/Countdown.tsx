@@ -11,7 +11,7 @@ interface TimeRemaining {
   seconds: number;
 }
 
-const Countdown = ({ now }: { now: number }) => {
+const Countdown = ({ serverNow }: { serverNow: number }) => {
   const [timeRemaining, setTimeRemaining] = useState<TimeRemaining>({
     days: 0,
     hours: 0,
@@ -30,8 +30,13 @@ const Countdown = ({ now }: { now: number }) => {
 
   useEffect(() => {
     setIsClient(true);
+    const clientMountTime = Date.now(); // capture once — used to measure elapsed time
 
     const calculateTimeRemaining = () => {
+      // Use server-anchored time: server's trusted timestamp + real elapsed ms since mount.
+      // This means faking the system clock shifts Date.now() but the phase boundaries
+      // (derived from serverNow) don't move, so users can't jump phases by spoofing time.
+      const currentTime = serverNow + (Date.now() - clientMountTime);
       const hackathonStartDate = new Date(event.eventStart).getTime();
       const hackathonEndDate = new Date(event.eventEnd).getTime();
       const winnersDate = new Date(event.eventWinnersDate).getTime();
@@ -41,19 +46,19 @@ const Countdown = ({ now }: { now: number }) => {
       let title: string;
       let description: string;
 
-      if (now < hackathonStartDate) {
+      if (currentTime < hackathonStartDate) {
         targetDate = hackathonStartDate;
         phase = "initial";
         title = "The Ultimate Esports Showdown Begins";
         description =
           "Gear up for intense battles in BGMI, Free Fire, Valorant, and eFootball. Assemble your squad and prepare to dominate!";
-      } else if (now < hackathonEndDate) {
+      } else if (currentTime < hackathonEndDate) {
         targetDate = hackathonEndDate;
         phase = "tournament"; // Changed phase name from 'hackathon'
         title = "Live Tournament Ends";
         description =
           "The battlegrounds are live! Teams are fighting for the championship. Time remaining in the tournament:";
-      } else if (now < winnersDate) {
+      } else if (currentTime < winnersDate) {
         targetDate = winnersDate;
         phase = "winners";
         title = "Champions Will Be Crowned";
@@ -76,7 +81,7 @@ const Countdown = ({ now }: { now: number }) => {
         return;
       }
 
-      const difference = targetDate - now;
+      const difference = targetDate - currentTime;
 
       if (difference > 0) {
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
