@@ -170,7 +170,34 @@ export const eventSchedule = [
   }
 ]
 
+export const eventRules = [
+  {
+    section: "General Rules",
+    rules: [
+      {
+        title: "Eligibility Criteria",
+        content: "ESCAYPE is open to all undergraduate students of Academy of Technology (1st to 4th year). Mixed teams across departments and years are encouraged. Participants must register for their respective games and ensure fair play in this online tournament."
+      },
+      {
+        title: "Team Formation",
+        content: "Teams must meet game-specific requirements: 4 members for Valorant, and a minimum of 3 members for BGMI and Free Fire. Mixed teams across different years and departments are allowed. Team composition cannot be changed after the registration deadline."
+      },
+      {
+        title: "Registration Process",
+        content: "Registration will be conducted online through the official ESCAYPE platform with complete participant/team details. A single team or participant can register for multiple games, but each entry must be submitted separately. The registration deadline is strictly enforced, and no late entries will be accepted."
+      },
+      {
+        title: "Code of Conduct",
+        content: "All participants must maintain professional behavior, ensure respectful communication, and follow fair play throughout the event. Any form of harassment, misconduct, hacking, smurfing, or account sharing is strictly prohibited and will lead to immediate disqualification. Participants must adhere to all event rules and guidelines."
+      }
+    ]
+  }
+];
+
 export const hasTrackPrizes = false;
 export const hasSponsors = false;
 export const isPrizesVisible = false;
 export const timelineVisible = true;
+
+export const lastUpdated = "March, 2026";
+export const supportEmail = "sceeaot@gmail.com"
