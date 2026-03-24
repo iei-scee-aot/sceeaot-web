@@ -17,7 +17,7 @@ const PrizeSection = () => {
             {isPrizesVisible ? (
               <IOTricityPrizes />
             ) : (
-              <ComingSoon description="Prize structure and rewards for the hackathon are being finalized. Stay tuned for exciting prizes and recognition opportunities." />
+              <ComingSoon description="🏆 Rewards incoming! Stay tuned for prizes worth the grind 🎮🔥" />
             )}
           </div>
         </div>

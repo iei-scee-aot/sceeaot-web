@@ -7,7 +7,7 @@ export const trackPrizes: TrackPrize[] = [];
 export const event: EventInfo = {
     registrationEnd: "2026-04-09T20:00:00",
 
-    registrationLink: "#",
+    registrationLink: "https://forms.gle/XLBaguGiTHRN3vVT7",
 
     heroBackground: "/images/hero_background.svg",
 
@@ -37,7 +37,7 @@ export const event: EventInfo = {
       "The escaype begins here… are you ready?!! 👀🔥"
     ],
     
-    eventCinematicDesctiption: "🚀 The wait is over! Relive the energy, innovation, and excitement of Iotricity Season 2 - D-Day Finale 🎥✨",
+    eventCinematicDesctiption: "🚀 The wait is over! Dive into the action, intense battles, and clutch plays from our Ultimate Gaming Arena 🎮⚡",
 
     trailer: "https://www.youtube.com/embed/-Bq2TGLDlDg",
 
