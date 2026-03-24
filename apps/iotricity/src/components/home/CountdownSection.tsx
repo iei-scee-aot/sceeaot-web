@@ -5,7 +5,7 @@ import Headlines from '../ui/Headlines'
 import { event } from '../../../constants'
 
 const CountdownSection = () => {
-  const currentTime = new Date(event.eventEnd).getTime();
+  const currentTime = new Date().getTime();
 
   return (
     <>
