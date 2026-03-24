@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Confetti from "./Confetti";
-import { event } from "../../../constants";
+import { event, eventWinners } from "../../../constants";
 
 interface TimeRemaining {
   days: number;

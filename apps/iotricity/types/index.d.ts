@@ -39,3 +39,14 @@ export interface FAQItem {
   question: string;
   answer: string;
 }
+
+export interface winner {
+  rank: 1 | 2 | 3;
+  name: string;
+}
+export interface Winners {
+  id: number;
+  game: "Valorant" | "BGMI" | "Free Fire" | "E-Football";
+  imageUrl: string;
+  winners: winner[];
+}

@@ -1,4 +1,4 @@
-import { EventInfo, FAQItem, Mentor, TrackPrize } from "../types";
+import { EventInfo, FAQItem, Mentor, TrackPrize, Winners } from "../types";
 
 export const eventMentors: Mentor[] = [];
 
@@ -45,7 +45,7 @@ export const event: EventInfo = {
 
     eventStart: "2026-04-12",
     eventEnd: "2026-04-16",
-    eventWinnersDate: "2026-04-16T14.00.00",
+    eventWinnersDate: "2026-04-16T16.00.00",
 }
 
 export const faqData: FAQItem[] = [
@@ -196,7 +196,9 @@ export const eventRules = [
   }
 ];
 
-export const eventWinners = [
+export const eventWinners: Winners[] = []
+
+const dummyData = [
   {
     id: 1,
     game: "Valorant",
@@ -204,17 +206,17 @@ export const eventWinners = [
     winners: [
       {
         rank: 1,
-        name: "Team Alpha",
+        name: "Team 1",
       },
       {
         rank: 2,
-        name: "Team Bravo",
+        name: "Team 2",
       },
       {
         rank: 3,
-        name: "Team Charlie",
+        name: "Team 3",
       },
-    ],
+    ]
   },
   {
     id: 2,
@@ -223,17 +225,17 @@ export const eventWinners = [
     winners: [
       {
         rank: 1,
-        name: "Team Delta",
+        name: "Team 1",
       },
       {
         rank: 2,
-        name: "Team Echo",
+        name: "Team 2",
       },
       {
         rank: 3,
-        name: "Team Foxtrot",
-      },
-    ],
+        name: "Team 3"
+      }
+    ]
   },
   {
     id: 3,
@@ -242,17 +244,17 @@ export const eventWinners = [
     winners: [
       {
         rank: 1,
-        name: "Team Golf",
+        name: "Team 1",
       },
       {
         rank: 2,
-        name: "Team Hotel",
+        name: "Team 2",
       },
       {
         rank: 3,
-        name: "Team India",
-      },
-    ],
+        name: "Team 3"
+      }
+    ]
   },
   {
     id: 4,
@@ -261,23 +263,22 @@ export const eventWinners = [
     winners: [
       {
         rank: 1,
-        name: "Team Juliet",
+        name: "Team 1",
       },
       {
         rank: 2,
-        name: "Team Kilo",
+        name: "Team 2",
       },
       {
         rank: 3,
-        name: "Team Lima",
-      },
-    ],
-  },
+        name: "Team 3"
+      }
+    ]
+  }
 ]
 
 export const hasTrackPrizes = false;
 export const hasSponsors = false;
-export const isPrizesVisible = true;
 export const timelineVisible = true;
 
 export const lastUpdated = "March, 2026";
