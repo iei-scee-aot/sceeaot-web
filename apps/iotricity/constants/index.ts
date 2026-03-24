@@ -146,3 +146,8 @@ export const faqData: FAQItem[] = [
     answer: "You can reach out to the SCEE event coordination team through the contact info mentioned in the registration form or the official brochure."
   }
 ];
+
+export const hasTrackPrizes = false;
+export const hasSponsors = true;
+export const isPrizesVisible = false;
+export const timelineVisible = true;

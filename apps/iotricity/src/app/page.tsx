@@ -6,15 +6,13 @@ import MentorSection from "@/components/home/MentorSection";
 import Timeline from "@/components/home/Timeline";
 import Accordion from "@/components/ui/Accordion";
 import Headlines from "@/components/ui/Headlines";
-import { event, eventMentors, faqData } from "../../constants";
+import { event, eventMentors, faqData, hasSponsors, hasTrackPrizes } from "../../constants";
 import PrizeSection from "@/components/home/PrizeSection";
 import TracSection from "@/components/home/TracSection";
 import SponsorSection from "@/components/home/SponsorSection";
 
 const HomePage = () => {
   const isMentorsVisible = eventMentors.length > 0 ? true : false;
-  const hasTrackPrizes = false;
-  const hasSponsors = true;
 
   return (
     <>

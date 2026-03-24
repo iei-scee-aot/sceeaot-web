@@ -3,9 +3,9 @@ import IOTricityPrizes from '../iotricity/IOTricityPrizes'
 import ComingSoon from '../shared/ComingSoon'
 import Divider from '../ui/Divider'
 import Headlines from '../ui/Headlines'
+import { isPrizesVisible } from '../../../constants'
 
 const PrizeSection = () => {
-  const isPrizesVisible = false;
 
   return (
     <>

@@ -3,9 +3,10 @@ import Headlines from '../ui/Headlines'
 import IOTricityTimeline from '../iotricity/IOTricityTimeline'
 import ComingSoon from '../shared/ComingSoon'
 import Divider from '../ui/Divider'
+import { timelineVisible } from '../../../constants'
 
 const Timeline = () => {
-  const timelineVisible = true;
+
   return (
     <>
         <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
