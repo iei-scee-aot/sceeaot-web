@@ -24,13 +24,17 @@ export const event: EventInfo = {
     eventAboutSubDescription: "Innovation • Technology • Community",
 
     eventAboutDescription: [
-      "Welcome to IOTricity Season 2.0 - where innovation meets electricity! This flagship event represents the perfect fusion of Internet of Things (IoT) technology and electrical engineering excellence.",
+      "Welcome to ESCAYPE 🎮🔥 – the ultimate battleground where skill, strategy, and esports passion collide! Organized by SCEE, this electrifying multi-title gaming event brings together competitive players across some of the most popular titles — Valorant, BGMI, Free Fire, and E-Football.",
       
-      "IOTricity is more than just a competition; it's a comprehensive learning experience that spans multiple days of workshops, hands-on sessions, and collaborative projects. From embedded systems to machine learning, from cloud computing to networking protocols - we cover the entire IoT ecosystem.",
+      "Set to take place from 12th to 16th April 2026 📅, ESCAYPE is a fully online tournament designed to unite gamers from all backgrounds. With a massive prize pool of ₹21,000 💰 along with exciting goodies 🎁 for all participants, the event promises high-stakes competition and rewarding experiences for everyone involved.",
       
-      "Whether you're a beginner curious about IoT or an experienced developer ready to push boundaries, IOTricity offers something for everyone. Join industry experts, connect with like-minded innovators, and transform your ideas into reality through cutting-edge technology.",
+      "ESCAYPE is not just about winning — it’s about proving your dominance, teamwork, and tactical brilliance. Whether you’re a sharpshooter in Valorant 🎯, a survival expert in BGMI 🪖, a fast-paced Free Fire player ⚡, or a maestro in E-Football ⚽, this platform gives you the stage to shine.",
       
-      "Get ready to electrify your imagination and create the future of connected devices. The revolution starts here, and it starts with you!"
+      "The competition structure ensures rewarding outcomes across all games, with cash prizes 💸 distributed to top performers in each category, alongside exclusive goodies 🎉 for everyone who joins the battle.",
+
+      "ESCAYPE is where competitive spirit meets community 🤝, where gamers connect, compete, and create unforgettable moments. Step into the arena, showcase your skills, and rise above the rest 🚀",
+
+      "The escaype begins here… are you ready?!! 👀🔥"
     ],
     
     eventCinematicDesctiption: "🚀 The wait is over! Relive the energy, innovation, and excitement of Iotricity Season 2 - D-Day Finale 🎥✨",
@@ -44,105 +48,81 @@ export const event: EventInfo = {
 
 export const faqData: FAQItem[] = [
   {
-    question: "Who can participate in this event?",
-    answer: "Any undergraduate student of Academy of Technology who are interested in technology, IoT, hardware, or software development can register. Teams can be interdisciplinary, and both beginners and experienced students are welcome."
+    question: "What is ESCAYPE?",
+    answer: "ESCAYPE is a multi-title online esports tournament organized by SCEE, featuring competitive gameplay across Valorant, BGMI, Free Fire, and E-Football."
   },
   {
-    question: "Is this event open to students outside our institution?",
-    answer: "As of now, the event is primarily intended for students of Academy of Technology."
+    question: "When will ESCAYPE take place?",
+    answer: "The event is scheduled from 12th to 16th April 2026 and will be conducted entirely online."
   },
   {
-    question: "What is the format of IOTricity 2.0?",
-    answer: "The event is divided into three main stages: Seminar and Workshop (online), Online Hackathon (project submission and evaluation), and Offline Hardware Finale (for top 10 teams)."
+    question: "Who can participate in ESCAYPE?",
+    answer: "ESCAYPE is open to undergraduate students of Academy of Technology (1st to 4th year). Mixed teams across different years and departments are allowed."
   },
   {
-    question: "What's the theme or problem statement for the hackathon?",
-    answer: "Problem Statements will be provided by us when the hacking time starts."
+    question: "What games are included in the event?",
+    answer: "The tournament includes Valorant, BGMI (Battlegrounds Mobile India), Free Fire, and E-Football."
   },
   {
-    question: "Can I participate individually or do I need a team?",
-    answer: "Participation is team-based. You need to form a team (usually 3-5 members). Solo entries are allowed and will have a separate team building activity for them, as you must be a team of two to be able to submit the project."
+    question: " What are the team size requirements?",
+    answer: "Valorant requires 4 players per team, while BGMI and Free Fire require a minimum of 3 players per team. E-Football is played individually."
   },
   {
-    question: "How do I register for the event?",
-    answer: "You can register via the event registration link shared by SCEE starting from August 19, 2025, till August 29, 2025. Offline registration desk will be setup in the canteen, where the registration fee will be collected."
+    question: "Can a participant or team register for multiple games?",
+    answer: "Yes, a single team or participant can register for multiple games, but each registration must be submitted separately."
   },
   {
-    question: "Can team members be from different branches or years?",
-    answer: "Yes! We encourage diversity in teams. Members can be from different departments and academic years."
+    question: "How can we register for ESCAYPE?",
+    answer: "Registration will be conducted online through the official ESCAYPE platform. All participant or team details must be submitted before the deadline."
   },
   {
-    question: "Can we change our team members after registration?",
-    answer: "No. Team members must be finalized before the registration deadline. Changes will not be permitted after August 29, 2025."
+    question: "What is the registration fee?",
+    answer: "The registration fees are ₹150 per team for Valorant, ₹120 per team for BGMI and Free Fire, and ₹30 per participant for E-Football."
   },
   {
-    question: "When does the hackathon start and end?",
-    answer: "The online hackathon starts on August 30, 2025, at 08:00 PM and ends on September 1, 2025, at 08:00 PM."
+    question: "Is there any prize pool?",
+    answer: "Yes, ESCAYPE features a total prize pool of ₹21,000, along with additional goodies for all participants."
   },
   {
-    question: "What should we submit during the online hackathon?",
-    answer: "You must submit a project pitch deck, source code, and a demo video explaining your idea and its implementation."
+    question: "Can team members be changed after registration?",
+    answer: "No, team composition cannot be changed after the registration deadline."
   },
   {
-    question: "Are there any restrictions on tech stack or tools?",
-    answer: "No, you are free to use any hardware platforms, software tools, or programming languages that support your idea."
+    question: " Is ESCAYPE suitable for beginners?",
+    answer: "Yes, both beginners and experienced players are welcome to participate and compete."
   },
   {
-    question: "Can we work on an idea we've already started before?",
-    answer: "The idea must be original and must not have been submitted in any prior hackathon. Reusing components is allowed but the overall project should be new."
+    question: "Do I need any specific setup to participate?",
+    answer: "Since the event is online, participants must ensure a stable internet connection and the required gaming setup for their respective games."
   },
   {
-    question: "Is plagiarism allowed?",
-    answer: "No. All forms of plagiarism or uncredited copying of projects will lead to immediate disqualification."
+    question: " What is the format of the tournament?",
+    answer: "The format will vary for each game and may include qualifiers, knockout rounds, and finals. Detailed rules will be shared with registered participants."
   },
   {
-    question: "How will the projects be judged?",
-    answer: "Judging will be based on innovation and originality, technical feasibility and implementation, relevance to the problem statement, presentation and documentation, and hardware functionality (for final round)."
+    question: "How will match schedules be communicated?",
+    answer: "Match timings and updates will be shared through official communication channels after registration."
   },
   {
-    question: "Who are the judges?",
-    answer: "The judging panel consists of domain experts, faculty members, and industry professionals experienced in IoT, embedded systems, and AI."
+    question: "Is there any limit on the number of teams per game?",
+    answer: "Slots may be limited for each game, and registrations will be accepted on a first-come, first-served basis."
   },
   {
-    question: "How will the top 12 teams be selected?",
-    answer: "Based on online submissions, judges will shortlist the top 12 teams who will qualify for the offline hardware finale round."
+    question: " What happens if a player disconnects during a match?",
+    answer: "Handling of disconnections will follow game-specific rules, which will be communicated prior to the matches."
   },
   {
-    question: "Will we get feedback on our projects?",
-    answer: "Yes, detailed feedback will be provided after the evaluation of submissions."
+    question: " Are there any restrictions on in-game names or IDs?",
+    answer: "Participants are expected to use appropriate and non-offensive in-game names. Any violation may lead to penalties or disqualification."
   },
   {
-    question: "When is the offline hardware finale happening?",
-    answer: "The offline finale will take place on September 3, 2025, from 10:00 AM to 03:00 PM."
+    question: "Can we participate using multiple accounts?",
+    answer: "No, participants are not allowed to use multiple accounts. Account sharing or smurfing is strictly prohibited."
   },
   {
-    question: "Do we need to bring our own hardware components?",
-    answer: "No, components will be provided by the organizing team in the venue for the particular problem statement."
+    question: "Will participants receive certificates?",
+    answer: "Yes, certificates or participation recognition may be provided to all registered participants."
   },
-  {
-    question: "What if our project doesn't work as intended during the finale?",
-    answer: "Judges will evaluate the attempt, logic, and troubleshooting effort, even if the prototype isn't 100% functional."
-  },
-  {
-    question: "What are the prizes for winners?",
-    answer: "Winners will receive exciting prizes, certificates, trophies, and recognition through official social media and SCEE platforms."
-  },
-  {
-    question: "When and where is the prize distribution?",
-    answer: "The Closing Ceremony and Prize Distribution will be held on September 4, 2025, from 03:00 PM to 05:00 PM."
-  },
-  {
-    question: "Will participation certificates be provided?",
-    answer: "Yes, all participants will receive certificates of participation. Special awards will be given to winners and top-performing teams."
-  },
-  {
-    question: "Will food and accommodation be provided during the finale?",
-    answer: "Further details regarding logistics for the offline round will be communicated via email to the top 12 teams."
-  },
-  {
-    question: "Who do I contact in case of any queries or technical issues?",
-    answer: "You can reach out to the SCEE event coordination team through the contact info mentioned in the registration form or the official brochure."
-  }
 ];
 
 export const eventSchedule = [
