@@ -72,7 +72,7 @@ const About = () => {
                   Rules and Regulations
                 </Button>
               </Link>
-              <Link href={event.registrationLink}>
+              <Link href={event.registrationLink} target="_blank">
                 <Button
                   variant="secondary"
                   className="group border-primary/20 hover:border-primary/50"

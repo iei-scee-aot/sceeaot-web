@@ -80,7 +80,7 @@ const HeroSection = () => {
                     </Button>
                   </div>
                 ) : (
-                  <Link href={registrationLink} className="w-full sm:w-auto">
+                  <Link href={registrationLink} target='_blank' className="w-full sm:w-auto">
                     <Button
                       variant="primary"
                       className="group relative overflow-hidden w-full"
