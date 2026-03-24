@@ -24,7 +24,7 @@ export interface EventInfo {
     eventLogo: string;
     eventHeroSectionDescription: string;
     eventAboutDescription: string[];
-    eventImage: string;
+    eventImage?: string;
     eventYear: string;
     eventAboutSubDescription?: string;
     eventCinematicDesctiption: string;

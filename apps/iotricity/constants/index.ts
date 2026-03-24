@@ -5,23 +5,21 @@ export const eventMentors: Mentor[] = [];
 export const trackPrizes: TrackPrize[] = [];
 
 export const event: EventInfo = {
-    registrationEnd: "2025-08-29T23:59:59",
+    registrationEnd: "2026-04-09T20:00:00",
 
-    registrationLink: "https://unstop.com/o/jlaz2pf",
+    registrationLink: "#",
 
     heroBackground: "/images/hero_background.svg",
 
     patternBackground: "data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFBE00' fill-opacity='0.4'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E",
 
-    eventName: "IoTricity",
+    eventName: "ESCAYPE",
 
     eventLogo: "/iotricity.svg",
 
     eventHeroSectionDescription: "The Ultimate IoT Hackathon hosted by IEI SCEE AOT", 
 
-    eventImage: "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rh1sbxjJ7QV5tB8ivhMZbY4dapLFmDuzfUgolI",
-
-    eventYear: "2025",
+    eventYear: "2026",
 
     eventAboutSubDescription: "Innovation • Technology • Community",
 

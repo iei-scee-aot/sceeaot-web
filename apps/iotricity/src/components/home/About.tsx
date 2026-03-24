@@ -96,30 +96,32 @@ const About = () => {
           </div>
 
           {/* Event Image */}
-          <div className="relative w-full h-[200px] md:h-[480px] lg:h-[720px] mt-4 lg:mt-0">
-            <Image
-              src={event.eventImage}
-              alt={`${event.eventName} Event`}
-              loading="lazy"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b to-black/85 from-transparent"></div>
-            <div className="absolute bottom-8 left-8 text-white">
-              <h3
-                className="text-2xl lg:text-4xl font-bold mb-2"
-                style={{ fontFamily: "KMR Apparat1" }}
-              >
-                {event.eventName} {event.eventYear}
-              </h3>
-              {event.eventAboutSubDescription && (
-                <p className="text-sm lg:text-lg">
-                  {event.eventAboutSubDescription}
-                </p>
-              )}
+          {event.eventImage && (
+            <div className="relative w-full h-[200px] md:h-[480px] lg:h-[720px] mt-4 lg:mt-0">
+              <Image
+                src={event.eventImage}
+                alt={`${event.eventName} Event`}
+                loading="lazy"
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b to-black/85 from-transparent"></div>
+              <div className="absolute bottom-8 left-8 text-white">
+                <h3
+                  className="text-2xl lg:text-4xl font-bold mb-2"
+                  style={{ fontFamily: "KMR Apparat1" }}
+                >
+                  {event.eventName} {event.eventYear}
+                </h3>
+                {event.eventAboutSubDescription && (
+                  <p className="text-sm lg:text-lg">
+                    {event.eventAboutSubDescription}
+                  </p>
+                )}
+              </div>
             </div>
-          </div>
+          )}
         </div>
         <Divider />
     </>
