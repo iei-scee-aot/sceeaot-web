@@ -196,9 +196,88 @@ export const eventRules = [
   }
 ];
 
+export const eventWinners = [
+  {
+    id: 1,
+    game: "Valorant",
+    imageUrl: "",
+    winners: [
+      {
+        rank: 1,
+        name: "Team Alpha",
+      },
+      {
+        rank: 2,
+        name: "Team Bravo",
+      },
+      {
+        rank: 3,
+        name: "Team Charlie",
+      },
+    ],
+  },
+  {
+    id: 2,
+    game: "BGMI",
+    imageUrl: "",
+    winners: [
+      {
+        rank: 1,
+        name: "Team Delta",
+      },
+      {
+        rank: 2,
+        name: "Team Echo",
+      },
+      {
+        rank: 3,
+        name: "Team Foxtrot",
+      },
+    ],
+  },
+  {
+    id: 3,
+    game: "Free Fire",
+    imageUrl: "",
+    winners: [
+      {
+        rank: 1,
+        name: "Team Golf",
+      },
+      {
+        rank: 2,
+        name: "Team Hotel",
+      },
+      {
+        rank: 3,
+        name: "Team India",
+      },
+    ],
+  },
+  {
+    id: 4,
+    game: "E-Football",
+    imageUrl: "",
+    winners: [
+      {
+        rank: 1,
+        name: "Team Juliet",
+      },
+      {
+        rank: 2,
+        name: "Team Kilo",
+      },
+      {
+        rank: 3,
+        name: "Team Lima",
+      },
+    ],
+  },
+]
+
 export const hasTrackPrizes = false;
 export const hasSponsors = false;
-export const isPrizesVisible = false;
+export const isPrizesVisible = true;
 export const timelineVisible = true;
 
 export const lastUpdated = "March, 2026";

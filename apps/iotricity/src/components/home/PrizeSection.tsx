@@ -4,6 +4,7 @@ import ComingSoon from '../shared/ComingSoon'
 import Divider from '../ui/Divider'
 import Headlines from '../ui/Headlines'
 import { isPrizesVisible } from '../../../constants'
+import Prize from '../iotricity/Prize'
 
 const PrizeSection = () => {
 
@@ -15,7 +16,7 @@ const PrizeSection = () => {
           </div>
           <div className="px-4 lg:px-8 py-12 lg:py-8 text-sm lg:text-[2rem] font-pxg lg:font-light lg:leading-relaxed flex justify-center items-center">
             {isPrizesVisible ? (
-              <IOTricityPrizes />
+              <Prize />
             ) : (
               <ComingSoon description="🏆 Rewards incoming! Stay tuned for prizes worth the grind 🎮🔥" />
             )}
