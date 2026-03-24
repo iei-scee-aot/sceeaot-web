@@ -1,7 +1,7 @@
 {
   "previousTeam": {
     "headline": "The Previous Team",
-    "imageUrl": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rhlcdh5oLMNJOCXnKiHD7Ua35Ww8EVepuQtP4Z",
+    "imageUrl": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rh35oXwPbXE0zcFG1Du6Bp4oNP5ZejtqOgASw9",
     "imageAlt": "scee-old-team"
   },
   "previousTeamLeads": {
@@ -126,6 +126,14 @@
           ]
         },
         {
+          "name": "Arijit Mondal",
+          "designation": "Co-Lead",
+          "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhYAOsKQMed1tZu29y8JWAUijHqOI7MLx0FEfm",
+          "links":[
+            "https://www.linkedin.com/in/arijitmandal06"
+          ]
+        },
+        {
           "name": "Achinta Siddhanta",
           "designation": "Member",
           "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhFKyoUEeh7I4KeCh1sPMzrTxXgoWancAERND3",
@@ -149,6 +157,24 @@
           "links": [
             "https://www.linkedin.com/in/abhinandan-sadhukhan-5b011a269"
           ]
+        },
+        {
+          "name": "Tanisha Kayal",
+          "designation": "Co-Lead",
+          "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhrT0zwWCwB0yc3xHao2nJslKUpdEFifIAGShC",
+          "links": [
+            "https://www.linkedin.com/in/tanishakayal",
+            "https://www.instagram.com/tanishakyl"
+          ]
+        },
+        {
+          "name": "Sarthak Dutta",
+          "designation": "Co-Lead",
+          "imagePath":"https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhyAg2bWNpF9aPhmx8sodeI6YTcGLbRkEqlQzw",
+          "links": [
+            "https://www.linkedin.com/in/sarthak-dutta",
+            "https://www.instagram.com/wassup.sarthak?igsh=MTlzYXQxMjk0ZnQ2bQ=="
+          ]
         }
       ]
     },
@@ -159,7 +185,7 @@
         {
           "name": "Aritrika Chatterjee",
           "designation": "Lead",
-          "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rhj9DRMYelnB2cSYNFZT34AMahi9XmQkvwRKHG",
+          "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rh4WHlD6G4q9U7neCtJuQgrxMTDjKLVAhaW8Bo",
           "links": [
             "https://www.facebook.com/share/1B76dPjtYJ/",
             "https://www.instagram.com/_a_riiy",
@@ -167,19 +193,11 @@
           ]
         },
         {
-          "name": "Anisha Singha",
+          "name": "Sambit Bhattacharjee",
           "designation": "Co-Lead",
-          "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhTj1V53stG9rZqRND8HX3fYsFbxPuVpkIdcoQ",
-          "links": ["https://www.linkedin.com/in/anisha-singha-b6381931b"]
-        },
-        {
-          "name": "Koushani Kundu",
-          "designation": "Member",
-          "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RheVFmNNzhIsqAxZXnSYW2za5EbC8wpjygto7v",
+          "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rhiqdy4M7TnETD9VYlwRobzQy4hqUA5OBimscI",
           "links": [
-            "https://www.instagram.com/roop_zafaarian",
-            "https://www.linkedin.com/in/koushani-kundu-b02199284",
-            "https://www.facebook.com/share/1DhwpnHTyV/"
+            "https://www.linkedin.com/in/sambit-bhattacharjee-76851731a"
           ]
         }
       ]
@@ -198,35 +216,6 @@
             "https://x.com/EddY___04",
             "https://www.linkedin.com/in/aditya-kumar-gupta-5616a129b"
           ]
-        },
-        {
-          "name": "Amritesh Singh",
-          "designation": "Member",
-          "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rhr8R1brCwB0yc3xHao2nJslKUpdEFifIAGShC",
-          "links": [
-            "https://www.facebook.com/share/1D6e4YqY9J/",
-            "https://www.instagram.com/justamrit__",
-            "https://www.linkedin.com/in/amritesh-singh-bb6b92346"
-          ]
-        },
-        {
-          "name": "Anindya Sundar Das",
-          "designation": "Member",
-          "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhAQCX4VWjGkhi1g3pRxlCEBz7e4M6XLbqQnyF",
-          "links": [
-            "https://www.facebook.com/share/1Dasrb3pgu/",
-            "https://www.instagram.com/_aninz",
-            "https://www.linkedin.com/in/anindya-sundar-das-798b942a1"
-          ]
-        },
-        {
-          "name": "Anurati Bhaduri",
-          "designation": "Member",
-          "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rh9NzXCGAeQlUgIYx42MXEpDAwvuC5fqiKakHh",
-          "links": [
-            "https://www.instagram.com/anurati__",
-            "http://www.linkedin.com/in/anurati-bhaduri-807773353"
-          ]
         }
       ]
     },
@@ -242,16 +231,6 @@
             "https://www.facebook.com/share/16HwyVvMdH/",
             "https://www.instagram.com/hrisi_onroads",
             "https://www.linkedin.com/in/hrisikesh-ghosh-771709353"
-          ]
-        },
-        {
-          "name": "Asmit Putatunda",
-          "designation": "Co-Lead",
-          "imagePath": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhhxHCJ9QtwXgj4lN2y8f5YkdRqHosM7AuUQTL",
-          "links": [
-            "https://www.facebook.com/profile.php?id=100094195157462",
-            "https://www.instagram.com/mostly_insane_0_0",
-            "https://x.com/AsmitWick2005"
           ]
         }
       ]
