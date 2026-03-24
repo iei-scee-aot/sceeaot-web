@@ -6,12 +6,34 @@ export const trackPrizes: TrackPrize[] = [];
 
 export const event: EventInfo = {
     targetDate: "2025-08-29T23:59:59",
+
     registrationLink: "https://unstop.com/o/jlaz2pf",
+
     heroBackground: "/images/hero_background.svg",
+
     patternBackground: "data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFBE00' fill-opacity='0.4'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E",
+
     eventName: "IoTricity",
+
     eventLogo: "/iotricity.svg",
-    eventDescription: "The Ultimate IoT Hackathon hosted by IEI SCEE AOT",   
+
+    eventHeroSectionDescription: "The Ultimate IoT Hackathon hosted by IEI SCEE AOT", 
+
+    eventImage: "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rh1sbxjJ7QV5tB8ivhMZbY4dapLFmDuzfUgolI",
+
+    eventYear: "2025",
+
+    eventAboutSubDescription: "Innovation • Technology • Community",
+
+    eventAboutDescription: [
+      "Welcome to IOTricity Season 2.0 - where innovation meets electricity! This flagship event represents the perfect fusion of Internet of Things (IoT) technology and electrical engineering excellence.",
+      
+      "IOTricity is more than just a competition; it's a comprehensive learning experience that spans multiple days of workshops, hands-on sessions, and collaborative projects. From embedded systems to machine learning, from cloud computing to networking protocols - we cover the entire IoT ecosystem.",
+      
+      "Whether you're a beginner curious about IoT or an experienced developer ready to push boundaries, IOTricity offers something for everyone. Join industry experts, connect with like-minded innovators, and transform your ideas into reality through cutting-edge technology.",
+      
+      "Get ready to electrify your imagination and create the future of connected devices. The revolution starts here, and it starts with you!"
+    ]  
 }
 
 export const faqData: FAQItem[] = [

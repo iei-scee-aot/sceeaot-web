@@ -6,7 +6,7 @@ import MentorSection from "@/components/home/MentorSection";
 import Timeline from "@/components/home/Timeline";
 import Accordion from "@/components/ui/Accordion";
 import Headlines from "@/components/ui/Headlines";
-import { eventMentors, faqData } from "../../constants";
+import { event, eventMentors, faqData } from "../../constants";
 import PrizeSection from "@/components/home/PrizeSection";
 import TracSection from "@/components/home/TracSection";
 import SponsorSection from "@/components/home/SponsorSection";
@@ -50,7 +50,7 @@ const HomePage = () => {
         {/* FAQ Section */}
         <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
-            <Headlines headLine="IOTricity FAQs" />
+            <Headlines headLine={`${event.eventName} FAQs`} />
           </div>
             <Accordion items={faqData} allowMultipleOpen />
         </div>

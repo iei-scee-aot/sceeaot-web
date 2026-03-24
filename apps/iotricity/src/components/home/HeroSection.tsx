@@ -8,7 +8,7 @@ import { event } from '../../../constants'
 
 const HeroSection = () => {
 
-  const { targetDate, registrationLink, heroBackground, patternBackground, eventName, eventLogo, eventDescription } = event;
+  const { targetDate, registrationLink, heroBackground, patternBackground, eventName, eventLogo, eventHeroSectionDescription } = event;
  
   const targetedDate = new Date(targetDate).getTime();
   const now = new Date().getTime();
@@ -60,7 +60,7 @@ const HeroSection = () => {
               <div className="flex items-center justify-center gap-3 mt-6">
                 {/* <div className="h-1 w-16 bg-gradient-to-r from-primary to-transparent rounded-full"></div> */}
                 <span className="text-lg lg:text-xl font-medium text-primary uppercase">
-                  {eventDescription}
+                  {eventHeroSectionDescription}
                 </span>
                 {/* <div className="h-1 w-16 bg-gradient-to-l from-primary to-transparent rounded-full"></div> */}
               </div>

@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface Mentor {
   name: string;
   designation: string;
@@ -20,7 +22,11 @@ export interface EventInfo {
     patternBackground: string;
     eventName: string;
     eventLogo: string;
-    eventDescription: string;
+    eventHeroSectionDescription: string;
+    eventAboutDescription: string[];
+    eventImage: string;
+    eventYear: string;
+    eventAboutSubDescription?: string;
 }
 
 export interface FAQItem {

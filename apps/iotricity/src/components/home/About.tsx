@@ -4,6 +4,7 @@ import Button from "../ui/Button"
 import { ExternalLink } from "lucide-react"
 import Image from "next/image"
 import Divider from "../ui/Divider"
+import { event } from "../../../constants"
 
 
 const About = () => {
@@ -18,7 +19,7 @@ const About = () => {
             {/* Headline Section */}
             <div className="flex items-center border-gray-500 border-b-[0.5px] lg:border-b-[0.8px] lg:border-r-[0.8px] lg:w-1/2 lg:pl-[1.6rem] overflow-hidden">
               <div className="block lg:hidden w-full">
-                <Headlines headLine="About IOTricity" />
+                <Headlines headLine={`About ${event.eventName}`} />
               </div>
               <h1
                 className="hidden lg:block text-[94px] font-bold leading-[72px] tracking-[-0.47px]"
@@ -30,7 +31,7 @@ const About = () => {
               >
                 About
                 <br />
-                IOTricity
+                {event.eventName}
               </h1>
             </div>
 
@@ -52,29 +53,13 @@ const About = () => {
 
           {/* Text Content */}
           <div className="px-[1.40625rem] lg:px-8 py-[1.40625rem] lg:py-8 text-[10.5px] lg:text-[1.2rem] font-light leading-relaxed font-pxg text-left lg:text-center">
-            Welcome to IOTricity Season 2.0 - where innovation meets
-            electricity! This flagship event represents the perfect fusion of
-            Internet of Things (IoT) technology and electrical engineering
-            excellence.
-            <br />
-            <br />
-            IOTricity is more than just a competition; it&apos;s a comprehensive
-            learning experience that spans multiple days of workshops, hands-on
-            sessions, and collaborative projects. From embedded systems to
-            machine learning, from cloud computing to networking protocols - we
-            cover the entire IoT ecosystem.
-            <br />
-            <br />
-            Whether you&apos;re a beginner curious about IoT or an experienced
-            developer ready to push boundaries, IOTricity offers something for
-            everyone. Join industry experts, connect with like-minded
-            innovators, and transform your ideas into reality through
-            cutting-edge technology.
-            <br />
-            <br />
-            Get ready to electrify your imagination and create the future of
-            connected devices. The revolution starts here, and it starts with
-            you!
+            {event.eventAboutDescription.map((paragraph, index) => (
+              <p key={index}>
+                {paragraph}
+                {index < event.eventAboutDescription.length - 1 && <br />}
+                {index < event.eventAboutDescription.length - 1 && <br />}
+              </p>
+            ))}
           </div>
           <div className="flex justify-center items-center">
             <div className="flex flex-col sm:flex-row gap-4 mt-8 mb-12 px-4 justify-center items-center">
@@ -87,7 +72,7 @@ const About = () => {
                   Rules and Regulations
                 </Button>
               </Link>
-              <Link href="#"> {/* TODO: Add google form registration link */}
+              <Link href={event.registrationLink}>
                 <Button
                   variant="secondary"
                   className="group border-primary/20 hover:border-primary/50"
@@ -113,8 +98,8 @@ const About = () => {
           {/* Event Image */}
           <div className="relative w-full h-[200px] md:h-[480px] lg:h-[720px] mt-4 lg:mt-0">
             <Image
-              src="https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rh1sbxjJ7QV5tB8ivhMZbY4dapLFmDuzfUgolI"
-              alt="IOTricity Event"
+              src={event.eventImage}
+              alt={`${event.eventName} Event`}
               loading="lazy"
               layout="fill"
               objectFit="cover"
@@ -126,11 +111,13 @@ const About = () => {
                 className="text-2xl lg:text-4xl font-bold mb-2"
                 style={{ fontFamily: "KMR Apparat1" }}
               >
-                IOTricity 2025
+                {event.eventName} {event.eventYear}
               </h3>
-              <p className="text-sm lg:text-lg">
-                Innovation • Technology • Community
-              </p>
+              {event.eventAboutSubDescription && (
+                <p className="text-sm lg:text-lg">
+                  {event.eventAboutSubDescription}
+                </p>
+              )}
             </div>
           </div>
         </div>
