@@ -193,6 +193,6 @@ export const eventSchedule = [
 ]
 
 export const hasTrackPrizes = false;
-export const hasSponsors = true;
+export const hasSponsors = false;
 export const isPrizesVisible = false;
 export const timelineVisible = true;
