@@ -14,7 +14,7 @@ const Cinematics = () => {
                 <Headlines headLine="Post Event Cinematics" />
               </div>
               <h1
-                className="hidden lg:block text-[94px] font-bold leading-[72px] tracking-[-0.47px]"
+                className="hidden lg:block text-[70px] xl:text-[80px] 2xl:text-[94px] font-bold leading-[1] 2xl:leading-[72px] tracking-[-0.47px]"
                 style={{
                   fontFamily: "KMR Apparat1",
                   WebkitTextStroke: "1px var(--primary)",
