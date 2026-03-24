@@ -31,9 +31,9 @@ const Countdown = () => {
     setIsClient(true);
 
     const calculateTimeRemaining = () => {
-      const hackathonStartDate = new Date("2025-08-30T20:00:00").getTime();
-      const hackathonEndDate = new Date("2025-09-01T20:00:00").getTime();
-      const winnersDate = new Date("2025-09-03T16:00:00").getTime();
+      const hackathonStartDate = new Date("2026-04-12").getTime();
+      const hackathonEndDate = new Date("2026-04-16").getTime();
+      const winnersDate = new Date("2026-04-16").getTime();
 
       const now = new Date().getTime();
 

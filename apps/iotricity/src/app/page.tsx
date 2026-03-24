@@ -47,7 +47,7 @@ const HomePage = () => {
   // Visibility controls for different sections
   const [isTimelineVisible, setIsTimelineVisible] = useState(true);
   const [isTracksVisible, setIsTracksVisible] = useState(true);
-  const [isPrizesVisible, setIsPrizesVisible] = useState(true);
+  const [isPrizesVisible, setIsPrizesVisible] = useState(false);
   const [isMentorsVisible, setIsMentorsVisible] = useState(true);
 
   // Target Date controls the end of registration date
@@ -279,13 +279,13 @@ const HomePage = () => {
                   Rules and Regulations
                 </Button>
               </Link>
-              <Link href="https://iotricitys2.notion.site/IOTricity-S2-Hackers-Guild-245b2a014830804cabe3ef4a6817fab5?pvs=74">
+              <Link href="#"> {/* TODO: Add google form registration link */}
                 <Button
                   variant="secondary"
                   className="group border-primary/20 hover:border-primary/50"
                 >
                   <span className="flex items-center gap-2">
-                    Hackers Guild
+                    Registration
                     <ExternalLink
                       size={16}
                       className="transition-transform group-hover:scale-110"
@@ -464,7 +464,7 @@ const HomePage = () => {
         <Divider2 />
 
         {/* Mentors Section */}
-        <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+        {/* <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
             <Headlines headLine="Mentors" />
           </div>
@@ -485,11 +485,11 @@ const HomePage = () => {
               <ComingSoon description="Our expert mentors and industry professionals are being finalized. Stay tuned to meet the amazing mentors who will guide you throughout your IOTricity journey." />
             )}
           </div>
-        </div>
-        <Divider2 />
+        </div> */}
+        {/* <Divider2 /> */}
 
         {/* Event Tracks Section */}
-        <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+        {/* <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
           <div className="flex items-center border-gray-500 border-b-[0.5px] overflow-hidden">
             <Headlines headLine="Event Tracks" />
           </div>
@@ -501,7 +501,7 @@ const HomePage = () => {
             )}
           </div>
         </div>
-        <Divider2 />
+        <Divider2 /> */}
 
         {/* Event Prizes Section */}
         <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
@@ -519,7 +519,9 @@ const HomePage = () => {
         <Divider2 />
 
         {/* Sponsors Section */}
-        <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
+        {false && (
+          <>
+            <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
           {/* Unified Header Section */}
           <div className="lg:flex lg:h-[10rem]">
             {/* Headline Section */}
@@ -615,6 +617,8 @@ const HomePage = () => {
           </div>
         </div>
         <Divider2 />
+          </>
+        )}
 
         {/* FAQ Section */}
         <div className="w-[calc(100%-30px)] lg:w-[calc(100%-14rem)] mx-auto border-[0.5px] border-gray-500 border-t-0 border-b-0">
