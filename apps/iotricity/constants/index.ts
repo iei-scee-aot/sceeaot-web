@@ -17,13 +17,13 @@ export const event: EventInfo = {
 
     eventLogo: "/iotricity.svg",
 
-    loadingGreetings: "Welcome to IoTricity Season 2",
+    loadingGreetings: "Welcome ESCAYPE the gaming event",
 
-    eventHeroSectionDescription: "The Ultimate IoT Hackathon hosted by IEI SCEE AOT", 
+    eventHeroSectionDescription: "The Ultimate Gaming Event hosted by IEI SCEE AOT", 
 
     eventYear: "2026",
 
-    eventAboutSubDescription: "Innovation • Technology • Community",
+    eventAboutSubDescription: "Competition • Strategy • Community",
 
     eventAboutDescription: [
       "Welcome to ESCAYPE 🎮🔥 – the ultimate battleground where skill, strategy, and esports passion collide! Organized by SCEE, this electrifying multi-title gaming event brings together competitive players across some of the most popular titles — Valorant, BGMI, Free Fire, and E-Football.",
