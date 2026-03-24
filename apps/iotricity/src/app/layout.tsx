@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "IoTricity Season 2",
+    default: "ESCAYPE",
     template: "%s | SCEE AOT",
   },
   description:
