@@ -27,6 +27,8 @@ export interface EventInfo {
     eventImage: string;
     eventYear: string;
     eventAboutSubDescription?: string;
+    eventCinematicDesctiption: string;
+    trailer: string;
 }
 
 export interface FAQItem {

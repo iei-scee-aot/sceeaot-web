@@ -1,3 +1,4 @@
+import { event } from "../../../constants"
 import Divider from "../ui/Divider"
 import Headlines from "../ui/Headlines"
 
@@ -44,8 +45,7 @@ const Cinematics = () => {
           <div className="px-[1.40625rem] lg:px-8 py-[1.40625rem] lg:py-8">
             {/* Description Text */}
             <div className="text-[10.5px] lg:text-[1rem] font-light leading-relaxed font-pxg text-left lg:text-center mb-8">
-              🚀 The wait is over! Relive the energy, innovation, and excitement
-              of Iotricity Season 2 - D-Day Finale 🎥✨
+              {event.eventCinematicDesctiption}
             </div>
 
             {/* YouTube Video Embed */}
@@ -56,7 +56,7 @@ const Cinematics = () => {
                   {/* 16:9 aspect ratio */}
                   <iframe
                     className="absolute top-0 left-0 w-full h-full rounded-lg border border-primary/20"
-                    src="https://www.youtube.com/embed/-Bq2TGLDlDg"
+                    src={event.trailer}
                     title="IOTricity Post Event Cinematics"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

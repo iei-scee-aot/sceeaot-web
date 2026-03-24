@@ -33,7 +33,11 @@ export const event: EventInfo = {
       "Whether you're a beginner curious about IoT or an experienced developer ready to push boundaries, IOTricity offers something for everyone. Join industry experts, connect with like-minded innovators, and transform your ideas into reality through cutting-edge technology.",
       
       "Get ready to electrify your imagination and create the future of connected devices. The revolution starts here, and it starts with you!"
-    ]  
+    ],
+    
+    eventCinematicDesctiption: "🚀 The wait is over! Relive the energy, innovation, and excitement of Iotricity Season 2 - D-Day Finale 🎥✨",
+
+    trailer: "https://www.youtube.com/embed/-Bq2TGLDlDg"
 }
 
 export const faqData: FAQItem[] = [
