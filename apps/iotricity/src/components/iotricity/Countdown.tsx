@@ -238,8 +238,7 @@ const Countdown = ({ now }: { now: number }) => {
       <div className="text-center mt-6 px-4">
         {currentPhase === "initial" && (
           <p className="text-base lg:text-lg text-secondary/70 max-w-2xl">
-            Join us for IOTricity Season 2.0! The countdown to the ultimate 
-            esports showdown has begun. Get your squads ready!
+            🎯 Join us for our Gaming Event! The countdown to the ultimate esports showdown has begun. Get your squads ready ⚔️
           </p>
         )}
         {currentPhase === "tournament" && (
