@@ -16,7 +16,7 @@ export interface TrackPrize {
 }
 
 export interface EventInfo {
-    targetDate: string;
+    registrationEnd: string;
     registrationLink: string;
     heroBackground: string;
     patternBackground: string;
@@ -29,6 +29,9 @@ export interface EventInfo {
     eventAboutSubDescription?: string;
     eventCinematicDesctiption: string;
     trailer: string;
+    eventStart: string;
+    eventEnd: string;
+    eventWinnersDate: string
 }
 
 export interface FAQItem {

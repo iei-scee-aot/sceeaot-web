@@ -5,7 +5,7 @@ export const eventMentors: Mentor[] = [];
 export const trackPrizes: TrackPrize[] = [];
 
 export const event: EventInfo = {
-    targetDate: "2025-08-29T23:59:59",
+    registrationEnd: "2025-08-29T23:59:59",
 
     registrationLink: "https://unstop.com/o/jlaz2pf",
 
@@ -37,7 +37,11 @@ export const event: EventInfo = {
     
     eventCinematicDesctiption: "🚀 The wait is over! Relive the energy, innovation, and excitement of Iotricity Season 2 - D-Day Finale 🎥✨",
 
-    trailer: "https://www.youtube.com/embed/-Bq2TGLDlDg"
+    trailer: "https://www.youtube.com/embed/-Bq2TGLDlDg",
+
+    eventStart: "2026-04-12",
+    eventEnd: "2026-04-16",
+    eventWinnersDate: "2026-04-16T14.00.00",
 }
 
 export const faqData: FAQItem[] = [

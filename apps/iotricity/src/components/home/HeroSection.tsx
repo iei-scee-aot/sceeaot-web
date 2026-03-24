@@ -8,9 +8,9 @@ import { event } from '../../../constants'
 
 const HeroSection = () => {
 
-  const { targetDate, registrationLink, heroBackground, patternBackground, eventName, eventLogo, eventHeroSectionDescription } = event;
+  const { registrationEnd, registrationLink, heroBackground, patternBackground, eventName, eventLogo, eventHeroSectionDescription } = event;
  
-  const targetedDate = new Date(targetDate).getTime();
+  const targetedDate = new Date(registrationEnd).getTime();
   const now = new Date().getTime();
   const hasTargetDatePassed = now >= targetedDate;
 
