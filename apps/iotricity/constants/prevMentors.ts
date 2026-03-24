@@ -1,0 +1,20 @@
+const iotricityMentors = [
+    {
+        name: "Gourav Ghosal",
+        designation: "Fullstack SDE@Truxt.ai",
+        imagePath: "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhbcqgYSbELC8OUR5HEvuXeK0TG6d2ASjInlty",
+        links: ["https://www.linkedin.com/in/gourav-ghosal/"]
+    },
+    {
+        name: "Imran Roshan",
+        designation: "Security Specialist and GDE-GCP",
+        imagePath: "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhKkJynirBGWo9EQCLMp63kYul72d5sezfFiTH",
+        links: ["https://www.linkedin.com/in/imranfosec/"]
+    },
+    {
+        name: "Om Ashish Mishra",
+        designation: "Product Data Scientist @Deloitte",
+        imagePath: "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhepUcLCzhIsqAxZXnSYW2za5EbC8wpjygto7v",
+        links: ["https://www.linkedin.com/in/om-ashish-mishra/"]
+    }
+]
