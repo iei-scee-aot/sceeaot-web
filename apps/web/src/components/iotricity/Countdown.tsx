@@ -42,10 +42,22 @@ const Countdown = ({ showTimeline = true }: CountdownProps) => {
     const loadEventSchedule = async () => {
       try {
         const response = await fetch("/data/hackathon-schedule.json");
+        if (!response.ok) {
+          const text = await response.text();
+          throw new Error(`Failed to fetch event schedule: ${response.status} ${response.statusText} - ${text.slice(0, 200)}`);
+        }
+
+        const contentType = response.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+          const text = await response.text();
+          throw new Error(`Expected application/json but received ${contentType}. Body: ${text.slice(0, 200)}`);
+        }
+
         const data = await response.json();
         setEventSchedule(data);
       } catch (error) {
         console.error("Failed to load event schedule:", error);
+        setEventSchedule([]);
       }
     };
 
