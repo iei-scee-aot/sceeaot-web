@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { event } from "../../../constants";
 
 interface LoadingAnimationProps {
   onComplete: () => void;
@@ -54,8 +55,8 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
             }}
           >
             <Image
-              src="/iotricity.svg"
-              alt="Iotricity Logo"
+              src={event.eventLogo}
+              alt={event.eventName}
               fill
               className="object-contain filter drop-shadow-2xl"
               priority
@@ -85,7 +86,7 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
         }`}
       >
         <h1 className="text-white text-lg md:text-xl lg:text-2xl font-medium tracking-wide text-center">
-          Welcome to IoTricity Season 2
+          {event.loadingGreetings}
         </h1>
       </div>
 

@@ -22,6 +22,7 @@ export interface EventInfo {
     patternBackground: string;
     eventName: string;
     eventLogo: string;
+    loadingGreetings: string;
     eventHeroSectionDescription: string;
     eventAboutDescription: string[];
     eventImage?: string;

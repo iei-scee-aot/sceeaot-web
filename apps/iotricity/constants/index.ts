@@ -17,6 +17,8 @@ export const event: EventInfo = {
 
     eventLogo: "/iotricity.svg",
 
+    loadingGreetings: "Welcome to IoTricity Season 2",
+
     eventHeroSectionDescription: "The Ultimate IoT Hackathon hosted by IEI SCEE AOT", 
 
     eventYear: "2026",
