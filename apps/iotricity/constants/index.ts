@@ -200,7 +200,7 @@ export const eventWinners: Winners[] = []
 
 export const prizePool: PrizePool[] = [
   {
-    event: "Event 1",
+    event: "Game 1",
     gradientClass: "group-hover:from-orange-500/20 group-hover:to-yellow-500/10",
     game: "BGMI",
     totalPrizePool: "₹5K",
@@ -220,7 +220,7 @@ export const prizePool: PrizePool[] = [
     ]
   },
   {
-    event: "Event 2",
+    event: "Game 2",
     game: "Free Fire",
     gradientClass: "group-hover:from-red-600/20 group-hover:to-orange-500/10",
     totalPrizePool: "₹5K",
@@ -240,7 +240,7 @@ export const prizePool: PrizePool[] = [
     ]
   },
   {
-    event: "Event 3",
+    event: "Game 3",
     game: "E-Football",
     gradientClass: "group-hover:from-blue-600/20 group-hover:to-cyan-400/10",
     totalPrizePool: "₹3K",
@@ -260,7 +260,7 @@ export const prizePool: PrizePool[] = [
     ]
   },
   {
-    event: "Event 4",
+    event: "Game 4",
     game: "Valorant",
     gradientClass: "group-hover:from-rose-600/20 group-hover:to-red-600/10",
     totalPrizePool: "₹5K",
@@ -283,7 +283,7 @@ export const prizePool: PrizePool[] = [
 
 const dummyData: Winners[] = [
   {
-    event: "Event 1",
+    event: "Game 1",
     gradientClass: "group-hover:from-orange-500/20 group-hover:to-yellow-500/10",
     game: "BGMI",
     championsName: "Team 1",
@@ -303,7 +303,7 @@ const dummyData: Winners[] = [
     ]
   },
   {
-    event: "Event 2",
+    event: "Game 2",
     game: "Free Fire",
     gradientClass: "group-hover:from-red-600/20 group-hover:to-orange-500/10",
     championsName: "Team 2",
@@ -323,7 +323,7 @@ const dummyData: Winners[] = [
     ]
   },
   {
-    event: "Event 3",
+    event: "Game 3",
     game: "E-Football",
     gradientClass: "group-hover:from-blue-600/20 group-hover:to-cyan-400/10",
     championsName: "Team 3",
@@ -343,7 +343,7 @@ const dummyData: Winners[] = [
     ]
   },
   {
-    event: "Event 4",
+    event: "Game 4",
     game: "Valorant",
     gradientClass: "group-hover:from-rose-600/20 group-hover:to-red-600/10",
     championsName: "Team 4",
