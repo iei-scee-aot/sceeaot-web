@@ -5,6 +5,7 @@ import Accordion from "@/components/ui/Accordion";
 import Button from "@/components/ui/Button";
 import Divider2 from "@/components/ui/Divider";
 import Headlines from "@/components/ui/Headlines";
+import SlideShow from "@/components/ui/SlideShow";
 import {
   ArrowRight,
   Award,
@@ -31,15 +32,123 @@ interface FAQData {
   };
 }
 
+interface Event {
+  id: string;
+  title: string;
+  status: string;
+  date: string;
+  registrationStartDate: string;
+  registrationEndDate: string;
+  eventStartDate: string;
+  eventEndDate: string;
+  registrationDeadline: string;
+  mode: string;
+  fees: string;
+  teamSize: string;
+  description: string;
+  gallery: string;
+  imageSrc: string;
+  registrationLink?: string;
+  detailsLink?: string;
+}
+
+interface EventsData {
+  futureEvents: Event[];
+  ongoingEvents: Event[];
+  pastEvents: Event[];
+}
+
 const HomePage = () => {
   const [currentDate, setCurrentDate] = useState<Date | null>(null);
   const [faqData, setFaqData] = useState<FAQ[]>([]);
   const [faqLoading, setFaqLoading] = useState(true);
   const [faqError, setFaqError] = useState<string | null>(null);
+  const [eventsData, setEventsData] = useState<EventsData | null>(null);
+  const [visibleEvent, setVisibleEvent] = useState<Event | null>(null);
+
+  // Helper function to check if event is within visibility window (10 days before, during, and 10 days after)
+  const isEventVisible = (event: Event, checkDate: Date): boolean => {
+    const regStartMs = new Date(event.registrationStartDate).getTime();
+    const eventEndMs = new Date(event.eventEndDate).getTime();
+    const checkDateMs = checkDate.getTime();
+
+    const visibilityWindowMs = 10 * 24 * 60 * 60 * 1000; // 10 days in milliseconds
+
+    // Calculate visibility boundaries - start from 5 days before registration (for teaser)
+    const visibilityStartMs = regStartMs - 5 * 24 * 60 * 60 * 1000; // 5 days before registration for teaser
+    const visibilityEndMs = eventEndMs + visibilityWindowMs; // 10 days after event ends
+
+    return checkDateMs >= visibilityStartMs && checkDateMs <= visibilityEndMs;
+  };
+
+  // Get the most relevant visible event
+  const getVisibleEvent = (
+    allEvents: EventsData,
+    checkDate: Date,
+  ): Event | null => {
+    const allEventsArray = [
+      ...allEvents.futureEvents,
+      ...allEvents.ongoingEvents,
+    ];
+
+    // Find event where current date falls within visibility window
+    const visible = allEventsArray.find((event) =>
+      isEventVisible(event, checkDate),
+    );
+    return visible || null;
+  };
+
+  // Check if there are consecutive events in same month
+  const hasConsecutiveEventsInMonth = (
+    allEvents: EventsData,
+    checkDate: Date,
+  ): boolean => {
+    const currentMonth = checkDate.getMonth();
+    const currentYear = checkDate.getFullYear();
+
+    const eventsInMonth = [
+      ...allEvents.futureEvents,
+      ...allEvents.ongoingEvents,
+    ].filter((event) => {
+      const eventDate = new Date(event.eventStartDate);
+      return (
+        eventDate.getMonth() === currentMonth &&
+        eventDate.getFullYear() === currentYear
+      );
+    });
+
+    return eventsInMonth.length > 1;
+  };
 
   useEffect(() => {
     setCurrentDate(new Date());
   }, []);
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const response = await fetch("/data/events.json");
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+
+        const data: EventsData = await response.json();
+        setEventsData(data);
+
+        // Set visible event based on current date
+        if (currentDate) {
+          const visible = getVisibleEvent(data, currentDate);
+          setVisibleEvent(visible);
+        }
+      } catch (err) {
+        console.error("Failed to fetch events:", err);
+      }
+    };
+
+    if (currentDate) {
+      fetchEvents();
+    }
+  }, [currentDate]);
 
   useEffect(() => {
     const fetchFAQs = async () => {
@@ -51,7 +160,7 @@ const HomePage = () => {
           console.error(
             "Response not OK:",
             response.status,
-            response.statusText
+            response.statusText,
           );
           throw new Error(`HTTP ${response.status}: ${response.statusText}`);
         }
@@ -78,18 +187,50 @@ const HomePage = () => {
     fetchFAQs();
   }, []);
 
-  // Date checks
-  const isAfterAugust27 = currentDate
-    ? currentDate >= new Date("2025-08-27T00:00:00")
-    : false;
-  const isAfterAugust30 = currentDate
-    ? currentDate >= new Date("2025-08-30T00:00:00")
-    : false;
+  // Date checks based on visible event (using milliseconds for timezone safety)
+  const isRegistrationComing =
+    visibleEvent && currentDate
+      ? (() => {
+          const regStartMs = new Date(
+            visibleEvent.registrationStartDate,
+          ).getTime();
+          const fiveDaysBeforeMs = regStartMs - 5 * 24 * 60 * 60 * 1000;
+          const currentMs = currentDate.getTime();
+          return currentMs >= fiveDaysBeforeMs && currentMs < regStartMs;
+        })()
+      : false;
 
-  // Check if target date has passed (same as Countdown component)
-  const targetDate = new Date("2025-08-30T20:00:00").getTime();
-  const now = new Date().getTime();
-  const hasTargetDatePassed = now >= targetDate;
+  const isRegistrationActive =
+    visibleEvent && currentDate
+      ? currentDate.getTime() >=
+          new Date(visibleEvent.registrationStartDate).getTime() &&
+        currentDate.getTime() <=
+          new Date(visibleEvent.registrationEndDate).getTime()
+      : false;
+
+  const isRegistrationClosed =
+    visibleEvent && currentDate
+      ? currentDate.getTime() >
+          new Date(visibleEvent.registrationEndDate).getTime() &&
+        currentDate.getTime() < new Date(visibleEvent.eventStartDate).getTime()
+      : false;
+
+  const isEventOngoing =
+    visibleEvent && currentDate
+      ? currentDate.getTime() >=
+          new Date(visibleEvent.eventStartDate).getTime() &&
+        currentDate.getTime() <= new Date(visibleEvent.eventEndDate).getTime()
+      : false;
+
+  const isEventConcluded =
+    visibleEvent && currentDate
+      ? currentDate.getTime() > new Date(visibleEvent.eventEndDate).getTime()
+      : false;
+
+  const hasConsecutiveEvents =
+    eventsData && currentDate
+      ? hasConsecutiveEventsInMonth(eventsData, currentDate)
+      : false;
 
   return (
     <>
@@ -284,31 +425,186 @@ const HomePage = () => {
 
           {/* Content */}
           <div className="px-4 lg:px-8 py-12 lg:py-8 text-sm lg:text-[2rem] font-pxg lg:font-light lg:leading-relaxed">
-            {isAfterAugust30 ? (
-              /* Event Ended Message */
+            {!visibleEvent ? (
+              /* No Active Event */
               <div className="flex flex-col justify-center items-center lg:min-h-[23.5rem] text-center">
                 <div className="mb-8">
                   <h3
                     className="text-2xl lg:text-4xl font-bold text-primary mb-4"
                     style={{ fontFamily: "KMR Apparat1" }}
                   >
-                    🎉 Event Has Concluded! 🎉
+                    Stay Tuned!
                   </h3>
                   <p className="text-base lg:text-xl text-secondary/80">
-                    IOTricity Season 2.0 has now concluded! See You Next Year.
-                    <br />
-                    Check out the dedicated page for the Highlights and Winners.
+                    Exciting events are coming soon! Check back for updates on
+                    upcoming events.
+                  </p>
+                </div>
+              </div>
+            ) : isRegistrationComing ? (
+              /* Registration Coming - 5 days before registration opens */
+              <div className="flex flex-col justify-center items-center lg:min-h-[23.5rem] text-center">
+                <div className="mb-8 space-y-6">
+                  <h3
+                    className="text-4xl lg:text-6xl font-bold text-primary"
+                    style={{ fontFamily: "KMR Apparat1" }}
+                  >
+                    {visibleEvent.title}
+                  </h3>
+                  <p className="text-base lg:text-xl text-secondary/80 max-w-2xl mx-auto">
+                    Something amazing is coming. Registration opens soon!
+                  </p>
+                </div>
+              </div>
+            ) : isRegistrationActive ? (
+              /* Registration Active */
+              <div className="flex flex-col justify-center items-center lg:min-h-[23.5rem]">
+                <div className="mb-8 text-center">
+                  <h2 className="text-xl lg:text-2xl font-bold text-primary mb-2">
+                    Registration Open for {visibleEvent.title}
+                  </h2>
+                  <p className="text-sm lg:text-lg text-secondary">
+                    Don't miss out! Register now before slots are filled.
                   </p>
                 </div>
 
-                {/* Checkout Button */}
+                <div className="w-full flex justify-center mb-8">
+                  <Countdown
+                    targetDate={new Date(visibleEvent.registrationEndDate)}
+                    eventName={`Registration for ${visibleEvent.title}`}
+                    eventEndDate={new Date(visibleEvent.registrationEndDate)}
+                    scheduleDataPath="/data/hackathon-schedule.json"
+                  />
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md">
+                  {visibleEvent.registrationLink && (
+                    <Link
+                      href={visibleEvent.registrationLink}
+                      className="w-full sm:w-auto"
+                    >
+                      <Button variant="primary" icon={<Users size={18} />}>
+                        Register Now
+                        <ArrowRight size={16} />
+                      </Button>
+                    </Link>
+                  )}
+                  {visibleEvent.detailsLink && (
+                    <Link
+                      href={visibleEvent.detailsLink}
+                      className="w-full sm:w-auto"
+                    >
+                      <Button
+                        variant="secondary"
+                        icon={<ExternalLink size={18} />}
+                      >
+                        View Details
+                      </Button>
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ) : isRegistrationClosed ? (
+              /* Registration Closed - Countdown to Event */
+              <div className="flex flex-col justify-center items-center lg:min-h-[23.5rem]">
+                <div className="mb-8 text-center">
+                  <h2 className="text-xl lg:text-2xl font-bold text-red-500 mb-2">
+                    🔒 Registration Closed
+                  </h2>
+                  <p className="text-sm lg:text-lg text-secondary">
+                    {visibleEvent.title} event is coming up! Get ready for the
+                    action.
+                  </p>
+                </div>
+
+                <div className="w-full flex justify-center mb-8">
+                  <Countdown
+                    targetDate={new Date(visibleEvent.eventStartDate)}
+                    eventName={`${visibleEvent.title} Event Starts In`}
+                    eventEndDate={new Date(visibleEvent.eventEndDate)}
+                    scheduleDataPath="/data/hackathon-schedule.json"
+                  />
+                </div>
+
+                {/* Details Button */}
+                <div className="flex justify-center">
+                  {visibleEvent.detailsLink && (
+                    <Link
+                      href={visibleEvent.detailsLink}
+                      className="w-full sm:w-auto max-w-xs"
+                    >
+                      <Button
+                        variant="secondary"
+                        size="lg"
+                        icon={<ExternalLink size={20} />}
+                        className="justify-center"
+                      >
+                        View Event Details
+                        <ArrowRight size={18} />
+                      </Button>
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ) : isEventOngoing ? (
+              /* Event is Happening Now */
+              <div className="flex flex-col justify-center items-center lg:min-h-[23.5rem] text-center">
+                <div className="mb-8">
+                  <h3
+                    className="text-2xl lg:text-4xl font-bold text-primary mb-4"
+                    style={{ fontFamily: "KMR Apparat1" }}
+                  >
+                    🎪 Event is Live!
+                  </h3>
+                  <p className="text-base lg:text-xl text-secondary/80">
+                    {visibleEvent.title} is happening right now! Join the
+                    action.
+                  </p>
+                </div>
+
+                {/* Details Button */}
+                <div className="flex justify-center">
+                  {visibleEvent.detailsLink && (
+                    <Link
+                      href={visibleEvent.detailsLink}
+                      className="w-full sm:w-auto max-w-xs"
+                    >
+                      <Button
+                        variant="primary"
+                        size="lg"
+                        icon={<ExternalLink size={20} />}
+                        className="justify-center"
+                      >
+                        Join Event
+                        <ArrowRight size={18} />
+                      </Button>
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ) : isEventConcluded ? (
+              /* Event Concluded */
+              <div className="flex flex-col justify-center items-center lg:min-h-[23.5rem] text-center">
+                <div className="mb-8">
+                  <h3
+                    className="text-2xl lg:text-4xl font-bold text-primary mb-4"
+                    style={{ fontFamily: "KMR Apparat1" }}
+                  >
+                    🎉 {visibleEvent.title} Concluded! 🎉
+                  </h3>
+                  <p className="text-base lg:text-xl text-secondary/80">
+                    Thank you for participating! See you at the next event.
+                    {hasConsecutiveEvents && <br />}
+                    {hasConsecutiveEvents &&
+                      "Check out our upcoming events this month!"}
+                  </p>
+                </div>
+
+                {/* Details Button */}
                 <div className="flex justify-center">
                   <Link
-                    href={
-                      process.env.NODE_ENV === "development"
-                        ? "http://localhost:3001"
-                        : "https://iotricity.vercel.app"
-                    }
+                    href={visibleEvent.detailsLink || "#"}
                     className="w-full sm:w-auto max-w-xs"
                   >
                     <Button
@@ -317,61 +613,13 @@ const HomePage = () => {
                       icon={<ExternalLink size={20} />}
                       className="justify-center"
                     >
-                      Checkout IOTricity
+                      View Event Details
                       <ArrowRight size={18} />
                     </Button>
                   </Link>
                 </div>
               </div>
-            ) : (
-              /* Countdown and Buttons */
-              <div className="flex flex-col justify-center items-center lg:min-h-[23.5rem]">
-                <div className="w-full flex justify-center mb-8">
-                  <Countdown />
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md">
-                  {!isAfterAugust27 && (
-                    <Link
-                      href="https://unstop.com/o/jlaz2pf"
-                      className="w-full sm:w-auto"
-                    >
-                      <Button
-                        variant="primary"
-                        icon={<Users size={18} />}
-                        className={`${
-                          hasTargetDatePassed
-                            ? "opacity-50 cursor-not-allowed"
-                            : ""
-                        }`}
-                        disabled={hasTargetDatePassed}
-                      >
-                        {hasTargetDatePassed
-                          ? "Registration Closed"
-                          : "Register Now"}
-                        {!hasTargetDatePassed && <ArrowRight size={16} />}
-                      </Button>
-                    </Link>
-                  )}
-                  <Link
-                    href={
-                      process.env.NODE_ENV === "development"
-                        ? "http://localhost:3001"
-                        : "https://iotricity.sceeaot.vercel.app"
-                    }
-                    className="w-full sm:w-auto"
-                  >
-                    <Button
-                      variant="secondary"
-                      icon={<ExternalLink size={18} />}
-                    >
-                      Checkout IOTricity
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            )}
+            ) : null}
           </div>
         </div>
         <Divider2 />
@@ -453,7 +701,13 @@ const HomePage = () => {
           </div>
 
           {/* Team Image */}
-          <div className="relative w-full h-[200px] md:h-[420px] lg:h-[609px] mt-4 lg:mt-0">
+          <SlideShow
+            images={[
+              "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rhlcdh5oLMNJOCXnKiHD7Ua35Ww8EVepuQtP4Z",
+              "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rh7D2j2poSLNVmr9d45kJMsPpqcKHlEyWRwIO2"
+            ]}
+          />
+          {/* <div className="relative w-full h-[200px] md:h-[420px] lg:h-[609px] mt-4 lg:mt-0">
             <Image
               src={
                 "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rhlcdh5oLMNJOCXnKiHD7Ua35Ww8EVepuQtP4Z"
@@ -465,7 +719,7 @@ const HomePage = () => {
               objectPosition="center"
             />
             <div className="absolute inset-0 bg-gradient-to-b to-black/65 from-transparent"></div>
-          </div>
+          </div> */}
         </div>
         <Divider2 />
 

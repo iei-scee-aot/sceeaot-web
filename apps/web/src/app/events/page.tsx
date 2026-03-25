@@ -17,6 +17,7 @@ export default function EventsPage() {
     teamSize: string;
     description: string;
     gallery: string;
+    registrationLink?: string;
   };
 
   const [futureEvents, setFutureEvents] = useState<Event[]>([]);
@@ -55,15 +56,18 @@ export default function EventsPage() {
                 {futureEvents.map((event) => (
                   <EventCard
                     key={event.id}
-                    imageSrc={event.imageSrc}
+                    imageSrc={"/images/GIF.gif"}
                     title={event.title}
-                    status={event.status}
-                    date={event.date}
-                    mode={event.mode}
-                    fees={event.fees}
-                    teamSize={event.teamSize}
-                    description={event.description}
-                    gallery={event.gallery}
+                    status={"Coming soon..."}
+                    date={"Coming soon..."}
+                    mode={"Coming soon..."}
+                    fees={"Coming soon..."}
+                    teamSize={"Coming soon..."}
+                    description={"Coming soon..."}
+                    gallery={"Coming soon..."}
+                    registrationLink={"Coming soon..."}
+                    isOngoing={false}
+                    isFuture={true}
                   />
                 ))}
               </div>
@@ -94,6 +98,8 @@ export default function EventsPage() {
                     teamSize={event.teamSize}
                     description={event.description}
                     gallery={event.gallery}
+                    registrationLink={event.registrationLink}
+                    isOngoing={true}
                   />
                 ))}
               </div>
@@ -124,6 +130,8 @@ export default function EventsPage() {
                 teamSize={event.teamSize}
                 description={event.description}
                 gallery={event.gallery}
+                registrationLink={event.registrationLink}
+                isOngoing={false}
               />
             ))}
           </div>
