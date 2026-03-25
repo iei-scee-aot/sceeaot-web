@@ -46,7 +46,13 @@ const Countdown = ({ serverNow }: { serverNow: number }) => {
       let title: string;
       let description: string;
 
-      if (currentTime < hackathonStartDate) {
+      if (eventWinners.length > 0) {
+        phase = "ended";
+        title = "Tournament Concluded";
+        description = "GGWP! Thank you to all the players and teams for an amazing event. See you in the next season.";
+        targetDate = winnersDate;
+      } else {
+        if (currentTime < hackathonStartDate) {
         targetDate = hackathonStartDate;
         phase = "initial";
         title = "The Ultimate Esports Showdown Begins";
@@ -69,6 +75,7 @@ const Countdown = ({ serverNow }: { serverNow: number }) => {
         title = "Tournament Concluded";
         description = "GGWP! Thank you to all the players and teams for an amazing event. See you in the next season.";
         targetDate = winnersDate;
+      } 
       }
 
       setCurrentPhase(phase);
