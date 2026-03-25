@@ -250,18 +250,18 @@ const Countdown = ({ serverNow }: { serverNow: number }) => {
       <div className="text-center mt-6 px-4">
         {currentPhase === "initial" && (
           <p className="text-base lg:text-lg text-secondary/70 max-w-2xl">
-            🎯 Join us for our Gaming Event! The countdown to the ultimate esports showdown has begun. Get your squads ready ⚔️
+            Join us for our Gaming Event! The countdown to the ultimate esports showdown has begun. Get your squads ready
           </p>
         )}
         {currentPhase === "tournament" && (
           <p className="text-base lg:text-lg text-secondary/80 max-w-2xl">
-            🚀 The tournament is LIVE! Squads are battling it out across BGMI, 
+            The tournament is LIVE! Squads are battling it out across BGMI, 
             Free Fire, Valorant, and eFootball. Secure those top placements before time runs out!
           </p>
         )}
         {currentPhase === "winners" && (
           <p className="text-base lg:text-lg text-primary/80 max-w-2xl">
-            🏆 The matches have concluded! Tournament officials are verifying final 
+            The matches have concluded! Tournament officials are verifying final 
             scores and leaderboards. The ultimate champions will be crowned soon.
           </p>
         )}

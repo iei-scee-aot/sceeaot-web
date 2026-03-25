@@ -73,6 +73,7 @@ const About = () => {
                   variant="secondary"
                   icon={<ExternalLink size={18} />}
                   iconPosition="right"
+                  className="hover:translate-y-1 hover:scale-95 transititon-transform duration-300"
                 >
                   Rules and Regulations
                 </Button>
@@ -81,7 +82,7 @@ const About = () => {
                 <Link href={event.registrationLink} target="_blank">
                 <Button
                     variant="secondary"
-                    className="group border-primary/20 hover:border-primary/50"
+                    className="group border-primary/20 hover:border-primary/50 hover:translate-y-1 hover:scale-95 transititon-transform duration-300"
                 >
                     <span className="flex items-center gap-2">
                     Register Now

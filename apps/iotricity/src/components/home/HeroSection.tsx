@@ -46,7 +46,7 @@ const HeroSection = () => {
                     alt={eventName}
                     width={970}
                     height={300}
-                    className="object-contain transform group-hover:scale-105 transition-transform duration-500 filter drop-shadow-2xl"
+                    className="object-contain transform filter drop-shadow-2xl"
                     priority
                   />
                 </div>
@@ -71,7 +71,7 @@ const HeroSection = () => {
                   <div className="cursor-not-allowed w-full sm:w-auto">
                     <Button
                       variant="primary"
-                      className="opacity-50 pointer-events-none w-full" 
+                      className="opacity-50 pointer-events-none w-full hover:translate-y-1 hover:scale-95 transititon-transform duration-300" 
                       disabled={true}
                     >
                       <span className="relative z-10 flex items-center gap-2">
@@ -83,7 +83,7 @@ const HeroSection = () => {
                   <Link href={registrationLink} target='_blank' className="w-full sm:w-auto">
                     <Button
                       variant="primary"
-                      className="group relative overflow-hidden w-full"
+                      className="group relative overflow-hidden w-full hover:translate-y-1 hover:scale-95 transition-transform duration-300"
                     >
                       <span className="relative z-10 flex items-center gap-2">
                         Register Now
