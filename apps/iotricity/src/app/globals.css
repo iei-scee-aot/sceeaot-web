@@ -4,7 +4,7 @@
 
 :root {
   /* --primary: #00E2FF; */
-  --primary: #A138FA;
+  --primary: #ffc94d;
   --secondary: #FFFFFF;
   --background: #000000;
   --foreground: #FFFFFF;
@@ -444,4 +444,14 @@ a, button, [role="button"], input[type="submit"], input[type="button"],
 /* Gradient radial utility */
 .bg-gradient-radial {
   background: radial-gradient(var(--tw-gradient-stops));
+}
+
+
+.prize-square {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.prize-square:hover {
+    border-color: #FFD700;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px -10px rgba(255, 215, 0, 0.15);
 }

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { event } from "../../../constants";
 
 interface LoadingAnimationProps {
   onComplete: () => void;
@@ -40,7 +41,7 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
     >
       {/* Logo Container */}
       <div className="relative overflow-hidden">
-        <div className="relative w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64">
+        <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96">
           {/* Logo Image */}
           <div
             className={`relative w-full h-full transition-all duration-2000 ease-out ${
@@ -54,8 +55,8 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
             }}
           >
             <Image
-              src="/iotricity.svg"
-              alt="Iotricity Logo"
+              src={event.eventLogo}
+              alt={event.eventName}
               fill
               className="object-contain filter drop-shadow-2xl"
               priority
@@ -85,12 +86,12 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
         }`}
       >
         <h1 className="text-white text-lg md:text-xl lg:text-2xl font-medium tracking-wide text-center">
-          Welcome to IoTricity Season 2
+          {event.loadingGreetings}
         </h1>
       </div>
 
       {/* Loading Dots */}
-      <div
+      {/* <div
         className={`absolute bottom-16 left-1/2 transform -translate-x-1/2 transition-opacity duration-1000 delay-1500 ${
           animationStage === "revealing" ? "opacity-100" : "opacity-0"
         }`}
@@ -109,7 +110,7 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
             style={{ animationDelay: "0.6s", animationDuration: "1.5s" }}
           ></div>
         </div>
-      </div>
+      </div> */}
 
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-5">

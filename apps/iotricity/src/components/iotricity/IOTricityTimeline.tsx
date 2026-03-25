@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { eventSchedule } from "../../../constants";
 
 interface EventScheduleItemProps {
   title: string;
   date: string;
-  time: string;
+  time?: string;
   isLast?: boolean;
   index?: number;
 }
@@ -103,26 +104,8 @@ const TimelineItem = ({
 };
 
 const IOTricityTimeline = () => {
-  const [eventSchedule, setEventSchedule] = useState<EventSchedule[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
   const [lineProgress, setLineProgress] = useState(0);
   const timelineRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const loadEventSchedule = async () => {
-      try {
-        const response = await fetch("/data/hackathon-schedule.json");
-        const data = await response.json();
-        setEventSchedule(data);
-      } catch (error) {
-        console.error("Failed to load event schedule:", error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    loadEventSchedule();
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -158,17 +141,6 @@ const IOTricityTimeline = () => {
     };
   }, []);
 
-  if (isLoading) {
-    return (
-      <div className="flex flex-col items-center justify-center gap-4 py-8">
-        <div className="animate-pulse text-center">
-          <div className="h-16 bg-gray-300 rounded mb-4 w-48"></div>
-          <div className="h-8 bg-gray-300 rounded w-32 mx-auto"></div>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="flex flex-col items-center justify-center gap-4 py-8">
       {/* Timeline Title */}
@@ -184,7 +156,7 @@ const IOTricityTimeline = () => {
           Event Schedule
         </h2>
         <p className="text-lg lg:text-xl text-primary font-medium">
-          Complete IOTricity Season 2.0 Timeline
+          Complete ESCAYPE Timeline
         </p>
       </div>
 
@@ -208,7 +180,6 @@ const IOTricityTimeline = () => {
                 key={event.id}
                 title={event.title}
                 date={event.date}
-                time={event.time}
                 isLast={index === eventSchedule.length - 1}
                 index={index}
               />
@@ -220,9 +191,7 @@ const IOTricityTimeline = () => {
       {/* Timeline Info */}
       <div className="text-center mt-8 px-4">
         <p className="text-base lg:text-lg text-secondary/70 max-w-2xl mx-auto">
-          Follow the complete journey of IOTricity Season 2.0! From online
-          workshops and hackathon to the offline finale, every moment is
-          designed to enhance your IoT and electrical engineering skills.
+          Follow the complete journey of our Gaming Event! From intense online qualifiers to the thrilling finale, every moment is packed with action, competition, and unforgettable gameplay.
         </p>
       </div>
     </div>

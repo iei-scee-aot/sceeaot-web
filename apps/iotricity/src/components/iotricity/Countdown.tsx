@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Confetti from "./Confetti";
+import { event, eventWinners } from "../../../constants";
 
 interface TimeRemaining {
   days: number;
@@ -10,7 +11,7 @@ interface TimeRemaining {
   seconds: number;
 }
 
-const Countdown = () => {
+const Countdown = ({ serverNow }: { serverNow: number }) => {
   const [timeRemaining, setTimeRemaining] = useState<TimeRemaining>({
     days: 0,
     hours: 0,
@@ -22,51 +23,59 @@ const Countdown = () => {
 
   // Multi-phase countdown states
   const [currentPhase, setCurrentPhase] = useState<
-    "initial" | "hackathon" | "winners" | "ended"
+    "initial" | "hackathon" | "winners" | "ended" | "tournament"
   >("initial");
   const [phaseTitle, setPhaseTitle] = useState("");
   const [phaseDescription, setPhaseDescription] = useState("");
 
   useEffect(() => {
     setIsClient(true);
+    const clientMountTime = Date.now(); // capture once — used to measure elapsed time
 
     const calculateTimeRemaining = () => {
-      const hackathonStartDate = new Date("2025-08-30T20:00:00").getTime();
-      const hackathonEndDate = new Date("2025-09-01T20:00:00").getTime();
-      const winnersDate = new Date("2025-09-03T16:00:00").getTime();
-
-      const now = new Date().getTime();
-
-      // const now = new Date("2025-09-20T20:00:00").getTime(); // for testing
+      // Use server-anchored time: server's trusted timestamp + real elapsed ms since mount.
+      // This means faking the system clock shifts Date.now() but the phase boundaries
+      // (derived from serverNow) don't move, so users can't jump phases by spoofing time.
+      const currentTime = serverNow + (Date.now() - clientMountTime);
+      const hackathonStartDate = new Date(event.eventStart).getTime();
+      const hackathonEndDate = new Date(event.eventEnd).getTime();
+      const winnersDate = new Date(event.eventWinnersDate).getTime();
 
       let targetDate: number;
-      let phase: "initial" | "hackathon" | "winners" | "ended";
+      let phase: "initial" | "hackathon" | "winners" | "ended" | "tournament";
       let title: string;
       let description: string;
 
-      if (now < hackathonStartDate) {
+      if (eventWinners.length > 0) {
+        phase = "ended";
+        title = "Tournament Concluded";
+        description = "GGWP! Thank you to all the players and teams for an amazing event. See you in the next season.";
+        targetDate = winnersDate;
+      } else {
+        if (currentTime < hackathonStartDate) {
         targetDate = hackathonStartDate;
         phase = "initial";
-        title = "IOTricity Season 2.0 Begins";
+        title = "The Ultimate Esports Showdown Begins";
         description =
-          "Get ready for workshops, networking, and the start of our amazing IoT journey!";
-      } else if (now < hackathonEndDate) {
+          "Gear up for intense battles in BGMI, Free Fire, Valorant, and eFootball. Assemble your squad and prepare to dominate!";
+      } else if (currentTime < hackathonEndDate) {
         targetDate = hackathonEndDate;
-        phase = "hackathon";
-        title = "Online Hackathon Ends";
+        phase = "tournament"; // Changed phase name from 'hackathon'
+        title = "Live Tournament Ends";
         description =
-          "The hackathon is live! Teams are building amazing IoT solutions. Time remaining for submissions:";
-      } else if (now < winnersDate) {
+          "The battlegrounds are live! Teams are fighting for the championship. Time remaining in the tournament:";
+      } else if (currentTime < winnersDate) {
         targetDate = winnersDate;
         phase = "winners";
-        title = "Winners Will Be Declared";
+        title = "Champions Will Be Crowned";
         description =
-          "Hackathon submissions are closed! Judging is in progress. Winners will be announced soon:";
+          "The matches have concluded! Officials are verifying the final scores and standings. Winners will be announced soon:";
       } else {
         phase = "ended";
-        title = "IOTricity Season 2.0 Completed";
-        description = "Thank you for participating! See you next year.";
+        title = "Tournament Concluded";
+        description = "GGWP! Thank you to all the players and teams for an amazing event. See you in the next season.";
         targetDate = winnersDate;
+      } 
       }
 
       setCurrentPhase(phase);
@@ -79,7 +88,7 @@ const Countdown = () => {
         return;
       }
 
-      const difference = targetDate - now;
+      const difference = targetDate - currentTime;
 
       if (difference > 0) {
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -144,33 +153,31 @@ const Countdown = () => {
 
         {/* Thank You Message */}
         <div className="w-full max-w-4xl bg-primary/10 border border-primary/30 rounded-lg p-8 text-center animate-slide-up">
-          <div className="text-6xl mb-6 animate-bounce">🎉</div>
+          <div className="text-6xl mb-6 animate-bounce">🏆</div>
           <h3
             className="text-xl lg:text-2xl font-bold text-primary mb-4 animate-fade-in-delay-2"
             style={{ fontFamily: "KMR Apparat1" }}
           >
-            IOTricity Season 2.0 Has Concluded!
+            GGWP! The Tournament Has Concluded!
           </h3>
           <p className="text-base lg:text-lg text-secondary/80 mb-6 max-w-2xl mx-auto animate-fade-in-delay-3">
-            Thank you for participating in our amazing journey through IoT
-            innovation, workshops, hackathons, and competitions. Your enthusiasm
-            and creativity made this event truly special.
+            Thank you to all the players and squads for dropping in and giving it your all across BGMI, Free Fire, Valorant, and eFootball. The insane clutches, strategic plays, and relentless competitive spirit made this event truly legendary.
           </p>
           <div className="space-y-4 text-secondary/70 animate-fade-in-delay-4">
             <p className="text-lg font-medium text-primary">
-              We hope you enjoyed the experience and learned something new!
+              We hope you enjoyed the intense competition and the thrill of the battle!
             </p>
             <p className="text-base">
-              Stay connected with us for future events and opportunities.
+              Stay connected with us for future tournaments, scrims, and prize pools.
             </p>
             <div className="text-2xl mt-6 animate-wave">
               <span
                 className="text-primary font-bold"
                 style={{ fontFamily: "KMR Apparat1" }}
               >
-                See you next year!
+                See you in the next lobby!
               </span>
-              <span className="ml-2 animate-wave-hand">👋</span>
+              <span className="ml-2 animate-wave-hand">🎮</span>
             </div>
           </div>
         </div>
@@ -178,8 +185,7 @@ const Countdown = () => {
         {/* Footer Message */}
         <div className="text-center mt-6 px-4 animate-fade-in-delay-5">
           <p className="text-sm lg:text-base text-secondary/60">
-            Keep innovating and stay curious about electrical engineering and
-            IoT!
+            Keep grinding, stay sharp, and never stop climbing the ranks!
           </p>
         </div>
       </div>
@@ -210,7 +216,7 @@ const Countdown = () => {
         ></div>
         <div
           className={`w-3 h-3 rounded-full ${
-            currentPhase === "hackathon" ? "bg-secondary" : "bg-gray-600"
+            currentPhase === "hackathon" || currentPhase === "tournament" ? "bg-secondary" : "bg-gray-600"
           }`}
         ></div>
         <div
@@ -244,20 +250,19 @@ const Countdown = () => {
       <div className="text-center mt-6 px-4">
         {currentPhase === "initial" && (
           <p className="text-base lg:text-lg text-secondary/70 max-w-2xl">
-            Join us for IOTricity Season 2.0! The countdown to our flagship IoT
-            event has begun.
+            🎯 Join us for our Gaming Event! The countdown to the ultimate esports showdown has begun. Get your squads ready ⚔️
           </p>
         )}
-        {currentPhase === "hackathon" && (
+        {currentPhase === "tournament" && (
           <p className="text-base lg:text-lg text-secondary/80 max-w-2xl">
-            🚀 The hackathon is LIVE! Teams are working on innovative IoT
-            solutions. Submit your projects before time runs out!
+            🚀 The tournament is LIVE! Squads are battling it out across BGMI, 
+            Free Fire, Valorant, and eFootball. Secure those top placements before time runs out!
           </p>
         )}
         {currentPhase === "winners" && (
           <p className="text-base lg:text-lg text-primary/80 max-w-2xl">
-            🏆 Judging in progress! Our expert panel is reviewing all
-            submissions. Winners will be announced at the finale event.
+            🏆 The matches have concluded! Tournament officials are verifying final 
+            scores and leaderboards. The ultimate champions will be crowned soon.
           </p>
         )}
       </div>
