@@ -1,3 +1,4 @@
+import PrizePool from "@/components/iotricity/PrizePool";
 import { ReactNode } from "react";
 
 export interface Mentor {
@@ -30,6 +31,7 @@ export interface EventInfo {
     eventAboutSubDescription?: string;
     eventCinematicDesctiption: string;
     trailer: string;
+    eventHighlight?: string;
     eventStart: string;
     eventEnd: string;
     eventWinnersDate: string
@@ -40,19 +42,7 @@ export interface FAQItem {
   answer: string;
 }
 
-export interface winner {
-  rank: 1 | 2 | 3;
-  name: string;
-}
-
 export type Game = "Valorant" | "BGMI" | "Free Fire" | "E-Football";
-
-export interface Winners {
-  id: number;
-  game: Game;
-  imageUrl: string;
-  winners: winner[];
-}
 
 export interface Prize {
   rank: string;
@@ -64,4 +54,16 @@ export interface PrizePool {
   gradientClass: string;
   totalPrizePool: string;
   prizes: Prize[];
+}
+
+export interface winner {
+  rank: string;
+  teamName: string;
+}
+export interface Winners {
+  event: string;
+  game: Game;
+  championsName: string;
+  gradientClass: string;
+  prizes: winner[];
 }

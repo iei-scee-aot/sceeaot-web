@@ -281,83 +281,87 @@ export const prizePool: PrizePool[] = [
   },  
 ]
 
-const dummyData = [
+const dummyData: Winners[] = [
   {
-    id: 1,
-    game: "Valorant",
-    imageUrl: "",
-    winners: [
-      {
-        rank: 1,
-        name: "Team 1",
-      },
-      {
-        rank: 2,
-        name: "Team 2",
-      },
-      {
-        rank: 3,
-        name: "Team 3",
-      },
-    ]
-  },
-  {
-    id: 2,
+    event: "Event 1",
+    gradientClass: "group-hover:from-orange-500/20 group-hover:to-yellow-500/10",
     game: "BGMI",
-    imageUrl: "",
-    winners: [
+    championsName: "Team 1",
+    prizes: [
       {
-        rank: 1,
-        name: "Team 1",
+        rank: "1ST",
+        teamName: "Team 1"
       },
       {
-        rank: 2,
-        name: "Team 2",
+        rank: "2ND",
+        teamName: "Team 2"
       },
       {
-        rank: 3,
-        name: "Team 3"
+        rank: "3RD",
+        teamName: "Team 3"
       }
     ]
   },
   {
-    id: 3,
+    event: "Event 2",
     game: "Free Fire",
-    imageUrl: "",
-    winners: [
+    gradientClass: "group-hover:from-red-600/20 group-hover:to-orange-500/10",
+    championsName: "Team 2",
+    prizes: [
       {
-        rank: 1,
-        name: "Team 1",
+        rank: "1ST",
+        teamName: "Team 1"
       },
       {
-        rank: 2,
-        name: "Team 2",
+        rank: "2ND",
+        teamName: "Team 2"
       },
       {
-        rank: 3,
-        name: "Team 3"
+        rank: "3RD",
+        teamName: "Team 3"
       }
     ]
   },
   {
-    id: 4,
+    event: "Event 3",
     game: "E-Football",
-    imageUrl: "",
-    winners: [
+    gradientClass: "group-hover:from-blue-600/20 group-hover:to-cyan-400/10",
+    championsName: "Team 3",
+    prizes: [
       {
-        rank: 1,
-        name: "Team 1",
+        rank: "1ST",
+        teamName: "Team 1"
       },
       {
-        rank: 2,
-        name: "Team 2",
+        rank: "2ND",
+        teamName: "Team 2"
       },
       {
-        rank: 3,
-        name: "Team 3"
+        rank: "3RD",
+        teamName: "Team 3"
       }
     ]
-  }
+  },
+  {
+    event: "Event 4",
+    game: "Valorant",
+    gradientClass: "group-hover:from-rose-600/20 group-hover:to-red-600/10",
+    championsName: "Team 4",
+    prizes: [
+      {
+        rank: "1ST",
+        teamName: "Team 1"
+      },
+      {
+        rank: "2ND",
+        teamName: "Team 2"
+      },
+      {
+        rank: "3RD",
+        teamName: "Team 3"
+      }
+    ]
+  }, 
 ]
 
 export const hasTrackPrizes = false;

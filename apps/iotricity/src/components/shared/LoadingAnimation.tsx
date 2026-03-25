@@ -91,7 +91,7 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
       </div>
 
       {/* Loading Dots */}
-      <div
+      {/* <div
         className={`absolute bottom-16 left-1/2 transform -translate-x-1/2 transition-opacity duration-1000 delay-1500 ${
           animationStage === "revealing" ? "opacity-100" : "opacity-0"
         }`}
@@ -110,7 +110,7 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
             style={{ animationDelay: "0.6s", animationDuration: "1.5s" }}
           ></div>
         </div>
-      </div>
+      </div> */}
 
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-5">
