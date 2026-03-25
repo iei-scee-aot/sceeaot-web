@@ -8,6 +8,11 @@ import { event } from "../../../constants"
 
 
 const About = () => {
+
+  const targetedDate = new Date(event.registrationEnd).getTime();
+  const now = new Date().getTime();
+  const hasTargetDatePassed = now >= targetedDate;
+
   return (
     <>
         <div
@@ -72,20 +77,34 @@ const About = () => {
                   Rules and Regulations
                 </Button>
               </Link>
-              <Link href={event.registrationLink} target="_blank">
+              {!hasTargetDatePassed ? (
+                <Link href={event.registrationLink} target="_blank">
                 <Button
-                  variant="secondary"
-                  className="group border-primary/20 hover:border-primary/50"
+                    variant="secondary"
+                    className="group border-primary/20 hover:border-primary/50"
                 >
-                  <span className="flex items-center gap-2">
-                    Registration
+                    <span className="flex items-center gap-2">
+                    Register Now
                     <ExternalLink
-                      size={16}
-                      className="transition-transform group-hover:scale-110"
+                        size={16}
+                        className="transition-transform group-hover:scale-110"
                     />
-                  </span>
+                    </span>
                 </Button>
-              </Link>
+            </Link>
+            ) : (
+                <div className="cursor-not-allowed w-full sm:w-auto">
+                    <Button
+                        variant="secondary"
+                        className="opacity-50 pointer-events-none w-full" 
+                        disabled={true}
+                    >
+                        <span className="relative z-10 flex items-center gap-2">
+                        Registration Closed
+                        </span>
+                    </Button>
+                </div>
+            )}
             </div>
 
             {/* <div className="flex flex-col sm:flex-row gap-4 mt-8 mb-12 px-4 justify-center items-center">
