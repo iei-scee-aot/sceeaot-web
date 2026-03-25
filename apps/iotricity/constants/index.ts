@@ -26,17 +26,17 @@ export const event: EventInfo = {
     eventAboutSubDescription: "Competition • Strategy • Community",
 
     eventAboutDescription: [
-      "Welcome to ESCAYPE 🎮🔥 – the ultimate battleground where skill, strategy, and esports passion collide! Organized by SCEE, this electrifying multi-title gaming event brings together competitive players across some of the most popular titles — Valorant, BGMI, Free Fire, and E-Football.",
+      "Welcome to ESCAYPE – the ultimate battleground where skill, strategy, and esports passion collide! Organized by SCEE, this electrifying multi-title gaming event brings together competitive players across some of the most popular titles — Valorant, BGMI, Free Fire, and E-Football.",
       
-      "Set to take place from 12th to 16th April 2026 📅, ESCAYPE is a fully online tournament designed to unite gamers from all backgrounds. With a massive prize pool of ₹21,000 💰 along with exciting goodies 🎁 for all participants, the event promises high-stakes competition and rewarding experiences for everyone involved.",
+      "Set to take place from 12th to 16th April 2026, ESCAYPE is a fully online tournament designed to unite gamers from all backgrounds. With a massive prize pool of ₹21,000 along with exciting goodies for all participants, the event promises high-stakes competition and rewarding experiences for everyone involved.",
       
-      "ESCAYPE is not just about winning — it’s about proving your dominance, teamwork, and tactical brilliance. Whether you’re a sharpshooter in Valorant 🎯, a survival expert in BGMI 🪖, a fast-paced Free Fire player ⚡, or a maestro in E-Football ⚽, this platform gives you the stage to shine.",
+      "ESCAYPE is not just about winning — it’s about proving your dominance, teamwork, and tactical brilliance. Whether you’re a sharpshooter in Valorant, a survival expert in BGMI, a fast-paced Free Fire player, or a maestro in E-Football, this platform gives you the stage to shine.",
       
-      "The competition structure ensures rewarding outcomes across all games, with cash prizes 💸 distributed to top performers in each category, alongside exclusive goodies 🎉 for everyone who joins the battle.",
+      "The competition structure ensures rewarding outcomes across all games, with cash prizes distributed to top performers in each category, alongside exclusive goodies for everyone who joins the battle.",
 
-      "ESCAYPE is where competitive spirit meets community 🤝, where gamers connect, compete, and create unforgettable moments. Step into the arena, showcase your skills, and rise above the rest 🚀",
+      "ESCAYPE is where competitive spirit meets community, where gamers connect, compete, and create unforgettable moments. Step into the arena, showcase your skills, and rise above the rest",
 
-      "The escaype begins here… are you ready?!! 👀🔥"
+      "The escaype begins here… are you ready?!!"
     ],
     
     eventCinematicDesctiption: "🚀 The wait is over! Dive into the action, intense battles, and clutch plays from our Ultimate Gaming Arena 🎮⚡",
@@ -131,7 +131,7 @@ export const eventSchedule = [
   {
     id: 1,
     title: "Online Registration Opens",
-    date: "March 29, 2026",
+    date: "March 28, 2026",
     type: "Registration",
   },
   {
