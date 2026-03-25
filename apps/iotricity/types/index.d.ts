@@ -44,9 +44,24 @@ export interface winner {
   rank: 1 | 2 | 3;
   name: string;
 }
+
+export type Game = "Valorant" | "BGMI" | "Free Fire" | "E-Football";
+
 export interface Winners {
   id: number;
-  game: "Valorant" | "BGMI" | "Free Fire" | "E-Football";
+  game: Game;
   imageUrl: string;
   winners: winner[];
+}
+
+export interface Prize {
+  rank: string;
+  amount: string;
+}
+export interface PrizePool {
+  event: string;
+  game: Game;
+  gradientClass: string;
+  totalPrizePool: string;
+  prizes: Prize[];
 }

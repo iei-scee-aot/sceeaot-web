@@ -5,6 +5,7 @@ export default {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./constants/**/*.{js,ts}",
     "./public/**/*.json",
   ],
   theme: {
@@ -32,6 +33,7 @@ export default {
       fontFamily: {
         apparat: ["KMR Apparat", "sans-serif"],
         pxg: ["'PXG'", "sans-serif"],
+        mono: ['var(--font-space-mono)', 'monospace'],
       },
     },
   },

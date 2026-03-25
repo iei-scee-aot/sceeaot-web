@@ -1,4 +1,4 @@
-import { EventInfo, FAQItem, Mentor, TrackPrize, Winners } from "../types";
+import { EventInfo, FAQItem, Mentor, PrizePool, TrackPrize, Winners } from "../types";
 
 export const eventMentors: Mentor[] = [];
 
@@ -9,13 +9,13 @@ export const event: EventInfo = {
 
     registrationLink: "https://forms.gle/XLBaguGiTHRN3vVT7",
 
-    heroBackground: "/images/hero_background.svg",
+    heroBackground: "/images/bg.png",
 
     patternBackground: "data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFBE00' fill-opacity='0.4'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E",
 
     eventName: "ESCAYPE",
 
-    eventLogo: "/iotricity.svg",
+    eventLogo: "/images/logo_primary_1.svg",
 
     loadingGreetings: "Welcome ESCAYPE the gaming event",
 
@@ -197,6 +197,89 @@ export const eventRules = [
 ];
 
 export const eventWinners: Winners[] = []
+
+export const prizePool: PrizePool[] = [
+  {
+    event: "Event 1",
+    gradientClass: "group-hover:from-orange-500/20 group-hover:to-yellow-500/10",
+    game: "BGMI",
+    totalPrizePool: "₹5K",
+    prizes: [
+      {
+        rank: "1ST",
+        amount: "₹3K"
+      },
+      {
+        rank: "2ND",
+        amount: "₹2K"
+      },
+      {
+        rank: "3RD",
+        amount: "₹1K"
+      }
+    ]
+  },
+  {
+    event: "Event 2",
+    game: "Free Fire",
+    gradientClass: "group-hover:from-red-600/20 group-hover:to-orange-500/10",
+    totalPrizePool: "₹5K",
+    prizes: [
+      {
+        rank: "1ST",
+        amount: "₹3K"
+      },
+      {
+        rank: "2ND",
+        amount: "₹2K"
+      },
+      {
+        rank: "3RD",
+        amount: "₹1K"
+      }
+    ]
+  },
+  {
+    event: "Event 3",
+    game: "E-Football",
+    gradientClass: "group-hover:from-blue-600/20 group-hover:to-cyan-400/10",
+    totalPrizePool: "₹3K",
+    prizes: [
+      {
+        rank: "1ST",
+        amount: "₹1.5K"
+      },
+      {
+        rank: "2ND",
+        amount: "₹1K"
+      },
+      {
+        rank: "3RD",
+        amount: "₹500"
+      }
+    ]
+  },
+  {
+    event: "Event 4",
+    game: "Valorant",
+    gradientClass: "group-hover:from-rose-600/20 group-hover:to-red-600/10",
+    totalPrizePool: "₹5K",
+    prizes: [
+      {
+        rank: "1ST",
+        amount: "₹3K"
+      },
+      {
+        rank: "2ND",
+        amount: "₹2K"
+      },
+      {
+        rank: "3RD",
+        amount: "₹1K"
+      }
+    ]
+  },  
+]
 
 const dummyData = [
   {

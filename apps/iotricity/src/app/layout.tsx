@@ -3,7 +3,7 @@ import LayoutWrapper from "@/components/ui/LayoutWrapper";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Space_Mono } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,6 +15,13 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const spaceMono = Space_Mono({
+  variable: "--font-space-mono",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"]
+})
 
 export const metadata: Metadata = {
   title: {
@@ -65,7 +72,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning={true}
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${spaceMono.variable} antialiased`}
       >
         <LoadingProvider>
           <LayoutWrapper>{children}</LayoutWrapper>
