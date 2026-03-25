@@ -41,7 +41,7 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
     >
       {/* Logo Container */}
       <div className="relative overflow-hidden">
-        <div className="relative w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64">
+        <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96">
           {/* Logo Image */}
           <div
             className={`relative w-full h-full transition-all duration-2000 ease-out ${

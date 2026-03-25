@@ -44,8 +44,8 @@ const HeroSection = () => {
                   <Image
                     src={eventLogo}
                     alt={eventName}
-                    width={800}
-                    height={200}
+                    width={970}
+                    height={300}
                     className="object-contain transform group-hover:scale-105 transition-transform duration-500 filter drop-shadow-2xl"
                     priority
                   />
