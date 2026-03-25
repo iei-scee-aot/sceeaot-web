@@ -22,9 +22,19 @@ interface EventSchedule {
 
 interface CountdownProps {
   showTimeline?: boolean;
+  targetDate?: Date;
+  eventName?: string;
+  eventEndDate?: Date;
+  scheduleDataPath?: string;
 }
 
-const Countdown = ({ showTimeline = true }: CountdownProps) => {
+const Countdown = ({ 
+  showTimeline = true, 
+  targetDate,
+  eventName = "Upcoming Event",
+  eventEndDate,
+  scheduleDataPath = "/data/hackathon-schedule.json"
+}: CountdownProps) => {
   const [timeRemaining, setTimeRemaining] = useState<TimeRemaining>({
     days: 0,
     hours: 0,
@@ -41,7 +51,7 @@ const Countdown = ({ showTimeline = true }: CountdownProps) => {
 
     const loadEventSchedule = async () => {
       try {
-        const response = await fetch("/data/hackathon-schedule.json");
+        const response = await fetch(scheduleDataPath);
         if (!response.ok) {
           const text = await response.text();
           throw new Error(`Failed to fetch event schedule: ${response.status} ${response.statusText} - ${text.slice(0, 200)}`);
@@ -64,12 +74,20 @@ const Countdown = ({ showTimeline = true }: CountdownProps) => {
     loadEventSchedule();
 
     const calculateTimeRemaining = () => {
-      const targetDate = new Date("2025-08-30T20:00:00").getTime(); // The Day Event Starts
-      const eventEndDate = new Date("2025-09-06T23:59:59").getTime(); // The Day Event Ends
+      // Use provided targetDate or fallback to hardcoded date for IOTricity S2
+      const target = targetDate || new Date("2025-08-30T20:00:00");
+      const eventEnd = eventEndDate 
+        ? eventEndDate
+        : targetDate 
+          ? new Date(targetDate.getTime() + (7 * 24 * 60 * 60 * 1000)) // 7 days after target
+          : new Date("2025-09-06T23:59:59");
+      
+      const targetDateMs = target.getTime();
+      const eventEndDateMs = eventEnd.getTime();
       const now = new Date().getTime();
-      const difference = targetDate - now;
+      const difference = targetDateMs - now;
 
-      if (now > eventEndDate) {
+      if (now > eventEndDateMs) {
         setHasEventEnded(true);
         setHasDatePassed(true);
         setTimeRemaining({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -100,7 +118,7 @@ const Countdown = ({ showTimeline = true }: CountdownProps) => {
     const interval = setInterval(calculateTimeRemaining, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [targetDate, eventEndDate, scheduleDataPath]);
 
   if (!isClient) {
     return (
@@ -137,7 +155,7 @@ const Countdown = ({ showTimeline = true }: CountdownProps) => {
             Thank You!
           </h2>
           <p className="text-lg lg:text-xl text-primary font-medium animate-fade-in-delay">
-            IOTricity Season 2.0 - Event Completed
+            {eventName} - Event Completed
           </p>
         </div>
 
@@ -148,7 +166,7 @@ const Countdown = ({ showTimeline = true }: CountdownProps) => {
             className="text-xl lg:text-2xl font-bold text-primary mb-4 animate-fade-in-delay-2"
             style={{ fontFamily: "KMR Apparat1" }}
           >
-            IOTricity Season 2.0 Has Concluded!
+            {eventName} Has Concluded!
           </h3>
           <p className="text-base lg:text-lg text-secondary/80 mb-6 max-w-2xl mx-auto animate-fade-in-delay-3">
             Thank you for participating in our amazing journey through IoT
@@ -198,10 +216,10 @@ const Countdown = ({ showTimeline = true }: CountdownProps) => {
               color: "transparent",
             }}
           >
-            IOTricity Season 2.0
+            {eventName.toUpperCase()}
           </h2>
           <p className="text-lg lg:text-xl text-primary font-medium">
-            Complete Event and Hackathon Schedule
+            Complete Event and Schedule
           </p>
         </div>
 
@@ -243,10 +261,10 @@ const Countdown = ({ showTimeline = true }: CountdownProps) => {
           className="text-[2.5rem] lg:text-[3.5rem] font-bold leading-tight tracking-tight mb-2 text-primary"
           style={{ fontFamily: "KMR Apparat1" }}
         >
-          IOTRICITY SEASON 2.0
+          {eventName.toUpperCase()}
         </h2>
         <p className="text-lg lg:text-xl text-secondary/80 font-medium max-w-2xl mx-auto">
-          Counting down to the biggest event of the year.
+          Counting down to the event.
         </p>
       </div>
 

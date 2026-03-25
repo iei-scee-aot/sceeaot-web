@@ -1,4 +1,4 @@
-import { ArrowRight} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,6 +12,9 @@ interface EventCardProps {
   teamSize: string;
   description: string;
   gallery: string;
+  registrationLink?: string;
+  isOngoing?: boolean;
+  isFuture?: boolean;
 }
 
 const EventCard: React.FC<EventCardProps> = ({
@@ -23,6 +26,9 @@ const EventCard: React.FC<EventCardProps> = ({
   teamSize,
   description,
   gallery,
+  registrationLink,
+  isOngoing,
+  isFuture,
 }) => {
   return (
     <div className=" mb-4 overflow-hidden bg-background  flex  flex-col md:flex-row w-full">
@@ -51,16 +57,30 @@ const EventCard: React.FC<EventCardProps> = ({
             />
           </svg>
           <div className=" bg-primary w-[100%] text-black py-[0.6rem] px-[0.5rem] text-[12px] font-semibold hover:bg-primary/90 transition-all duration-300 z-10">
-            <Link target="_blank" rel="noopener noreferer" href={gallery} >
-              <div className="flex flex-col items-start">
-                <span className="leading-none">VIEW</span>
-                <span className="leading-none">GALLERY</span>
-                <ArrowRight size={14} className="mt-2 animate-float" />
-
+            <Link
+              target="_blank"
+              rel="noopener noreferer"
+              href={isOngoing ? registrationLink || "/" : gallery}
+            >
+              <div className="flex flex-col items-start text-xs">
+                {isFuture ? (
+                  <>
+                    <span className="leading-none">COMING SOON</span>
+                  </>
+                ) : isOngoing ? (
+                  <>
+                    <span className="leading-none">REGISTER</span>
+                    <span className="leading-none">NOW</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="leading-none">VIEW</span>
+                    <span className="leading-none">GALLERY</span>
+                  </>
+                )}
+                <ArrowRight size={18} className="" />
               </div>
-              
             </Link>
-            
           </div>
         </div>
       </div>
@@ -106,7 +126,9 @@ const EventCard: React.FC<EventCardProps> = ({
           </div>
         </div>
 
-        <p className="text-xs m-3 px-3 text-secondary mt-2 font-pxg">{description}</p>
+        <p className="text-xs m-3 px-3 text-secondary mt-2 font-pxg">
+          {description}
+        </p>
       </div>
     </div>
   );
