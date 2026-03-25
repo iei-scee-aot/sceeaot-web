@@ -13,6 +13,7 @@ import SponsorSection from "@/components/home/SponsorSection";
 
 const HomePage = () => {
   const isMentorsVisible = eventMentors.length > 0 ? true : false;
+  const hasTrailer = event.trailer ? true : false;
 
   return (
     <>
@@ -25,7 +26,7 @@ const HomePage = () => {
         <About />
 
         {/* Post Event Cinematics Section */}
-        <Cinematics />
+        {hasTrailer && <Cinematics />}
 
         {/* Countdown Section */}
         <CountdownSection />

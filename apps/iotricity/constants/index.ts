@@ -41,7 +41,7 @@ export const event: EventInfo = {
     
     eventCinematicDesctiption: "🚀 The wait is over! Dive into the action, intense battles, and clutch plays from our Ultimate Gaming Arena 🎮⚡",
 
-    trailer: "https://www.youtube.com/embed/-Bq2TGLDlDg",
+    // trailer: "https://www.youtube.com/embed/-Bq2TGLDlDg",
 
     eventStart: "2026-04-12",
     eventEnd: "2026-04-16",

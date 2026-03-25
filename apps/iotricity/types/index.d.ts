@@ -30,7 +30,7 @@ export interface EventInfo {
     eventYear: string;
     eventAboutSubDescription?: string;
     eventCinematicDesctiption: string;
-    trailer: string;
+    trailer?: string;
     eventHighlight?: string;
     eventStart: string;
     eventEnd: string;
