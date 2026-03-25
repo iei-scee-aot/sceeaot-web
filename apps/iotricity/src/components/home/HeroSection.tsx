@@ -59,7 +59,7 @@ const HeroSection = () => {
 
               <div className="flex items-center justify-center gap-3 mt-6">
                 {/* <div className="h-1 w-16 bg-gradient-to-r from-primary to-transparent rounded-full"></div> */}
-                <span className="text-lg lg:text-xl font-medium text-primary uppercase">
+                <span className="text-lg lg:text-xl font-medium text-[#F3F4F6] uppercase">
                   {eventHeroSectionDescription}
                 </span>
                 {/* <div className="h-1 w-16 bg-gradient-to-l from-primary to-transparent rounded-full"></div> */}
