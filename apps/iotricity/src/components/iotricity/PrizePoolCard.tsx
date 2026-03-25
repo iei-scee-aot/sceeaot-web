@@ -17,7 +17,7 @@ const PrizePoolCard = ({ prizePool }: { prizePool: PrizePool }) => {
   const { event, game, totalPrizePool, gradientClass } = prizePool;
 
   return (
-    <div className="prize-square font-mono relative h-64 border border-white/30 flex flex-col items-center justify-center p-6 text-center group cursor-default overflow-hidden">
+    <div className="prize-square font-mono relative h-64 rounded-lg border border-primary/30 flex flex-col items-center justify-center p-6 text-center group cursor-default overflow-hidden">
         <div className={`absolute inset-0 bg-gradient-to-br from-transparent to-transparent ${gradientClass} transition-all duration-500 z-0`}></div>
 
         <div className="relative z-10 w-full flex flex-col items-center">
