@@ -1,5 +1,6 @@
 {
-  "futureEvents": [
+  "futureEvents": [],
+  "ongoingEvents": [
     {
       "id": "escaypes1",
       "title": "Escaype",
@@ -16,12 +17,9 @@
       "description": "A completely virtual eSports event organized by IEI Students' Chapter EE. The event featured popular games like Valorant, BGMI, eFootabll and Free Fire. Participants could compete in solo or team categories, with exciting prizes awaiting the winners.",
       "gallery": "",
       "imageSrc": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhKBQQQMrBGWo9EQCLMp63kYul72d5sezfFiTH",
-      "registrationLink": "/",
-      "detailsLink": "/"
+      "registrationLink": "https://forms.gle/XK3H3s4NUWfBhsD69",
+      "detailsLink": "https://escaype.sceeaot.in"
     }
-  ],
-  "ongoingEvents": [
-    
   ],
   "pastEvents": [
     {
