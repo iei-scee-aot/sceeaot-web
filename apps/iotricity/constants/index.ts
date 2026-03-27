@@ -131,7 +131,7 @@ export const eventSchedule = [
   {
     id: 1,
     title: "Online Registration Opens",
-    date: "March 28, 2026",
+    date: "March 27, 2026",
     type: "Registration",
   },
   {
