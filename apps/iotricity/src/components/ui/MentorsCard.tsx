@@ -1,3 +1,6 @@
+"use client";
+
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -9,9 +12,9 @@ interface CardProps {
 }
 
 const MentorsCard = ({
-  Name = "Member Name",
-  Designation = "Designation",
-  imagePath = "",
+  Name = "",
+  Designation = "Revealing Soon...",
+  imagePath = "/images/GIF.gif",
   links = [
     "https://facebook.com",
     "https://instagram.com",
@@ -23,7 +26,11 @@ const MentorsCard = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleCard = () => {
-    setIsExpanded(!isExpanded);
+    if (Name?.length > 0) {
+      setIsExpanded(!isExpanded);
+    } else {
+      setIsExpanded(false);
+    }
   };
 
   // Map known domains to their corresponding icon file names
@@ -90,18 +97,25 @@ const MentorsCard = ({
               unoptimized
               src={imagePath}
               alt={Name}
-              loading="lazy"
               width={160}
               height={160}
               className="object-cover w-[16rem] h-[16rem] md:w-[10rem] md:h-[10rem]"
-              priority={false}
+              priority={true}
             />
           </div>
-          <div className="border-t-[0.5px] h-[6rem] md:h-[3.5rem] border-gray-500 text-left pt-2 md:pt-1.5 px-[1rem] md:px-[0.7rem]">
-            <h2 className="font-pxg font-thin leading-[1.8rem] md:leading-[1.2rem] text-xl md:text-sm">
-              {Name}
-            </h2>
-            <p className="text-xl md:text-sm font-thin font-pxg text-primary">
+          <div className={cn(
+            "border-t-[0.5px] h-[6rem] md:h-[3.5rem] border-gray-500 px-[1rem] md:px-[0.7rem]",
+            Name.length > 0 ? "text-left pt-2 md:pt-1.5" : "flex items-center justify-center text-center"
+          )}>
+            {Name.length > 0 && (
+              <h2 className="font-pxg font-thin leading-[1.8rem] md:leading-[1.2rem] text-xl md:text-sm">
+                {Name}
+              </h2>
+            )}
+            <p className={cn(
+              "font-thin font-pxg text-primary",
+              Name.length > 0 ? "text-xl md:text-sm" : "text-2xl md:text-base tracking-wide"
+            )}>
               {Designation}
             </p>
           </div>
