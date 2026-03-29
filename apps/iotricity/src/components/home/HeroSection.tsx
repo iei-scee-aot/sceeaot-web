@@ -66,7 +66,7 @@ const HeroSection = () => {
               </div>
 
               {/* Call to Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mt-12">
+              <div className="flex flex-col sm:flex-row gap-4 mt-32 md:mt-12">
                 {hasTargetDatePassed ? (
                   <div className="cursor-not-allowed w-full sm:w-auto">
                     <Button

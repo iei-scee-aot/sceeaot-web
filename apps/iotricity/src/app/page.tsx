@@ -12,7 +12,7 @@ import TracSection from "@/components/home/TracSection";
 import SponsorSection from "@/components/home/SponsorSection";
 
 const HomePage = () => {
-  const isMentorsVisible = eventMentors.length > 0 ? true : false;
+  const hasMentors = true;
   const hasTrailer = event.trailer ? true : false;
 
   return (
@@ -35,7 +35,7 @@ const HomePage = () => {
         <Timeline />
 
         {/* Mentors Section */}
-        {isMentorsVisible && <MentorSection mentors={eventMentors} />}
+        {hasMentors && <MentorSection mentors={eventMentors} />}
 
         {/* Event Tracks Section */}
         {hasTrackPrizes && <TracSection />}
