@@ -212,7 +212,7 @@ export const prizePool: PrizePool[] = [
     event: "Game 1",
     gradientClass: "group-hover:from-orange-500/20 group-hover:to-yellow-500/10",
     game: "BGMI",
-    totalPrizePool: "₹5K",
+    totalPrizePool: "₹6K",
     prizes: [
       {
         rank: "1ST",
@@ -232,7 +232,7 @@ export const prizePool: PrizePool[] = [
     event: "Game 2",
     game: "Free Fire",
     gradientClass: "group-hover:from-red-600/20 group-hover:to-orange-500/10",
-    totalPrizePool: "₹5K",
+    totalPrizePool: "₹6K",
     prizes: [
       {
         rank: "1ST",
@@ -272,7 +272,7 @@ export const prizePool: PrizePool[] = [
     event: "Game 4",
     game: "Valorant",
     gradientClass: "group-hover:from-rose-600/20 group-hover:to-red-600/10",
-    totalPrizePool: "₹5K",
+    totalPrizePool: "₹6K",
     prizes: [
       {
         rank: "1ST",
