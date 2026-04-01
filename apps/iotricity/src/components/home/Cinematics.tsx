@@ -57,7 +57,7 @@ const Cinematics = () => {
                   <iframe
                     className="absolute top-0 left-0 w-full h-full rounded-lg border border-primary/20"
                     src={event.trailer}
-                    title="IOTricity Post Event Cinematics"
+                    title="4 Games, 1 Champion. Welcome to ESCAYPE 2026 🏆"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
