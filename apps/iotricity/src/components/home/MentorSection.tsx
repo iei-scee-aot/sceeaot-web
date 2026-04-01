@@ -16,7 +16,7 @@ const MentorSection = ({ mentors }: { mentors: Mentor[] }) => {
           <div className="px-4 lg:px-8 py-12 lg:py-8 text-sm lg:text-[2rem] font-pxg lg:font-light lg:leading-relaxed flex justify-center items-center">
               {isMentorsVisible 
                 ? (
-                  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-x-10 gap-y-5 md:gap-y-[4.5rem] mx-5 py-12 pb-5 md:pb-20 place-items-center">
+                  <div className="grid grid-cols-1 mx-5 py-12 pb-5 md:pb-20 place-items-center">
                     {mentors.map((mentor, index) => (
                       <MentorsCard
                         key={index}

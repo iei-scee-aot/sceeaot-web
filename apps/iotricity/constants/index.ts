@@ -1,6 +1,15 @@
 import { EventInfo, FAQItem, Mentor, PrizePool, TrackPrize, Winners } from "../types";
 
-export const eventMentors: Mentor[] = [];
+export const eventMentors: Mentor[] = [
+  {
+    name: "Caster Suraj",
+    designation: "Commentator/Caster",
+    imagePath: "/images/escaype_commentator.png",
+    links: [
+      "https://www.instagram.com/caster_suraj"
+    ]
+  }
+];
 
 export const trackPrizes: TrackPrize[] = [];
 
