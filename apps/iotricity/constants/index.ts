@@ -14,7 +14,7 @@ export const eventMentors: Mentor[] = [
 export const trackPrizes: TrackPrize[] = [];
 
 export const event: EventInfo = {
-    registrationEnd: "2026-04-09T20:00:00",
+    registrationEnd: "2026-04-10T23:59:59+05:30",
 
     registrationLink: "https://forms.gle/XLBaguGiTHRN3vVT7",
 
@@ -152,7 +152,7 @@ export const eventSchedule = [
   {
     id: 3,
     title: "Registration Ends",
-    date: "April 09, 2026",
+    date: "April 10, 2026",
     type: "Registration",
   },
   {
