@@ -3,7 +3,7 @@ import { event, prizePool } from '../../../constants'
 import PrizePoolCard from './PrizePoolCard'
 import Link from 'next/link'
 import Button from '../ui/Button'
-import { ArrowRight, ExternalLink } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 const PrizePool = () => {
 
