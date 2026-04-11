@@ -5,13 +5,12 @@ import { ExternalLink } from "lucide-react"
 import Image from "next/image"
 import Divider from "../ui/Divider"
 import { event } from "../../../constants"
+import { getRegistrationStatus } from "@/lib/registrationStatus"
 
 
 const About = () => {
 
-  const targetedDate = new Date(event.registrationEnd).getTime();
-  const now = new Date().getTime();
-  const hasTargetDatePassed = now >= targetedDate;
+  const { closed: hasTargetDatePassed } = getRegistrationStatus();
 
   return (
     <>

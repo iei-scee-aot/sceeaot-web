@@ -5,14 +5,14 @@ import Link from 'next/link'
 import Button from '../ui/Button'
 import { ArrowRight } from 'lucide-react'
 import { event } from '../../../constants'
+import { getRegistrationStatus } from '@/lib/registrationStatus'
 
 const HeroSection = () => {
 
-  const { registrationEnd, registrationLink, heroBackground, patternBackground, eventName, eventLogo, eventHeroSectionDescription } = event;
- 
-  const targetedDate = new Date(registrationEnd).getTime();
-  const now = new Date().getTime();
-  const hasTargetDatePassed = now >= targetedDate;
+  const { registrationLink, heroBackground, patternBackground, eventName, eventLogo, eventHeroSectionDescription } = event;
+
+
+  const { closed: hasTargetDatePassed } = getRegistrationStatus();
 
   return (
     <>
