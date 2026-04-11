@@ -52,9 +52,9 @@ export const event: EventInfo = {
 
     trailer: "https://www.youtube.com/embed/zT5DTiWjAkA",
 
-    eventStart: "2026-04-12",
-    eventEnd: "2026-04-16",
-    eventWinnersDate: "2026-04-16T16.00.00",
+    eventStart: "2026-04-12T11:30:00+05:30",
+    eventEnd: "2026-04-15T23:30:00+05:30",
+    eventWinnersDate: "2026-04-16T11:30:00+05:30",
 }
 
 export const faqData: FAQItem[] = [
