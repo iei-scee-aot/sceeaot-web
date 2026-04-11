@@ -11,6 +11,9 @@ import PrizeSection from "@/components/home/PrizeSection";
 import TracSection from "@/components/home/TracSection";
 import SponsorSection from "@/components/home/SponsorSection";
 
+
+export const revalidate = 60;
+
 const HomePage = () => {
   const hasMentors = true;
   const hasTrailer = event.trailer ? true : false;
