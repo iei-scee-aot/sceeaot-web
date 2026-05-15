@@ -2,6 +2,26 @@
   "futureEvents": [],
   "ongoingEvents": [
     {
+      "id": "devora26",
+      "title": "DEVORA’26",
+      "status":"Open",
+      "date": "16th May 2026",
+      "registrationStartDate": "2026-05-15T00:00:00Z",
+      "registrationEndDate": "2026-05-15T23:59:59Z",
+      "eventStartDate": "2026-05-16T00:00:00Z",
+      "eventEndDate": "2026-05-16T23:59:59Z",
+      "registrationDeadline": "2026-05-15T23:59:59Z",
+      "mode":"Offline",
+      "fees":"Free",
+      "teamSize":"Solo",
+      "description": "An AI-focused offline workshop organized by SCEE, Academy of Technology, dedicated to exploring the future of Artificial Intelligence, innovation, and emerging technologies.",
+      "gallery": "",
+      "imageSrc": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rhztpj5Y3Dl6Uym4bapcM3Yt0wOosHeCi1Z5XB",
+      "registrationLink": "https://unstop.com/o/HhkN3w9?lb=wxAAm5Pv"
+    }
+  ],
+  "pastEvents": [
+    {
       "id": "escaypes1",
       "title": "Escaype",
       "status":"Closed",
@@ -19,9 +39,7 @@
       "imageSrc": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhKBQQQMrBGWo9EQCLMp63kYul72d5sezfFiTH",
       "registrationLink": "https://forms.gle/XK3H3s4NUWfBhsD69",
       "detailsLink": "https://escaype.sceeaot.in"
-    }
-  ],
-  "pastEvents": [
+    },
     {
       "id": "iotricitys2",
       "imageSrc": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9RhIKZ7WY8XBiE7hCZo24eUpHdkmLYfMlFRqOc8",
