@@ -27,7 +27,7 @@ export default function EventsPage() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await fetch("/data/events.json");
+        const res = await fetch("/api/events");
         const data = await res.json();
         setFutureEvents(data.futureEvents || []);
         setOngoingEvents(data.ongoingEvents || []);
@@ -57,7 +57,7 @@ export default function EventsPage() {
                   <EventCard
                     key={event.id}
                     imageSrc={"/images/GIF.gif"}
-                    title={event.title}
+                    title={"Coming Soon..."}
                     status={"Coming soon..."}
                     date={"Coming soon..."}
                     mode={"Coming soon..."}

@@ -1,6 +1,6 @@
 {
-  "futureEvents": [],
-  "ongoingEvents": [
+  "ongoingEvents": [],
+  "pastEvents": [
     {
       "id": "devora26",
       "title": "DEVORA’26",
@@ -18,9 +18,7 @@
       "gallery": "",
       "imageSrc": "https://bywh0yntxo.ufs.sh/f/k4bR25DaT9Rhztpj5Y3Dl6Uym4bapcM3Yt0wOosHeCi1Z5XB",
       "registrationLink": "https://unstop.com/o/HhkN3w9?lb=wxAAm5Pv"
-    }
-  ],
-  "pastEvents": [
+    },
     {
       "id": "escaypes1",
       "title": "Escaype",
