@@ -7,9 +7,9 @@
       "status": "Open",
       "date": "27th September",
       "registrationStartDate": "2026-09-16T20:00:00Z",
-      "registrationEndDate": "2026-09-24T23:59:59Z",
+      "registrationEndDate": "2026-09-26T23:59:59Z",
       "eventStartDate": "2026-09-27T10:00:00Z",
-      "eventEndDate": "2025-09-30T23:59:59Z",
+      "eventEndDate": "2026-09-30T23:59:59Z",
       "registrationDeadline": "2026-09-24T23:59:59Z",
       "mode": "Hybrid",
       "fees": "₹50 per person",
@@ -17,7 +17,7 @@
       "description": "The season 3 of hybrid hackathon event, the first of its kind at AOT campus. The event focused on IoT (Internet of Things), a rapidly growing field. The event had a prize pool of ₹20000.",
       "gallery": "https://drive.google.com/drive/folders/1RawkgELoOl6BvUNoYWbLbEe-VXSc-NbU",
       "registrationLink": "https://forms.gle/GNrYWHxSsFScuGir5",
-      "detailsLink": "https://iotricity.sceeaot.vercel.app"
+      "detailsLink": "https://iotricitys3.notion.site/IoTRICITY-Season-3-Hackers-Guide-3dfb2a0148308038b7bacbba80dd2fff"
     }
   ],
   "pastEvents": [
